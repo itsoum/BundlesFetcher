@@ -1,15 +1,13 @@
-import pycurl
-from io import BytesIO
+import json
+import urllib.request
 
-buffer = BytesIO()
-c = pycurl.Curl()
-c.setopt(c.URL, 'https://api.jujucharms.com/charmstore/v5/list?type=bundle')
-c.setopt(c.WRITEDATA, buffer)
-c.perform()
-c.close()
 
-body = buffer.getvalue()
-# Body is a byte string.
-# We have to know the encoding in order to print it to a text file
-# such as standard output.
-print(body.decode('iso-8859-1'))
+with urllib.request.urlopen("https://api.jujucharms.com/charmstore/v5/list?type=bundle") as url:
+    data = json.loads(url.read().decode())
+    j=0
+    for i in data['Results']:
+    	print(data['Results'][j]['Id'])
+    	j+=1
+    print(j)
+
+
