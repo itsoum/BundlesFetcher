@@ -1,0 +1,38 @@
+relations:
+- - liferay:db
+  - mysql:db
+series: precise
+services:
+  liferay:
+    annotations:
+      gui-x: '195'
+      gui-y: '61'
+    charm: cs:precise/liferay-1
+    constraints: cpu=,mem=,arch=
+    num_units: 1
+    options:
+      http-port: 8080
+      java-opts: -Dfile.encoding=UTF8 -Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false
+        -Duser.timezone=GMT -Xmx2g -XX:MaxPermSize=512m
+  mysql:
+    annotations:
+      gui-x: '195'
+      gui-y: '345'
+    charm: cs:precise/mysql-28
+    constraints: cpu=,mem=,arch=
+    num_units: 1
+    options:
+      binlog-format: MIXED
+      block-size: 5
+      dataset-size: 80%
+      flavor: distro
+      ha-bindiface: eth0
+      ha-mcastport: 5411
+      max-connections: -1
+      preferred-storage-engine: InnoDB
+      query-cache-size: -1
+      query-cache-type: 'OFF'
+      rbd-name: mysql1
+      tuning-level: safest
+      vip_cidr: 24
+      vip_iface: eth0

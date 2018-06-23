@@ -1,0 +1,51 @@
+relations:
+- - accumulo-master:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+- - accumulo-master:accumulo-server
+  - tablet-servers:tabletserver
+- - tablet-servers:zookeeper
+  - hdp-zookeeper:zookeeper
+- - accumulo-master:namenode
+  - yarn-hdfs-master:namenode
+- - tablet-servers:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+- - tablet-servers:namenode
+  - yarn-hdfs-master:namenode
+- - yarn-hdfs-master:namenode
+  - compute-node:datanode
+- - yarn-hdfs-master:resourcemanager
+  - compute-node:nodemanager
+- - accumulo-master:zookeeper
+  - hdp-zookeeper:zookeeper
+series: trusty
+services:
+  accumulo-master:
+    annotations:
+      gui-x: '517.415251928498'
+      gui-y: '-1.5720638819540795'
+    charm: cs:~asanjar/trusty/hdp-accumulo
+    num_units: 1
+  compute-node:
+    annotations:
+      gui-x: '945.4095020764812'
+      gui-y: '-32.3559307642783'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1
+  hdp-zookeeper:
+    annotations:
+      gui-x: '80.91724487167937'
+      gui-y: '217.5119769355636'
+    charm: cs:trusty/hdp-zookeeper-7
+    num_units: 3
+  tablet-servers:
+    annotations:
+      gui-x: '520.2493241170985'
+      gui-y: '589.1107278738682'
+    charm: cs:~asanjar/trusty/hdp-accumulo
+    num_units: 4
+  yarn-hdfs-master:
+    annotations:
+      gui-x: '943.2350115498868'
+      gui-y: '229.28104587853142'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1

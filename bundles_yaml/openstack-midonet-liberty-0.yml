@@ -1,0 +1,236 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=32 mem=139264
+    series: trusty
+  '1':
+    constraints: arch=amd64 cpu-cores=32 mem=139264
+    series: trusty
+  '2':
+    constraints: arch=amd64 cpu-cores=32 mem=139264
+    series: trusty
+relations:
+- - keystone:identity-service
+  - nova:identity-service
+- - rabbitmq:amqp
+  - nova:amqp
+- - neutron-agents-midonet:neutron_agents
+  - nova:quantum-network-service
+- - neutron:neutron-api
+  - nova:neutron-api
+- - compute:cloud-compute
+  - nova:cloud-compute
+- - glance:image-service
+  - nova:image-service
+- - cinder:cinder-volume-service
+  - nova:cinder-volume-service
+- - keystone:identity-service
+  - cinder:identity-service
+- - mysql:shared-db
+  - cinder:shared-db
+- - rabbitmq:amqp
+  - cinder:amqp
+- - glance:image-service
+  - cinder:image-service
+- - keystone:identity-service
+  - glance:identity-service
+- - mysql:shared-db
+  - glance:shared-db
+- - rabbitmq:amqp
+  - glance:amqp
+- - mysql:shared-db
+  - neutron:shared-db
+- - rabbitmq:amqp
+  - neutron:amqp
+- - neutron-agents-midonet:neutron-plugin-api
+  - neutron:neutron-plugin-api
+- - keystone:identity-service
+  - midonet-api:keystone
+- - zookeeper:zookeeper
+  - midonet-api:zookeeper
+- - midonet-agent:host
+  - midonet-api:host
+- - rabbitmq:amqp
+  - neutron-agents-midonet:amqp
+- - midonet-agent:host
+  - neutron-agents-midonet:agent
+- - cassandra:database
+  - midonet-agent:cassandra
+- - zookeeper:zookeeper
+  - midonet-agent:zookeeper
+- - midonet-api:midonet-api
+  - neutron-agents-midonet:midonet
+- - rabbitmq:amqp
+  - compute:amqp
+- - glance:image-service
+  - compute:image-service
+- - midonet-agent:neutron-plugin
+  - compute:neutron-plugin
+- - keystone:identity-service
+  - horizon:identity-service
+- - midonet-api:midonet-api
+  - neutron:midonet
+- - mysql:shared-db
+  - keystone:shared-db
+- - mysql:shared-db
+  - nova:shared-db
+- - keystone:identity-service
+  - neutron:identity-service
+series: trusty
+services:
+  cassandra:
+    annotations:
+      gui-x: '337.93280029296875'
+      gui-y: '987.3145830909757'
+    charm: cs:trusty/cassandra-13
+    num_units: 1
+    options:
+      authenticator: AllowAllAuthenticator
+      cluster_name: midonet
+      extra_packages: dsc20
+      install_keys: '- null
+
+        - null
+
+        - 7E41C00F85BFC1706C4FFFB3350200F2B999A372
+
+        '
+      install_sources: '- ppa:openjdk-r/ppa   # For OpenJDK 8
+
+        - ppa:stub/cassandra  # For Python driver
+
+        - deb http://debian.datastax.com/community 2.0 main
+
+        '
+    to:
+    - lxc:zookeeper/0
+  cinder:
+    annotations:
+      gui-x: '1331'
+      gui-y: '237.2949192431123'
+    charm: cs:trusty/cinder-34
+    num_units: 1
+    options:
+      block-device: None
+      glance-api-version: 2
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - lxc:neutron-agents-midonet/0
+  compute:
+    annotations:
+      gui-x: '131'
+      gui-y: '237.29491924311225'
+    charm: cs:trusty/nova-compute-36
+    num_units: 1
+    options:
+      enable-live-migration: true
+      enable-resize: true
+      manage-neutron-plugin-legacy-mode: false
+      migration-auth-type: ssh
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - '0'
+  glance:
+    annotations:
+      gui-x: '1331'
+      gui-y: '930.1152422706632'
+    charm: cs:trusty/glance-30
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - lxc:neutron-agents-midonet/0
+  horizon:
+    annotations:
+      gui-x: '1531'
+      gui-y: '583.7050807568878'
+    charm: cs:trusty/openstack-dashboard-21
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-liberty
+  keystone:
+    annotations:
+      gui-x: '931'
+      gui-y: '237.2949192431123'
+    charm: cs:trusty/keystone-33
+    num_units: 1
+    options:
+      admin-password: openstack
+      admin-token: osttesting
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - lxc:neutron-agents-midonet/0
+  midonet-agent:
+    annotations:
+      gui-x: '-90.07345581054688'
+      gui-y: '604.7785060498564'
+    charm: cs:trusty/midonet-agent-1
+    options:
+      openstack-origin: cloud:trusty-liberty
+  midonet-api:
+    annotations:
+      gui-x: '331'
+      gui-y: '583.7050807568878'
+    charm: cs:trusty/midonet-api-1
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - lxc:neutron-agents-midonet/0
+  mysql:
+    annotations:
+      gui-x: '531'
+      gui-y: '237.2949192431123'
+    charm: cs:trusty/mysql-18
+    num_units: 1
+    options:
+      max-connections: 500
+  neutron:
+    annotations:
+      gui-x: '1131'
+      gui-y: '583.7050807568878'
+    charm: cs:~openstack-charmers-next/trusty/neutron-api-33
+    num_units: 1
+    options:
+      l2-population: false
+      neutron-external-network: Public_Network
+      neutron-plugin: midonet
+      neutron-security-groups: true
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - lxc:neutron-agents-midonet/0
+  neutron-agents-midonet:
+    annotations:
+      gui-x: '755.4795532226562'
+      gui-y: '845.2111406047793'
+    charm: cs:trusty/neutron-agents-midonet-1
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - '1'
+  nova:
+    annotations:
+      gui-x: '731'
+      gui-y: '-109.1152422706632'
+    charm: cs:trusty/nova-cloud-controller-66
+    num_units: 1
+    options:
+      console-access-protocol: vnc
+      network-manager: Neutron
+      openstack-origin: cloud:trusty-liberty
+    to:
+    - lxc:neutron-agents-midonet/0
+  rabbitmq:
+    annotations:
+      gui-x: '1134.4060668945312'
+      gui-y: '-39.46705364252625'
+    charm: cs:trusty/rabbitmq-server-43
+    num_units: 1
+  zookeeper:
+    annotations:
+      gui-x: '-101.20360660552979'
+      gui-y: '978.2830889503507'
+    charm: cs:trusty/zookeeper-1
+    num_units: 1
+    to:
+    - '2'

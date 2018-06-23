@@ -1,0 +1,591 @@
+relations:
+- - landscape-client:container
+  - nagios:juju-info
+- - ganglia-node:juju-info
+  - nagios:juju-info
+- - nrpe:general-info
+  - ganglia:juju-info
+- - nrpe:general-info
+  - kibana:juju-info
+- - nrpe:general-info
+  - elasticsearch:juju-info
+- - nrpe:general-info
+  - logstash-indexer:juju-info
+- - nrpe:general-info
+  - shard3:juju-info
+- - nrpe:general-info
+  - shard2:juju-info
+- - nrpe:general-info
+  - shard1:juju-info
+- - nrpe:general-info
+  - mongos:juju-info
+- - nrpe:general-info
+  - rabbitmq-server:juju-info
+- - nrpe:local-monitors
+  - mysql:local-monitors
+- - nrpe:general-info
+  - tomcat-memcached:juju-info
+- - nrpe:general-info
+  - terracotta:juju-info
+- - nrpe:general-info
+  - configsvr:juju-info
+- - nrpe:general-info
+  - postgresql:juju-info
+- - nrpe:general-info
+  - redis-master:juju-info
+- - nrpe:general-info
+  - zend-server:juju-info
+- - nrpe:general-info
+  - tomcat:juju-info
+- - nrpe:general-info
+  - node-app:juju-info
+- - nrpe:general-info
+  - python-django:juju-info
+- - nrpe:general-info
+  - django-memcached:juju-info
+- - nrpe:local-monitors
+  - rails:nrpe
+- - nrpe:general-info
+  - rails-memcached:juju-info
+- - nrpe:local-monitors
+  - lamp-haproxy:local-monitors
+- - nrpe:local-monitors
+  - tomcat-haproxy:local-monitors
+- - nrpe:local-monitors
+  - node-haproxy:local-monitors
+- - nrpe:local-monitors
+  - django-haproxy:local-monitors
+- - nrpe:local-monitors
+  - rails-haproxy:local-monitors
+- - nrpe:general-info
+  - openvpn-as:juju-info
+- - nagios:monitors
+  - nrpe:monitors
+- - logstash-agent:juju-info
+  - openvpn-as:juju-info
+- - landscape-client:container
+  - openvpn-as:juju-info
+- - ganglia-node:juju-info
+  - openvpn-as:juju-info
+- - logstash-agent:juju-info
+  - shard3:juju-info
+- - landscape-client:container
+  - shard3:juju-info
+- - ganglia-node:juju-info
+  - shard3:juju-info
+- - logstash-agent:juju-info
+  - shard2:juju-info
+- - landscape-client:container
+  - shard2:juju-info
+- - ganglia-node:juju-info
+  - shard2:juju-info
+- - logstash-agent:juju-info
+  - shard1:juju-info
+- - landscape-client:container
+  - shard1:juju-info
+- - ganglia-node:juju-info
+  - shard1:juju-info
+- - logstash-agent:juju-info
+  - mongos:juju-info
+- - landscape-client:container
+  - mongos:juju-info
+- - ganglia-node:juju-info
+  - mongos:juju-info
+- - ganglia-node:juju-info
+  - node-haproxy:juju-info
+- - ganglia-node:juju-info
+  - python-django:juju-info
+- - ganglia-node:juju-info
+  - django-haproxy:juju-info
+- - ganglia-node:juju-info
+  - django-memcached:juju-info
+- - ganglia-node:juju-info
+  - rails-haproxy:juju-info
+- - ganglia-node:juju-info
+  - rails:juju-info
+- - ganglia-node:juju-info
+  - rails-memcached:juju-info
+- - ganglia-node:juju-info
+  - logstash-indexer:juju-info
+- - ganglia-node:juju-info
+  - kibana:juju-info
+- - ganglia-node:juju-info
+  - elasticsearch:juju-info
+- - ganglia-node:juju-info
+  - ganglia:juju-info
+- - landscape-client:container
+  - ganglia:juju-info
+- - landscape-client:container
+  - kibana:juju-info
+- - landscape-client:container
+  - logstash-indexer:juju-info
+- - landscape-client:container
+  - tomcat:juju-info
+- - ganglia-node:juju-info
+  - tomcat-haproxy:juju-info
+- - landscape-client:container
+  - rails:juju-info
+- - landscape-client:container
+  - rails-haproxy:juju-info
+- - landscape-client:container
+  - django-memcached:juju-info
+- - landscape-client:container
+  - python-django:juju-info
+- - landscape-client:container
+  - django-haproxy:juju-info
+- - landscape-client:container
+  - node-app:juju-info
+- - landscape-client:container
+  - node-haproxy:juju-info
+- - ganglia-node:juju-info
+  - node-app:juju-info
+- - logstash-agent:juju-info
+  - rabbitmq-server:juju-info
+- - logstash-agent:juju-info
+  - mysql:juju-info
+- - logstash-agent:juju-info
+  - zend-server:juju-info
+- - logstash-agent:juju-info
+  - lamp-haproxy:juju-info
+- - logstash-agent:juju-info
+  - tomcat-haproxy:juju-info
+- - logstash-agent:juju-info
+  - tomcat:juju-info
+- - logstash-agent:juju-info
+  - node-app:juju-info
+- - logstash-agent:juju-info
+  - node-haproxy:juju-info
+- - logstash-agent:juju-info
+  - django-haproxy:juju-info
+- - logstash-agent:juju-info
+  - python-django:juju-info
+- - logstash-agent:juju-info
+  - django-memcached:juju-info
+- - logstash-agent:juju-info
+  - rails-haproxy:juju-info
+- - logstash-agent:juju-info
+  - rails:juju-info
+- - logstash-agent:juju-info
+  - rails-memcached:juju-info
+- - logstash-agent:juju-info
+  - elasticsearch:juju-info
+- - logstash-agent:juju-info
+  - kibana:juju-info
+- - logstash-agent:juju-info
+  - ganglia:juju-info
+- - landscape-client:container
+  - rabbitmq-server:juju-info
+- - landscape-client:container
+  - mysql:juju-info
+- - landscape-client:container
+  - zend-server:juju-info
+- - landscape-client:container
+  - lamp-haproxy:juju-info
+- - landscape-client:container
+  - tomcat-haproxy:juju-info
+- - landscape-client:container
+  - elasticsearch:juju-info
+- - rails-haproxy:reverseproxy
+  - rails:proxy
+- - rails:memcached
+  - rails-memcached:cache
+- - rails:redis
+  - redis-master:redis-master
+- - python-django:cache
+  - django-memcached:cache
+- - django-haproxy:reverseproxy
+  - python-django:website
+- - python-django:pgsql
+  - postgresql:db
+- - node-haproxy:reverseproxy
+  - node-app:website
+- - mongos:mongos
+  - shard2:database
+- - mongos:mongos
+  - shard1:database
+- - mongos:mongos-cfg
+  - configsvr:configsvr
+- - mongos:mongos
+  - shard3:database
+- - node-app:mongodb
+  - configsvr:database
+- - tomcat-haproxy:reverseproxy
+  - tomcat:website
+- - lamp-haproxy:reverseproxy
+  - zend-server:website
+- - zend-server:database
+  - mysql:db-admin
+- - tomcat:jndi-terracotta
+  - terracotta:dso
+- - tomcat:jndi-memcached
+  - tomcat-memcached:cache
+- - kibana:rest
+  - elasticsearch:client
+- - logstash-indexer:cluster
+  - elasticsearch:client
+- - logstash-agent:input
+  - logstash-indexer:input
+- - ganglia:node
+  - ganglia-node:node
+- - logstash-agent:juju-info
+  - terracotta:juju-info
+- - logstash-agent:juju-info
+  - tomcat-memcached:juju-info
+- - ganglia-node:juju-info
+  - tomcat-memcached:juju-info
+- - landscape-client:container
+  - tomcat-memcached:juju-info
+- - ganglia-node:juju-info
+  - terracotta:juju-info
+- - landscape-client:container
+  - terracotta:juju-info
+- - ganglia-node:juju-info
+  - tomcat:juju-info
+- - ganglia-node:juju-info
+  - lamp-haproxy:juju-info
+- - ganglia-node:juju-info
+  - zend-server:juju-info
+- - ganglia-node:juju-info
+  - mysql:juju-info
+- - ganglia-node:juju-info
+  - rabbitmq-server:juju-info
+- - landscape-client:container
+  - rails-memcached:juju-info
+- - ganglia-node:juju-info
+  - postgresql:juju-info
+- - landscape-client:container
+  - postgresql:juju-info
+- - logstash-agent:juju-info
+  - postgresql:juju-info
+- - ganglia-node:juju-info
+  - redis-master:juju-info
+- - landscape-client:container
+  - redis-master:juju-info
+- - logstash-agent:juju-info
+  - redis-master:juju-info
+- - ganglia-node:juju-info
+  - configsvr:juju-info
+- - landscape-client:container
+  - configsvr:juju-info
+- - logstash-agent:juju-info
+  - configsvr:juju-info
+- - compute-node:datanode
+  - yarn-hdfs-master:namenode
+- - compute-node:nodemanager
+  - yarn-hdfs-master:resourcemanager
+- - hdp-hive:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+- - hdp-hive:db
+  - mysql:db
+- - nrpe:general-info
+  - hdp-hive:juju-info
+- - ganglia-node:juju-info
+  - hdp-hive:juju-info
+- - landscape-client:container
+  - hdp-hive:juju-info
+- - logstash-agent:juju-info
+  - hdp-hive:juju-info
+- - nrpe:general-info
+  - yarn-hdfs-master:juju-info
+- - ganglia-node:juju-info
+  - yarn-hdfs-master:juju-info
+- - landscape-client:container
+  - yarn-hdfs-master:juju-info
+- - logstash-agent:juju-info
+  - yarn-hdfs-master:juju-info
+- - nrpe:general-info
+  - compute-node:juju-info
+- - ganglia-node:juju-info
+  - compute-node:juju-info
+- - landscape-client:container
+  - compute-node:juju-info
+- - logstash-agent:juju-info
+  - compute-node:juju-info
+- - kafka:zk
+  - hdp-zookeeper:zookeeper
+- - nimbus-server:zookeeper
+  - hdp-zookeeper:zookeeper
+- - storm-worker:zookeeper
+  - hdp-zookeeper:zookeeper
+- - storm-worker:slave
+  - nimbus-server:nimbus
+- - nrpe:general-info
+  - kafka:juju-info
+- - ganglia-node:juju-info
+  - kafka:juju-info
+- - landscape-client:container
+  - kafka:juju-info
+- - logstash-agent:juju-info
+  - kafka:juju-info
+- - nrpe:general-info
+  - nimbus-server:juju-info
+- - ganglia-node:juju-info
+  - nimbus-server:juju-info
+- - landscape-client:container
+  - nimbus-server:juju-info
+- - logstash-agent:juju-info
+  - nimbus-server:juju-info
+- - nrpe:general-info
+  - storm-worker:juju-info
+- - ganglia-node:juju-info
+  - storm-worker:juju-info
+- - landscape-client:container
+  - storm-worker:juju-info
+- - logstash-agent:juju-info
+  - storm-worker:juju-info
+- - nrpe:general-info
+  - hdp-zookeeper:juju-info
+- - ganglia-node:juju-info
+  - hdp-zookeeper:juju-info
+- - landscape-client:container
+  - hdp-zookeeper:juju-info
+- - logstash-agent:juju-info
+  - hdp-zookeeper:juju-info
+series: precise
+services:
+  compute-node:
+    annotations:
+      gui-x: '-908.3682861328125'
+      gui-y: '-79.81492328643799'
+    charm: cs:trusty/hdp-hadoop-8
+    num_units: 1
+  configsvr:
+    annotations:
+      gui-x: '825.19775390625'
+      gui-y: '270.7906494140625'
+    charm: cs:precise/mongodb-28
+    num_units: 3
+    options:
+      replicaset: configsvr
+  django-haproxy:
+    annotations:
+      gui-x: '1204.9883422851562'
+      gui-y: '-464.3597869873047'
+    charm: cs:trusty/haproxy-4
+    num_units: 1
+  django-memcached:
+    annotations:
+      gui-x: '1540.0686645507812'
+      gui-y: '-66.37035369873047'
+    charm: cs:trusty/memcached-8
+    num_units: 1
+  elasticsearch:
+    annotations:
+      gui-x: '2941.5227661132812'
+      gui-y: '685.1768798828125'
+    charm: cs:trusty/elasticsearch-8
+    num_units: 1
+  ganglia:
+    annotations:
+      gui-x: '3095.9751586914062'
+      gui-y: '-215.4019317626953'
+    charm: cs:trusty/ganglia-2
+    num_units: 1
+  ganglia-node:
+    annotations:
+      gui-x: '2763.5003051757812'
+      gui-y: '-204.98265838623047'
+    charm: cs:trusty/ganglia-node-2
+  hdp-hive:
+    annotations:
+      gui-x: '-541.2879943847656'
+      gui-y: '380.7026062011719'
+    charm: cs:trusty/hdp-hive-4
+    num_units: 1
+  hdp-zookeeper:
+    annotations:
+      gui-x: '-1571.0080078341807'
+      gui-y: '-65.6882350133385'
+    charm: cs:trusty/hdp-zookeeper-11
+    num_units: 3
+  kafka:
+    annotations:
+      gui-x: '-1191.1547699426344'
+      gui-y: '-455.2224222479384'
+    charm: cs:~vpalos/trusty/kafka-0
+    num_units: 1
+  kibana:
+    annotations:
+      gui-x: '2930.3587036132812'
+      gui-y: '346.91876220703125'
+    charm: cs:trusty/kibana-3
+    num_units: 1
+  lamp-haproxy:
+    annotations:
+      gui-x: '-143.53745889663696'
+      gui-y: '-478.90525245666504'
+    charm: cs:trusty/haproxy-4
+    num_units: 1
+  landscape-client:
+    annotations:
+      gui-x: '2768.1936645507812'
+      gui-y: '75.5896258354187'
+    charm: cs:trusty/landscape-client-11
+  logstash-agent:
+    annotations:
+      gui-x: '2578.9004516601562'
+      gui-y: '359.8180694580078'
+    charm: cs:trusty/logstash-agent-1
+  logstash-indexer:
+    annotations:
+      gui-x: '2590.4990844726562'
+      gui-y: '697.9095458984375'
+    charm: cs:precise/logstash-indexer-4
+    num_units: 1
+  mongos:
+    annotations:
+      gui-x: '821.5999145507812'
+      gui-y: '645.7539672851562'
+    charm: cs:precise/mongodb-28
+    num_units: 1
+  mysql:
+    annotations:
+      gui-x: '-152.58601516485214'
+      gui-y: '378.6219482421875'
+    charm: cs:trusty/mysql-24
+    num_units: 1
+  nagios:
+    annotations:
+      gui-x: '3092.8759765625'
+      gui-y: '-570.4630432128906'
+    charm: cs:trusty/nagios-5
+    num_units: 1
+  nimbus-server:
+    annotations:
+      gui-x: '-1209.6011657714844'
+      gui-y: '-73.77155303955078'
+    charm: cs:trusty/hdp-storm-3
+    num_units: 1
+  node-app:
+    annotations:
+      gui-x: '833.8258666992188'
+      gui-y: '-77.39254951477051'
+    charm: cs:precise/node-app-10
+    num_units: 2
+  node-haproxy:
+    annotations:
+      gui-x: '833.4334106445312'
+      gui-y: '-473.46118927001953'
+    charm: cs:trusty/haproxy-4
+    num_units: 1
+  nrpe:
+    annotations:
+      gui-x: '2751.674560546875'
+      gui-y: '-523.4931030273438'
+    charm: cs:trusty/nrpe-1
+  openvpn-as:
+    annotations:
+      gui-x: '2460.275390625'
+      gui-y: '-706.2930908203125'
+    charm: cs:precise/openvpn-as-6
+    num_units: 1
+  postgresql:
+    annotations:
+      gui-x: '1194.1262817382812'
+      gui-y: '360.2027893066406'
+    charm: cs:trusty/postgresql-17
+    num_units: 1
+  python-django:
+    annotations:
+      gui-x: '1199.8611450195312'
+      gui-y: '-60.67990159988403'
+    charm: cs:trusty/python-django-14
+    num_units: 2
+  rabbitmq-server:
+    annotations:
+      gui-x: '-463.01838302612305'
+      gui-y: '839.8280944824219'
+    charm: cs:trusty/rabbitmq-server-26
+    num_units: 4
+  rails:
+    annotations:
+      gui-x: '1834.9014282226562'
+      gui-y: '-68.21410369873047'
+    charm: cs:precise/rails-3
+    num_units: 2
+    options:
+      repo: https://github.com/pavelpachkovskij/sample-rails
+  rails-haproxy:
+    annotations:
+      gui-x: '1811.1881713867188'
+      gui-y: '-472.5976257324219'
+    charm: cs:trusty/haproxy-4
+    num_units: 1
+  rails-memcached:
+    annotations:
+      gui-x: '2179.0188598632812'
+      gui-y: '-50.15729904174805'
+    charm: cs:trusty/memcached-8
+    num_units: 1
+  redis-master:
+    annotations:
+      gui-x: '1829.9974975585938'
+      gui-y: '396.62200927734375'
+    charm: cs:precise/redis-master-7
+    num_units: 1
+  shard1:
+    annotations:
+      gui-x: '532.4017333984375'
+      gui-y: '1054.2928466796875'
+    charm: cs:precise/mongodb-28
+    num_units: 3
+    options:
+      replicaset: shard1
+  shard2:
+    annotations:
+      gui-x: '817.1136474609375'
+      gui-y: '1047.2177124023438'
+    charm: cs:precise/mongodb-28
+    num_units: 3
+    options:
+      replicaset: shard2
+  shard3:
+    annotations:
+      gui-x: '1070.094482421875'
+      gui-y: '1037.030517578125'
+    charm: cs:precise/mongodb-28
+    num_units: 3
+    options:
+      replicaset: shard3
+  storm-worker:
+    annotations:
+      gui-x: '-1211.7181854699782'
+      gui-y: '342.94394432921'
+    charm: cs:trusty/hdp-storm-3
+    num_units: 1
+  terracotta:
+    annotations:
+      gui-x: '467.3168029785156'
+      gui-y: '267.17584228515625'
+    charm: cs:trusty/terracotta-2
+    num_units: 1
+  tomcat:
+    annotations:
+      gui-x: '270.52117919921875'
+      gui-y: '-67.57757568359375'
+    charm: cs:trusty/tomcat-1
+    num_units: 2
+  tomcat-haproxy:
+    annotations:
+      gui-x: '277.7298889160156'
+      gui-y: '-484.2255210876465'
+    charm: cs:trusty/haproxy-4
+    num_units: 1
+  tomcat-memcached:
+    annotations:
+      gui-x: '134.31602478027344'
+      gui-y: '270.77581787109375'
+    charm: cs:trusty/memcached-8
+    num_units: 1
+  yarn-hdfs-master:
+    annotations:
+      gui-x: '-541.5703735351562'
+      gui-y: '-78.03202939033508'
+    charm: cs:trusty/hdp-hadoop-8
+    num_units: 1
+  zend-server:
+    annotations:
+      gui-x: '-148.3733615875244'
+      gui-y: '-95.98851585388184'
+    charm: cs:trusty/zend-server-1
+    num_units: 2

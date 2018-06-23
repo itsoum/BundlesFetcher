@@ -1,0 +1,97 @@
+applications:
+  conda:
+    annotations:
+      gui-x: -204.67959904670715
+      gui-y: 624.9640808105469
+    charm: cs:~omnivector/conda-7
+  jupyter-notebook:
+    annotations:
+      gui-x: -470.64870262145996
+      gui-y: 804.5987243652344
+    charm: cs:~omnivector/jupyter-notebook-5
+    expose: true
+    num_units: 1
+    to:
+    - '4'
+  namenode:
+    annotations:
+      gui-x: 506.0120849609375
+      gui-y: 797.9153442382812
+    charm: cs:hadoop-namenode-35
+    constraints: mem=7168 root-disk=32768
+    expose: false
+    num_units: 1
+    to:
+    - '0'
+  plugin:
+    annotations:
+      gui-x: '1000'
+      gui-y: '400'
+    charm: cs:hadoop-plugin-35
+  resourcemanager:
+    annotations:
+      gui-x: '500'
+      gui-y: '0'
+    charm: cs:hadoop-resourcemanager-37
+    constraints: mem=7168 root-disk=32768
+    expose: false
+    num_units: 1
+    to:
+    - '0'
+  slave:
+    annotations:
+      gui-x: '0'
+      gui-y: '400'
+    charm: cs:hadoop-slave-36
+    constraints: mem=7168 root-disk=32768
+    num_units: 3
+    to:
+    - '1'
+    - '2'
+    - '3'
+  spark:
+    annotations:
+      gui-x: 1470.7045593261719
+      gui-y: 810.0895385742188
+    charm: cs:spark-60
+    constraints: root-disk=32768 instance-type=m4.large
+    expose: false
+    num_units: 1
+    options:
+      spark_execution_mode: yarn-client
+    to:
+    - '4'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '3':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '4':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+relations:
+- - conda:juju-info
+  - slave:juju-info
+- - conda:conda
+  - jupyter-notebook:conda
+- - resourcemanager:namenode
+  - namenode:namenode
+- - resourcemanager:nodemanager
+  - slave:resourcemanager
+- - plugin:namenode
+  - namenode:namenode
+- - plugin:resourcemanager
+  - resourcemanager:resourcemanager
+- - spark:hadoop
+  - plugin:hadoop-plugin
+- - namenode:datanode
+  - slave:namenode
+series: xenial

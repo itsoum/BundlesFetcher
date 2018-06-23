@@ -1,0 +1,6 @@
+series: xenial
+services:
+  compute:
+    charm: cs:xenial/ubuntu
+    constraints: mem=2M
+    num_units: 2

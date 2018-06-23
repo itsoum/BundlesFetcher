@@ -1,0 +1,29 @@
+relations:
+- - yarn-hdfs-master:namenode
+  - compute-node:datanode
+- - yarn-hdfs-master:resourcemanager
+  - compute-node:nodemanager
+- - hdp-tez:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+- - hdp-tez:namenode
+  - yarn-hdfs-master:namenode
+series: trusty
+services:
+  compute-node:
+    annotations:
+      gui-x: '849.6418941713882'
+      gui-y: '627.4593128427454'
+    charm: cs:~asanjar/trusty/hdp-hadoop
+    num_units: 1
+  hdp-tez:
+    annotations:
+      gui-x: '489.9256825141649'
+      gui-y: '244.54068715725464'
+    charm: cs:~asanjar/trusty/hdp-tez
+    num_units: 1
+  yarn-hdfs-master:
+    annotations:
+      gui-x: '846.3581058286118'
+      gui-y: '244.54068715725464'
+    charm: cs:~asanjar/trusty/hdp-hadoop
+    num_units: 1

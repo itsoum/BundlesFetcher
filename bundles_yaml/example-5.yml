@@ -1,0 +1,56 @@
+relations:
+- - haproxy:reverseproxy
+  - sabnzbd:reverseproxy
+- - haproxy:reverseproxy
+  - couchpotato:reverseproxy
+- - haproxy:reverseproxy
+  - sonarr:reverseproxy
+- - sabnzbd:usenet-downloader
+  - couchpotato:usenet-downloader
+- - sabnzbd:usenet-downloader
+  - sonarr:usenet-downloader
+- - salt-master:saltinfo
+  - salt-minion:saltmaster
+- - salt-minion:juju-info
+  - salt-master:juju-info
+- - salt-minion:juju-info
+  - haproxy:juju-info
+- - salt-minion:juju-info
+  - couchpotato:juju-info
+- - salt-minion:juju-info
+  - sabnzbd:juju-info
+- - salt-minion:juju-info
+  - sonarr:juju-info
+services:
+  couchpotato:
+    charm: cs:~chris.sanders/couchpotato
+    num_units: 1
+    options:
+      hostname: couchpotato
+      proxy-port: 80
+  haproxy:
+    charm: cs:~chris.sanders/haproxy
+    num_units: 1
+    options:
+      enable-stats: true
+      hostname: haproxy
+  sabnzbd:
+    charm: cs:~chris.sanders/sabnzbd
+    num_units: 1
+    options:
+      hostname: sabnzbd
+      proxy-port: 80
+  salt-master:
+    charm: cs:~chris.sanders/salt-master
+    num_units: 1
+    options:
+      hostname: salt-master
+  salt-minion:
+    charm: cs:~chris.sanders/salt-minion
+  sonarr:
+    charm: cs:~chris.sanders/sonarr
+    num_units: 1
+    options:
+      hostname: sonarr
+      proxy-port: 80
+sries: xenial

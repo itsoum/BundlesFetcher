@@ -1,0 +1,58 @@
+relations:
+- - namenode
+  - slave
+- - resourcemanager
+  - slave
+- - resourcemanager
+  - namenode
+- - plugin
+  - namenode
+- - plugin
+  - resourcemanager
+- - hive
+  - plugin
+- - hive
+  - mariadb
+series: trusty
+services:
+  hive:
+    annotations:
+      gui-x: '1200'
+      gui-y: '200'
+    charm: cs:trusty/apache-hive-11
+    constraints: mem=3G
+    num_units: 1
+  mariadb:
+    annotations:
+      gui-x: '1200'
+      gui-y: '450'
+    charm: cs:trusty/mariadb-2
+    num_units: 1
+    options:
+      binlog-format: ROW
+  namenode:
+    annotations:
+      gui-x: '600'
+      gui-y: '350'
+    charm: cs:trusty/apache-hadoop-namenode-1
+    constraints: mem=7G
+    num_units: 1
+  plugin:
+    annotations:
+      gui-x: '950'
+      gui-y: '200'
+    charm: cs:trusty/apache-hadoop-plugin-13
+  resourcemanager:
+    annotations:
+      gui-x: '600'
+      gui-y: '100'
+    charm: cs:trusty/apache-hadoop-resourcemanager-1
+    constraints: mem=7G
+    num_units: 1
+  slave:
+    annotations:
+      gui-x: '250'
+      gui-y: '200'
+    charm: cs:trusty/apache-hadoop-slave-1
+    constraints: mem=7G
+    num_units: 3

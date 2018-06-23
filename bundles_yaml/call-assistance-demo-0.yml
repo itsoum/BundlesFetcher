@@ -1,0 +1,173 @@
+applications:
+  call-assistance:
+    annotations:
+      gui-x: '1664'
+      gui-y: '250'
+    charm: cs:~dataart-telco-practice/trusty/call-assistance-0
+    expose: true
+    num_units: 1
+    options:
+      password: 42d8aa7cde9c78c4757862d84620c335
+      restcomm-app: restcomm-call-assistance
+    to:
+    - '6'
+  clearwater-bono:
+    annotations:
+      gui-x: '775'
+      gui-y: '806'
+    charm: cs:~dataart-telco-practice/precise/clearwater-bono-0
+    constraints: arch=amd64
+    expose: true
+    num_units: 1
+    to:
+    - '0'
+  clearwater-homer:
+    annotations:
+      gui-x: '318'
+      gui-y: '250'
+    charm: cs:~dataart-telco-practice/precise/clearwater-homer-0
+    constraints: arch=amd64
+    num_units: 1
+    options:
+      zone: clearwater.local
+    to:
+    - '1'
+  clearwater-homestead:
+    annotations:
+      gui-x: '765'
+      gui-y: '248'
+    charm: cs:~dataart-telco-practice/precise/clearwater-homestead-0
+    constraints: arch=amd64
+    num_units: 1
+    options:
+      zone: clearwater.local
+    to:
+    - '2'
+  clearwater-ralf:
+    annotations:
+      gui-x: '320'
+      gui-y: '810'
+    charm: cs:~dataart-telco-practice/precise/clearwater-ralf-0
+    constraints: arch=amd64
+    num_units: 1
+    options:
+      zone: clearwater.local
+    to:
+    - '3'
+  clearwater-sprout:
+    annotations:
+      gui-x: '936'
+      gui-y: '532'
+    charm: cs:~dataart-telco-practice/precise/clearwater-sprout-0
+    constraints: arch=amd64
+    num_units: 1
+    options:
+      zone: clearwater.local
+    to:
+    - '4'
+  dns:
+    annotations:
+      gui-x: '532'
+      gui-y: '532'
+    charm: cs:~dataart-telco-practice/precise/dns-0
+    num_units: 1
+    options:
+      domain: clearwater.local
+    to:
+    - '5'
+  ims-tools:
+    annotations:
+      gui-x: '1215'
+      gui-y: '250'
+    charm: cs:~dataart-telco-practice/trusty/ims-tools-0
+    num_units: 1
+    to:
+    - '6'
+  mysql:
+    annotations:
+      gui-x: '1438'
+      gui-y: '832'
+    charm: cs:mysql-55
+    num_units: 1
+    to:
+    - '7'
+  restcomm:
+    annotations:
+      gui-x: '1438'
+      gui-y: '532'
+    charm: cs:~dataart-telco-practice/trusty/restcomm-8
+    expose: true
+    num_units: 1
+    options:
+      init_password: q1w2e3r4t5
+      voicerss_key: 29b2d893df9f454abbfae94df6cff95b
+      zone: clearwater.local
+    to:
+    - '6'
+  restcomm-call-assistance:
+    annotations:
+      gui-x: '1730'
+      gui-y: '562'
+    charm: cs:~dataart-telco-practice/trusty/restcomm-call-assistance-0
+    options:
+      password: 42d8aa7cde9c78c4757862d84620c335
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=2 mem=4096 root-disk=8192
+    series: precise
+  '1':
+    constraints: arch=amd64 cpu-cores=2 mem=4096 root-disk=8192
+    series: precise
+  '2':
+    constraints: arch=amd64 cpu-cores=2 root-disk=8192
+    series: precise
+  '3':
+    constraints: arch=amd64 cpu-cores=2 root-disk=8192
+    series: precise
+  '4':
+    constraints: arch=amd64 cpu-cores=2 root-disk=8192
+    series: precise
+  '5':
+    constraints: arch=amd64 cpu-cores=2 root-disk=8192
+    series: precise
+  '6':
+    constraints: arch=amd64 cpu-cores=2 root-disk=8192
+    series: trusty
+  '7':
+    constraints: arch=amd64 cpu-cores=2 root-disk=8192
+    series: trusty
+relations:
+- - clearwater-ralf:programmable-multiple
+  - dns:programmable-multiple
+- - clearwater-homestead:programmable-multiple
+  - dns:programmable-multiple
+- - restcomm-call-assistance:container
+  - restcomm:juju-info
+- - ims-tools:restcomm
+  - restcomm:sip
+- - call-assistance:registration
+  - ims-tools:api
+- - clearwater-bono:cscf
+  - clearwater-sprout:pcscf
+- - clearwater-bono:ralf-ctf
+  - clearwater-ralf:ralf-cscf
+- - clearwater-sprout:ralf-ctf
+  - clearwater-ralf:ralf-cscf
+- - clearwater-homestead:homestead-cscf
+  - clearwater-sprout:homestead-hss
+- - clearwater-homer:xdms-user
+  - clearwater-sprout:xdms
+- - clearwater-homer:programmable-multiple
+  - dns:programmable-multiple
+- - clearwater-bono:programmable-multiple
+  - dns:programmable-multiple
+- - clearwater-sprout:programmable-multiple
+  - dns:programmable-multiple
+- - call-assistance:restcomm
+  - restcomm:api
+- - ims-tools:homestead
+  - clearwater-homestead:homestead-prov-user
+- - restcomm:mysql
+  - mysql:db
+- - restcomm:outbound-proxy
+  - clearwater-sprout:pcscf

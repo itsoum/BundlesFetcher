@@ -15,22 +15,20 @@ def bundles_list():
 	    for i in data['Results']:
 	    	bundle_name = ''.join(bundles_link_part(data['Results'][j]['Id']))
 	    	bundle_list.append(bundle_name)
-	    	#print(bundle_name)
 	    	j+=1
-	    #print(bundle_list)
-	    #print(j)
 	    return bundle_list
-
 
 bundles=bundles_list()
 
-#https://api.jujucharms.com/charmstore/v5/bundle/<bundle-name>/archive/bundle.yaml
 for bundle in bundles:
 	print(bundle)
+	print('ilias')
 	resp=urllib.request.urlopen('https://api.jujucharms.com/charmstore/v5/' + bundle + '/archive/bundle.yaml')
 	data = yaml.load(resp)
-	print(data)
-	#data = json.loads(x.read().decode())
+	buname=bundle.split("bundle/",1)[1]
+	print('ilias') 
+	with open('bundles_yaml/'+buname+'.yml', 'w') as yaml_file:
+	    yaml.dump(data, yaml_file, default_flow_style=False)
 
 
 

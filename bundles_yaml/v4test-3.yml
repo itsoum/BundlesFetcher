@@ -1,0 +1,46 @@
+description: Bizzle bazzle
+machines:
+  0:
+    constraints: ''
+  1:
+    constraints: ''
+  2:
+    constraints: ''
+relations:
+- - wordpress:db
+  - mysql:db
+- - mediawiki:db
+  - mysql:db
+series: precise
+services:
+  mediawiki:
+    annotations:
+      gui-x: '267.5'
+      gui-y: '30.5'
+    charm: cs:precise/mediawiki-18
+    num_units: 3
+    to:
+    - lxc:1
+    - '2'
+    - kvm:new
+  mysql:
+    annotations:
+      gui-x: '-360'
+      gui-y: '66'
+    charm: cs:precise/mysql-51
+    num_units: 1
+    to:
+    - '0'
+  wordpress:
+    annotations:
+      gui-x: '-87'
+      gui-y: '-141'
+    charm: cs:precise/wordpress-27
+    num_units: 3
+    to:
+    - lxc:1
+    - '2'
+    - mysql
+tags:
+- foo
+- bar

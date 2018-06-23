@@ -1,0 +1,29 @@
+applications:
+  gitlab-server:
+    annotations:
+      gui-x: '1553'
+      gui-y: '582.5'
+    charm: cs:~spiculecharms/gitlab-server-1
+    num_units: 1
+    to:
+    - '1'
+  ssl-termination-proxy:
+    annotations:
+      gui-x: '1158'
+      gui-y: '487.5'
+    charm: cs:~tengu-team/ssl-termination-proxy-6
+    expose: true
+    num_units: 1
+    to:
+    - '0'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+relations:
+- - gitlab-server:website
+  - ssl-termination-proxy:reverseproxy
+series: xenial

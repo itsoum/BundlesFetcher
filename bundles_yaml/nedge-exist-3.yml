@@ -1,0 +1,129 @@
+relations:
+- - nedge-swift-gw:identity-service
+  - keystone:identity-service
+- - cinder-nedge:storage-backend
+  - cinder:storage-backend
+- - glance:shared-db
+  - mysql:shared-db
+- - keystone:shared-db
+  - mysql:shared-db
+- - cinder:image-service
+  - glance:image-service
+- - nedge-mgmt:cinder-gw
+  - nedge-cinder-gw:cinder-gw
+- - nedge-mgmt:swift-gw
+  - nedge-swift-gw:swift-gw
+- - nova-compute:amqp
+  - rabbitmq-server:amqp
+- - nova-compute:image-service
+  - glance:image-service
+- - cinder:amqp
+  - rabbitmq-server:amqp
+- - nedge-cinder-gw:cinder-nedge
+  - cinder-nedge:cinder-nedge
+- - cinder:identity-service
+  - keystone:identity-service
+- - glance:identity-service
+  - keystone:identity-service
+- - nedge-mgmt:nedge
+  - nedge:nedge
+- - cinder:shared-db
+  - mysql:shared-db
+- - nova-compute:shared-db
+  - mysql:shared-db
+- - glance:amqp
+  - rabbitmq-server:amqp
+series: trusty
+services:
+  cinder:
+    annotations:
+      gui-x: '761'
+      gui-y: '117.5'
+    charm: cs:trusty/cinder
+    constraints: tags=openstack
+    num_units: 1
+    options:
+      block-device: None
+      glance-api-version: 2
+  cinder-nedge:
+    annotations:
+      gui-x: '1528.806884765625'
+      gui-y: '36.37933349609375'
+    charm: cs:~anton-skriptsov/trusty/cinder-nedge
+  glance:
+    annotations:
+      gui-x: '1330.3255615234375'
+      gui-y: '701.5836181640625'
+    charm: cs:trusty/glance
+    constraints: tags=openstack
+    num_units: 1
+  keystone:
+    annotations:
+      gui-x: '1144.4368896484375'
+      gui-y: '-41.421142578125'
+    charm: cs:trusty/keystone
+    constraints: tags=openstack
+    num_units: 1
+    options:
+      admin-password: nexenta
+      admin-token: ubuntutesting
+  mysql:
+    annotations:
+      gui-x: '790.3585205078125'
+      gui-y: '537.4429931640625'
+    charm: cs:trusty/mysql
+    constraints: tags=openstack
+    num_units: 1
+    options:
+      dataset-size: 50%
+  nedge:
+    annotations:
+      gui-x: '2473.82861328125'
+      gui-y: '-50.93341255187988'
+    charm: cs:~anton-skriptsov/trusty/nedge
+    constraints: tags=nedge
+    num_units: 1
+    options:
+      replicast_eth: eth2
+  nedge-cinder-gw:
+    annotations:
+      gui-x: '2067.060546875'
+      gui-y: '196.80955505371094'
+    charm: cs:~anton-skriptsov/trusty/nedge-cinder-gw
+    constraints: tags=nedge
+    num_units: 1
+    options:
+      replicast_eth: eth2
+  nedge-mgmt:
+    annotations:
+      gui-x: '2062.73193359375'
+      gui-y: '-43.93120193481445'
+    charm: cs:~anton-skriptsov/trusty/nedge-mgmt
+    constraints: tags=nedge
+    num_units: 1
+    options:
+      activation_key: ''
+      replicast_eth: eth2
+  nedge-swift-gw:
+    annotations:
+      gui-x: '2063.635009765625'
+      gui-y: '-291.9028778076172'
+    charm: cs:~anton-skriptsov/trusty/nedge-swift-gw
+    constraints: tags=nedge
+    num_units: 1
+    options:
+      replicast_eth: eth2
+  nova-compute:
+    annotations:
+      gui-x: '1474.024658203125'
+      gui-y: '243.36416625976562'
+    charm: cs:trusty/nova-compute
+    constraints: tags=openstack
+    num_units: 1
+  rabbitmq-server:
+    annotations:
+      gui-x: '1697.8673095703125'
+      gui-y: '593.5053100585938'
+    charm: cs:trusty/rabbitmq-server
+    constraints: tags=openstack
+    num_units: 1

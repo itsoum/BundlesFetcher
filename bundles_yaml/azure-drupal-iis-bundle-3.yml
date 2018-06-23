@@ -1,0 +1,49 @@
+relations:
+- - drupal-iis
+  - haproxy
+- - drupal-iis
+  - mssql-express
+- - drupal-iis
+  - nsclient
+- - drupal-iis
+  - memcached
+- - nagios
+  - nsclient
+services:
+  drupal-iis:
+    charm: cs:~cloudbaseit/drupal-iis-9
+    constraints: instance-type=Standard_D1
+    num_units: 2
+    options:
+      admin-password: Passw0rd
+      admin-user-name: cloudbase
+      iis-website-port: 8080
+      site-name: Cloudbase Drupal IIS Website
+    series: win2012r2
+  haproxy:
+    charm: cs:xenial/haproxy-40
+    constraints: instance-type=Standard_D1
+    num_units: 1
+    series: xenial
+  memcached:
+    charm: cs:memcached
+    constraints: instance-type=Standard_D1
+    num_units: 1
+    series: xenial
+  mssql-express:
+    charm: cs:~cloudbaseit/mssql-express-5
+    constraints: instance-type=Standard_D1
+    num_units: 1
+    options:
+      sa-password: Passw0rd
+    series: win2012r2
+  nagios:
+    charm: cs:~ionutbalutoiu/trusty/nagios-1
+    constraints: instance-type=Standard_D1
+    num_units: 1
+    options:
+      password: Passw0rd
+    series: trusty
+  nsclient:
+    charm: cs:~cloudbaseit/nsclient-6
+    series: win2012r2

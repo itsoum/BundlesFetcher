@@ -1,0 +1,158 @@
+relations:
+- - nova-compute:shared-db
+  - mysql:shared-db
+- - cinder:shared-db
+  - mysql:shared-db
+- - glance:shared-db
+  - mysql:shared-db
+- - cinder:identity-service
+  - keystone:identity-service
+- - cinder:amqp
+  - rabbitmq-server:amqp
+- - nexentaedge-mgmt:nedge
+  - nexentaedge-data:nedge
+- - nexentaedge-iscsi-gw:cinder-nedge
+  - cinder-nexentaedge:cinder-nedge
+- - nova-compute:image-service
+  - glance:image-service
+- - glance:identity-service
+  - keystone:identity-service
+- - nova-compute:amqp
+  - rabbitmq-server:amqp
+- - nexentaedge-mgmt:swift-gw
+  - nexentaedge-swift-gw:swift-gw
+- - nexentaedge-mgmt:cinder-gw
+  - nexentaedge-iscsi-gw:cinder-gw
+- - cinder:image-service
+  - glance:image-service
+- - glance:amqp
+  - rabbitmq-server:amqp
+- - keystone:shared-db
+  - mysql:shared-db
+- - nexentaedge-swift-gw:identity-service
+  - keystone:identity-service
+- - cinder-nexentaedge:storage-backend
+  - cinder:storage-backend
+- - openstack-dashboard:identity-service
+  - keystone:identity-service
+- - nova-cloud-controller:identity-service
+  - keystone:identity-service
+- - nova-cloud-controller:image-service
+  - glance:image-service
+- - nova-cloud-controller:cloud-compute
+  - nova-compute:cloud-compute
+- - nova-cloud-controller:amqp
+  - rabbitmq-server:amqp
+- - nova-cloud-controller:shared-db
+  - mysql:shared-db
+- - cinder:cinder-volume-service
+  - nova-cloud-controller:cinder-volume-service
+series: trusty
+services:
+  cinder:
+    annotations:
+      gui-x: '954.0368041992188'
+      gui-y: '245.01727199554443'
+    charm: cs:trusty/cinder
+    constraints: tags=openstack
+    options:
+      block-device: None
+      glance-api-version: 2
+      openstack-origin: cloud:trusty-liberty
+  cinder-nexentaedge:
+    annotations:
+      gui-x: '1276.268310546875'
+      gui-y: '271.4505386352539'
+    charm: cs:trusty/cinder-nexentaedge-0
+  glance:
+    annotations:
+      gui-x: '347.4593811035156'
+      gui-y: '-63.71212196350098'
+    charm: cs:trusty/glance
+    constraints: tags=openstack
+    options:
+      openstack-origin: cloud:trusty-liberty
+  keystone:
+    annotations:
+      gui-x: '1228.550537109375'
+      gui-y: '-61.30023765563965'
+    charm: cs:trusty/keystone
+    constraints: tags=openstack
+    options:
+      admin-password: nexenta
+      admin-token: ubuntutesting
+      openstack-origin: cloud:trusty-liberty
+  mysql:
+    annotations:
+      gui-x: '961.1553344726562'
+      gui-y: '-367.0846710205078'
+    charm: cs:trusty/percona-cluster
+    constraints: tags=openstack
+    num_units: 1
+    options:
+      dataset-size: 50%
+  nexentaedge-data:
+    annotations:
+      gui-x: '1860.1436767578125'
+      gui-y: '-72.33935546875'
+    charm: cs:trusty/nexentaedge-data-4
+    constraints: arch=amd64 cpu-cores=4 mem=12288 tags=nedge
+    options:
+      profile: capacity
+  nexentaedge-iscsi-gw:
+    annotations:
+      gui-x: '1521.988525390625'
+      gui-y: '235.9025575220585'
+    charm: cs:trusty/nexentaedge-iscsi-gw-5
+    constraints: arch=amd64 cpu-cores=4 mem=12288 tags=nedge
+    num_units: 1
+    options:
+      profile: capacity
+  nexentaedge-mgmt:
+    annotations:
+      gui-x: '1516.58447265625'
+      gui-y: '-73.41730690002441'
+    charm: cs:trusty/nexentaedge-mgmt-5
+    constraints: arch=amd64 cpu-cores=4 mem=12288 tags=nedge
+    num_units: 1
+    options:
+      activation_key: ''
+      profile: capacity
+  nexentaedge-swift-gw:
+    annotations:
+      gui-x: '1508.792724609375'
+      gui-y: '-361.8343048095703'
+    charm: cs:trusty/nexentaedge-swift-gw-4
+    constraints: arch=amd64 cpu-cores=4 mem=12288 tags=nedge
+    options:
+      profile: capacity
+  nova-cloud-controller:
+    charm: cs:trusty/nova-cloud-controller
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-liberty
+  nova-compute:
+    annotations:
+      gui-x: '601.8466186523438'
+      gui-y: '-366.37112617492676'
+    charm: cs:trusty/nova-compute
+    constraints: tags=openstack
+    options:
+      openstack-origin: cloud:trusty-liberty
+  openstack-dashboard:
+    annotations:
+      gui-x: '1227.0936279296875'
+      gui-y: '-644.5044250488281'
+    charm: cs:trusty/openstack-dashboard
+    constraints: tags=openstack
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-liberty
+  rabbitmq-server:
+    annotations:
+      gui-x: '600.297119140625'
+      gui-y: '242.4732666015625'
+    charm: cs:trusty/rabbitmq-server
+    constraints: tags=openstack
+    options:
+      source: cloud:trusty-liberty

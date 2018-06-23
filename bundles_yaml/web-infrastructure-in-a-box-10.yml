@@ -1,0 +1,44 @@
+relations:
+- - mongodb:database
+  - api:mongodb
+- - website:nginx-engine
+  - nginx:web-engine
+- - api:website
+  - nginx-proxy:website
+- - nginx-proxy:website
+  - website:website
+series: trusty
+services:
+  api:
+    annotations:
+      gui-x: '1366.4895792894895'
+      gui-y: '338.0509889514144'
+    charm: cs:~hp-discover/trusty/node-app
+    num_units: 1
+  mongodb:
+    annotations:
+      gui-x: '1509.6827392578125'
+      gui-y: '606.6281679064925'
+    charm: cs:trusty/mongodb-3
+    num_units: 1
+  nginx:
+    annotations:
+      gui-x: '760.5689534253543'
+      gui-y: '312.6845643908675'
+    charm: cs:~hp-discover/trusty/nginx
+    num_units: 1
+  nginx-proxy:
+    annotations:
+      gui-x: '1196.837601750427'
+      gui-y: '12.983199873655622'
+    charm: cs:~hp-discover/trusty/nginx-proxy
+    num_units: 1
+    options:
+      default-route: /website
+  website:
+    annotations:
+      gui-x: '1034.9820332970885'
+      gui-y: '317.37576886108565'
+    charm: cs:~hp-discover/trusty/website
+    options:
+      content: https://github.com/juju/juju-academy.git

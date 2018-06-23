@@ -1,0 +1,53 @@
+relations:
+- - hadoop-master:namenode
+  - hadoop-slavecluster:datanode
+- - hadoop-master:resourcemanager
+  - hadoop-slavecluster:nodemanager
+- - hive-server:db
+  - mysql:db
+- - hive-server:namenode
+  - hadoop-master:namenode
+- - hive-server:resourcemanager
+  - hadoop-master:resourcemanager
+- - elasticsearch:client
+  - hive-server:elk
+- - elasticsearch:client
+  - hadoop-master:elasticsearch
+series: trusty
+services:
+  elasticsearch:
+    annotations:
+      gui-x: '1273.85578103427'
+      gui-y: '440.64687147112477'
+    charm: cs:trusty/elasticsearch-2
+    constraints: mem=8G cpu-cores=4
+    num_units: 1
+  hadoop-master:
+    annotations:
+      gui-x: '1273.4723978923976'
+      gui-y: '751.0885818896138'
+    charm: cs:trusty/hadoop-16
+    constraints: mem=16G cpu-cores=8
+    num_units: 1
+  hadoop-slavecluster:
+    annotations:
+      gui-x: '795.1608957803636'
+      gui-y: '749.9986888750404'
+    charm: cs:trusty/hadoop-16
+    constraints: mem=16G cpu-cores=8
+    num_units: 3
+  hive-server:
+    annotations:
+      gui-x: '801.1061543536961'
+      gui-y: '440.68495640133244'
+    charm: cs:trusty/hive2-1
+    constraints: mem=4G cpu-cores=4
+    num_units: 1
+  mysql:
+    annotations:
+      gui-x: '803.2158742391675'
+      gui-y: '99.07819166155457'
+    charm: cs:trusty/mysql-1
+    num_units: 1
+    options:
+      binlog-format: ROW

@@ -1,0 +1,34 @@
+relations:
+- - stormdeployer:juju-info
+  - storm:juju-info
+- - stormworker:worker
+  - storm:master
+- - storm:zookeeper
+  - zookeeper:zookeeper
+- - stormworker:zookeeper
+  - zookeeper:zookeeper
+series: precise
+services:
+  storm:
+    annotations:
+      gui-x: '-104.5'
+      gui-y: '-243'
+    charm: cs:~maarten-ectors/precise/storm
+    num_units: 1
+  stormdeployer:
+    annotations:
+      gui-x: '263.5'
+      gui-y: '-237'
+    charm: cs:~maarten-ectors/precise/stormdeployer
+  stormworker:
+    annotations:
+      gui-x: '-105.5'
+      gui-y: '92'
+    charm: cs:~maarten-ectors/precise/storm
+    num_units: 3
+  zookeeper:
+    annotations:
+      gui-x: '-433.5'
+      gui-y: '-84.75'
+    charm: cs:precise/zookeeper
+    num_units: 1

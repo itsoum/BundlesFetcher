@@ -1,0 +1,93 @@
+relations:
+- - dpaste:wsgi
+  - gunicorn:wsgi-file
+- - cache-lb:reverseproxy
+  - cache:cached-website
+- - cache:website
+  - app-lb:website
+- - apache:balancer
+  - cache-lb:website
+- - app-lb:reverseproxy
+  - dpaste:website
+- - dpaste:pgsql
+  - postgresql:db
+series: precise
+services:
+  apache:
+    annotations:
+      gui-x: '316.07373336801334'
+      gui-y: '183.33331298828125'
+    charm: cs:precise/apache2-25
+    num_units: 1
+    options:
+      enable_modules: proxy rewrite proxy_http proxy_balancer ssl headers
+      servername: dpaste.pyconuk
+      vhost_https_template: PFZpcnR1YWxIb3N0IF9kZWZhdWx0Xzo4MD4KICAgIFNlcnZlck5hbWUge3sgc2VydmVybmFtZSB9fQoKICAgIEVycm9yTG9nICR7QVBBQ0hFX0xPR19ESVJ9L3t7IHNlcnZlcm5hbWUgfX0taHR0cC1lcnJvci5sb2cKICAgIEN1c3RvbUxvZyAke0FQQUNIRV9MT0dfRElSfS97eyBzZXJ2ZXJuYW1lIH19LWh0dHAtYWNjZXNzLmxvZyBjb21iaW5lZAoKICAgIFJlZGlyZWN0TWF0Y2ggcGVybWFuZW50IF4vKC4qKSBodHRwczovL3t7IHNlcnZlcm5hbWUgfX0vJDEKPC9WaXJ0dWFsSG9zdD4KCjxWaXJ0dWFsSG9zdCBfZGVmYXVsdF86NDQzPgogICAgU2VydmVyTmFtZSB7eyBzZXJ2ZXJuYW1lIH19CiAgICBTZXJ2ZXJBZG1pbiB3ZWJtYXN0ZXJAdWJ1bnR1b25lLmNvbQoKICAgIEVycm9yTG9nICR7QVBBQ0hFX0xPR19ESVJ9L3t7IHNlcnZlcm5hbWUgfX0taHR0cHMtZXJyb3IubG9nCiAgICBDdXN0b21Mb2cgJHtBUEFDSEVfTE9HX0RJUn0ve3sgc2VydmVybmFtZSB9fS1odHRwcy1hY2Nlc3MubG9nIGNvbWJpbmVkCiAgICBMb2dMZXZlbCB3YXJuCgogICAgSGVhZGVyIHNldCBTdHJpY3QtVHJhbnNwb3J0LVNlY3VyaXR5ICJtYXgtYWdlPTI1OTIwMDAiCgogICAgU1NMRW5naW5lIE9uCiAgICBTU0xQcm90b2NvbCBhbGwgLVNTTHYyIC1TU0x2MwogICAgU1NMUHJveHlFbmdpbmUgT24KICAgIFNTTEhvbm9yQ2lwaGVyT3JkZXIgT24KICAgIFNTTENpcGhlclN1aXRlIFJDNC1TSEE6QUVTMTI4LVNIQTpBTEw6IUFESDohRVhQOiFMT1c6IU1ENTohU1NMVjI6IU5VTEwKCnslLSBpZiBzc2xfY2VydGxvY2F0aW9uICV9CiAgICBTU0xDZXJ0aWZpY2F0ZUZpbGUgICAgL2V0Yy9zc2wvY2VydHMve3sgc3NsX2NlcnRsb2NhdGlvbiB9fQogICAgU1NMQ2VydGlmaWNhdGVLZXlGaWxlIC9ldGMvc3NsL3ByaXZhdGUve3sgc3NsX2tleWxvY2F0aW9uIH19CnslLSBlbHNlICV9CiAgICAjIFNuYWtlb2lsIGNlcnQgZm9yIHRlc3RpbmcuCiAgICBTU0xDZXJ0aWZpY2F0ZUZpbGUgICAgL2V0Yy9zc2wvY2VydHMvc3NsLWNlcnQtc25ha2VvaWwucGVtCiAgICBTU0xDZXJ0aWZpY2F0ZUtleUZpbGUgL2V0Yy9zc2wvcHJpdmF0ZS9zc2wtY2VydC1zbmFrZW9pbC5rZXkKeyUtIGVuZGlmICV9Cgp7JS0gaWYgc3NsX2NoYWlubG9jYXRpb24gJX0KICAgIFNTTENlcnRpZmljYXRlQ2hhaW5GaWxlIC9ldGMvc3NsL2NlcnRzL3t7IHNzbF9jaGFpbmxvY2F0aW9uIH19CnslLSBlbmRpZiAlfQoKICAgIERvY3VtZW50Um9vdCAvc3J2L3t7IHNlcnZlcm5hbWUgfX0vd3d3L3Jvb3QKCiAgICBQcm94eVJlcXVlc3RzIG9mZgogICAgUHJveHlQcmVzZXJ2ZUhvc3Qgb24KCiAgICAjIEhpbnQgRGphbmdvIHRoYXQgd2UncmUgc2VydmluZyBjb250ZW50IHZpYSBodHRwcyBzbyB0aGF0IHVybHMgYXJlCiAgICAjIHByb3Blcmx5IGNvbXB1dGVkLgogICAgUmVxdWVzdEhlYWRlciBzZXQgWC1Gb3J3YXJkZWQtUHJvdG9jb2wgInNzbCIKICAgIFJlcXVlc3RIZWFkZXIgc2V0IFgtRm9yd2FyZGVkLVNzbCAib24iCgogICAgUmV3cml0ZUVuZ2luZSBvbgoKICAgIFJld3JpdGVSdWxlIF4vKC4qKSQgYmFsYW5jZXI6Ly9kcGFzdGUvJDEgW1AsTF0KPC9WaXJ0dWFsSG9zdD4K
+  app-lb:
+    annotations:
+      gui-x: '1209.259610137846'
+      gui-y: '181.68155303275955'
+    charm: cs:precise/haproxy-35
+    num_units: 1
+    options:
+      enable_monitoring: true
+      services: "- service_name: dpaste\n  service_host: 0.0.0.0\n  service_port:\
+        \ 80\n  service_options:\n    - mode http\n    - option httplog\n    - balance\
+        \ leastconn\n    - timeout server 50000\n  server_options:\n    - check inter\
+        \ 2000\n    - rise 2\n    - fall 5\n"
+  cache:
+    annotations:
+      gui-x: '882.9481512146183'
+      gui-y: '184.6666717529297'
+    charm: cs:~bloodearnest/precise/squid-reverseproxy-0
+    num_units: 1
+    options:
+      x_balancer_name_allowed: true
+  cache-lb:
+    annotations:
+      gui-x: '601.8224164733326'
+      gui-y: '184.66665649414062'
+    charm: cs:precise/haproxy-35
+    num_units: 1
+    options:
+      enable_monitoring: true
+      services: "- service_name: dpaste\n  service_host: 0.0.0.0\n  service_port:\
+        \ 80\n  service_options:\n    - mode http\n    - option httplog\n    - balance\
+        \ uri\n    - hash-type consistent\n    - timeout client 65000\n    - timeout\
+        \ server 65000\n  server_options:\n    - check inter 2000\n    - rise 2\n\
+        \    - fall 5\n"
+  dpaste:
+    annotations:
+      gui-x: '1491.5107134094799'
+      gui-y: '183.01488127982986'
+    charm: cs:~bloodearnest/precise/python-django-0
+    constraints: mem=512
+    num_units: 1
+    options:
+      additional_distro_packages: python-imaging,python-tz,python-dev,build-essential,libpq-dev,libmysqlclient-dev,libxml2-dev,libxslt1-dev
+      application_path: dpaste
+      django_allowed_hosts: '*'
+      django_debug: true
+      django_settings: dpaste.settings
+      django_south: true
+      django_south_version: ''
+      django_version: ''
+      repos_branch: '2.6'
+      repos_url: https://github.com/bartTC/dpaste.git
+      requirements_pip_files: requirements.txt
+      settings_injection_path: settings/__init__.py
+      urls_injection_path: urls/__init__.py
+      vcs: git
+  gunicorn:
+    annotations:
+      gui-x: '1477.0519708556942'
+      gui-y: '-66.31846222602951'
+    charm: cs:precise/gunicorn-12
+    options:
+      wsgi_access_logfile: /var/log/gunicorn/dpaste-access.log
+  postgresql:
+    annotations:
+      gui-x: '1495.718657867413'
+      gui-y: '438.31844696724045'
+    charm: cs:precise/postgresql-74
+    num_units: 1

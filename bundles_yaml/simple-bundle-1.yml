@@ -1,0 +1,8 @@
+series: xenial
+services:
+  ubuntu:
+    annotations:
+      gui-x: '550'
+      gui-y: '400'
+    charm: cs:ubuntu-10
+    num_units: 1

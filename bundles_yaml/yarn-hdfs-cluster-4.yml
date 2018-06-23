@@ -1,0 +1,21 @@
+relations:
+- - yarn-hdfs-node:resourcemanager
+  - compute-nodes:nodemanager
+- - yarn-hdfs-node:namenode
+  - compute-nodes:datanode
+series: trusty
+services:
+  compute-nodes:
+    annotations:
+      gui-x: '863.5'
+      gui-y: '612.9225159843982'
+    charm: cs:trusty/hadoop-16
+    constraints: mem=16384
+    num_units: 1
+  yarn-hdfs-node:
+    annotations:
+      gui-x: '870.6427919257696'
+      gui-y: '248.07748401560184'
+    charm: cs:trusty/hadoop-16
+    constraints: mem=16384
+    num_units: 1

@@ -1,0 +1,55 @@
+relations:
+- - namenode
+  - slave
+- - resourcemanager
+  - slave
+- - resourcemanager
+  - namenode
+- - plugin
+  - namenode
+- - plugin
+  - resourcemanager
+- - spark
+  - plugin
+- - zeppelin
+  - spark
+series: trusty
+services:
+  namenode:
+    annotations:
+      gui-x: '600'
+      gui-y: '350'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-namenode-5
+    constraints: mem=7G
+    num_units: 1
+  plugin:
+    annotations:
+      gui-x: '950'
+      gui-y: '200'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-plugin-66
+  resourcemanager:
+    annotations:
+      gui-x: '600'
+      gui-y: '100'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-resourcemanager-6
+    constraints: mem=7G
+    num_units: 1
+  slave:
+    annotations:
+      gui-x: '250'
+      gui-y: '200'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-slave-5
+    constraints: mem=7G
+    num_units: 3
+  spark:
+    annotations:
+      gui-x: '1300'
+      gui-y: '100'
+    charm: cs:~bigdata-dev/trusty/apache-spark-71
+    constraints: mem=7G
+    num_units: 1
+  zeppelin:
+    annotations:
+      gui-x: '1300'
+      gui-y: '350'
+    charm: cs:~bigdata-dev/trusty/apache-zeppelin-50

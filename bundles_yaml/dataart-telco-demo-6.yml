@@ -1,0 +1,222 @@
+relations:
+- - restcomm
+  - mesos-master
+- - restcomm:mysql
+  - mysql:db
+- - calls-consumer:redis
+  - redis-master:db
+- - calls-consumer:restcomm
+  - restcomm:website
+- - haproxy:reverseproxy
+  - calls-consumer:haproxy
+- - calls-consumer
+  - mesos-master
+- - conference-call:redis
+  - redis-master:db
+- - conference-call:restcomm
+  - restcomm:website
+- - haproxy:reverseproxy
+  - conference-call:haproxy
+- - conference-call
+  - mesos-master
+- - sms-feedback:redis
+  - redis-master:db
+- - sms-feedback:restcomm
+  - restcomm:website
+- - haproxy:reverseproxy
+  - sms-feedback:haproxy
+- - sms-feedback
+  - mesos-master
+- - drop-conference:redis
+  - redis-master:db
+- - drop-conference:restcomm
+  - restcomm:website
+- - drop-conference:mesos
+  - mesos-master:juju-info
+- - mesos-master
+  - mesos-slave
+- - monitor-agent-mesos:monitor-server
+  - monitor-server:monitor-server
+- - monitor-agent-mesos-master:monitor-server
+  - monitor-server:monitor-server
+- - monitor-agent-restcomm:monitor-server
+  - monitor-server:monitor-server
+- - monitor-server
+  - mesos-master
+- - monitor-agent-mesos
+  - mesos-master
+- - monitor-agent-mesos
+  - mesos-slave
+- - monitor-agent-mesos-master
+  - mesos-master
+- - monitor-agent-restcomm
+  - mesos-master
+- - elasticsearch
+  - kibana
+- - monitor-server
+  - elasticsearch
+- - opencell-billing:restcomm
+  - restcomm:website
+- - opencell-billing:redis
+  - redis-master:db
+- - opencell-billing:opencell
+  - opencell:opencell
+- - postgresql:db
+  - opencell:database
+- - mesos-master:juju-info
+  - opencell-billing:mesos
+series: trusty
+services:
+  calls-consumer:
+    annotations:
+      gui-x: '1740'
+      gui-y: '320'
+    charm: cs:~dataart.telco/trusty/calls-consumer-1
+    options:
+      DID_DOMAIN: ''
+      PHONE_NUMBER: '5555'
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335
+  conference-call:
+    annotations:
+      gui-x: '1740'
+      gui-y: '600'
+    charm: cs:~dataart.telco/trusty/conference-call-0
+    options:
+      DID_DOMAIN: ''
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335
+  drop-conference:
+    annotations:
+      gui-x: '1740'
+      gui-y: '30'
+    charm: cs:~dataart.telco/trusty/drop-conference-1
+    options:
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335
+  elasticsearch:
+    annotations:
+      gui-x: '380'
+      gui-y: '950'
+    charm: cs:trusty/elasticsearch-13
+    constraints: instance-type=m3.large root-disk=20G
+    expose: true
+    num_units: 1
+    options:
+      firewall_enabled: false
+  haproxy:
+    annotations:
+      gui-x: '2280'
+      gui-y: '760'
+    charm: cs:trusty/haproxy-11
+    expose: true
+    num_units: 1
+    options:
+      services: '[]'
+  kibana:
+    annotations:
+      gui-x: '0'
+      gui-y: '950'
+    charm: cs:trusty/kibana-10
+    expose: true
+    num_units: 1
+    options:
+      kibana_source: https://download.elastic.co/kibana/kibana/kibana-4.1.4-linux-x64.tar.gz
+      kibana_source_checksum: f88a7ad612b4e7129a951cf0e64429e63d847ed9
+  mesos-master:
+    annotations:
+      gui-x: '1140'
+      gui-y: '570'
+    charm: cs:~dataart.telco/trusty/mesos-master-1
+    constraints: instance-type=m3.large root-disk=20G
+    expose: true
+    num_units: 1
+  mesos-slave:
+    annotations:
+      gui-x: '1140'
+      gui-y: '950'
+    charm: cs:~dataart.telco/trusty/mesos-slave-1
+    constraints: instance-type=m3.large root-disk=20G
+    expose: true
+    num_units: 2
+  monitor-agent-mesos:
+    annotations:
+      gui-x: '794'
+      gui-y: '980'
+    charm: cs:~dataart.telco/trusty/monitor-agent-mesos-1
+  monitor-agent-mesos-master:
+    annotations:
+      gui-x: '794'
+      gui-y: '600'
+    charm: cs:~dataart.telco/trusty/monitor-agent-mesos-master-1
+  monitor-agent-restcomm:
+    annotations:
+      gui-x: '794'
+      gui-y: '220'
+    charm: cs:~dataart.telco/trusty/monitor-agent-restcomm-1
+  monitor-server:
+    annotations:
+      gui-x: '380'
+      gui-y: '570'
+    charm: cs:~dataart.telco/trusty/monitor-server-1
+    expose: true
+    num_units: 1
+    options:
+      CHECK_PERIOD: 20
+      IGNORE_LIST: restcomm
+      JUJU_SCALE_DOWN: 50
+      JUJU_SCALE_UP: 75
+      MESOS_SCALE_DOWN: 35
+      MESOS_SCALE_UP: 66
+  mysql:
+    annotations:
+      gui-x: '1140'
+      gui-y: '-196'
+    charm: cs:trusty/mysql-34
+    constraints: instance-type=m3.medium
+    expose: true
+    num_units: 1
+  opencell:
+    annotations:
+      gui-x: '2280'
+      gui-y: '-292'
+    charm: cs:~dataart.telco/trusty/opencell-1
+    constraints: instance-type=m3.medium
+    expose: true
+    num_units: 1
+  opencell-billing:
+    annotations:
+      gui-x: '1740'
+      gui-y: '-260'
+    charm: cs:~dataart.telco/trusty/opencell-billing-1
+    options:
+      OPENCELL_PASSWORD: Basic bWV2ZW8uYWRtaW46bWV2ZW8uYWRtaW4=
+  postgresql:
+    annotations:
+      gui-x: '2660'
+      gui-y: '-293'
+    charm: cs:trusty/postgresql-41
+    constraints: root-disk=20G instance-type=m3.medium
+    num_units: 1
+  redis-master:
+    annotations:
+      gui-x: '2280'
+      gui-y: '190'
+    charm: cs:~mbruzek/trusty/redis-master-0
+    expose: true
+    num_units: 1
+  restcomm:
+    annotations:
+      gui-x: '1170'
+      gui-y: '224'
+    charm: cs:~dataart.telco/trusty/restcomm-single-0
+    expose: true
+    options:
+      init_password: 42d8aa7cde9c78c4757862d84620c335
+      sms_proxy: ''
+      voicerss_key: 29b2d893df9f454abbfae94df6cff95b
+  sms-feedback:
+    annotations:
+      gui-x: '1740'
+      gui-y: '880'
+    charm: cs:~dataart.telco/trusty/sms-feedback-0
+    options:
+      DID_DOMAIN: ''
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335

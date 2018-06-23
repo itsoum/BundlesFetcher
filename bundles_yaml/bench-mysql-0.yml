@@ -1,0 +1,10 @@
+relations:
+- - mysql
+  - mysql-benchmark
+services:
+  mysql:
+    charm: cs:trusty/mysql-29
+    num_units: 1
+  mysql-benchmark:
+    charm: cs:~aisrael/trusty/mysql-benchmark-5
+    num_units: 0

@@ -1,0 +1,47 @@
+relations:
+- - cf-dea:nats
+  - cf-nats:nats
+- - cf-go-router:nats
+  - cf-nats:nats
+- - cf-uaa:nats
+  - cf-nats:nats
+- - cf-uaa:router
+  - cf-go-router:router
+- - cf-dea:router
+  - cf-go-router:router
+- - cf-cloud-controller:nats
+  - cf-nats:nats
+- - cf-cloud-controller:router
+  - cf-go-router:router
+series: precise
+services:
+  cf-cloud-controller:
+    annotations:
+      gui-x: '-61.94976380966318'
+      gui-y: '-82.66450112964162'
+    charm: cs:~prismakov/trusty/cf-cloud-controller-2
+    num_units: 1
+  cf-dea:
+    annotations:
+      gui-x: '-65.66666412353516'
+      gui-y: '-320'
+    charm: cs:~cf-charmers/trusty/cf-dea-31
+    num_units: 1
+  cf-go-router:
+    annotations:
+      gui-x: '565.0000610351562'
+      gui-y: '101.33332443237305'
+    charm: cs:~cf-charmers/trusty/cf-go-router-34
+    num_units: 1
+  cf-nats:
+    annotations:
+      gui-x: '563.6666297912598'
+      gui-y: '-238.6666603088379'
+    charm: cs:~cf-charmers/trusty/cf-nats-27
+    num_units: 1
+  cf-uaa:
+    annotations:
+      gui-x: '-53.66667175292969'
+      gui-y: '168.66668701171875'
+    charm: cs:~cf-charmers/trusty/cf-uaa-31
+    num_units: 1

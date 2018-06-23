@@ -1,0 +1,39 @@
+relations:
+- - mediawiki:db
+  - mysql:db
+- - haproxy:reverseproxy
+  - mediawiki:website
+series: precise
+services:
+  haproxy:
+    annotations:
+      gui-x: '684.1810607910156'
+      gui-y: '-93.65547943115234'
+    charm: cs:precise/haproxy-27
+    num_units: 1
+  mediawiki:
+    annotations:
+      gui-x: '689.2766418457031'
+      gui-y: '211.53964233398438'
+    charm: cs:precise/mediawiki-11
+    num_units: 2
+    options:
+      name: Juju demo wiki!
+  mongodb:
+    annotations:
+      gui-x: '281.4385681152344'
+      gui-y: '501.87579345703125'
+    charm: cs:precise/mongodb-21
+    num_units: 2
+  mysql:
+    annotations:
+      gui-x: '685.6976013183594'
+      gui-y: '528.0145874023438'
+    charm: cs:precise/mysql-33
+    num_units: 1
+  varnish:
+    annotations:
+      gui-x: '273.5313415527344'
+      gui-y: '-104.41975116729736'
+    charm: cs:precise/varnish-3
+    num_units: 1

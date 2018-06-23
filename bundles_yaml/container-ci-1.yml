@@ -1,0 +1,151 @@
+applications:
+  jenkins:
+    annotations:
+      gui-x: '211.00091552734375'
+      gui-y: '67.04528045654297'
+    charm: cs:trusty/jenkins-6
+    constraints: mem=12288 root-disk=153600
+    expose: true
+    num_units: 1
+    options:
+      password: ''
+      plugins: 'ace-editor
+
+        analysis-core
+
+        antisamy-markup-formatter
+
+        authentication-tokens
+
+        branch-api
+
+        build-timeout
+
+        cloudbees-folder
+
+        credentials
+
+        credentials-binding
+
+        dependency-check-jenkins-plugin
+
+        docker-build-step
+
+        docker-build-publish
+
+        docker-commons
+
+        durable-task
+
+        external-monitor-job
+
+        git
+
+        git-client
+
+        github
+
+        github-api
+
+        github-branch-source
+
+        github-organization-folder
+
+        git-server
+
+        handlebars
+
+        icon-shim
+
+        javadoc
+
+        jquery-detached
+
+        junit
+
+        ldap
+
+        mailer
+
+        matrix-auth
+
+        matrix-project
+
+        maven-plugin
+
+        momentjs
+
+        pam-auth
+
+        pipeline-build-step
+
+        pipeline-graph-analysis
+
+        pipeline-input-step
+
+        pipeline-rest-api
+
+        pipeline-stage-step
+
+        pipeline-stage-view
+
+        plain-credentials
+
+        scm-api
+
+        script-security
+
+        secondary-timestamper-plugin
+
+        ssh-credentials
+
+        structs
+
+        timestamper
+
+        token-macro
+
+        windows-slaves
+
+        workflow-aggregator
+
+        workflow-api
+
+        workflow-basic-steps
+
+        workflow-cps
+
+        workflow-cps-global-lib
+
+        workflow-durable-task-step
+
+        workflow-job
+
+        workflow-multibranch
+
+        workflow-scm-step
+
+        workflow-step-api
+
+        workflow-support
+
+        ws-cleanup
+
+        '
+      remove-unlisted-plugins: 'yes'
+      tools: docker.io git bzr build-essential unzip tree
+    to:
+    - '0'
+  workspace:
+    annotations:
+      gui-x: '402.0890808105469'
+      gui-y: '303.2294006347656'
+    charm: cs:~lazypower/trusty/jenkins-workspace-2
+machines:
+  '0':
+    constraints: root-disk=153600
+    series: trusty
+relations:
+- - jenkins:juju-info
+  - workspace:jenkins-host
+series: xenial

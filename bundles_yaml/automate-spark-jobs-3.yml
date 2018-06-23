@@ -1,0 +1,99 @@
+applications:
+  getdata:
+    annotations:
+      gui-x: 6412.326599121094
+      gui-y: 1051.9226379394531
+    charm: cs:~tengu-team/spark-job-2
+    options:
+      job_location: https://raw.githubusercontent.com/tengu-team/bundle-spark/master/jobs/writedata.py
+  hadoop-namenode:
+    annotations:
+      gui-x: 5593.3056640625
+      gui-y: 1410.1217346191406
+    charm: cs:hadoop-namenode-31
+    num_units: 1
+    to:
+    - '1'
+  hadoop-plugin:
+    annotations:
+      gui-x: 5874.531921386719
+      gui-y: 1282.3707275390625
+    charm: cs:hadoop-plugin-31
+  hadoop-resourcemanager:
+    annotations:
+      gui-x: 5603.686584472656
+      gui-y: 1098.5697937011719
+    charm: cs:hadoop-resourcemanager-33
+    num_units: 1
+    to:
+    - '1'
+  hadoop-slave:
+    annotations:
+      gui-x: '5314.690246582031'
+      gui-y: '1238.49365234375'
+    charm: cs:hadoop-slave-32
+    num_units: 1
+    to:
+    - '0'
+  spark:
+    annotations:
+      gui-x: 6065
+      gui-y: 1120.5
+    charm: cs:spark-56
+    num_units: 1
+    options:
+      spark_bench_enabled: true
+    to:
+    - '0'
+  tengu-notebook:
+    annotations:
+      gui-x: 6428.494567871094
+      gui-y: 1440.6942138671875
+    charm: cs:~tengu-team/notebook-1
+    options:
+      notebook_location: https://raw.githubusercontent.com/tengu-team/bundle-spark/master/spark-notebook.json
+  validatedata:
+    annotations:
+      gui-x: 6419.145080566406
+      gui-y: 1241.2651062011719
+    charm: cs:~tengu-team/spark-job-2
+    options:
+      job_location: https://raw.githubusercontent.com/tengu-team/bundle-spark/master/jobs/transformdata.py
+  zeppelin:
+    annotations:
+      gui-x: 6057.6982421875
+      gui-y: 1413.867919921875
+    charm: cs:zeppelin-32
+    expose: true
+    num_units: 1
+    to:
+    - '0'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+relations:
+- - hadoop-namenode:datanode
+  - hadoop-slave:namenode
+- - hadoop-plugin:namenode
+  - hadoop-namenode:namenode
+- - zeppelin:hadoop
+  - hadoop-plugin:hadoop-plugin
+- - hadoop-namenode:namenode
+  - hadoop-resourcemanager:namenode
+- - zeppelin:spark
+  - spark:client
+- - hadoop-resourcemanager:nodemanager
+  - hadoop-slave:resourcemanager
+- - hadoop-plugin:resourcemanager
+  - hadoop-resourcemanager:resourcemanager
+- - getdata:spark
+  - spark:client
+- - validatedata:spark
+  - spark:client
+- - tengu-notebook:zeppelin
+  - zeppelin:juju-info
+series: xenial

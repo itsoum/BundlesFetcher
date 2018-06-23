@@ -1,0 +1,98 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=8192 root-disk=30720
+    series: trusty
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=8192 root-disk=30720
+    series: trusty
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '4':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '5':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '6':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=30720
+    series: trusty
+  '7':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=30720
+    series: trusty
+  '8':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=30720
+    series: trusty
+relations:
+- - kibana:rest
+  - elasticsearch:client
+- - filebeat:elasticsearch
+  - elasticsearch:client
+- - topbeat:elasticsearch
+  - elasticsearch:client
+- - swarm:consul
+  - consul:api
+- - filebeat:beats-host
+  - consul:juju-info
+- - filebeat:beats-host
+  - swarm:juju-info
+- - topbeat:beats-host
+  - consul:juju-info
+- - topbeat:beats-host
+  - swarm:juju-info
+series: trusty
+services:
+  consul:
+    annotations:
+      gui-x: '1153.579'
+      gui-y: '393.138'
+    charm: cs:~containers/trusty/consul-2
+    num_units: 3
+    to:
+    - '3'
+    - '4'
+    - '5'
+  elasticsearch:
+    annotations:
+      gui-x: '524.309'
+      gui-y: '403.205'
+    charm: cs:trusty/elasticsearch-15
+    num_units: 2
+    to:
+    - '0'
+    - '1'
+  filebeat:
+    annotations:
+      gui-x: '808.188'
+      gui-y: '426.512'
+    charm: cs:trusty/filebeat-1
+  kibana:
+    annotations:
+      gui-x: '241.817'
+      gui-y: '395.914'
+    charm: cs:trusty/kibana-12
+    expose: true
+    num_units: 1
+    options:
+      dashboards: beats
+    to:
+    - '2'
+  swarm:
+    annotations:
+      gui-x: '1147.795'
+      gui-y: '643.4722'
+    charm: cs:~containers/trusty/swarm-2
+    expose: true
+    num_units: 3
+    to:
+    - '6'
+    - '7'
+    - '8'
+  topbeat:
+    annotations:
+      gui-x: '819.045'
+      gui-y: '585.538'
+    charm: cs:trusty/topbeat-1

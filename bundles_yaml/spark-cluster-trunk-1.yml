@@ -1,0 +1,17 @@
+relations:
+- - spark-master:master
+  - spark-slave:slave
+series: precise
+services:
+  spark-master:
+    annotations:
+      gui-x: '1134.6229206884336'
+      gui-y: '717.7440061986317'
+    charm: cs:~asanjar/trusty/spark
+    num_units: 1
+  spark-slave:
+    annotations:
+      gui-x: '1047.1666259765625'
+      gui-y: '265.96776576571847'
+    charm: cs:~asanjar/trusty/spark
+    num_units: 1

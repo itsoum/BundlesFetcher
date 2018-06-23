@@ -1,0 +1,51 @@
+relations:
+- - spark
+  - zookeeper
+- - kibana:rest
+  - elasticsearch:client
+- - filebeat:elasticsearch
+  - elasticsearch:client
+- - filebeat:beats-host
+  - spark:juju-info
+- - topbeat:elasticsearch
+  - elasticsearch:client
+- - topbeat:beats-host
+  - spark:juju-info
+series: trusty
+services:
+  elasticsearch:
+    annotations:
+      gui-x: '750'
+      gui-y: '200'
+    charm: cs:trusty/elasticsearch-15
+    num_units: 1
+  filebeat:
+    annotations:
+      gui-x: '500'
+      gui-y: '375'
+    charm: cs:trusty/filebeat-2
+  kibana:
+    annotations:
+      gui-x: '1000'
+      gui-y: '200'
+    charm: cs:trusty/kibana-12
+    expose: true
+    num_units: 1
+  spark:
+    annotations:
+      gui-x: '250'
+      gui-y: '200'
+    charm: cs:trusty/apache-spark-9
+    constraints: mem=3G
+    num_units: 3
+  topbeat:
+    annotations:
+      gui-x: '500'
+      gui-y: '125'
+    charm: cs:trusty/topbeat-2
+  zookeeper:
+    annotations:
+      gui-x: '0'
+      gui-y: '200'
+    charm: cs:trusty/apache-zookeeper-2
+    num_units: 3

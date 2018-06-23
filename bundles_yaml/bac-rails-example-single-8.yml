@@ -1,0 +1,19 @@
+relations:
+- - sample-app:postgresql
+  - postgresql:db
+series: precise
+services:
+  postgresql:
+    annotations:
+      gui-x: '1917.5'
+      gui-y: '327.5'
+    charm: cs:precise/postgresql-62
+    num_units: 1
+  sample-app:
+    annotations:
+      gui-x: '1915.5'
+      gui-y: '-0.5'
+    charm: cs:precise/rails-1
+    num_units: 1
+    options:
+      repo: https://github.com/pavelpachkovskij/sample-rails

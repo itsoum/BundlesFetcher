@@ -1,0 +1,94 @@
+applications:
+  activemq:
+    annotations:
+      gui-x: 4699.53662109375
+      gui-y: 1756.860107421875
+    charm: cs:~tengu-team/activemq-1
+    expose: true
+    num_units: 1
+    to:
+    - '1'
+  activemq-flow:
+    annotations:
+      gui-x: 5101.73583984375
+      gui-y: 1196.609619140625
+    charm: cs:~tengu-team/activemq-flow-2
+    num_units: 1
+    to:
+    - lxd:0
+  bundle-api:
+    annotations:
+      gui-x: 5758.0888671875
+      gui-y: 1187.774658203125
+    charm: cs:~tengu-team/demo-bundle-api-1
+    expose: true
+    num_units: 1
+    to:
+    - '0'
+  mongodb:
+    annotations:
+      gui-x: 5511.44091796875
+      gui-y: 1793.1209716796875
+    charm: cs:mongodb-43
+    num_units: 1
+    options:
+      volume-map: '{}'
+    to:
+    - '1'
+  nodered:
+    annotations:
+      gui-x: 5106.24658203125
+      gui-y: 1781.2828369140625
+    charm: cs:~tengu-team/node-red-1
+    expose: true
+    num_units: 1
+    to:
+    - '2'
+  nodered-deployer:
+    annotations:
+      gui-x: 5137.0380859375
+      gui-y: 1521.6710205078125
+    charm: cs:~tengu-team/nodered-deployer-1
+  rss-feed:
+    annotations:
+      gui-x: 4454.1005859375
+      gui-y: 1187.6981201171875
+    charm: cs:~tengu-team/demo-data-source-0
+    num_units: 1
+    to:
+    - lxd:0
+  tengu-db:
+    annotations:
+      gui-x: 5530.96044921875
+      gui-y: 1508.83740234375
+    charm: cs:~tengu-team/mongo-database-0
+  tengu-topic:
+    annotations:
+      gui-x: 4738.05126953125
+      gui-y: 1517.933349609375
+    charm: cs:~tengu-team/activemq-topic-0
+machines:
+  '0':
+    series: xenial
+  '1':
+    series: xenial
+  '2':
+    series: xenial
+relations:
+- - tengu-db:mongodb
+  - mongodb:database
+- - activemq:messagebroker
+  - tengu-topic:messagebroker
+- - rss-feed:topic
+  - tengu-topic:activemqtopic
+- - nodered:juju-info
+  - nodered-deployer:nodered
+- - activemq-flow:dataflow
+  - nodered-deployer:dataflow
+- - activemq-flow:topic
+  - tengu-topic:activemqtopic
+- - activemq-flow:db
+  - tengu-db:db
+- - bundle-api:db
+  - tengu-db:db
+series: xenial

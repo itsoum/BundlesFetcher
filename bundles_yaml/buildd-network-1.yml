@@ -1,0 +1,29 @@
+relations:
+- - wanna-build:db-admin
+  - postgresql:db-admin
+- - wanna-build:package-builder
+  - sbuild:package-builder
+services:
+  postgresql:
+    annotations:
+      gui-x: '1185.4522705078125'
+      gui-y: '264.9775695800781'
+    charm: cs:precise/postgresql-52
+    num_units: 1
+  sbuild:
+    annotations:
+      gui-x: '748.5773010253906'
+      gui-y: '400.302978515625'
+    charm: cs:~xnox/trusty/sbuild-0
+    num_units: 1
+    options:
+      architecture: armhf
+      chroots: ubuntu:trusty
+  wanna-build:
+    annotations:
+      gui-x: '770.0202026367188'
+      gui-y: '-6.8376922607421875'
+    charm: cs:~xnox/trusty/wanna-build-0
+    num_units: 1
+    options:
+      architectures: armhf

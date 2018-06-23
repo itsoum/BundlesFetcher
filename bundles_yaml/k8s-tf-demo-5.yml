@@ -1,0 +1,123 @@
+applications:
+  easyrsa:
+    annotations:
+      gui-x: '1080.9298706054688'
+      gui-y: '503.37957763671875'
+    charm: cs:~containers/easyrsa-2
+    num_units: 1
+    to:
+    - '1'
+  etcd:
+    annotations:
+      gui-x: '1095.2626953125'
+      gui-y: '848.3707885742188'
+    charm: cs:~containers/etcd-13
+    num_units: 1
+    to:
+    - '0'
+  flannel:
+    annotations:
+      gui-x: '925.6192932128906'
+      gui-y: '539.232666015625'
+    charm: cs:~containers/flannel-2
+  haproxy:
+    annotations:
+      gui-x: '95.12571334838867'
+      gui-y: '511.2660217285156'
+    charm: cs:haproxy-37
+    expose: true
+    num_units: 1
+    to:
+    - '5'
+  inception:
+    annotations:
+      gui-x: '619.463623046875'
+      gui-y: '541.06396484375'
+    charm: cs:~cmars/inception-6
+    expose: true
+  kubeapi-load-balancer:
+    annotations:
+      gui-x: '1354.4364013671875'
+      gui-y: '481.5481872558594'
+    charm: cs:~containers/kubeapi-load-balancer-2
+    expose: true
+    num_units: 1
+    to:
+    - '2'
+  kubernetes-master:
+    annotations:
+      gui-x: '800'
+      gui-y: '850'
+    charm: cs:~cmars/kubernetes-master-3
+    num_units: 1
+    to:
+    - '3'
+  kubernetes-worker:
+    annotations:
+      gui-x: '798.9234619140625'
+      gui-y: '235.33502197265625'
+    charm: cs:~cmars/kubernetes-worker-0
+    constraints: cores=4 mem=15360 root-disk=30720
+    expose: true
+    num_units: 1
+    to:
+    - '4'
+  tfdemo:
+    annotations:
+      gui-x: '365.01983642578125'
+      gui-y: '511.3851318359375'
+    charm: cs:~cmars/tfdemo-0
+    num_units: 1
+    to:
+    - lxd:haproxy/0
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+  '4':
+    constraints: arch=amd64 cpu-cores=4 cpu-power=1100 mem=26000 root-disk=30720
+    series: xenial
+  '5':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=138 mem=1700 root-disk=10240
+    series: xenial
+relations:
+- - flannel:etcd
+  - etcd:db
+- - kubernetes-master:loadbalancer
+  - kubeapi-load-balancer:loadbalancer
+- - kubernetes-master:cluster-dns
+  - kubernetes-worker:kube-dns
+- - kubernetes-master:certificates
+  - easyrsa:client
+- - kubernetes-master:etcd
+  - etcd:db
+- - kubernetes-master:sdn-plugin
+  - flannel:host
+- - kubernetes-worker:certificates
+  - easyrsa:client
+- - kubernetes-worker:sdn-plugin
+  - flannel:host
+- - kubernetes-worker:kube-api-endpoint
+  - kubeapi-load-balancer:website
+- - kubeapi-load-balancer:certificates
+  - easyrsa:client
+- - kubernetes-master:kube-api-endpoint
+  - kubeapi-load-balancer:apiserver
+- - kubernetes-master:workload
+  - inception:workload
+- - kubernetes-worker:node-host
+  - inception:node-guest
+- - inception:serving
+  - tfdemo:client
+- - tfdemo:website
+  - haproxy:reverseproxy
+series: xenial

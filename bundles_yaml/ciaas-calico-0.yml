@@ -1,0 +1,199 @@
+machines:
+  '0':
+    constraints: arch=amd64
+    series: xenial
+  '1':
+    constraints: arch=amd64
+    series: xenial
+  '2':
+    constraints: arch=amd64
+    series: xenial
+relations:
+- - keystone
+  - mysql
+- - nova-cloud-controller
+  - glance
+- - nova-cloud-controller
+  - keystone
+- - nova-cloud-controller
+  - mysql
+- - nova-cloud-controller
+  - rabbitmq-server
+- - glance
+  - keystone
+- - glance
+  - mysql
+- - cinder
+  - keystone
+- - cinder
+  - nova-cloud-controller
+- - cinder
+  - mysql
+- - cinder
+  - rabbitmq-server
+- - cinder:image-service
+  - glance:image-service
+- - openstack-dashboard
+  - keystone
+- - nova-compute:amqp
+  - rabbitmq-server:amqp
+- - nova-compute
+  - nova-cloud-controller
+- - nova-compute
+  - glance
+- - neutron-calico:neutron-plugin-api
+  - neutron-api:neutron-plugin-api
+- - neutron-calico:neutron-plugin
+  - nova-compute:neutron-plugin
+- - neutron-api
+  - nova-cloud-controller
+- - neutron-calico:bgp-route-reflector
+  - bird:bgp-route-reflector
+- - neutron-calico:etcd-proxy
+  - etcd:proxy
+- - neutron-api:etcd-proxy
+  - etcd:proxy
+- - neutron-calico:amqp
+  - rabbitmq-server:amqp
+- - neutron-api
+  - mysql
+- - neutron-api
+  - rabbitmq-server
+- - neutron-api
+  - keystone
+- - ceph-mon
+  - glance
+- - ceph-mon
+  - nova-compute
+- - ceph-osd:mon
+  - ceph-mon:osd
+- - ceph-mon
+  - cinder
+series: xenial
+services:
+  bird:
+    charm: cs:~project-calico/xenial/bird-5
+    num_units: 1
+    to:
+    - lxc:0
+  ceph-mon:
+    charm: cs:xenial/ceph-mon
+    num_units: 1
+    options:
+      expected-osd-count: 1
+      fsid: 6547bd3e-1397-11e2-82e5-53567c8d32dc
+      monitor-count: 1
+      monitor-secret: AQCXrnZQwI7KGBAAiPofmKEXKxu5bUzoYLVkbQ==
+      source: cloud:xenial-newton
+    to:
+    - lxc:1
+  ceph-osd:
+    charm: cs:xenial/ceph-osd
+    hwreqs:
+      storage: /dev/sdb
+    num_units: 1
+    options:
+      osd-devices: /dev/sdb
+      osd-reformat: 'yes'
+      source: cloud:xenial-newton
+    to:
+    - '0'
+  cinder:
+    charm: cs:xenial/cinder
+    hwreqs:
+      storage: None
+    num_units: 1
+    options:
+      block-device: None
+      ceph-osd-replication-count: 1
+      glance-api-version: 2
+      openstack-origin: cloud:xenial-newton
+      overwrite: 'true'
+      remove-missing-force: true
+    to:
+    - '2'
+  etcd:
+    charm: cs:etcd-8
+    num_units: 1
+    to:
+    - lxc:2
+  glance:
+    charm: cs:xenial/glance
+    num_units: 1
+    options:
+      ceph-osd-replication-count: 1
+      debug: true
+      openstack-origin: cloud:xenial-newton
+      verbose: true
+    to:
+    - lxc:0
+  keystone:
+    charm: cs:xenial/keystone
+    num_units: 1
+    options:
+      admin-password: openstack
+      admin-token: ubuntutesting
+      openstack-origin: cloud:xenial-newton
+    to:
+    - lxc:1
+  mysql:
+    charm: cs:xenial/percona-cluster
+    num_units: 1
+    options:
+      max-connections: 20000
+      source: cloud:xenial-newton
+    to:
+    - lxc:2
+  neutron-api:
+    charm: cs:~project-calico/xenial/neutron-api-12
+    hwreqs:
+      compute: amd64
+    num_units: 1
+    options:
+      etcd-package-url: http://launchpadlibrarian.net/274096873/etcd_2.3.7+dfsg-4_amd64.deb
+      neutron-plugin: Calico
+      neutron-security-groups: true
+      openstack-origin: cloud:xenial-newton
+    to:
+    - lxc:0
+  neutron-calico:
+    charm: cs:~project-calico/xenial/neutron-calico-18
+    hwreqs:
+      compute: amd64
+    num_units: 0
+    options:
+      etcd-package-url: http://launchpadlibrarian.net/274096873/etcd_2.3.7+dfsg-4_amd64.deb
+      openstack-origin: cloud:xenial-newton
+  nova-cloud-controller:
+    charm: cs:xenial/nova-cloud-controller
+    num_units: 1
+    options:
+      network-manager: Neutron
+      openstack-origin: cloud:xenial-newton
+    to:
+    - lxc:1
+  nova-compute:
+    charm: cs:xenial/nova-compute
+    hwreqs:
+      compute: kvm
+    num_units: 2
+    options:
+      openstack-origin: cloud:xenial-newton
+      virt-type: kvm
+    to:
+    - '0'
+    - '1'
+  openstack-dashboard:
+    charm: cs:xenial/openstack-dashboard
+    num_units: 1
+    options:
+      openstack-origin: cloud:xenial-newton
+    to:
+    - lxc:2
+  rabbitmq-server:
+    charm: cs:xenial/rabbitmq-server
+    num_units: 1
+    options:
+      source: cloud:xenial-newton
+    to:
+    - lxc:0

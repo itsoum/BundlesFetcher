@@ -1,0 +1,63 @@
+machines:
+  '0':
+    constraints: arch=amd64
+    series: trusty
+  '1':
+    constraints: arch=amd64
+    series: xenial
+  '2':
+    constraints: arch=amd64
+    series: xenial
+  '3':
+    constraints: arch=amd64 mem=8G cpu-cores=4
+    series: trusty
+relations:
+- - openmano:db
+  - mariadb:db
+- - openvim:db
+  - mariadb:db
+- - openmano:openvim-controller
+  - openvim:openvim-controller
+- - openvim:compute
+  - openvim-compute:compute
+services:
+  mariadb:
+    annotations:
+      gui-x: '539'
+      gui-y: '494.7050807568877'
+    charm: cs:trusty/mariadb-6
+    num_units: 1
+    to:
+    - '0'
+  openmano:
+    annotations:
+      gui-x: '939'
+      gui-y: '494.7050807568877'
+    charm: cs:~nfv/openmano-15
+    num_units: 1
+    to:
+    - '1'
+  openvim:
+    annotations:
+      gui-x: '739'
+      gui-y: '148.29491924311225'
+    bindings:
+      internal: space-1
+      public: space-0
+    charm: cs:~nfv/openvim-14
+    num_units: 1
+    options:
+      branch: onsite
+    to:
+    - '2'
+  openvim-compute:
+    annotations:
+      gui-x: '339'
+      gui-y: '148.29491924311225'
+    bindings:
+      internal: space-1
+      public: space-0
+    charm: cs:~nfv/openvim-compute-15
+    num_units: 1
+    to:
+    - '3'

@@ -1,0 +1,71 @@
+relations:
+- - namenode
+  - slave
+- - resourcemanager
+  - slave
+- - resourcemanager
+  - namenode
+- - plugin
+  - namenode
+- - plugin
+  - resourcemanager
+- - flume-hdfs
+  - plugin
+- - flume-kafka
+  - flume-hdfs
+- - flume-kafka
+  - kafka
+- - kafka
+  - zookeeper
+series: trusty
+services:
+  flume-hdfs:
+    annotations:
+      gui-x: '1200'
+      gui-y: '100'
+    charm: cs:trusty/apache-flume-hdfs-6
+    num_units: 1
+  flume-kafka:
+    annotations:
+      gui-x: '1500'
+      gui-y: '100'
+    charm: cs:trusty/apache-flume-kafka-0
+    num_units: 1
+  kafka:
+    annotations:
+      gui-x: '1500'
+      gui-y: '350'
+    charm: cs:trusty/apache-kafka-4
+    num_units: 1
+  namenode:
+    annotations:
+      gui-x: '600'
+      gui-y: '350'
+    charm: cs:trusty/apache-hadoop-namenode-2
+    constraints: mem=7G
+    num_units: 1
+  plugin:
+    annotations:
+      gui-x: '950'
+      gui-y: '200'
+    charm: cs:trusty/apache-hadoop-plugin-14
+  resourcemanager:
+    annotations:
+      gui-x: '600'
+      gui-y: '100'
+    charm: cs:trusty/apache-hadoop-resourcemanager-3
+    constraints: mem=7G
+    num_units: 1
+  slave:
+    annotations:
+      gui-x: '250'
+      gui-y: '200'
+    charm: cs:trusty/apache-hadoop-slave-2
+    constraints: mem=7G
+    num_units: 3
+  zookeeper:
+    annotations:
+      gui-x: '1200'
+      gui-y: '350'
+    charm: cs:trusty/apache-zookeeper-3
+    num_units: 3

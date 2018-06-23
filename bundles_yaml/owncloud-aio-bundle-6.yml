@@ -1,0 +1,24 @@
+relations:
+- - owncloud:db
+  - mysql
+services:
+  mysql:
+    charm: cs:~ionutbalutoiu/percona-cluster-0
+    num_units: 1
+    options:
+      innodb-buffer-pool-size: 256M
+      max-connections: 500
+    series: xenial
+    to:
+    - owncloud/0
+  owncloud:
+    charm: cs:~ionutbalutoiu/owncloud-3
+    constraints: mem=4G cores=2 root-disk=100G
+    num_units: 1
+    options:
+      downloadurl: https://download.owncloud.org/community/owncloud-10.0.2.tar.bz2
+      password: Passw0rd
+      sha1sum: 0305a638294f120017b0dcfe24c55f8b1e3529af
+      src: source
+      user: owncloud
+    series: xenial

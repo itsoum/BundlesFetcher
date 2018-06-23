@@ -1,0 +1,11 @@
+relations:
+- - mysql:db
+  - cakephp:database
+series: trusty
+services:
+  cakephp:
+    charm: cs:precise/cakephp
+    num_units: 1
+  mysql:
+    charm: cs:precise/mysql
+    num_units: 1

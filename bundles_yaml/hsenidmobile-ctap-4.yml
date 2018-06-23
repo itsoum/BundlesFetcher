@@ -1,0 +1,23 @@
+relations:
+- - hsenidmobile-ctap-simulator:ctap
+  - hsenidmobile-ctap-sampleapp-ussd:backend
+series: trusty
+services:
+  hsenidmobile-ctap-doc:
+    annotations:
+      gui-x: '389.0384521484375'
+      gui-y: '-732.8627548217773'
+    charm: cs:~ctap/trusty/hsenidmobile-ctap-doc-10
+    num_units: 1
+  hsenidmobile-ctap-sampleapp-ussd:
+    annotations:
+      gui-x: '382.2027587890625'
+      gui-y: '-246.67363357543945'
+    charm: cs:~ctap/trusty/hsenidmobile-ctap-sampleapp-ussd-0
+    num_units: 1
+  hsenidmobile-ctap-simulator:
+    annotations:
+      gui-x: '1648.2869262695312'
+      gui-y: '-245.85712432861328'
+    charm: cs:~ctap/trusty/hsenidmobile-ctap-simulator-6
+    num_units: 1

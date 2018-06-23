@@ -1,0 +1,58 @@
+machines:
+  '0':
+    annotations:
+      pubipv4: true
+      testbed: wall1
+    constraints: arch=amd64
+    series: trusty
+  '1':
+    annotations:
+      testbed: wall1
+    constraints: arch=amd64
+    series: trusty
+relations:
+- - nimbus
+  - apache-zookeeper
+- - worker
+  - apache-zookeeper
+- - nimbus:master
+  - worker:worker
+series: trusty
+services:
+  apache-zookeeper:
+    annotations:
+      gui-x: '0'
+      gui-y: '150'
+    charm: cs:~tengu-bot/trusty/apache-zookeeper-0
+    num_units: 1
+    to:
+    - lxc:0
+  cassandra:
+    annotations:
+      gui-x: '600'
+      gui-y: '0'
+    charm: cs:trusty/cassandra-21
+    num_units: 1
+    to:
+    - lxc:0
+  modelinfo:
+    annotations:
+      gui-x: '600'
+      gui-y: '300'
+    charm: cs:~tengu-bot/trusty/modelinfo-1
+  nimbus:
+    annotations:
+      gui-x: '300'
+      gui-y: '0'
+    charm: cs:~tengu-bot/trusty/storm-2
+    num_units: 1
+    to:
+    - lxc:0
+  worker:
+    annotations:
+      gui-x: '300'
+      gui-y: '300'
+    charm: cs:~tengu-bot/trusty/storm-2
+    num_units: 1
+    to:
+    - lxc:1

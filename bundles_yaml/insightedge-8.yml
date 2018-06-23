@@ -1,0 +1,18 @@
+relations:
+- - insightedge-zeppelin
+  - insightedge-spark
+series: xenial
+services:
+  insightedge-spark:
+    annotations:
+      gui-x: '0'
+      gui-y: '0'
+    charm: cs:~gigaspaces/insightedge-spark-3
+    constraints: mem=7G
+    num_units: 1
+  insightedge-zeppelin:
+    annotations:
+      gui-x: '500'
+      gui-y: '0'
+    charm: cs:~gigaspaces/insightedge-zeppelin-2
+    expose: true

@@ -1,0 +1,51 @@
+relations:
+- - compute-slave
+  - hdfs-master
+- - plugin
+  - hdfs-master
+- - spark
+  - plugin
+- - benchmark-gui
+  - plugin
+- - benchmark-gui
+  - spark
+series: trusty
+services:
+  benchmark-gui:
+    annotations:
+      gui-x: '1050'
+      gui-y: '500'
+    charm: cs:~marcoceppi/trusty/benchmark-gui-8
+    num_units: 1
+  compute-slave:
+    annotations:
+      gui-x: '300'
+      gui-y: '200'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-compute-slave-99
+    constraints: mem=7G
+    num_units: 1
+  hdfs-master:
+    annotations:
+      gui-x: '600'
+      gui-y: '200'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-hdfs-master-97
+    constraints: mem=7G
+    num_units: 1
+    options:
+      dfs_replication: 1
+  plugin:
+    annotations:
+      gui-x: '900'
+      gui-y: '200'
+    charm: cs:~bigdata-dev/trusty/apache-hadoop-plugin-57
+  spark:
+    annotations:
+      gui-x: '1200'
+      gui-y: '200'
+    charm: cs:~bigdata-dev/trusty/apache-spark-61
+    constraints: mem=7G
+    num_units: 1
+    options:
+      driver_memory: 10%
+      executor_memory: 80%
+      spark_execution_mode: standalone

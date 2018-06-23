@@ -1,0 +1,82 @@
+relations:
+- - ntp:juju-info
+  - ceph-osd:juju-info
+- - ceph-mon:osd
+  - ceph-osd:mon
+- - erasure-single:ceph-mds
+  - ceph-mon:mds
+- - erasure-double:ceph-mds
+  - ceph-mon:mds
+series: xenial
+services:
+  ceph-mon:
+    bindings:
+      ? ''
+      : home-space
+      cluster: home-space
+      public: home-space
+    charm: cs:~chris.sanders/ceph-mon-0
+    expected-osd-count: 12
+    num_units: 1
+    options:
+      allow-multiple-fs: true
+      monitor-count: 1
+      osd-failure-domain: true
+      source: cloud:xenial-pike
+    to:
+    - lxd:ceph-osd/0
+  ceph-osd:
+    bindings:
+      ? ''
+      : home-space
+      cluster: home-space
+      public: home-space
+    charm: cs:~chris.sanders/ceph-osd-0
+    num_units: 1
+    options:
+      autotune: true
+      bluestore: true
+      osd-devices: /dev/sda /dev/sdb /dev/sdc /dev/sdd
+      osd-encrypt: false
+      osd-reformat: 'Yes'
+      osd-shared: true
+      source: cloud:xenial-pike
+  erasure-double:
+    bindings:
+      ? ''
+      : home-space
+      public: home-space
+    charm: cs:~chris.sanders/ceph-fs-0
+    num_units: 1
+    options:
+      compression-algorithm: zlib
+      compression-mode: aggressive
+      compression-required-ratio: 0.45
+      config-flags: '{"profile":"double", "erasure-type":"isa", "k":2, "m":2, "failure-domain":"osd"}'
+      fs-name: erasure_2
+      pool-type: erasure
+      pool-weight: 30
+      source: cloud:xenial-pike
+    to:
+    - lxd:ceph-osd/0
+  erasure-single:
+    bindings:
+      ? ''
+      : home-space
+      public: home-space
+    charm: cs:~chris.sanders/ceph-fs-0
+    num_units: 2
+    options:
+      compression-algorithm: zlib
+      compression-mode: aggressive
+      compression-required-ratio: 0.45
+      config-flags: '{"profile":"single", "erasure-type":"isa", "k":2, "m":1, "failure-domain":"osd"}'
+      fs-name: erasure_1
+      pool-type: erasure
+      pool-weight: 60
+      source: cloud:xenial-pike
+    to:
+    - lxd:ceph-osd/0
+    - lxd:ceph-osd/0
+  ntp:
+    charm: cs:ntp

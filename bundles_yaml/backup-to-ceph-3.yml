@@ -1,0 +1,42 @@
+applications:
+  ceph-mon:
+    charm: cs:ceph-mon
+    num_units: 3
+    options:
+      source: cloud:trusty-mitaka
+  ceph-osd:
+    charm: cs:ceph-osd
+    num_units: 3
+    options:
+      ephemeral-unmount: /mnt
+      osd-devices: /dev/xvdb
+      source: cloud:trusty-mitaka
+  consul:
+    charm: cs:~jamesbeedy/consul-1
+    num_units: 3
+  consul-agent:
+    charm: cs:~jamesbeedy/consul-agent-6
+  host-to-backup:
+    charm: cs:ubuntu
+    num_units: 1
+  preserve:
+    charm: cs:~xfactor973/preserve
+    options:
+      backup-path: /home/ubuntu/.ssh
+  vault:
+    charm: cs:~jamesbeedy/vault-13
+    num_units: 1
+relations:
+- - ceph-osd:mon
+  - ceph-mon:osd
+- - vault:consul-agent
+  - consul-agent:consul-agent
+- - consul:api
+  - consul-agent:consul
+- - preserve:juju-info
+  - host-to-backup:juju-info
+- - preserve:vault
+  - vault:vault
+- - preserve:mon
+  - ceph-mon:client
+series: xenial

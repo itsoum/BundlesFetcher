@@ -1,0 +1,17 @@
+relations:
+- - openerp-server:db
+  - postgresql:db-admin
+series: precise
+services:
+  openerp-server:
+    annotations:
+      gui-x: '667'
+      gui-y: '381'
+    charm: cs:precise/openerp-server
+    num_units: 1
+  postgresql:
+    annotations:
+      gui-x: '355'
+      gui-y: '381'
+    charm: cs:precise/postgresql
+    num_units: 1

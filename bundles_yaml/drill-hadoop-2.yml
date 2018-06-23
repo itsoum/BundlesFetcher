@@ -1,0 +1,149 @@
+applications:
+  apache-drill:
+    annotations:
+      gui-x: '-503'
+      gui-y: '362'
+    charm: cs:~spiculecharms/apache-drill-122
+    num_units: 3
+    to:
+    - '0'
+    - '1'
+    - '2'
+  client:
+    annotations:
+      gui-x: '1250'
+      gui-y: '400'
+    charm: cs:hadoop-client-9
+    constraints: mem=3072
+    num_units: 1
+    to:
+    - '3'
+  ganglia:
+    annotations:
+      gui-x: '0'
+      gui-y: '800'
+    charm: cs:ganglia-12
+    num_units: 1
+    to:
+    - '3'
+  ganglia-node:
+    annotations:
+      gui-x: '250'
+      gui-y: '400'
+    charm: cs:ganglia-node-7
+  namenode:
+    annotations:
+      gui-x: '500'
+      gui-y: '800'
+    charm: cs:hadoop-namenode-35
+    constraints: mem=7168 root-disk=32768
+    num_units: 1
+    to:
+    - '4'
+  plugin:
+    annotations:
+      gui-x: '1000'
+      gui-y: '400'
+    charm: cs:hadoop-plugin-35
+  resourcemanager:
+    annotations:
+      gui-x: '500'
+      gui-y: '0'
+    charm: cs:hadoop-resourcemanager-37
+    constraints: mem=7168 root-disk=32768
+    num_units: 1
+    to:
+    - '4'
+  rsyslog:
+    annotations:
+      gui-x: '1000'
+      gui-y: '800'
+    charm: cs:~bigdata-dev/xenial/rsyslog-7
+    num_units: 1
+    to:
+    - '3'
+  rsyslog-forwarder-ha:
+    annotations:
+      gui-x: '750'
+      gui-y: '400'
+    charm: cs:~bigdata-dev/xenial/rsyslog-forwarder-ha-7
+  slave:
+    annotations:
+      gui-x: '0'
+      gui-y: '400'
+    charm: cs:hadoop-slave-36
+    constraints: mem=7168 root-disk=32768
+    num_units: 3
+    to:
+    - '0'
+    - '1'
+    - '2'
+  zookeeper:
+    annotations:
+      gui-x: '-523'
+      gui-y: '83'
+    charm: cs:zookeeper-42
+    num_units: 3
+    to:
+    - '5'
+    - '6'
+    - '7'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+  '4':
+    constraints: arch=amd64 cpu-cores=2 cpu-power=672 mem=8192 root-disk=32768
+    series: xenial
+  '5':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+  '6':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+  '7':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+relations:
+- - rsyslog:aggregator
+  - rsyslog-forwarder-ha:syslog
+- - ganglia:node
+  - ganglia-node:node
+- - ganglia-node:juju-info
+  - namenode:juju-info
+- - rsyslog-forwarder-ha:juju-info
+  - namenode:juju-info
+- - ganglia-node:juju-info
+  - resourcemanager:juju-info
+- - ganglia-node:juju-info
+  - slave:juju-info
+- - rsyslog-forwarder-ha:juju-info
+  - resourcemanager:juju-info
+- - rsyslog-forwarder-ha:juju-info
+  - slave:juju-info
+- - namenode:datanode
+  - slave:namenode
+- - resourcemanager:nodemanager
+  - slave:resourcemanager
+- - plugin:resourcemanager
+  - resourcemanager:resourcemanager
+- - plugin:namenode
+  - namenode:namenode
+- - resourcemanager:namenode
+  - namenode:namenode
+- - client:hadoop
+  - plugin:hadoop-plugin
+- - zookeeper:zookeeper
+  - apache-drill:zookeeper
+- - apache-drill:hdfs
+  - namenode:namenode
+series: xenial

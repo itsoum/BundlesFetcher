@@ -1,0 +1,18 @@
+relations:
+- - etcd:db
+  - kubernetes:etcd
+series: xenial
+services:
+  etcd:
+    annotations:
+      gui-x: '918'
+      gui-y: '403'
+    charm: cs:~lazypower/etcd-15
+    num_units: 3
+  kubernetes:
+    annotations:
+      gui-x: '518'
+      gui-y: '403'
+    charm: cs:~lazypower/kubernetes-3
+    num_units: 3
+    series: trusty

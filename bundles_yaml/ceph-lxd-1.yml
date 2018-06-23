@@ -1,0 +1,25 @@
+description: Minimal Ceph deployment for LXD
+relations:
+- - ceph-osd:mon
+  - ceph-mon:osd
+series: xenial
+services:
+  ceph-mon:
+    annotations:
+      gui-x: '750'
+      gui-y: '500'
+    charm: cs:ceph-mon-24
+    num_units: 1
+    options:
+      monitor-count: 1
+      source: cloud:xenial-queens
+  ceph-osd:
+    annotations:
+      gui-x: '1000'
+      gui-y: '500'
+    charm: cs:ceph-osd-261
+    num_units: 3
+    options:
+      osd-devices: /srv/osd1 /srv/osd2 /srv/osd3
+      source: cloud:xenial-queens
+      use-direct-io: false

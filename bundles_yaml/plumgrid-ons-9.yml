@@ -1,0 +1,171 @@
+relations:
+- - mysql
+  - keystone
+- - nova-cloud-controller
+  - mysql
+- - nova-cloud-controller
+  - rabbitmq-server
+- - nova-cloud-controller
+  - glance
+- - nova-cloud-controller
+  - keystone
+- - nova-compute
+  - nova-cloud-controller
+- - nova-compute
+  - mysql
+- - nova-compute
+  - rabbitmq-server
+- - nova-compute
+  - glance
+- - glance
+  - mysql
+- - glance
+  - keystone
+- - glance
+  - cinder
+- - mysql
+  - cinder
+- - cinder
+  - rabbitmq-server
+- - cinder
+  - nova-cloud-controller
+- - cinder
+  - keystone
+- - openstack-dashboard
+  - keystone
+- - neutron-api
+  - mysql
+- - neutron-api
+  - keystone
+- - neutron-api
+  - rabbitmq-server
+- - neutron-api
+  - nova-cloud-controller
+- - neutron-api
+  - neutron-api-plumgrid
+- - neutron-api-plumgrid
+  - plumgrid-edge
+- - plumgrid-director
+  - plumgrid-edge
+- - nova-compute
+  - plumgrid-edge
+- - plumgrid-director
+  - plumgrid-gateway
+series: trusty
+services:
+  cinder:
+    annotations:
+      gui-x: '250'
+      gui-y: '-250'
+    charm: cs:trusty/cinder-26
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-kilo
+    to: lxc:plumgrid-director=0
+  glance:
+    annotations:
+      gui-x: '-250'
+      gui-y: '-250'
+    charm: cs:trusty/glance-24
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-kilo
+    to: lxc:plumgrid-director=0
+  keystone:
+    annotations:
+      gui-x: '0'
+      gui-y: '0'
+    charm: cs:trusty/keystone-28
+    num_units: 1
+    options:
+      admin-password: plumgrid
+      openstack-origin: cloud:trusty-kilo
+    to: lxc:plumgrid-director=0
+  mysql:
+    annotations:
+      gui-x: '-250'
+      gui-y: '250'
+    charm: cs:trusty/mysql-26
+    num_units: 1
+    to: lxc:plumgrid-director=0
+  neutron-api:
+    annotations:
+      gui-x: '500'
+      gui-y: '0'
+    charm: cs:~openstack-charmers-next/trusty/neutron-api-1
+    num_units: 1
+    options:
+      neutron-plugin: plumgrid
+      neutron-security-groups: true
+      openstack-origin: cloud:trusty-kilo
+      plumgrid-password: plumgrid
+      plumgrid-username: plumgrid
+      plumgrid-virtual-ip: 192.168.100.250
+    to: lxc:plumgrid-director=0
+  neutron-api-plumgrid:
+    annotations:
+      gui-x: '750'
+      gui-y: '250'
+    charm: cs:trusty/neutron-api-plumgrid-1
+    options:
+      enable-metadata: true
+  nova-cloud-controller:
+    annotations:
+      gui-x: '-500'
+      gui-y: '0'
+    charm: cs:~openstack-charmers-next/trusty/nova-cloud-controller-1
+    num_units: 1
+    options:
+      console-access-protocol: novnc
+      network-manager: Neutron
+      openstack-origin: cloud:trusty-kilo
+      quantum-security-groups: 'yes'
+    to: lxc:plumgrid-director=0
+  nova-compute:
+    annotations:
+      gui-x: '250'
+      gui-y: '250'
+    charm: cs:~openstack-charmers-next/trusty/nova-compute-1
+    num_units: 1
+    options:
+      enable-live-migration: true
+      enable-resize: true
+      manage-neutron-plugin-legacy-mode: false
+      migration-auth-type: ssh
+      openstack-origin: cloud:trusty-kilo
+    to: '0'
+  openstack-dashboard:
+    annotations:
+      gui-x: '0'
+      gui-y: '-500'
+    charm: cs:trusty/openstack-dashboard-16
+    num_units: 1
+    options:
+      openstack-origin: cloud:trusty-kilo
+    to: lxc:plumgrid-director=0
+  plumgrid-director:
+    annotations:
+      gui-x: '0'
+      gui-y: '500'
+    charm: cs:trusty/plumgrid-director-1
+    num_units: 1
+    options:
+      plumgrid-virtual-ip: 192.168.100.250
+  plumgrid-edge:
+    annotations:
+      gui-x: '500'
+      gui-y: '500'
+    charm: cs:trusty/plumgrid-edge-0
+  plumgrid-gateway:
+    annotations:
+      gui-x: '-500'
+      gui-y: '500'
+    charm: cs:trusty/plumgrid-gateway-1
+    num_units: 1
+  rabbitmq-server:
+    annotations:
+      gui-x: '-750'
+      gui-y: '250'
+    charm: cs:trusty/rabbitmq-server-33
+    num_units: 1
+    to: lxc:plumgrid-director=0

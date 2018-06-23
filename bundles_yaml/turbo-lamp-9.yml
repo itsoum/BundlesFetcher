@@ -1,0 +1,34 @@
+relations:
+- - mellanox:juju-info
+  - mariadb:juju-info
+- - zend-server:juju-info
+  - mellanox:juju-info
+- - zend-server:database
+  - mariadb:db-admin
+- - haproxy:reverseproxy
+  - zend-server:website
+series: trusty
+services:
+  haproxy:
+    annotations:
+      gui-x: '-400'
+      gui-y: '0'
+    charm: cs:trusty/haproxy-3
+    num_units: 1
+  mariadb:
+    annotations:
+      gui-x: '0'
+      gui-y: '400'
+    charm: cs:trusty/mariadb-2
+    num_units: 1
+  mellanox:
+    annotations:
+      gui-x: '400'
+      gui-y: '200'
+    charm: cs:trusty/mellanox-2
+  zend-server:
+    annotations:
+      gui-x: '0'
+      gui-y: '0'
+    charm: cs:trusty/zend-server-1
+    num_units: 1

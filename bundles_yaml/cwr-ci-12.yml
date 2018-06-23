@@ -1,0 +1,24 @@
+machines:
+  '0':
+    constraints: mem=7G
+    series: xenial
+relations:
+- - cwr:jenkins
+  - jenkins
+series: xenial
+services:
+  cwr:
+    annotations:
+      gui-x: '300'
+      gui-y: '400'
+    charm: cs:~juju-solutions/cwr
+    expose: true
+  jenkins:
+    annotations:
+      gui-x: '550'
+      gui-y: '400'
+    charm: cs:xenial/jenkins-4
+    expose: true
+    num_units: 1
+    to:
+    - '0'

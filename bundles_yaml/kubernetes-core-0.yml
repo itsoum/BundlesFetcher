@@ -1,0 +1,17 @@
+relations:
+- - kubernetes:etcd
+  - etcd:db
+series: trusty
+services:
+  etcd:
+    annotations:
+      gui-x: '804'
+      gui-y: '281'
+    charm: cs:~containers/trusty/etcd-0
+    num_units: 3
+  kubernetes:
+    annotations:
+      gui-x: '300'
+      gui-y: '300'
+    charm: cs:~containers/trusty/kubernetes-0
+    num_units: 2

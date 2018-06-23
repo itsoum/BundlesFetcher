@@ -1,0 +1,75 @@
+description: 'CELERY-DEV Bundle
+
+  '
+eodopts:
+  django-project-name: devdev
+  installed-apps: '''celery_dev'''
+  key-required: false
+  repo: https://github.com/jamesbeedy/devdev.git
+relations:
+- - web:redis
+  - redis:redis
+- - web:pgsql
+  - postgresql:db
+- - worker:redis
+  - redis:redis
+- - worker:db-info
+  - web:db-info
+- - worker-lr:redis
+  - redis:redis
+- - worker-lr:db-info
+  - web:db-info
+series: xenial
+services:
+  postgresql:
+    charm: cs:postgresql-159
+    constraints: instance-type=t2.medium spaces=common-nat root-disk=50G
+    num_units: 1
+    options:
+      extra_pg_auth: 'host all all "0.0.0.0/0" md5
+
+        '
+    series: xenial
+  redis:
+    charm: cs:~peopledatalabs/redis-0
+    constraints: instance-type=t2.micro spaces=common-nat root-disk=50G
+    num_units: 1
+    options:
+      password: Xtt8eutesradj63h
+    series: xenial
+  web:
+    charm: cs:~jamesbeedy/django-web-15
+    constraints: instance-type=t2.medium spaces=common-nat root-disk=50G
+    num_units: 1
+    options:
+      django-project-name: devdev
+      installed-apps: '''celery_dev'''
+      key-required: false
+      repo: https://github.com/jamesbeedy/devdev.git
+    series: xenial
+  worker:
+    charm: cs:~jamesbeedy/django-worker-15
+    constraints: instance-type=t2.medium spaces=common-nat root-disk=50G
+    num_units: 1
+    options:
+      django-project-name: devdev
+      installed-apps: '''celery_dev'''
+      key-required: false
+      repo: https://github.com/jamesbeedy/devdev.git
+    series: xenial
+  worker-lr:
+    charm: cs:~jamesbeedy/django-worker-15
+    constraints: instance-type=t2.medium spaces=common-nat root-disk=50G
+    num_units: 1
+    options:
+      django-project-name: devdev
+      installed-apps: '''celery_dev'''
+      key-required: false
+      longrunning: true
+      repo: https://github.com/jamesbeedy/devdev.git
+    series: xenial
+tags:
+- peopledatalabs
+- celery
+- dev
+- bundle

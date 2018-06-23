@@ -1,0 +1,80 @@
+machines:
+  '1':
+    constraints: arch=amd64 cpu-cores=4 mem=16G
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=4 mem=16G
+    series: xenial
+relations:
+- - oai-enb:mme
+  - oai-mme:mme
+- - oai-hss:db
+  - mysql:db
+- - oai-hss:hss
+  - oai-mme:hss
+- - oai-mme:spgw
+  - oai-spgw:spgw
+series: xenial
+services:
+  mysql:
+    annotations:
+      gui-x: '-7.511909484863338'
+      gui-y: '541.4643581006377'
+    charm: cs:xenial/mysql-56
+    num_units: 1
+    to:
+    - lxd:2
+  oai-enb:
+    annotations:
+      gui-x: '795.5335693359375'
+      gui-y: '1118.0245387647'
+    charm: cs:~navid-nikaein/xenial/oai-enb-24
+    num_units: 1
+    options:
+      N_RB_DL: 25
+      agent_active: 'no'
+      branch: develop
+      downlink_frequency: 2680000000L
+      eutra_band: 7
+      node_function: eNodeB_3GPP
+      remote_monitoring: 'no'
+      target_hardware: usrp_b200
+      uplink_frequency_offset: '-120000000'
+    to:
+    - '1'
+  oai-hss:
+    annotations:
+      gui-x: '5.1247406005859375'
+      gui-y: '813.7240626904814'
+    charm: cs:~navid-nikaein/xenial/oai-hss-8
+    num_units: 1
+    options:
+      branch: develop
+      eth: eth0
+    to:
+    - lxd:2
+  oai-mme:
+    annotations:
+      gui-x: '412.0322265625'
+      gui-y: '807.6817932128906'
+    charm: cs:~navid-nikaein/xenial/oai-mme-16
+    num_units: 1
+    options:
+      branch: develop
+      eth: eth0
+    to:
+    - lxd:2
+  oai-spgw:
+    annotations:
+      gui-x: '391.90765380859375'
+      gui-y: '1136.3841552734375'
+    charm: cs:~navid-nikaein/xenial/oai-spgw-13
+    num_units: 1
+    options:
+      DEFAULT_DNS_IPV4_ADDRESS: 172.27.61.254
+      DEFAULT_DNS_SEC_IPV4_ADDRESS: 172.27.60.1
+      branch: develop
+      pgw-eth: br-eth0
+      sgw-eth: br-eth0
+    to:
+    - '2'

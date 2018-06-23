@@ -1,0 +1,23 @@
+machines:
+  '0': {}
+relations:
+- - owncloud:db
+  - mysql:db
+series: precise
+services:
+  mysql:
+    annotations:
+      gui-x: '1484.5'
+      gui-y: '671'
+    charm: cs:precise/mysql
+    num_units: 1
+    to:
+    - '0'
+  owncloud:
+    annotations:
+      gui-x: '1879.5'
+      gui-y: '766'
+    charm: cs:precise/owncloud
+    num_units: 1
+    to:
+    - '0'

@@ -1,0 +1,25 @@
+description: 'Visimil Bundle
+
+  '
+relations:
+- - visimil:elasticsearch
+  - elasticsearch
+series: xenial
+services:
+  elasticsearch:
+    charm: cs:~peopledatalabs/elasticsearch-2
+    num_units: 1
+    options:
+      apt-key-url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+      apt-repository: deb https://artifacts.elastic.co/packages/5.x/apt stable main
+      gpg-key-id: D88E42B4
+    series: xenial
+  visimil:
+    charm: cs:~jamesbeedy/visimil-1
+    num_units: 1
+    series: xenial
+tags:
+- visimil
+- machine-learning
+- deep-learning
+- bundle

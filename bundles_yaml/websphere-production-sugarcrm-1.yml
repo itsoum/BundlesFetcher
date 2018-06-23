@@ -1,0 +1,39 @@
+relations:
+- - sugarcrm:database
+  - mariadb:db
+- - sugarcrm:cache
+  - memcached:cache
+- - haproxy:reverseproxy
+  - sugarcrm:website
+series: trusty
+services:
+  haproxy:
+    annotations:
+      gui-x: '-282.5'
+      gui-y: '-198.5'
+    charm: cs:trusty/haproxy-6
+    num_units: 1
+  mariadb:
+    annotations:
+      gui-x: '163.5'
+      gui-y: '92.5'
+    charm: cs:trusty/mariadb-2
+    num_units: 1
+  memcached:
+    annotations:
+      gui-x: '-14.5'
+      gui-y: '-198.5'
+    charm: cs:trusty/memcached-10
+    num_units: 1
+  sugarcrm:
+    annotations:
+      gui-x: '-154.5'
+      gui-y: '96.5'
+    charm: cs:trusty/sugarcrm-2
+    num_units: 1
+  websphere-liberty:
+    annotations:
+      gui-x: '-513.5'
+      gui-y: '108.5'
+    charm: cs:trusty/websphere-liberty-0
+    num_units: 1

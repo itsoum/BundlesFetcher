@@ -1,0 +1,9 @@
+relations: []
+series: trusty
+services:
+  etcd:
+    annotations:
+      gui-x: '412'
+      gui-y: '180'
+    charm: cs:~lazypower/trusty/etcd-4
+    num_units: 3

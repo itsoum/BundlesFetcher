@@ -1,0 +1,45 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 mem=3200
+    series: trusty
+  '1':
+    constraints: arch=amd64 cpu-cores=1 mem=1597
+    series: trusty
+  '2':
+    constraints: arch=amd64 cpu-cores=1 mem=1597
+    series: trusty
+relations:
+- - scaleio-mdm:scaleio-sds
+  - scaleio-sds:scaleio-sds
+- - scaleio-mdm:scaleio-mdm
+  - scaleio-sdc:scaleio-mdm
+- - scaleio-mdm:scaleio-mdm
+  - scaleio-gw:scaleio-mdm
+series: trusty
+services:
+  scaleio-gw:
+    charm: cs:~cloudscaling/scaleio-gw
+    num_units: 1
+    to:
+    - '0'
+  scaleio-mdm:
+    charm: cs:~cloudscaling/scaleio-mdm
+    num_units: 3
+    options:
+      cluster-mode: 3
+    to:
+    - '0'
+    - '1'
+    - '2'
+  scaleio-sdc:
+    charm: cs:~cloudscaling/scaleio-sdc
+    num_units: 1
+    to:
+    - '0'
+  scaleio-sds:
+    charm: cs:~cloudscaling/scaleio-sds
+    num_units: 3
+    to:
+    - '0'
+    - '1'
+    - '2'

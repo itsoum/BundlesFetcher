@@ -1,0 +1,61 @@
+relations:
+- - zookeeper-dh:ka
+  - kafka-dh:zk
+- - devicehive:zk
+  - zookeeper-dh:dh
+- - devicehive:pg
+  - postgresql-dh:dh
+- - devicehive-worker:ca
+  - cassandra-dh:dhc
+- - devicehive:ka
+  - kafka-dh:dh
+- - devicehive:re
+  - redis-dh:dh
+- - devicehive-worker:zk
+  - zookeeper-dh:dhc
+series: trusty
+services:
+  cassandra-dh:
+    annotations:
+      gui-x: '1569.8848266601562'
+      gui-y: '666.4840393066406'
+    charm: cs:~x3v947pl/trusty/cassandra-dh-2
+    constraints: mem=3G
+    num_units: 1
+  devicehive:
+    annotations:
+      gui-x: '801.1025390625'
+      gui-y: '987.2816467285156'
+    charm: cs:~x3v947pl/trusty/devicehive-9
+    num_units: 1
+  devicehive-worker:
+    annotations:
+      gui-x: '1176.8490600585938'
+      gui-y: '664.8114929199219'
+    charm: cs:~x3v947pl/trusty/devicehive-worker-1
+    num_units: 1
+  kafka-dh:
+    annotations:
+      gui-x: '429.1766357421875'
+      gui-y: '986.9577331542969'
+    charm: cs:~x3v947pl/trusty/kafka-dh-1
+    constraints: mem=7G
+    num_units: 1
+  postgresql-dh:
+    annotations:
+      gui-x: '1171.2549438476562'
+      gui-y: '987.6138000488281'
+    charm: cs:~x3v947pl/trusty/postgresql-dh-0
+    num_units: 1
+  redis-dh:
+    annotations:
+      gui-x: '803.5913696289062'
+      gui-y: '1300.6908264160156'
+    charm: cs:~x3v947pl/trusty/redis-dh-1
+    num_units: 1
+  zookeeper-dh:
+    annotations:
+      gui-x: '800.0508422851562'
+      gui-y: '669.1730041503906'
+    charm: cs:~x3v947pl/trusty/zookeeper-dh-1
+    num_units: 1

@@ -1,0 +1,28 @@
+applications:
+  mysql:
+    annotations:
+      gui-x: '695'
+      gui-y: '395'
+    charm: cs:mysql-58
+    num_units: 1
+    to:
+    - '1'
+  saiku-enterprise:
+    annotations:
+      gui-x: '300'
+      gui-y: '300'
+    charm: cs:~spiculecharms/saiku-enterprise-22
+    num_units: 1
+    to:
+    - '0'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=350 mem=3840 root-disk=8192
+    series: xenial
+relations:
+- - mysql:db
+  - saiku-enterprise:mysql
+series: xenial

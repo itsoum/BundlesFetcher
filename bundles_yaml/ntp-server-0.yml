@@ -1,0 +1,27 @@
+relations:
+- - ubuntu
+  - nrpe
+- - ubuntu
+  - ntp
+- - ubuntu
+  - telegraf
+series: xenial
+services:
+  nrpe:
+    charm: cs:nrpe-18
+    expose: true
+    options:
+      export_nagios_definitions: true
+      sub_postfix: ''
+  ntp:
+    charm: cs:~ntp-team/ntp-6
+    expose: true
+    options:
+      auto_peers: true
+      source: ntp.ubuntu.com
+  telegraf:
+    charm: cs:~telegraf-charmers/telegraf-9
+    expose: true
+  ubuntu:
+    charm: cs:ubuntu-10
+    num_units: 1

@@ -1,0 +1,24 @@
+description: 'Example Jenkins bundle
+
+  '
+relations:
+- - jenkins
+  - ci-configurator
+series: xenial
+services:
+  ci-configurator:
+    charm: cs:~oil-charms/ci-configurator
+    options:
+      config-repo: https://github.com/lutostag/jenkins-charm-ci-config-repo.git
+      config-repo-rcs: git
+      jjb-install-source: distro
+  jenkins:
+    charm: cs:~oil-charms/jenkins
+    expose: true
+    num_units: 1
+    options:
+      plugins: multiple-scms git buildresult-trigger
+      release: trunk
+      tools: git
+tags:
+- ops

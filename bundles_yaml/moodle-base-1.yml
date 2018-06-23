@@ -1,0 +1,22 @@
+applications:
+  moodle:
+    charm: cs:~csd-garr/moodle
+    num_units: 1
+    options:
+      post-max-size: 500M
+      upload-max-filesize: 500M
+      use-https: false
+    to:
+    - '0'
+  postgresql:
+    charm: cs:postgresql
+    num_units: 1
+    to:
+    - '0'
+machines:
+  '0':
+    series: xenial
+relations:
+- - postgresql:db
+  - moodle:pgsql-db
+series: xenial

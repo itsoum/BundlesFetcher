@@ -1,0 +1,11 @@
+relations:
+- - cassandra:database
+  - cassandra-stress:database
+series: trusty
+services:
+  cassandra:
+    charm: cs:trusty/cassandra-17
+    num_units: 1
+  cassandra-stress:
+    charm: cs:~cynerva/trusty/cassandra-stress-0
+    num_units: 1

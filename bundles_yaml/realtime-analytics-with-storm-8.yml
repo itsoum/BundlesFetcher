@@ -1,0 +1,27 @@
+relations:
+- - nimbus-server:nimbus
+  - storm-worker:slave
+- - storm-worker:zookeeper
+  - hdp-zookeeper:zookeeper
+- - nimbus-server:zookeeper
+  - hdp-zookeeper:zookeeper
+series: trusty
+services:
+  hdp-zookeeper:
+    annotations:
+      gui-x: '-323.31919557832146'
+      gui-y: '1169.6798136545692'
+    charm: cs:trusty/hdp-zookeeper-8
+    num_units: 3
+  nimbus-server:
+    annotations:
+      gui-x: '72.76041550414288'
+      gui-y: '1176.9597094939086'
+    charm: cs:trusty/hdp-storm-1
+    num_units: 1
+  storm-worker:
+    annotations:
+      gui-x: '72.51921077025622'
+      gui-y: '880.9325917901475'
+    charm: cs:trusty/hdp-storm-1
+    num_units: 1

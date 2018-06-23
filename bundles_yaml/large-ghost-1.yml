@@ -1,0 +1,85 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: precise
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: precise
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '4':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+  '5':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: trusty
+relations:
+- - nagios:monitors
+  - nrpe:monitors
+- - nrpe:nrpe-external-master
+  - squid-reverseproxy:nrpe-external-master
+- - nrpe:general-info
+  - ghost:juju-info
+- - nrpe:nrpe-external-master
+  - haproxy:nrpe-external-master
+- - nrpe:nrpe-external-master
+  - mysql:nrpe-external-master
+- - squid-reverseproxy:website
+  - haproxy:website
+- - haproxy:reverseproxy
+  - ghost:balancer
+- - ghost:db
+  - mysql:db
+series: trusty
+services:
+  ghost:
+    annotations:
+      gui-x: '-307'
+      gui-y: '105.5'
+    charm: cs:precise/ghost-3
+    num_units: 2
+    to:
+    - '1'
+    - '2'
+  haproxy:
+    annotations:
+      gui-x: '-307'
+      gui-y: '-159.5'
+    charm: cs:trusty/haproxy-10
+    num_units: 1
+    to:
+    - '3'
+  mysql:
+    annotations:
+      gui-x: '-18'
+      gui-y: '195.5'
+    charm: cs:trusty/mysql-25
+    num_units: 1
+    to:
+    - '0'
+  nagios:
+    annotations:
+      gui-x: '230'
+      gui-y: '-424.5'
+    charm: cs:trusty/nagios-7
+    num_units: 1
+    to:
+    - '5'
+  nrpe:
+    annotations:
+      gui-x: '-18'
+      gui-y: '-152.5'
+    charm: cs:trusty/nrpe-3
+    num_units: 0
+  squid-reverseproxy:
+    annotations:
+      gui-x: '-310'
+      gui-y: '-425.5'
+    charm: cs:trusty/squid-reverseproxy-5
+    num_units: 1
+    to:
+    - '4'

@@ -1,0 +1,96 @@
+applications:
+  ceph-mon:
+    annotations:
+      gui-x: '560'
+      gui-y: '495'
+    charm: cs:trusty/ceph-mon-3
+    num_units: 3
+    to:
+    - '7'
+    - '8'
+    - '9'
+  ceph-osd:
+    annotations:
+      gui-x: '760'
+      gui-y: '841.4101615137754'
+    charm: cs:trusty/ceph-osd-236
+    num_units: 3
+    options:
+      ephemeral-unmount: /mnt
+      osd-encrypt: true
+    to:
+    - '4'
+    - '5'
+    - '6'
+  consul:
+    annotations:
+      gui-x: '1160'
+      gui-y: '148.58983848622455'
+    charm: cs:~jamesbeedy/consul-1
+    expose: true
+    num_units: 3
+    to:
+    - '1'
+    - '2'
+    - '3'
+  consul-agent:
+    annotations:
+      gui-x: '1360'
+      gui-y: '495'
+    charm: cs:~jamesbeedy/consul-agent-6
+  unlock-ceph:
+    annotations:
+      gui-x: '760'
+      gui-y: '148.58983848622455'
+    charm: cs:~chris.macnaughton/trusty/unlock-ceph-4
+  vault:
+    annotations:
+      gui-x: '958.8416748046875'
+      gui-y: '493.84173583984375'
+    charm: cs:~jamesbeedy/vault-13
+    num_units: 1
+    to:
+    - '0'
+machines:
+  '0':
+    constraints: arch=amd64
+    series: xenial
+  '1':
+    constraints: arch=amd64
+    series: xenial
+  '2':
+    constraints: arch=amd64
+    series: xenial
+  '3':
+    constraints: arch=amd64
+    series: xenial
+  '4':
+    constraints: arch=amd64
+    series: trusty
+  '5':
+    constraints: arch=amd64
+    series: trusty
+  '6':
+    constraints: arch=amd64
+    series: trusty
+  '7':
+    constraints: arch=amd64
+    series: trusty
+  '8':
+    constraints: arch=amd64
+    series: trusty
+  '9':
+    constraints: arch=amd64
+    series: trusty
+relations:
+- - vault:vault
+  - unlock-ceph:vault
+- - consul:api
+  - consul-agent:consul
+- - vault:consul-agent
+  - consul-agent:consul-agent
+- - ceph-mon:osd
+  - ceph-osd:mon
+- - ceph-osd:juju-info
+  - unlock-ceph:requires
+series: xenial

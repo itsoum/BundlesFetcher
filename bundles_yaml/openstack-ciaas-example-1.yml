@@ -1,0 +1,195 @@
+machines:
+  '0':
+    constraints: tags=hayward-01
+    series: xenial
+  '1':
+    constraints: tags=hayward-00
+    series: xenial
+  '2':
+    constraints: tags=hayward-06
+    series: xenial
+  '3':
+    constraints: tags=hayward-08
+    series: xenial
+  '4':
+    constraints: tags=hayward-04
+    series: xenial
+relations:
+- - nova-cloud-controller
+  - glance
+- - nova-cloud-controller
+  - keystone
+- - nova-cloud-controller
+  - rabbitmq-server
+- - glance
+  - keystone
+- - cinder
+  - keystone
+- - cinder
+  - nova-cloud-controller
+- - cinder
+  - rabbitmq-server
+- - cinder:image-service
+  - glance:image-service
+- - openstack-dashboard
+  - keystone
+- - nova-compute:amqp
+  - rabbitmq-server:amqp
+- - nova-compute
+  - nova-cloud-controller
+- - nova-compute
+  - glance
+- - neutron-gateway
+  - nova-cloud-controller
+- - neutron-gateway:amqp
+  - rabbitmq-server
+- - neutron-api
+  - mysql
+- - neutron-api
+  - rabbitmq-server
+- - neutron-api
+  - nova-cloud-controller
+- - neutron-api
+  - neutron-openvswitch
+- - neutron-api
+  - keystone
+- - neutron-api
+  - neutron-gateway
+- - neutron-openvswitch
+  - nova-compute
+- - neutron-openvswitch
+  - rabbitmq-server
+- - swift-proxy
+  - keystone
+- - swift-proxy
+  - swift-storage
+- - keystone
+  - mysql
+- - nova-cloud-controller
+  - mysql
+- - glance
+  - mysql
+- - cinder
+  - mysql
+- - swift-proxy
+  - glance
+series: xenial
+services:
+  cinder:
+    charm: cs:xenial/cinder
+    hwreqs:
+      storage: /dev/sdb
+    num_units: 1
+    options:
+      block-device: /dev/sdb
+      ceph-osd-replication-count: 1
+      glance-api-version: 2
+      openstack-origin: distro
+      overwrite: 'true'
+      remove-missing: true
+    to:
+    - '3'
+  glance:
+    charm: cs:xenial/glance
+    num_units: 1
+    options:
+      ceph-osd-replication-count: 1
+      openstack-origin: distro
+    to:
+    - lxc:0
+  keystone:
+    charm: cs:xenial/keystone
+    num_units: 1
+    options:
+      admin-password: openstack
+      admin-token: ubuntutesting
+      openstack-origin: distro
+    to:
+    - lxc:1
+  mysql:
+    charm: cs:xenial/percona-cluster
+    num_units: 1
+    options:
+      max-connections: 20000
+      source: distro
+    to:
+    - lxc:3
+  neutron-api:
+    charm: cs:xenial/neutron-api
+    num_units: 1
+    options:
+      flat-network-providers: physnet1
+      neutron-security-groups: true
+      openstack-origin: distro
+    to:
+    - lxc:4
+  neutron-gateway:
+    charm: cs:xenial/neutron-gateway
+    hwreqs:
+      network: eth1
+    num_units: 1
+    options:
+      bridge-mappings: physnet1:br-ex
+      data-port: br-ex:eth1
+      openstack-origin: distro
+      plugin: ovs
+    to:
+    - '4'
+  neutron-openvswitch:
+    charm: cs:xenial/neutron-openvswitch
+    num_units: 0
+  nova-cloud-controller:
+    charm: cs:xenial/nova-cloud-controller
+    num_units: 1
+    options:
+      network-manager: Neutron
+      openstack-origin: distro
+    to:
+    - '2'
+  nova-compute:
+    charm: cs:xenial/nova-compute
+    hwreqs:
+      compute: kvm
+    num_units: 2
+    options:
+      openstack-origin: distro
+      virt-type: kvm
+    to:
+    - '0'
+    - '1'
+  openstack-dashboard:
+    charm: cs:xenial/openstack-dashboard
+    num_units: 1
+    options:
+      openstack-origin: distro
+    to:
+    - lxc:2
+  rabbitmq-server:
+    charm: cs:xenial/rabbitmq-server
+    num_units: 1
+    options:
+      source: distro
+    to:
+    - lxc:0
+  swift-proxy:
+    charm: cs:xenial/swift-proxy
+    num_units: 1
+    options:
+      openstack-origin: distro
+      replicas: 1
+      swift-hash: fdfef9d4-8b06-11e2-8ac0-531c923c8fae
+      zone-assignment: auto
+    to:
+    - lxc:1
+  swift-storage:
+    charm: cs:xenial/swift-storage
+    hwreqs:
+      storage: /dev/sdb
+    num_units: 1
+    options:
+      block-device: /dev/sdb
+      openstack-origin: distro
+      overwrite: 'true'
+      zone: 1
+    to:
+    - '0'

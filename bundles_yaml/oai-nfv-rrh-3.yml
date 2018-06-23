@@ -1,0 +1,66 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=4 mem=15951
+    series: trusty
+relations:
+- - oai-epc:epc
+  - oai-enb:epc
+- - oai-enb:rrh
+  - oai-rrh:rrh
+- - mysql:db
+  - oai-hss:db
+- - oai-hss:hss
+  - oai-epc:hss
+series: trusty
+services:
+  mysql:
+    annotations:
+      gui-x: '223.2505493164062'
+      gui-y: '530.73126483891895'
+    charm: cs:trusty/mysql-36
+    num_units: 1
+    to:
+    - kvm:oai-enb/0
+  oai-enb:
+    annotations:
+      gui-x: '987.388427734375'
+      gui-y: '747.73126483891895'
+    charm: cs:~navid-nikaein/trusty/oai-enb-14
+    num_units: 1
+    options:
+      N_RB_DL: 50
+      downlink_frequency: 2680000000L
+      eutra_band: 7
+      rrh_active: 'yes'
+      rrh_if_name: lo
+      rx_gain: 100
+      target_hardware: usrp
+      uplink_frequency_offset: '-120000000'
+    to:
+    - '0'
+  oai-epc:
+    annotations:
+      gui-x: '353'
+      gui-y: '267'
+    charm: cs:~navid-nikaein/trusty/oai-epc-22
+    num_units: 1
+    to:
+    - kvm:oai-enb/0
+  oai-hss:
+    annotations:
+      gui-x: '592.7639770507812'
+      gui-y: '652.7269923779814'
+    charm: cs:~navid-nikaein/trusty/oai-hss-10
+    num_units: 1
+    to:
+    - kvm:oai-enb/0
+  oai-rrh:
+    annotations:
+      gui-x: '995'
+      gui-y: '485'
+    charm: cs:~navid-nikaein/trusty/oai-rrh-7
+    num_units: 1
+    options:
+      fronthaul_if: lo
+    to:
+    - '0'

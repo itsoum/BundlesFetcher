@@ -1,0 +1,39 @@
+relations:
+- - hdphive:namenode
+  - yarn-hdfs-master:namenode
+- - yarn-hdfs-master:namenode
+  - compute-node:datanode
+- - hdphive:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+- - yarn-hdfs-master:resourcemanager
+  - compute-node:nodemanager
+- - hdphive:db
+  - mysql:db
+series: trusty
+services:
+  compute-node:
+    annotations:
+      gui-x: '768'
+      gui-y: '591.0585428804295'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1
+  hdphive:
+    annotations:
+      gui-x: '1105.4991775605417'
+      gui-y: '284.9414571195705'
+    charm: cs:trusty/hdp-hive-1
+    num_units: 1
+  mysql:
+    annotations:
+      gui-x: '1102.9983551210835'
+      gui-y: '591.0585428804295'
+    charm: cs:trusty/mysql-4
+    num_units: 1
+    options:
+      binlog-format: ROW
+  yarn-hdfs-master:
+    annotations:
+      gui-x: '769.0016448789165'
+      gui-y: '285.0585428804295'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1

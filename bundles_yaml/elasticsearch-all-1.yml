@@ -1,0 +1,11 @@
+description: 'Elasticsearch All Bundle
+
+  '
+series: xenial
+services:
+  elasticsearch:
+    charm: cs:~omnivector/elasticsearch-8
+    num_units: 3
+    series: xenial
+tags:
+- elasticsearch

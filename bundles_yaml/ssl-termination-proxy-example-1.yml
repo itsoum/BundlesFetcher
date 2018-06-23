@@ -1,0 +1,43 @@
+applications:
+  blog-fqdn:
+    annotations:
+      gui-x: '1650'
+      gui-y: '645'
+    charm: cs:~tengu-team/ssl-termination-fqdn-3
+    options:
+      fqdns: blog.example.com
+  ghost:
+    annotations:
+      gui-x: '1620'
+      gui-y: '960'
+    charm: cs:ghost-20
+    num_units: 1
+  jenkins:
+    annotations:
+      gui-x: '1180'
+      gui-y: '960'
+    charm: cs:jenkins-13
+    num_units: 1
+  jenkins-fqdn:
+    annotations:
+      gui-x: '1210'
+      gui-y: '645'
+    charm: cs:~tengu-team/ssl-termination-fqdn-3
+    options:
+      fqdns: jenkins.example.com
+  ssl-termination-proxy:
+    annotations:
+      gui-x: '1400'
+      gui-y: '540'
+    charm: cs:~tengu-team/ssl-termination-proxy-13
+    num_units: 1
+relations:
+- - jenkins:website
+  - jenkins-fqdn:website
+- - ghost:website
+  - blog-fqdn:website
+- - jenkins-fqdn:ssl-termination
+  - ssl-termination-proxy:ssl-termination
+- - blog-fqdn:ssl-termination
+  - ssl-termination-proxy:ssl-termination
+series: xenial

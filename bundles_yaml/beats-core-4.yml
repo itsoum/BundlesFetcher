@@ -1,0 +1,32 @@
+relations:
+- - kibana:rest
+  - elasticsearch:client
+- - filebeat:elasticsearch
+  - elasticsearch:client
+- - topbeat:elasticsearch
+  - elasticsearch:client
+series: trusty
+services:
+  elasticsearch:
+    annotations:
+      gui-x: '680'
+      gui-y: '735'
+    charm: cs:trusty/elasticsearch-14
+    num_units: 1
+  filebeat:
+    annotations:
+      gui-x: '352'
+      gui-y: '654'
+    charm: cs:~containers/trusty/filebeat-3
+  kibana:
+    annotations:
+      gui-x: '979'
+      gui-y: '731'
+    charm: cs:~containers/trusty/kibana
+    expose: true
+    num_units: 1
+  topbeat:
+    annotations:
+      gui-x: '358.0000305175781'
+      gui-y: '799'
+    charm: cs:~containers/trusty/topbeat-5

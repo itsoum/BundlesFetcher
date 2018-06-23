@@ -1,0 +1,70 @@
+applications:
+  easyrsa:
+    annotations:
+      gui-x: '920'
+      gui-y: '226.29491924311225'
+    charm: cs:~containers/easyrsa-7
+    num_units: 1
+    to:
+    - lxd:kubernetes-master/0
+  etcd:
+    annotations:
+      gui-x: '720'
+      gui-y: '572.7050807568877'
+    charm: cs:~containers/etcd-24
+    num_units: 1
+    to:
+    - '0'
+  flannel:
+    annotations:
+      gui-x: '320'
+      gui-y: '572.7050807568877'
+    charm: cs:~containers/flannel-11
+  kubernetes-master:
+    annotations:
+      gui-x: '1120'
+      gui-y: '572.7050807568877'
+    charm: cs:~tvansteenburgh/kubernetes-master-0
+    constraints: cores=4 mem=8192 root-disk=32768
+    expose: true
+    num_units: 1
+    to:
+    - '0'
+  kubernetes-worker-gpu:
+    annotations:
+      gui-x: '520'
+      gui-y: '226.29491924311225'
+    charm: cs:~tvansteenburgh/kubernetes-worker-0
+    expose: true
+    num_units: 1
+    to:
+    - '1'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=4 cpu-power=1679 mem=16384 root-disk=32768
+    series: xenial
+    to: zone=us-east-1a
+  '1':
+    constraints: instance-type=p2.xlarge
+    series: xenial
+    to: zone=us-east-1a
+relations:
+- - kubernetes-worker-gpu:cni
+  - flannel:cni
+- - kubernetes-worker-gpu:certificates
+  - easyrsa:client
+- - etcd:db
+  - flannel:etcd
+- - etcd:certificates
+  - easyrsa:client
+- - kubernetes-master:etcd
+  - etcd:db
+- - kubernetes-master:kube-control
+  - kubernetes-worker-gpu:kube-control
+- - kubernetes-master:certificates
+  - easyrsa:client
+- - kubernetes-master:cni
+  - flannel:cni
+- - kubernetes-master:kube-api-endpoint
+  - kubernetes-worker-gpu:kube-api-endpoint
+series: xenial

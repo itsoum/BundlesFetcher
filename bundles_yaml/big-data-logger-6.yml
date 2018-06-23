@@ -1,0 +1,75 @@
+relations:
+- - compute-node:datanode
+  - yarn-hdfs-master:namenode
+- - hdphive:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+- - compute-node:nodemanager
+  - yarn-hdfs-master:resourcemanager
+- - kibana:rest
+  - elasticsearch:client
+- - hdphive:db
+  - mysql:db
+- - logstash-indexer:client
+  - elasticsearch:client
+- - logstash-agent:input
+  - logstash-indexer:input
+- - logstash-agent:juju-info
+  - yarn-hdfs-master:juju-info
+- - logstash-agent:juju-info
+  - compute-node:juju-info
+- - logstash-agent:juju-info
+  - hdphive:juju-info
+- - logstash-agent:juju-info
+  - mysql:juju-info
+series: trusty
+services:
+  compute-node:
+    annotations:
+      gui-x: '725.8810424804688'
+      gui-y: '615.605295810117'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1
+  elasticsearch:
+    annotations:
+      gui-x: '363.14605712890625'
+      gui-y: '153.0677490234375'
+    charm: cs:trusty/elasticsearch-5
+    constraints: mem=2000
+    num_units: 1
+  hdphive:
+    annotations:
+      gui-x: '1165.1617752167917'
+      gui-y: '237.869801846133'
+    charm: cs:trusty/hdp-hive-1
+    num_units: 1
+  kibana:
+    annotations:
+      gui-x: '73.58988189697266'
+      gui-y: '151.5251693725586'
+    charm: cs:precise/kibana-5
+    num_units: 1
+  logstash-agent:
+    annotations:
+      gui-x: '939.1344909667969'
+      gui-y: '454.4509391784668'
+    charm: cs:~lazypower/trusty/logstash-agent-0
+  logstash-indexer:
+    annotations:
+      gui-x: '363.5318023867085'
+      gui-y: '447.8102518648045'
+    charm: cs:~lazypower/trusty/logstash-16
+    num_units: 1
+  mysql:
+    annotations:
+      gui-x: '1164.1050445742085'
+      gui-y: '630.0446268648045'
+    charm: cs:trusty/mysql-3
+    num_units: 1
+    options:
+      binlog-format: ROW
+  yarn-hdfs-master:
+    annotations:
+      gui-x: '723.5761077695415'
+      gui-y: '239.63303628863264'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1

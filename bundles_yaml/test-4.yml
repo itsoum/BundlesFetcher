@@ -1,0 +1,8 @@
+series: trusty
+services:
+  ubuntu:
+    annotations:
+      gui-x: '0'
+      gui-y: '0'
+    charm: cs:trusty/ubuntu-1
+    num_units: 1

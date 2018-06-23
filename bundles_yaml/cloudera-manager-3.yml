@@ -1,0 +1,31 @@
+relations:
+- - cm-server:db-admin
+  - mysql:db-admin
+- - cm-server:db
+  - mysql:db
+- - cm-server:cm-server
+  - cm-agent:cm-agent
+series: trusty
+services:
+  cm-agent:
+    annotations:
+      gui-x: '806.8743322184656'
+      gui-y: '319.824933006485'
+    charm: cs:~bigdata-dev/trusty/cdh5-cm
+    constraints: cpu-cores=4 mem=16G
+    num_units: 6
+  cm-server:
+    annotations:
+      gui-x: '1110.6945400279628'
+      gui-y: '320.23208339840863'
+    charm: cs:~bigdata-dev/trusty/cdh5-cm
+    constraints: cpu-cores=2 mem=8G
+    num_units: 1
+  mysql:
+    annotations:
+      gui-x: '1115.218720353354'
+      gui-y: '624.2681195653345'
+    charm: cs:trusty/mysql-25
+    num_units: 1
+    options:
+      binlog-format: ROW

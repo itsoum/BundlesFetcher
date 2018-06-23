@@ -1,0 +1,33 @@
+applications:
+  ganglia:
+    charm: cs:xenial/ganglia
+    num_units: 1
+  ganglia-node:
+    charm: cs:xenial/ganglia-node
+    num_units: 0
+  open-foam:
+    charm: cs:~omnivector/open-foam
+    num_units: 0
+  slurm-controller:
+    charm: cs:~omnivector/slurm-controller
+    num_units: 1
+  slurm-node:
+    charm: cs:~omnivector/slurm-node
+    num_units: 1
+description: 'Slurm-OF-Monitoring
+
+  '
+relations:
+- - slurm-controller:slurm-cluster
+  - slurm-node:slurm-cluster
+- - ganglia-node:juju-info
+  - slurm-node:juju-info
+- - ganglia-node:juju-info
+  - slurm-controller:juju-info
+- - ganglia:node
+  - ganglia-node:node
+- - open-foam:juju-info
+  - slurm-node:juju-info
+- - open-foam:juju-info
+  - slurm-controller:juju-info
+series: xenial

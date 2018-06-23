@@ -1,0 +1,98 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: trusty
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: trusty
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: trusty
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: trusty
+relations:
+- - qb-reg:quobyte-registry
+  - qb-api:quobyte-registry
+- - qb-reg:quobyte-registry
+  - qb-data:quobyte-registry
+- - qb-reg:quobyte-registry
+  - qb-metadata:quobyte-registry
+- - qb-reg:quobyte-registry
+  - qb-webconsole:quobyte-registry
+- - qb-reg:quobyte-registry
+  - qb-client:quobyte-registry
+series: trusty
+services:
+  qb-api:
+    annotations:
+      gui-x: '800'
+      gui-y: '150'
+    charm: cs:~quobyte/trusty/quobyte-api
+    num_units: 1
+    options:
+      oracle-java-license-accepted: true
+      quobyte-license-accepted: true
+    to:
+    - '0'
+  qb-client:
+    annotations:
+      gui-x: '1000'
+      gui-y: '400'
+    charm: cs:~quobyte/trusty/quobyte-client
+    num_units: 1
+    options:
+      oracle-java-license-accepted: true
+      quobyte-license-accepted: true
+    to:
+    - '0'
+  qb-data:
+    annotations:
+      gui-x: '500'
+      gui-y: '670'
+    charm: cs:~quobyte/trusty/quobyte-data
+    num_units: 3
+    options:
+      oracle-java-license-accepted: true
+      quobyte-license-accepted: true
+    to:
+    - '1'
+    - '2'
+    - '3'
+  qb-metadata:
+    annotations:
+      gui-x: '800'
+      gui-y: '650'
+    charm: cs:~quobyte/trusty/quobyte-metadata
+    num_units: 3
+    options:
+      oracle-java-license-accepted: true
+      quobyte-license-accepted: true
+    to:
+    - '1'
+    - '2'
+    - '3'
+  qb-reg:
+    annotations:
+      gui-x: '600'
+      gui-y: '400'
+    charm: cs:~quobyte/trusty/quobyte-registry
+    num_units: 3
+    options:
+      oracle-java-license-accepted: true
+      quobyte-license-accepted: true
+    to:
+    - '1'
+    - '2'
+    - '3'
+  qb-webconsole:
+    annotations:
+      gui-x: '1000'
+      gui-y: '150'
+    charm: cs:~quobyte/trusty/quobyte-webconsole
+    expose: true
+    num_units: 1
+    options:
+      oracle-java-license-accepted: true
+    to:
+    - '0'

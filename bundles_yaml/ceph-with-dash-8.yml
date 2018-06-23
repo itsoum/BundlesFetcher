@@ -1,0 +1,94 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '4':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '5':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '6':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '7':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+relations:
+- - ceph-collector:juju-info
+  - ceph-mon:juju-info
+- - ceph-dash:influx
+  - influxdb:query
+- - telegraf:influxdb-api
+  - influxdb:query
+- - ceph-collector:juju-info
+  - ceph-osd:juju-info
+- - ceph-collector:influx
+  - influxdb:query
+- - telegraf:juju-info
+  - ceph-osd:juju-info
+- - telegraf:juju-info
+  - ceph-mon:juju-info
+- - ceph-mon:osd
+  - ceph-osd:mon
+series: xenial
+services:
+  ceph-collector:
+    annotations:
+      gui-x: '306.0274963378906'
+      gui-y: '915.9868827051816'
+    charm: cs:~canonical-storage/xenial/ceph-collector
+  ceph-dash:
+    annotations:
+      gui-x: '354.1343078613281'
+      gui-y: '552.897216796875'
+    charm: cs:~canonical-storage/xenial/ceph-dash
+    expose: true
+    num_units: 1
+    to:
+    - '0'
+  ceph-mon:
+    annotations:
+      gui-x: '719.6109619140625'
+      gui-y: '803.0890502929688'
+    charm: cs:ceph-mon
+    num_units: 3
+    to:
+    - '2'
+    - '3'
+    - '4'
+  ceph-osd:
+    annotations:
+      gui-x: '727.7972412109375'
+      gui-y: '1049.4223685450254'
+    charm: cs:ceph-osd
+    num_units: 3
+    options:
+      ephemeral-unmount: /mnt
+      osd-devices: /dev/xvdb /dev/vdb /dev/sdb
+    to:
+    - '5'
+    - '6'
+    - '7'
+  influxdb:
+    annotations:
+      gui-x: '706.9479064941406'
+      gui-y: '544.2460274510684'
+    charm: cs:~chris.macnaughton/xenial/influxdb
+    num_units: 1
+    to:
+    - '1'
+  telegraf:
+    annotations:
+      gui-x: '1156.9862365722656'
+      gui-y: '893.0525565333066'
+    charm: cs:telegraf

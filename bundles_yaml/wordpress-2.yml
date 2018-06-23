@@ -1,0 +1,20 @@
+machines:
+  0: {}
+relation:
+- - wordpress:db
+  - mysql:db
+series: trusty
+services:
+  mysql:
+    charm: cs:trusty/mysql
+    num_units: 1
+    to:
+    - '0'
+  wordpress:
+    charm: cs:trusty/wordpress
+    num_units: 1
+    options:
+      engine: nginx
+      tuning: single
+    to:
+    - '0'

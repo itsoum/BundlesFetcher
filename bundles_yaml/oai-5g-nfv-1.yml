@@ -1,0 +1,80 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=4 mem=16384
+    series: trusty
+  '1':
+    constraints: arch=amd64 cpu-cores=4 mem=16384
+    series: trusty
+  '2':
+    constraints: arch=amd64 cpu-cores=4 mem=16384
+    series: trusty
+  '3':
+    constraints: arch=amd64 cpu-cores=4 mem=16384
+    series: trusty
+relations:
+- - oai-hss:db
+  - mysql:db
+- - oai-hss:hss
+  - oai-epc:hss
+- - oai-epc:epc
+  - oai-enodeb-usrp:epc
+series: trusty
+services:
+  mysql:
+    annotations:
+      gui-x: '1298.9381103515625'
+      gui-y: '98.41497802734375'
+    charm: cs:trusty/mysql-33
+    num_units: 1
+    to:
+    - lxc:0
+  oai-enodeb-usrp:
+    annotations:
+      gui-x: '676.829345703125'
+      gui-y: '721.6952209472656'
+    charm: cs:~marcoceppi/trusty/oai-enb-0
+    constraints: tags=physical
+    num_units: 1
+    options:
+      N_RB_DL: 50
+      config_file: enb.band13.tm1.usrpb210.conf
+      downlink_frequency: '751000000'
+      eth: juju-br0
+      eutra_band: 13
+      rrh_active: 'no'
+      rx_gain: 100
+      uplink_frequency_offset: '31000000'
+    to:
+    - '3'
+  oai-epc:
+    annotations:
+      gui-x: '1401.8292846679688'
+      gui-y: '647.6953125'
+    charm: cs:~navid-nikaein/trusty/oai-epc-20
+    num_units: 1
+    options:
+      DEFAULT_DNS_IPV4_ADDRESS: 10.155.0.1
+      DEFAULT_DNS_SEC_IPV4_ADDRESS: 172.27.9.254
+      ipv4_list_end: 192.188.2.0/23
+      revision: d32cbff9bb752d1ab9d0c259ce102e91641cc12a
+    to:
+    - kvm:1
+  oai-hss:
+    annotations:
+      gui-x: '1046.8292236328125'
+      gui-y: '360.69525146484375'
+    charm: cs:~marcoceppi/trusty/oai-hss-0
+    num_units: 1
+    to:
+    - kvm:1
+  oasim-baremetal:
+    annotations:
+      gui-x: '697.31298828125'
+      gui-y: '429.8409881591797'
+    charm: cs:~navid-nikaein/trusty/oaisim-enb-ue-2
+    constraints: tags=physical
+    num_units: 1
+    options:
+      eth: juju-br0
+    to:
+    - '2'

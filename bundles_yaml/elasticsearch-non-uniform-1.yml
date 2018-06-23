@@ -1,0 +1,42 @@
+applications:
+  es-data:
+    annotations:
+      gui-x: '402'
+      gui-y: '191'
+    charm: cs:~omnivector/elasticsearch-8
+    num_units: 3
+    options:
+      node-type: data
+  es-ingest:
+    annotations:
+      gui-x: '802'
+      gui-y: '192'
+    charm: cs:~omnivector/elasticsearch-8
+    num_units: 3
+    options:
+      node-type: ingest
+  es-master:
+    annotations:
+      gui-x: '1002'
+      gui-y: '537.7'
+    charm: cs:~omnivector/elasticsearch-8
+    num_units: 3
+    options:
+      min-master-count: 1
+      node-type: master
+  es-tribe:
+    annotations:
+      gui-x: '602'
+      gui-y: '537.7'
+    charm: cs:~omnivector/elasticsearch-8
+    num_units: 3
+    options:
+      node-type: tribe
+relations:
+- - es-master:provide-master
+  - es-ingest:require-master
+- - es-master:provide-master
+  - es-tribe:require-master
+- - es-master:provide-master
+  - es-data:require-master
+series: xenial

@@ -1,0 +1,28 @@
+relations:
+- - flannel-docker:network
+  - docker:network
+- - flannel-docker:docker-host
+  - docker:juju-info
+- - flannel-docker:db
+  - etcd:client
+series: trusty
+services:
+  docker:
+    annotations:
+      gui-x: '486.0074453476486'
+      gui-y: '427.5235600045462'
+    charm: cs:trusty/docker-1
+    num_units: 2
+    options:
+      latest: true
+  etcd:
+    annotations:
+      gui-x: '876.9836380292411'
+      gui-y: '225.43276385085915'
+    charm: cs:~kubernetes/trusty/etcd-2
+    num_units: 1
+  flannel-docker:
+    annotations:
+      gui-x: '878.1134204692496'
+      gui-y: '650.685663020781'
+    charm: cs:trusty/flannel-docker-1

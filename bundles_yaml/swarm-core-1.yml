@@ -1,0 +1,18 @@
+relations:
+- - swarm:consul
+  - consul:api
+series: trusty
+services:
+  consul:
+    annotations:
+      gui-x: '822.357177734375'
+      gui-y: '181.14959716796875'
+    charm: cs:~containers/trusty/consul
+    num_units: 3
+  swarm:
+    annotations:
+      gui-x: '1227.010009765625'
+      gui-y: '181.14959716796875'
+    charm: cs:~lazypower/swarm
+    expose: true
+    num_units: 2

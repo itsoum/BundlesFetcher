@@ -1,0 +1,93 @@
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '4':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '5':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+  '6':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=300 mem=3840 root-disk=8192
+    series: xenial
+relations:
+- - strongloop-mongo:system-z
+  - mongodb:system-z
+- - zos-connect:zos-connect
+  - apache-spark:zos-connect
+- - apache-spark:strongloop
+  - strongloop-mongo:strongloop
+- - node-red:node-red
+  - mongodb:node-red
+- - strongloop-spark:system-z
+  - apache-spark:system-z
+- - strongloop-mobile:z-relation
+  - strongloop-spark:z-relation
+series: xenial
+services:
+  apache-spark:
+    annotations:
+      gui-x: '966.9999389648438'
+      gui-y: '608.5'
+    charm: cs:~ibm-demo/xenial/apache-spark
+    num_units: 1
+    to:
+    - '0'
+  mongodb:
+    annotations:
+      gui-x: '982'
+      gui-y: '849.0898384862246'
+    charm: cs:~ibm-demo/xenial/mongodb
+    num_units: 1
+    to:
+    - '1'
+  node-red:
+    annotations:
+      gui-x: '634.0000610351562'
+      gui-y: '858.0898384862246'
+    charm: cs:~ibm-demo/xenial/node-red
+    num_units: 1
+    to:
+    - '2'
+  strongloop-mobile:
+    annotations:
+      gui-x: '628.0000610351562'
+      gui-y: '414.5'
+    charm: cs:~ibm-demo/xenial/strongloop-mobile
+    num_units: 1
+    to:
+    - '3'
+  strongloop-mongo:
+    annotations:
+      gui-x: '1286'
+      gui-y: '841.9101615137754'
+    charm: cs:~ibm-demo/xenial/strongloop-mongo
+    num_units: 1
+    to:
+    - '4'
+  strongloop-spark:
+    annotations:
+      gui-x: '1270'
+      gui-y: '412.5'
+    charm: cs:~ibm-demo/xenial/strongloop-spark
+    num_units: 1
+    to:
+    - '5'
+  zos-connect:
+    annotations:
+      gui-x: '1507'
+      gui-y: '601.9101615137754'
+    charm: cs:~ibm-demo/xenial/zos-connect
+    num_units: 1
+    to:
+    - '6'

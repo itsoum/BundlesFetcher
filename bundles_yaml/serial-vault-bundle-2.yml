@@ -1,0 +1,70 @@
+applications:
+  haproxy:
+    annotations:
+      gui-x: 924.81982421875
+      gui-y: 317.1206359863281
+    charm: cs:haproxy
+    num_units: 1
+    options:
+      enable_monitoring: false
+      services: "- service_name: serial-vault\n  service_host: 0.0.0.0\n  service_port:\
+        \ 8080\n  service_options:\n    - mode http\n    - option httplog\n    - balance\
+        \ leastconn\n    - timeout server 50000\n    - option httpchk GET /v1/version\
+        \ HTTP/1.1\\r\\nHost:\\ serial-vault\n  server_options:\n    - check inter\
+        \ 2000\n    - rise 2\n    - fall 5\n    - maxconn 50\n- service_name: serial-vault-admin\n\
+        \  service_host: 0.0.0.0\n  service_port: 8081\n  service_options:\n    -\
+        \ mode http\n    - option httplog\n    - balance leastconn\n    - timeout\
+        \ server 50000\n    - option httpchk GET /v1/version HTTP/1.1\\r\\nHost:\\\
+        \ serial-vault-admin\n  server_options:\n    - check inter 2000\n    - rise\
+        \ 2\n    - fall 5\n    - maxconn 50\n"
+    to:
+    - '3'
+  postgresql:
+    annotations:
+      gui-x: 1407
+      gui-y: 295.0000305175781
+    charm: cs:postgresql
+    num_units: 1
+    to:
+    - '0'
+  serial-vault:
+    annotations:
+      gui-x: 1151
+      gui-y: 141
+    charm: cs:~canonical-solutions/serial-vault-selfhosted
+    num_units: 1
+    to:
+    - '1'
+  serial-vault-admin:
+    annotations:
+      gui-x: 1168
+      gui-y: 517
+    charm: cs:~canonical-solutions/serial-vault-selfhosted
+    num_units: 1
+    options:
+      service_type: admin
+    to:
+    - '2'
+machines:
+  '0':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: xenial
+  '1':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: xenial
+  '2':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: xenial
+  '3':
+    constraints: arch=amd64 cpu-cores=1 cpu-power=100 mem=1740 root-disk=8192
+    series: xenial
+relations:
+- - serial-vault-admin:database
+  - postgresql:db-admin
+- - serial-vault:database
+  - postgresql:db-admin
+- - haproxy:reverseproxy
+  - serial-vault-admin:website
+- - haproxy:reverseproxy
+  - serial-vault:website
+series: xenial

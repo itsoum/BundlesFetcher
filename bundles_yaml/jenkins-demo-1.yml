@@ -1,0 +1,17 @@
+relations:
+- - jenkins-slave:slave
+  - jenkins:master
+series: precise
+services:
+  jenkins:
+    annotations:
+      gui-x: '1304'
+      gui-y: '292'
+    charm: cs:precise/jenkins-9
+    num_units: 1
+  jenkins-slave:
+    annotations:
+      gui-x: '1307'
+      gui-y: '665'
+    charm: cs:precise/jenkins-slave-3
+    num_units: 1

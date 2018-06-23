@@ -1,0 +1,46 @@
+cplane-repo: http://repohost.local/cplane_metadata.json
+machines:
+  '0':
+    constraints: arch=amd64 tags=oracle-rac
+    series: trusty
+num-of-slave-units: 0
+openstack-version: mitaka
+relations:
+- - rac-master:oracle
+  - cplane-msm:oracle
+series: trusty
+services:
+  cplane-msm:
+    annotations:
+      gui-x: '700'
+      gui-y: '0'
+    charm: cs:~cplane-team/trusty/cplane-controller
+    num_units: 1
+    options:
+      controller-app-mode: msm
+      cp-package-url: http://repohost.local/cplane_metadata.json
+      cplane-version: 1.3.8
+      jboss-cluster-name: cplane
+      jboss-db-on-host: false
+      msm-version: 262
+      openstack-version: mitaka
+      production: y
+      use-default-jboss-cluster: true
+    to:
+    - '0'
+  rac-master:
+    annotations:
+      gui-x: '700'
+      gui-y: '0'
+    charm: cs:~cplane-team/centos7/oracle-12c
+    constraints: tags=oracle-rac
+    num_units: 1
+    options:
+      cp-package-url: http://repohost.local/cplane_metadata.json
+      cplane-version: 1.3.8
+      openstack-version: mitaka
+      private-interface: eth2.11
+      scan-ip-range: 10.14.0.187
+      slave-units-number: 0
+      vip-range: 10.14.0.180
+    series: centos7

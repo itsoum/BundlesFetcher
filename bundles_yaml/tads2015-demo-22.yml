@@ -1,0 +1,163 @@
+relations:
+- - calls-consumer:redis
+  - redis-master:db
+- - calls-consumer:restcomm
+  - telscale-restcomm:website
+- - haproxy:reverseproxy
+  - calls-consumer:haproxy
+- - calls-consumer
+  - mesos-master
+- - conference-call:redis
+  - redis-master:db
+- - conference-call:restcomm
+  - telscale-restcomm:website
+- - haproxy:reverseproxy
+  - conference-call:haproxy
+- - conference-call
+  - mesos-master
+- - sms-feedback:redis
+  - redis-master:db
+- - sms-feedback:restcomm
+  - telscale-restcomm:website
+- - haproxy:reverseproxy
+  - sms-feedback:haproxy
+- - sms-feedback
+  - mesos-master
+- - monitor-server:redis
+  - monitor-db:redis-master
+- - mesos-master
+  - mesos-slave
+- - monitor-agent-mesos:monitor-server
+  - monitor-server:monitor-server
+- - monitor-agent-mesos
+  - mesos-master
+- - monitor-agent-mesos
+  - mesos-slave
+- - monitor-agent-mesos-master:monitor-server
+  - monitor-server:monitor-server
+- - monitor-agent-mesos-master
+  - mesos-master
+- - monitor-server
+  - mesos-master
+- - elasticsearch
+  - kibana
+- - monitor-server
+  - elasticsearch
+series: trusty
+services:
+  calls-consumer:
+    annotations:
+      gui-x: '1710'
+      gui-y: '190'
+    charm: cs:~tads2015dataart/trusty/tads2015-calls-consumer-4mesos
+    options:
+      DID_DOMAIN: 80.250.109.132
+      PHONE_NUMBER: '5555'
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335
+  conference-call:
+    annotations:
+      gui-x: '1710'
+      gui-y: '570'
+    charm: cs:~tads2015dataart/trusty/tads2015-conference-call-4mesos
+    options:
+      DID_DOMAIN: 80.250.109.132
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335
+  elasticsearch:
+    annotations:
+      gui-x: '380'
+      gui-y: '950'
+    charm: cs:trusty/elasticsearch-13
+    constraints: mem=2G
+    expose: true
+    options:
+      firewall_enabled: false
+  haproxy:
+    annotations:
+      gui-x: '2280'
+      gui-y: '380'
+    charm: cs:trusty/haproxy-11
+    expose: true
+    num_units: 1
+    options:
+      services: '[]'
+  kibana:
+    annotations:
+      gui-x: '0'
+      gui-y: '950'
+    charm: cs:trusty/kibana-10
+    expose: true
+    options:
+      kibana_source: https://download.elastic.co/kibana/kibana/kibana-4.1.4-linux-x64.tar.gz
+      kibana_source_checksum: f88a7ad612b4e7129a951cf0e64429e63d847ed9
+  mesos-master:
+    annotations:
+      gui-x: '1140'
+      gui-y: '570'
+    charm: cs:~tads2015dataart/trusty/mesos-master-0
+    constraints: mem=1G
+    expose: true
+    num_units: 1
+  mesos-slave:
+    annotations:
+      gui-x: '1140'
+      gui-y: '950'
+    charm: cs:~tads2015dataart/trusty/mesos-slave-0
+    constraints: mem=1G
+    expose: true
+    num_units: 2
+  monitor-agent-mesos:
+    annotations:
+      gui-x: '760'
+      gui-y: '950'
+    charm: cs:~tads2015dataart/trusty/monitor-agent-mesos
+  monitor-agent-mesos-master:
+    annotations:
+      gui-x: '760'
+      gui-y: '190'
+    charm: cs:~tads2015dataart/trusty/monitor-agent-mesos-master
+  monitor-db:
+    annotations:
+      gui-x: '380'
+      gui-y: '190'
+    charm: cs:~mbruzek/trusty/redis-master-0
+    expose: true
+    num_units: 1
+  monitor-server:
+    annotations:
+      gui-x: '380'
+      gui-y: '570'
+    charm: cs:~tads2015dataart/trusty/monitor-server
+    constraints: mem=512M
+    expose: true
+    num_units: 1
+    options:
+      CHECK_PERIOD: 60
+      JUJU_SCALE_DOWN: 37
+      MESOS_SCALE_DOWN: 10
+  redis-master:
+    annotations:
+      gui-x: '2280'
+      gui-y: '760'
+    charm: cs:~mbruzek/trusty/redis-master-0
+    expose: true
+    num_units: 1
+  sms-feedback:
+    annotations:
+      gui-x: '1710'
+      gui-y: '950'
+    charm: cs:~tads2015dataart/trusty/tads2015-sms-feedback-4mesos
+    options:
+      DID_DOMAIN: ''
+      RESTCOMM_PASSWORD: 42d8aa7cde9c78c4757862d84620c335
+  telscale-restcomm:
+    annotations:
+      gui-x: '2280'
+      gui-y: '0'
+    charm: cs:~tads2015dataart/trusty/telscale-restcomm
+    constraints: mem=2G
+    expose: true
+    num_units: 1
+    options:
+      init_password: 42d8aa7cde9c78c4757862d84620c335
+      sms_proxy: 54.174.171.104
+      voicerss_key: 29b2d893df9f454abbfae94df6cff95b

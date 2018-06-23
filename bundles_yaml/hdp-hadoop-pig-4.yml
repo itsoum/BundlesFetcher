@@ -1,0 +1,29 @@
+relations:
+- - hdp-pig:namenode
+  - yarn-hdfs-master:namenode
+- - yarn-hdfs-master:namenode
+  - compute-node:datanode
+- - yarn-hdfs-master:resourcemanager
+  - compute-node:nodemanager
+- - hdp-pig:resourcemanager
+  - yarn-hdfs-master:resourcemanager
+series: trusty
+services:
+  compute-node:
+    annotations:
+      gui-x: '656.6386478556842'
+      gui-y: '997.2758247589375'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1
+  hdp-pig:
+    annotations:
+      gui-x: '675.9159435670526'
+      gui-y: '279.7241752410624'
+    charm: cs:trusty/hdp-pig-2
+    num_units: 1
+  yarn-hdfs-master:
+    annotations:
+      gui-x: '657.3613521443158'
+      gui-y: '654.7241752410625'
+    charm: cs:trusty/hdp-hadoop-1
+    num_units: 1

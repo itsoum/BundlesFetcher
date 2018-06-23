@@ -1,0 +1,20 @@
+relations:
+- - wordpress:db
+  - mysql
+services:
+  mysql:
+    charm: cs:~ionutbalutoiu/percona-cluster-0
+    num_units: 1
+    options:
+      innodb-buffer-pool-size: 256M
+      max-connections: 500
+    series: xenial
+    to:
+    - wordpress/0
+  wordpress:
+    charm: cs:~ionutbalutoiu/wordpress-1
+    constraints: mem=4G cores=2 root-disk=100G
+    num_units: 1
+    options:
+      engine: apache2
+    series: xenial

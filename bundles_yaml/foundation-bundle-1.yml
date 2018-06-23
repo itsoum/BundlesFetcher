@@ -1,0 +1,1050 @@
+machines:
+  '0':
+    constraints: tags=large
+    series: xenial
+  '1':
+    constraints: tags=large
+    series: xenial
+  '10':
+    constraints: tags=virtual
+    series: xenial
+  '11':
+    constraints: tags=virtual
+    series: xenial
+  '12':
+    constraints: tags=virtual
+    series: xenial
+  '13':
+    constraints: tags=virtual
+    series: xenial
+  '14':
+    constraints: tags=virtual
+    series: xenial
+  '15':
+    constraints: tags=virtual
+    series: xenial
+  '16':
+    constraints: tags=virtual
+    series: xenial
+  '17':
+    constraints: tags=virtual
+    series: xenial
+  '18':
+    constraints: tags=virtual
+    series: xenial
+  '19':
+    constraints: tags=virtual
+    series: xenial
+  '2':
+    constraints: tags=small
+    series: xenial
+  '20':
+    constraints: tags=virtual
+    series: xenial
+  '21':
+    constraints: tags=virtual
+    series: xenial
+  '22':
+    constraints: tags=virtual
+    series: xenial
+  '3':
+    constraints: tags=small
+    series: xenial
+  '4':
+    constraints: tags=small
+    series: xenial
+  '5':
+    constraints: tags=small
+    series: xenial
+  '6':
+    constraints: tags=small
+    series: xenial
+  '7':
+    constraints: tags=large
+    series: xenial
+  '8':
+    constraints: tags=large
+    series: xenial
+  '9':
+    constraints: tags=virtual
+    series: xenial
+relations:
+- - aodh
+  - mysql
+- - aodh
+  - keystone
+- - aodh
+  - rabbitmq-server
+- - ceph-osd
+  - ceph-mon
+- - ceph-radosgw
+  - ceph-mon
+- - keystone
+  - ceph-radosgw
+- - nova-compute-kvm
+  - ntp
+- - nova-compute-lxd
+  - ntp
+- - neutron-gateway
+  - ntp
+- - ceph-radosgw
+  - hacluster-rados
+- - mysql
+  - hacluster-pxc
+- - keystone
+  - hacluster-keystone
+- - glance
+  - hacluster-glance
+- - cinder
+  - hacluster-cinder
+- - designate
+  - hacluster-designate
+- - neutron-api
+  - hacluster-neutron
+- - nova-cloud-controller
+  - hacluster-nova
+- - openstack-dashboard
+  - hacluster-horizon
+- - keystone
+  - mysql
+- - ceilometer:identity-service
+  - keystone:identity-service
+- - ceilometer
+  - mongodb
+- - ceilometer
+  - rabbitmq-server
+- - cinder
+  - mysql
+- - cinder
+  - keystone
+- - cinder-ceph
+  - ceph-mon
+- - cinder-ceph
+  - cinder
+- - cinder
+  - rabbitmq-server
+- - designate
+  - mysql
+- - designate
+  - designate-bind
+- - designate
+  - keystone
+- - designate
+  - rabbitmq-server
+- - glance
+  - mysql
+- - glance
+  - keystone
+- - glance
+  - ceph-mon
+- - glance
+  - rabbitmq-server
+- - heat
+  - mysql
+- - heat
+  - keystone
+- - heat
+  - rabbitmq-server
+- - nova-cloud-controller
+  - mysql
+- - nova-cloud-controller
+  - rabbitmq-server
+- - nova-cloud-controller
+  - keystone
+- - nova-cloud-controller
+  - glance
+- - neutron-api
+  - mysql
+- - neutron-api
+  - rabbitmq-server
+- - neutron-api
+  - nova-cloud-controller
+- - neutron-api
+  - keystone
+- - neutron-gateway
+  - nova-cloud-controller
+- - neutron-gateway:amqp
+  - rabbitmq-server:amqp
+- - neutron-gateway:neutron-plugin-api
+  - neutron-api:neutron-plugin-api
+- - neutron-openvswitch:amqp
+  - rabbitmq-server:amqp
+- - neutron-openvswitch
+  - neutron-api
+- - nova-compute-kvm:amqp
+  - rabbitmq-server:amqp
+- - nova-compute-lxd:amqp
+  - rabbitmq-server:amqp
+- - nova-compute-kvm
+  - ceph-mon
+- - nova-compute-kvm
+  - cinder-ceph
+- - nova-compute-kvm
+  - glance
+- - nova-compute-lxd
+  - glance
+- - nova-compute-kvm
+  - designate
+- - nova-compute-lxd
+  - designate
+- - nova-compute-kvm
+  - neutron-openvswitch
+- - nova-compute-lxd
+  - neutron-openvswitch
+- - nova-compute-kvm
+  - nova-cloud-controller
+- - nova-compute-lxd
+  - nova-cloud-controller
+- - openstack-dashboard
+  - keystone
+- - openstack-dashboard
+  - mysql
+- - ceilometer-agent
+  - nova-compute-kvm
+- - ceilometer-agent
+  - nova-compute-lxd
+- - ceilometer-agent
+  - glance
+- - ceilometer-agent
+  - cinder
+- - ceilometer-agent
+  - keystone
+- - ceilometer-agent
+  - designate
+- - ceilometer-agent
+  - heat
+- - ceilometer-agent
+  - neutron-api
+- - ceilometer-agent
+  - nova-cloud-controller
+- - ceilometer-agent
+  - ceilometer
+- - nova-compute-kvm
+  - filebeat
+- - nova-compute-lxd
+  - filebeat
+- - nova-compute-kvm
+  - nrpe
+- - nova-compute-lxd
+  - nrpe
+- - nova-compute-kvm
+  - telegraf
+- - nova-compute-lxd
+  - telegraf
+- - nova-compute-kvm
+  - landscape-client
+- - nova-compute-lxd
+  - landscape-client
+- - neutron-gateway
+  - filebeat
+- - neutron-gateway
+  - nrpe
+- - neutron-gateway
+  - telegraf
+- - neutron-gateway
+  - landscape-client
+- - ceph-mon
+  - nrpe
+- - ceph-mon
+  - telegraf
+- - ceph-mon
+  - landscape-client
+- - ceph-radosgw
+  - filebeat
+- - ceph-radosgw
+  - nrpe
+- - ceph-radosgw
+  - telegraf
+- - ceph-radosgw
+  - landscape-client
+- - cinder
+  - filebeat
+- - cinder
+  - nrpe
+- - cinder
+  - telegraf
+- - cinder
+  - landscape-client
+- - glance:image-service
+  - cinder:image-service
+- - glance:cinder-volume-service
+  - cinder:cinder-volume-service
+- - glance
+  - filebeat
+- - glance
+  - nrpe
+- - glance
+  - telegraf
+- - glance
+  - landscape-client
+- - keystone
+  - filebeat
+- - keystone
+  - nrpe
+- - keystone
+  - telegraf
+- - keystone
+  - landscape-client
+- - mongodb
+  - filebeat
+- - mongodb
+  - nrpe
+- - mongodb
+  - telegraf
+- - mongodb
+  - landscape-client
+- - mysql
+  - filebeat
+- - mysql
+  - nrpe
+- - mysql
+  - telegraf
+- - mysql
+  - landscape-client
+- - neutron-api
+  - filebeat
+- - neutron-api
+  - nrpe
+- - neutron-api
+  - telegraf
+- - neutron-api
+  - landscape-client
+- - nova-cloud-controller
+  - filebeat
+- - nova-cloud-controller
+  - nrpe
+- - nova-cloud-controller
+  - telegraf
+- - nova-cloud-controller
+  - landscape-client
+- - openstack-dashboard
+  - filebeat
+- - openstack-dashboard
+  - nrpe
+- - openstack-dashboard
+  - telegraf
+- - openstack-dashboard
+  - landscape-client
+- - rabbitmq-server
+  - filebeat
+- - rabbitmq-server
+  - nrpe
+- - rabbitmq-server
+  - telegraf
+- - rabbitmq-server
+  - landscape-client
+- - heat
+  - filebeat
+- - heat
+  - nrpe
+- - heat
+  - telegraf
+- - heat
+  - landscape-client
+- - designate
+  - filebeat
+- - designate
+  - nrpe
+- - designate
+  - telegraf
+- - designate
+  - landscape-client
+- - designate-bind
+  - filebeat
+- - designate-bind
+  - nrpe
+- - designate-bind
+  - telegraf
+- - designate-bind
+  - landscape-client
+- - ceilometer
+  - filebeat
+- - ceilometer
+  - nrpe
+- - ceilometer
+  - telegraf
+- - ceilometer
+  - landscape-client
+- - landscape-server
+  - filebeat
+- - landscape-server
+  - nrpe
+- - landscape-server
+  - telegraf
+- - landscape-server
+  - landscape-client
+- - landscape-rabbitmq
+  - filebeat
+- - landscape-rabbitmq
+  - nrpe
+- - landscape-rabbitmq
+  - telegraf
+- - landscape-rabbitmq
+  - landscape-client
+- - landscape-psql
+  - filebeat
+- - landscape-psql:local-monitors
+  - nrpe:local-monitors
+- - landscape-psql:juju-info
+  - nrpe:general-info
+- - landscape-psql:juju-info
+  - telegraf:juju-info
+- - landscape-psql
+  - landscape-client
+- - landscape-haproxy
+  - filebeat
+- - landscape-haproxy:juju-info
+  - nrpe:general-info
+- - landscape-haproxy:local-monitors
+  - nrpe:local-monitors
+- - landscape-haproxy:juju-info
+  - telegraf:juju-info
+- - landscape-haproxy
+  - landscape-client
+- - kibana
+  - filebeat
+- - kibana
+  - nrpe
+- - kibana
+  - telegraf
+- - kibana
+  - landscape-client
+- - elasticsearch
+  - filebeat
+- - elasticsearch
+  - nrpe
+- - elasticsearch
+  - telegraf
+- - elasticsearch
+  - landscape-client
+- - nagios:juju-info
+  - filebeat:beats-host
+- - nagios:juju-info
+  - telegraf:juju-info
+- - nagios:juju-info
+  - landscape-client:container
+- - prometheus
+  - filebeat
+- - prometheus
+  - nrpe
+- - prometheus:juju-info
+  - telegraf:juju-info
+- - prometheus
+  - landscape-client
+- - grafana
+  - filebeat
+- - grafana
+  - nrpe
+- - grafana
+  - telegraf
+- - grafana
+  - landscape-client
+- - nagios
+  - nrpe
+- - landscape-server
+  - landscape-rabbitmq
+- - landscape-server
+  - landscape-haproxy
+- - landscape-server:db
+  - landscape-psql:db-admin
+- - elasticsearch
+  - kibana
+- - prometheus:target
+  - telegraf:prometheus-client
+- - prometheus:alertmanager-service
+  - telegraf:prometheus-client
+- - prometheus:grafana-source
+  - grafana:grafana-source
+series: xenial
+services:
+  aodh:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+    charm: cs:xenial/aodh
+    num_units: 3
+    options:
+      openstack-origin: distro
+      region: RegionOne
+      vip: 10.245.208.78 10.245.208.79
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  ceilometer:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+    charm: cs:xenial/ceilometer
+    num_units: 3
+    options:
+      openstack-origin: distro
+      region: RegionOne
+      vip: 10.245.208.80 10.245.208.81
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  ceilometer-agent:
+    charm: cs:xenial/ceilometer-agent
+    num_units: 0
+    options:
+      use-internal-endpoints: true
+  ceph-mon:
+    bindings:
+      ? ''
+      : oam-space
+      public: ceph-access-space
+    charm: cs:xenial/ceph-mon
+    num_units: 3
+    options:
+      expected-osd-count: 9
+      monitor-count: 3
+      source: distro
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  ceph-osd:
+    bindings:
+      ? ''
+      : oam-space
+      cluster: ceph-replica-space
+      public: ceph-access-space
+    charm: cs:xenial/ceph-osd
+    num_units: 9
+    options:
+      aa-profile-mode: complain
+      osd-devices: /dev/sdb
+      osd-journal: null
+      osd-reformat: 'yes'
+      source: distro
+    to:
+    - '0'
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+  ceph-radosgw:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+    charm: cs:xenial/ceph-radosgw
+    num_units: 3
+    options:
+      region: RegionOne
+      restrict-ceph-pools: false
+      source: distro
+      vip: 10.245.208.98 10.245.208.99
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  cinder:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/cinder
+    constraints: spaces=ceph-access-space
+    num_units: 3
+    options:
+      block-device: None
+      glance-api-version: 2
+      openstack-origin: distro
+      region: RegionOne
+      use-internal-endpoints: true
+      vip: 10.245.208.82 10.245.208.83
+      worker-multiplier: 0.25
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  cinder-ceph:
+    charm: cs:xenial/cinder-ceph
+    num_units: 0
+    options:
+      restrict-ceph-pools: false
+  designate:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/designate
+    num_units: 3
+    options:
+      openstack-origin: distro
+      region: RegionOne
+      vip: 10.245.208.85 10.245.208.86
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  designate-bind:
+    bindings:
+      ? ''
+      : internal-space
+    charm: cs:xenial/designate-bind
+    constraints: spaces=oam-space
+    num_units: 1
+    to:
+    - lxd:4
+  elasticsearch:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:~ivoks/elasticsearch
+    num_units: 2
+    options:
+      apt-key-url: http://10.245.208.5/elastic-search-gpg-key
+      firewall_enabled: false
+    to:
+    - 14
+    - 22
+  filebeat:
+    charm: cs:xenial/filebeat
+  glance:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/glance
+    constraints: spaces=ceph-access-space
+    num_units: 3
+    options:
+      openstack-origin: distro
+      region: RegionOne
+      restrict-ceph-pools: false
+      use-internal-endpoints: true
+      vip: 10.245.208.87 10.245.208.88
+      worker-multiplier: 0.25
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  grafana:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:~prometheus-charmers/grafana
+    num_units: 1
+    options:
+      port: '80'
+    to:
+    - 10
+  hacluster-cinder:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-designate:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-glance:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-horizon:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-keystone:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-neutron:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-nova:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-pxc:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  hacluster-rados:
+    charm: cs:xenial/hacluster
+    options:
+      cluster_count: 3
+  heat:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/heat
+    num_units: 3
+    options:
+      openstack-origin: distro
+      region: RegionOne
+      vip: 10.245.208.89 10.245.208.90
+      worker-multiplier: 0.25
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  keystone:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/keystone
+    num_units: 3
+    options:
+      openstack-origin: distro
+      preferred-api-version: 3
+      region: RegionOne
+      vip: 10.245.208.91 10.245.208.92
+      worker-multiplier: 0.25
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  kibana:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:~ivoks/kibana
+    num_units: 1
+    to:
+    - 19
+  landscape-client:
+    charm: cs:xenial/landscape-client
+    options:
+      account-name: standalone
+      origin: ppa:landscape/17.03
+  landscape-haproxy:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:xenial/haproxy
+    num_units: 1
+    options:
+      default_timeouts: queue 60000, connect 5000, client 120000, server 120000
+      global_default_bind_options: no-tlsv10
+      services: ''
+      source: backports
+      ssl_cert: SELFSIGNED
+    to:
+    - 11
+  landscape-psql:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:xenial/postgresql
+    num_units: 2
+    options:
+      extra_packages: python-apt postgresql-contrib postgresql-.*-debversion postgresql-plpython-.*
+      max_connections: 500
+      max_prepared_transactions: 500
+    to:
+    - 12
+    - 17
+  landscape-rabbitmq:
+    bindings:
+      ? ''
+      : oam-space
+      amqp: oam-space
+      cluster: oam-space
+    charm: cs:xenial/rabbitmq-server
+    num_units: 3
+    to:
+    - 13
+    - 16
+    - 21
+  landscape-server:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:~alai/xenial/landscape-0
+    num_units: 2
+    options:
+      key: 4652B4E6
+      source: ppa:landscape/17.03
+    to:
+    - 15
+    - 20
+  mongodb:
+    bindings:
+      ? ''
+      : internal-space
+    charm: cs:xenial/mongodb
+    constraints: spaces=oam-space
+    num_units: 3
+    options:
+      backup_directory: /var/backups
+      backups_enabled: true
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  mysql:
+    bindings:
+      ? ''
+      : oam-space
+      cluster: internal-space
+      shared-db: internal-space
+    charm: cs:xenial/percona-cluster
+    num_units: 3
+    options:
+      enable-binlogs: true
+      innodb-buffer-pool-size: 10%
+      max-connections: 2000
+      min-cluster-size: 3
+      performance-schema: true
+      source: distro
+      vip: 10.245.208.93
+      wait-timeout: 180
+    to:
+    - lxd:0
+    - lxd:1
+    - lxd:2
+  nagios:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:xenial/nagios
+    num_units: 1
+    to:
+    - 9
+  neutron-api:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/neutron-api
+    num_units: 3
+    options:
+      default-tenant-network-type: vxlan
+      dhcp-agents-per-network: 2
+      enable-l3ha: true
+      enable-ml2-port-security: true
+      flat-network-providers: physnet1
+      l2-population: false
+      neutron-security-groups: true
+      openstack-origin: distro
+      overlay-network-type: vxlan gre
+      region: RegionOne
+      use-internal-endpoints: true
+      vip: 10.245.208.94 10.245.208.95
+      vlan-ranges: null
+      worker-multiplier: 0.25
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  neutron-gateway:
+    bindings:
+      ? ''
+      : oam-space
+      data: oam-space
+    charm: cs:xenial/neutron-gateway
+    num_units: 2
+    options:
+      aa-profile-mode: complain
+      bridge-mappings: physnet1:br-data
+      data-port: br-data:eth1.2734
+      openstack-origin: distro
+    to:
+    - 5
+    - 6
+  neutron-openvswitch:
+    bindings:
+      data: oam-space
+    charm: cs:xenial/neutron-openvswitch
+    num_units: 0
+    options:
+      bridge-mappings: physnet1:br-data
+      prevent-arp-spoofing: true
+  nova-cloud-controller:
+    bindings:
+      ? ''
+      : oam-space
+      admin: oam-space
+      internal: internal-space
+      public: oam-space
+      shared-db: internal-space
+    charm: cs:xenial/nova-cloud-controller
+    num_units: 3
+    options:
+      console-access-protocol: novnc
+      console-proxy-ip: local
+      network-manager: Neutron
+      openstack-origin: distro
+      region: RegionOne
+      single-nova-consoleauth: false
+      use-internal-endpoints: true
+      vip: 10.245.208.96 10.245.208.97
+      worker-multiplier: 0.25
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  nova-compute-kvm:
+    bindings:
+      ? ''
+      : oam-space
+      internal: internal-space
+    charm: cs:xenial/nova-compute
+    num_units: 5
+    options:
+      aa-profile-mode: complain
+      enable-live-migration: true
+      enable-resize: true
+      libvirt-image-backend: qcow2
+      migration-auth-type: ssh
+      openstack-origin: distro
+      restrict-ceph-pools: false
+      use-internal-endpoints: true
+      virt-type: kvm
+    to:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+  nova-compute-lxd:
+    bindings:
+      ? ''
+      : oam-space
+      internal: internal-space
+    charm: cs:xenial/nova-compute
+    num_units: 2
+    options:
+      aa-profile-mode: complain
+      enable-live-migration: false
+      openstack-origin: distro
+      restrict-ceph-pools: false
+      use-internal-endpoints: true
+      virt-type: lxd
+    to:
+    - 7
+    - 8
+  nrpe:
+    bindings:
+      monitors: oam-space
+    charm: cs:xenial/nrpe
+    options:
+      nagios_hostname_type: host
+      sub_postfix: ''
+  ntp:
+    charm: cs:xenial/ntp
+    num_units: 0
+    options:
+      source: ntp.ubuntu.com
+  openstack-dashboard:
+    bindings:
+      ? ''
+      : oam-space
+      shared-db: internal-space
+    charm: cs:xenial/openstack-dashboard
+    constraints: spaces=oam-space
+    num_units: 3
+    options:
+      cinder-backup: false
+      endpoint-type: publicURL
+      neutron-network-firewall: false
+      neutron-network-l3ha: true
+      neutron-network-lb: true
+      openstack-origin: distro
+      password-retrieve: true
+      secret: encryptcookieswithme
+      vip: 10.245.208.84
+      webroot: /
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  prometheus:
+    bindings:
+      ? ''
+      : oam-space
+    charm: cs:~prometheus-charmers/prometheus
+    num_units: 1
+    options:
+      install_method: apt
+    to:
+    - 18
+  rabbitmq-server:
+    bindings:
+      ? ''
+      : oam-space
+      amqp: internal-space
+      cluster: internal-space
+    charm: cs:xenial/rabbitmq-server
+    num_units: 3
+    options:
+      management_plugin: true
+      min-cluster-size: 3
+      source: distro
+    to:
+    - lxd:3
+    - lxd:5
+    - lxd:6
+  telegraf:
+    charm: cs:telegraf
+variables:
+  admin-space: oam-space
+  aodh-vip: 10.245.208.78 10.245.208.79
+  ceilometer-vip: 10.245.208.80 10.245.208.81
+  ceph-access-constr: spaces=ceph-access-space
+  ceph-cluster-space: ceph-replica-space
+  ceph-public-space: ceph-access-space
+  cinder-vip: 10.245.208.82 10.245.208.83
+  dashboard-vip: 10.245.208.84
+  data-port: br-data:eth1.2734
+  designate-vip: 10.245.208.85 10.245.208.86
+  expected-mon-count: 3
+  expected-osd-count: 9
+  glance-vip: 10.245.208.87 10.245.208.88
+  heat-vip: 10.245.208.89 10.245.208.90
+  internal-space: internal-space
+  keystone-vip: 10.245.208.91 10.245.208.92
+  landscape-charm: /home/ubuntu/charms/landscape
+  mysql-connections: 2000
+  mysql-vip: 10.245.208.93
+  neutron-api-vip: 10.245.208.94 10.245.208.95
+  nova-cc-vip: 10.245.208.96 10.245.208.97
+  ntp-source: ntp.ubuntu.com
+  oam-space: oam-space
+  oam-space-constr: spaces=oam-space
+  openstack-origin: distro
+  openstack-region: RegionOne
+  osd-devices: /dev/sdb
+  osd-journal: null
+  overlay-space: oam-space
+  public-space: oam-space
+  rados-gateway-vip: 10.245.208.98 10.245.208.99
+  worker-multiplier: 0.25

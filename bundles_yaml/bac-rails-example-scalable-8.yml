@@ -1,0 +1,86 @@
+relations:
+- - postgresql:db
+  - sample-app:postgresql
+- - haproxy:reverseproxy
+  - sample-app:proxy
+- - kibana:rest
+  - logstash-indexer:rest
+- - logstash-agent:input
+  - logstash-indexer:input
+- - logstash-agent:juju-info
+  - sample-app:juju-info
+- - sample-app:nagios
+  - nagios:monitors
+- - nrpe:monitors
+  - nagios:monitors
+- - sample-app:nrpe
+  - nrpe:local-monitors
+- - memcached:cache
+  - sample-app:memcached
+- - redis-master:redis-master
+  - sample-app:redis
+series: precise
+services:
+  haproxy:
+    annotations:
+      gui-x: '909.9'
+      gui-y: '351.7'
+    charm: cs:precise/haproxy-28
+    num_units: 1
+  kibana:
+    annotations:
+      gui-x: '144.11'
+      gui-y: '837.68'
+    charm: cs:precise/kibana-3
+    num_units: 1
+  logstash-agent:
+    annotations:
+      gui-x: '2146.15'
+      gui-y: '292.5'
+    charm: cs:precise/logstash-agent-0
+    options:
+      CustomLogFile: '[''/var/www/rack/current/log/*.log'']'
+      CustomLogType: rack
+  logstash-indexer:
+    annotations:
+      gui-x: '2146.6'
+      gui-y: '556.3'
+    charm: cs:precise/logstash-indexer-2
+    num_units: 1
+  memcached:
+    annotations:
+      gui-x: '617.15'
+      gui-y: '1.0'
+    charm: cs:precise/memcached-12
+    num_units: 1
+  nagios:
+    annotations:
+      gui-x: '670.5'
+      gui-y: '2.000'
+    charm: cs:precise/nagios-5
+    num_units: 1
+  nrpe:
+    annotations:
+      gui-x: '670.8'
+      gui-y: '315.0'
+    charm: cs:precise/nrpe-1
+  postgresql:
+    annotations:
+      gui-x: '916.63'
+      gui-y: '389.18'
+    charm: cs:precise/postgresql-62
+    num_units: 1
+  redis-master:
+    annotations:
+      gui-x: '651.3'
+      gui-y: '78.99'
+    charm: cs:precise/redis-master-6
+    num_units: 1
+  sample-app:
+    annotations:
+      gui-x: '915.5'
+      gui-y: '0.5'
+    charm: cs:precise/rails-1
+    num_units: 1
+    options:
+      repo: https://github.com/pavelpachkovskij/sample-rails
