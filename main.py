@@ -22,11 +22,9 @@ bundles=bundles_list()
 
 for bundle in bundles:
 	print(bundle)
-	print('ilias')
 	resp=urllib.request.urlopen('https://api.jujucharms.com/charmstore/v5/' + bundle + '/archive/bundle.yaml')
 	data = yaml.load(resp)
-	buname=bundle.split("bundle/",1)[1]
-	print('ilias') 
+	buname=bundle.split("bundle/",1)[1] 
 	with open('bundles_yaml/'+buname+'.yml', 'w') as yaml_file:
 	    yaml.dump(data, yaml_file, default_flow_style=False)
 
