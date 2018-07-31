@@ -1,0 +1,8 @@
+description: 'This charm provides support for network booting with PXE/TFTP.
+
+  '
+maintainer: Paul Larson <paul.larson@canonical.com>
+name: hwcert-pxe-server
+summary: PXE Boot Server
+tags:
+- network

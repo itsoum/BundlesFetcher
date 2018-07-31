@@ -1,0 +1,15 @@
+categories:
+- misc
+description: 'Run tests for pending approved merge proposals and land the branches
+  on trunk
+
+  if these tests pass.
+
+  '
+maintainer: Evan Dandrea <ev@ubuntu.com>
+name: tarmac
+provides:
+  user:
+    interface: username
+    scope: container
+summary: Gate and land branches on Launchpad

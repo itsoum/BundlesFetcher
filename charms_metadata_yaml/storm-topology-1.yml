@@ -1,0 +1,19 @@
+description: 'This charm provides a method to deploy Storm topologies, created by
+  spout and bolt charms.
+
+  '
+maintainer: Sander Borny <sander.borny@ugent.be>
+name: storm-topology
+provides:
+  topology:
+    interface: stormtopology
+requires:
+  master:
+    interface: storm
+    scope: container
+series:
+- trusty
+subordinate: true
+summary: Represents an Apache Storm topology
+tags:
+- misc

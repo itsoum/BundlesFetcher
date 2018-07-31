@@ -1,0 +1,23 @@
+categories:
+- openstack
+description: 'Heat is the main project in the OpenStack Orchestration program. It
+  implements an
+
+  orchestration engine to launch multiple composite cloud applications based on
+
+  templates in the form of text files that can be treated like code.
+
+  '
+maintainer: Yolanda Robla <yolanda.robla@canonical.com>
+name: heat
+provides:
+  heat:
+    interface: heat
+requires:
+  amqp:
+    interface: rabbitmq
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+summary: OpenStack orchestration engine

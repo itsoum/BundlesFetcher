@@ -1,0 +1,14 @@
+description: 'A layer to deploy an AWS s3 backed Docker Distribution daemon
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+name: docker-distribution
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: Docker distribution - a private image registry
+tags:
+- containers
+- repostiory

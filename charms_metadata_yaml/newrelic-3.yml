@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'New Relic is the all-in-one web application performance tool that lets
+  you see performance from the end user experience down to the line of application
+  code.
+
+  '
+maintainer: Brandon Holtsclaw <me@brandonholtsclaw.com>
+name: newrelic
+provides:
+  logging:
+    interface: newrelic
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Newrelic PHP Application Metrics and Reporting Daemon

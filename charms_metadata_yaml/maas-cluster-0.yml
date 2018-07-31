@@ -1,0 +1,14 @@
+categories:
+- misc
+description: '<Multi-line description here>
+
+  '
+maintainer: Andres Rodriguez <andres.rodriguez@canonical.com>
+name: maas-cluster
+provides:
+  maas-cluster:
+    interface: maas-cluster
+requires:
+  maas:
+    interface: maas-region
+summary: <Fill in summary here>

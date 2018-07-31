@@ -1,0 +1,14 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: uaa-v1
+provides:
+  uaa:
+    interface: http
+requires:
+  db:
+    interface: mysql
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: CF Oauth2 for identity management service

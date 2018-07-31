@@ -1,0 +1,21 @@
+description: 'This fires up lxd compute nodes linked by an openvswitch tunnel.
+
+  Each node sets up openvswitch, all are linked to the master''s node
+
+  (allowing all to communicate) and the master runs dnsmasq on it.
+
+  The default lxc.conf is updated to hook containers to the ovs bridge.
+
+  The master node is set up as an authorized lxd client for all other
+
+  nodes.
+
+  '
+name: ovs-lxd
+provides:
+  master:
+    interface: ovs-lxc
+requires:
+  slave:
+    interface: ovs-lxc
+summary: Lxd compute nodes with containers joined by openvswitch

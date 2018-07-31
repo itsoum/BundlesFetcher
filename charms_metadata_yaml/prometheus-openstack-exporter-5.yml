@@ -1,0 +1,37 @@
+description: 'This is an exporter that exposes information gathered from Openstack
+
+  for use by the Prometheus monitoring system.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: Prometheus Charmers <prometheus-charmers@lists.launchpad.net>
+name: prometheus-openstack-exporter
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  prometheus-openstack-exporter-service:
+    interface: http
+requires:
+  identity-credentials:
+    interface: keystone-credentials
+  swift-storage:
+    interface: swift
+resources:
+  prometheus-openstack-exporter:
+    description: Prometheus OpenStack Exporter snap
+    filename: prometheus-openstack-exporter.snap
+    type: file
+series:
+- xenial
+- bionic
+- trusty
+- yakkety
+summary: Openstack exporter for Prometheus
+tags:
+- openstack
+- monitoring
+- prometheus

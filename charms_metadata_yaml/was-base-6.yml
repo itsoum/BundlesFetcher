@@ -1,0 +1,12 @@
+description: 'DEPRECATED: please use ibm-was-base instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: was-base
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: WebSphere Application Server Base Edition (deprecated, use ibm-was-base)
+tags:
+- applications

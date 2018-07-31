@@ -1,0 +1,20 @@
+categories:
+- miscellaneous
+description: Updates DNS records for Clearwater using BIND service
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-bind
+provides:
+  register-bono:
+    interface: dns-register
+  register-ellis:
+    interface: dns-register
+  register-homer:
+    interface: dns-register
+  register-homestead:
+    interface: dns-register
+  register-ralf:
+    interface: dns-register
+  register-sprout:
+    interface: dns-register
+subordinate: false
+summary: BIND DNS Agent for Project Clearwater

@@ -1,0 +1,35 @@
+categories:
+- misc
+- ibm
+description: "zOS Connect EE\nhttp://www-03.ibm.com/software/products/en/zos-connect-enterprise-edition\n\
+  \nEfficient and scalable APIs for contemporary mobile and cloud applications\nIBM\xAE\
+  \ z/OS\xAE Connect Enterprise Edition (EE) V2.0 extends the value of applications\
+  \ \nthat run on z/OS by allowing efficient and scalable APIs for contemporary mobile\
+  \ \nand cloud applications to be easily created. z/OS Connect EE V2.0 can help to\
+  \ \ndeliver benefits for an enterpriser.\n\nProvides intuitive tooling that enables\
+  \ a developer, with or without z/OS-skills, \nto create RESTful APIs from traditional\
+  \ z/OS-based assets.\n\nAllows mobile and cloud application developers to incorporate\
+  \ z/OS data and transactions \ninto their applications without the need to understand\
+  \ z/OS subsystems.\n\nDelivers RESTful APIs as a discoverable, first-class resource\
+  \ with Swagger 2.0 descriptions \nthat are ready for consumption by application\
+  \ developers, and for integration\nwith API management solutions.\n\nProvides intuitive\
+  \ tooling that enables a developer with or without z/OS-skills to create \nRESTful\
+  \ APIs from traditional z/OS-based assets.\n\nIncludes a new API package artifact\
+  \ that encapsulates the RESTful API, together with necessary \ndetail to invoke\
+  \ underlying services in the z/OS subsystems.\n\nSupports standard JSON message\
+  \ format with translation to and from the required native \nformat of z/OS subsystems.\n\
+  \nIntegrates with IBM API Management for enterprise-class API management that covers\
+  \ consumer \nregistration, API security controls, and version control.\n"
+maintainer: Antonio Rosales <antonio.rosales@canonical.com>
+name: zos-connect
+peers:
+  zos-peer:
+    interface: zos-peer-interface
+provides:
+  zos-connect:
+    interface: zos-interface
+requires:
+  z-relation:
+    interface: z-interface
+subordinate: false
+summary: zOS Connect Enterprise Edition Version 2.0 Juju Charm

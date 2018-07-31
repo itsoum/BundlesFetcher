@@ -1,0 +1,53 @@
+description: 'IBM WebSphere Application Server Network Deployment provides an advanced,
+  flexible runtime environment for large-scale application deployments. It offers
+  near-continuous availability with advanced performance and management capabilities
+  for mission-critical applications.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-was-nd
+resources:
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+  ibm_was_nd_fp1:
+    description: WAS ND fix pack part1 archive
+    filename: ibm_was_nd_fp1.zip
+    type: file
+  ibm_was_nd_fp2:
+    description: WAS ND fix pack part2 archive
+    filename: ibm_was_nd_fp2.zip
+    type: file
+  ibm_was_nd_installer1:
+    description: WAS ND installer part1 archive
+    filename: ibm_was_nd_installer1.zip
+    type: file
+  ibm_was_nd_installer2:
+    description: WAS ND installer part2 archive
+    filename: ibm_was_nd_installer2.zip
+    type: file
+  ibm_was_nd_installer3:
+    description: WAS ND installer part3 archive
+    filename: ibm_was_nd_installer3.zip
+    type: file
+series:
+- trusty
+- xenial
+subordinate: false
+summary: WebSphere Application Server Network Deployment
+tags:
+- ibm
+- im
+- ibm
+- apt
+- leadership
+- ibm
+- misc
+terms:
+- ibmcharmers/ibm-im/1
+- ibmcharmers/ibm-was-nd/1

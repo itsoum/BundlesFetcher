@@ -1,0 +1,50 @@
+description: 'Apache Spark is a fast and general engine for large-scale data processing.
+
+  This charm provides version 2.1.1 of the Spark application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: spark
+peers:
+  sparkpeers:
+    interface: spark-quorum
+provides:
+  benchmark:
+    interface: benchmark
+  client:
+    interface: spark
+  giraph:
+    interface: giraph
+    scope: container
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+requires:
+  zookeeper:
+    interface: zookeeper
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+  sample-data:
+    description: A zip archive of sample data required by Spark benchmarks.
+    filename: sample-data.zip
+    type: file
+series:
+- xenial
+summary: Spark from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2
+- hadoop
+- analytics

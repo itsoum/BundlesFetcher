@@ -1,0 +1,21 @@
+description: 'This charm installs a standalone Kapacitor unit and connect it to a
+  running
+
+  InfluxDB database.
+
+  '
+maintainer: "Dixan Pe\xF1a Pe\xF1a <dixan.pena@tengu.io>"
+name: kapacitor
+provides:
+  kapacitor:
+    interface: kapacitor
+requires:
+  influxdb:
+    interface: influxdb-api
+series:
+- xenial
+subordinate: false
+summary: Kapacitor is a data processing engine developed by InfluxData.
+tags:
+- streaming
+- big_data

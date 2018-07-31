@@ -1,0 +1,18 @@
+description: 'Uses a Twitter source, memory channel, and Avro sink in Apache Flume
+
+  to ingest Twitter data.
+
+  '
+maintainer: Big Data Team <bigdata@lists.ubuntu.com>
+name: apache-flume-twitter
+requires:
+  flume-sink:
+    interface: flume-agent
+series:
+- xenial
+- trusty
+summary: Ingest tweets with Apache Flume
+tags:
+- applications
+- bigdata
+- apache

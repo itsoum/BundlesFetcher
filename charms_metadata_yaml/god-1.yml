@@ -1,0 +1,14 @@
+description: 'Keeping your server processes and tasks running should be a simple part
+  of your deployment process.
+
+  God aims to be the simplest, most powerful monitoring application available.
+
+  '
+maintainer: Altoros Systems, Inc. <pavel.pachkovskij@altoros.com>
+name: god
+requires:
+  service:
+    interface: god
+    scope: container
+subordinate: true
+summary: God is an easy to configure and extend monitoring framework on Ruby.

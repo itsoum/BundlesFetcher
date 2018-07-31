@@ -1,0 +1,20 @@
+description: 'Install Juju along with its toolchain needed for testing
+
+  charms in the context of a CI.
+
+  '
+maintainer: Big Data Team <bigdata@lists.ubuntu.com>
+name: juju-ci-env
+provides:
+  ci-client:
+    interface: charms-ci
+requires:
+  jenkins:
+    interface: jenkins-extension
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Install Juju along with all tools needed for a CI
+tags:
+- CI

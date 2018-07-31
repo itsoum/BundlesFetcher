@@ -1,0 +1,19 @@
+description: 'This charm will deploy the API for the Node-RED bundle.
+
+  '
+maintainer: "S\xE9bastien Pattyn <sebastien.pattyn@tengu.io>"
+name: streambundle-api
+provides:
+  bundleapi:
+    interface: http
+  website:
+    interface: http
+requires:
+  db:
+    interface: mongodb-database
+series:
+- xenial
+subordinate: false
+summary: This charm will deploy the API for the Node-RED bundle.
+tags:
+- misc

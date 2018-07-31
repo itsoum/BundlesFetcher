@@ -1,0 +1,14 @@
+description: 'This charm installs both layer:nfs-server and layer:samba-server in
+  one charm
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: file-server
+series:
+- xenial
+subordinate: false
+summary: Wrapper for NFS/SAMBA file server charms
+tags:
+- misc
+- storage
+- fileserver

@@ -1,0 +1,18 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the storage node (DataNode) for HDFS.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-bigtop-datanode
+provides:
+  namenode:
+    interface: dfs-slave
+summary: HDFS storage node (DataNode) for Apache Bigtop platform
+tags:
+- applications
+- bigdata
+- bigtop
+- hadoop
+- apache

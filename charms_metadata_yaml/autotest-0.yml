@@ -1,0 +1,11 @@
+description: 'Create a framework to run tests in the Autotest framework
+
+  '
+maintainer: Michael Reed <michael.reed@canonical.com>
+name: autotest
+provides:
+  benchmark:
+    interface: benchmark
+summary: Create a framework to run tests in the Autotest framework
+tags:
+- misc

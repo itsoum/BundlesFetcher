@@ -1,0 +1,24 @@
+description: 'Serial Vault that signs serial assertions from Ubuntu devices using
+  pre-defined
+
+  GPG signing keys. The Serial Vault holds a list of approved device models and
+
+  signs the serial assertion for the models.
+
+  '
+maintainer: "Roberto Mier Escand\xF3n <roberto.escandon@canonical.com>"
+name: serial-vault
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+series:
+- xenial
+summary: Service that signs serial assertions from Ubuntu devices.
+tags:
+- service

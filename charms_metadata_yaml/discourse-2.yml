@@ -1,0 +1,25 @@
+description: "Discourse is a from-scratch reboot, an attempt to reimagine what a \n\
+  modern Internet discussion platform should be today, in a world of\nubiquitous smartphones,\
+  \ tablets, Facebook, and Twitter.\n"
+maintainer: Dave Lawson <dave.lawson@canonical.com>
+name: discourse
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+  redis:
+    interface: redis
+    optional: true
+series:
+- bionic
+- xenial
+summary: Open source discussion forum.
+tags:
+- git
+- deploy
+- social

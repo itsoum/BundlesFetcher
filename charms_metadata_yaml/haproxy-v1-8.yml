@@ -1,0 +1,9 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: haproxy-v1
+requires:
+  orchestrator:
+    interface: orchestrator
+  router:
+    interface: router
+summary: loadbalance the routers

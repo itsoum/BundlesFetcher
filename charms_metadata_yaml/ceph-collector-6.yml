@@ -1,0 +1,23 @@
+description: 'A utility to export a variety of metrics from a running ceph server.
+  This charm is a subordinate of the
+
+  ceph charm.
+
+  '
+maintainers:
+- chris.holcombe@canonical.com
+- chris.macnaughton@canonical.com
+name: ceph-collector
+requires:
+  influx:
+    interface: influxdb-api
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- xenial
+subordinate: true
+summary: Collect all the statistics that are important for Ceph
+tags:
+- misc

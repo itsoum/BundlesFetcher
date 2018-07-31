@@ -1,0 +1,21 @@
+description: 'The Calico ACL Manager turns a connectivity graph into a collection
+  of ACLs
+
+  suitable for building virtual layer 3 networks. This charm deploys the ACL
+
+  manager as recommended in the Project Calico deployment guide.
+
+  '
+maintainer: Cory Benfield <cory.benfield@metaswitch.com>
+name: calico-acl-manager
+provides:
+  calico-acl-api:
+    interface: calico-acl-api
+requires:
+  calico-network-api:
+    interface: calico-network-api
+subordinate: false
+summary: Connectivity-to-ACL translation for Calico networking.
+tags:
+- openstack
+- network

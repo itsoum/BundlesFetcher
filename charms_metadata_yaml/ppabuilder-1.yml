@@ -1,0 +1,9 @@
+description: 'Provides a personal Ubuntu builder and PPA repository
+
+  '
+juju: charm
+name: ppabuilder
+provides:
+  ppa:
+    interface: ubuntu
+summary: Personal PPA and builder

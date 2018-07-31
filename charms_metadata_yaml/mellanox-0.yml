@@ -1,0 +1,13 @@
+categories:
+- misc
+description: "Mellanox OFED (MLNX_OFED) is a tested and packaged version of OFED and\n\
+  supports two interconnect types using the same RDMA (remote DMA) and kernel\nbypass\
+  \ APIs called OFED verbs \u2013 InfiniBand and Ethernet.\n"
+maintainer: Matthew Bruzek <Matthew.Bruzek@canonical.com>
+name: mellanox
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Mellanox OpenFabrics Enterprise Distribution (OFED) for Linux.

@@ -1,0 +1,18 @@
+categories:
+- misc
+description: 'The Loggregator captures logs coming from applications and internal
+
+  components relating to an application and stores them transiently.
+
+  '
+maintainer: cf-charmers <cf-charmers@lists.launchpad.net>
+name: cf-loggregator
+provides:
+  loggregator:
+    interface: loggregator
+requires:
+  logrouter:
+    interface: logrouter
+  nats:
+    interface: nats
+summary: Log Aggregator is a component of CloudFoundry PAAS

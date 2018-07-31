@@ -1,0 +1,8 @@
+description: 'This simply deploys Ubuntu Server for a demo.
+
+  '
+maintainer: Matthew Bruzek <matthew.bruzek@canonical.com>
+name: cfgmgmtcamp
+summary: An Ubuntu Server
+tags:
+- misc

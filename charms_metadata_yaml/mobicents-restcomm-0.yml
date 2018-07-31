@@ -1,0 +1,20 @@
+categories:
+- app-servers
+description: Mobicents Restcomm
+maintainer: Jean Deruelle <jean.deruelle@telestax.com>
+name: mobicents-restcomm
+provides:
+  cscf:
+    interface: 3GPP-ISC
+  website:
+    interface: http
+requires:
+  clearwater-ellis:
+    interface: as-register
+    optional: true
+  database:
+    interface: mysql
+  load-balancer:
+    interface: mobicents-load-balancer
+    optional: true
+summary: Mobicents RestComm

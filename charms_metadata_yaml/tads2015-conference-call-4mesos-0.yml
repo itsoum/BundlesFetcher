@@ -1,0 +1,20 @@
+description: 'Collects incoming numbers from database and add them to conference
+
+  '
+maintainer: gedubina <gdubina@dataart.com>
+name: tads2015-conference-call-4mesos
+provides:
+  haproxy:
+    interface: http
+requires:
+  mesos:
+    interface: juju-info
+    scope: container
+  redis:
+    interface: redis
+  restcomm:
+    interface: http
+subordinate: true
+summary: Collects incoming numbers from database and add them to conference
+tags:
+- misc

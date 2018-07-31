@@ -1,0 +1,18 @@
+description: Bono charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-bono
+provides:
+  ue:
+    interface: 3GPP-Gm
+requires:
+  cscf:
+    interface: 3GPP-Mw
+  programmable-multiple:
+    interface: dns-multi
+  ralf-ctf:
+    interface: ralf-ctf-interface
+    optional: true
+subordinate: false
+summary: Bono charm for Project Clearwater
+tags:
+- misc

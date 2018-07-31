@@ -1,0 +1,13 @@
+description: "Jenkins is a Continous Integration server supporting\nflexible continous\
+  \ integration and deployment methodologies\nand more.\n.\nThis formula provides\
+  \ the Jenkins master instance in a \ndeployment\n.\nForked to provide LXC environments\
+  \ and charm-tools\n"
+name: charmtester
+provides:
+  website:
+    interface: http
+requires:
+  master:
+    interface: jenkins-slave
+    optional: true
+summary: Jenkins Continuous Integration server

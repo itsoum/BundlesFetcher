@@ -1,0 +1,20 @@
+description: 'This charms works as a proxy allowing to bridge oai-enb charm with a
+  remote oai-rru snap.
+
+  '
+maintainers:
+- Navid Nikaein <navid.nikaein@eurecom.fr>
+name: oai-rru-snap
+provides:
+  rru:
+    interface: FH-ETH
+    optional: true
+subordinate: false
+summary: OAI Remote Radio Unit (RRU) Snap
+tags:
+- Telecom, Network
+- 4G, 5G, LTE
+- Remote Radio Unit, RRU, RRH,
+- Snappy
+- OpenAirInterface, OAI, oai
+- Eurecom

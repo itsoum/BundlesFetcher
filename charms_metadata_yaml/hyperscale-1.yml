@@ -1,0 +1,24 @@
+description: Charm for installation and deployment of Veritas HyperScale. Refer README
+  for more details
+maintainer: DL-VTAS-ENG-SDIO-HyperScale-Opensource@veritas.com
+name: hyperscale
+requires:
+  amqp:
+    interface: rabbitmq
+  identity-admin:
+    interface: keystone-admin
+  shared-db:
+    interface: mysql-shared
+resources:
+  install:
+    description: Tar ball for VRTS packages
+    filename: hyperscale_install.tar
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Veritas HyperScale deployment charm
+tags:
+- openstack
+terms:
+- vtas-hso/eula

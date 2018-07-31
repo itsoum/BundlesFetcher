@@ -1,0 +1,11 @@
+description: 'Rackspace cloud builders (RCSB) framework for deployment
+
+  and management of openstack.
+
+  '
+maintainer: juju@lists.ubuntu.com
+name: opencenter
+provides:
+  api:
+    interface: opscenter
+summary: Rackspace openstack opencenter management suite.

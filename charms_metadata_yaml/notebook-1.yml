@@ -1,0 +1,18 @@
+description: 'this charm needs an URL where a Zeppelin Notebook is located and will
+  deploy
+
+  this job on Zeppelin.
+
+  '
+maintainer: Sebastien Pattyn<sebastien.pattyn@tengu.io>
+name: notebook
+requires:
+  zeppelin:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Deploys a notebook on zeppelin
+tags:
+- Big Data

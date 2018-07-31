@@ -1,0 +1,27 @@
+description: 'SpagoBI is the 100% open source, complete and flexible Business Intelligence
+  suite.
+
+  '
+maintainer: SpagoBI charmers <spagobi@eng.it>
+name: spagobi
+requires:
+  cassandrads:
+    interface: cassandra
+  hiveds:
+    interface: hive
+  metadatadb:
+    interface: mysql
+  mongodbds:
+    interface: mongodb
+  mysqlds:
+    interface: mysql
+  postgresqlds:
+    interface: pgsql
+  tomcat-war:
+    interface: java-webapp
+    scope: container
+subordinate: true
+summary: SpagoBI is the only entirely Open Source Business Intelligence suite
+tags:
+- application
+- analytics

@@ -1,0 +1,32 @@
+description: 'A round robin Nginx load balancer to distribute traffic for kubernetes
+  apiservers.
+
+  '
+maintainers:
+- Tim Van Steenburgh <tim.van.steenburgh@canonical.com>
+- George Kraft <george.kraft@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+- Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+- Charles Butler <Chuck@dasroot.net>
+- Matthew Bruzek <mbruzek@ubuntu.com>
+name: kubeapi-load-balancer
+provides:
+  loadbalancer:
+    interface: public-address
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  apiserver:
+    interface: http
+  certificates:
+    interface: tls-certificates
+series:
+- xenial
+- bionic
+subordinate: false
+summary: Nginx Load Balancer
+tags:
+- misc

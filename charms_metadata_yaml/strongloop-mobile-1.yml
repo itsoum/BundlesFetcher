@@ -1,0 +1,22 @@
+categories:
+- misc
+- ibm
+description: "Strongloop Node.js application that takes input from\nmobile devices\
+  \ and sends output to Spark and MongoDB.\n\nStrongLoop (from https://strongloop.com/)\n\
+  \nBuilt on top of the open source LoopBack framework,\nStrongLoop allows you to\
+  \ visually develop REST APIs in \nNode and get them connected to your data.StrongLoop\
+  \ also\nfeatures built-in features like push and offline sync,\nplus graphical tools\
+  \ for clustering, profiling and monitoring Node apps.\n"
+maintainer: Antonio Rosales <antonio.rosales@canonical.com>
+name: strongloop-mobile
+peers:
+  z-peer-relation:
+    interface: z-peer-interface
+provides:
+  z-relation:
+    interface: z-interface
+requires:
+  system-z:
+    interface: z-connect
+subordinate: false
+summary: Node.js application.

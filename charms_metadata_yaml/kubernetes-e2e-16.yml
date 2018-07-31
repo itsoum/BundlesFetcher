@@ -1,0 +1,30 @@
+description: 'Deploy the Kubernetes e2e framework and validate the conformance of
+  a
+
+  deployed kubernetes cluster
+
+  '
+maintainers:
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+name: kubernetes-e2e
+requires:
+  certificates:
+    interface: tls-certificates
+  kubernetes-master:
+    interface: http
+resources:
+  kubectl:
+    description: kubectl snap
+    filename: kubectl.snap
+    type: file
+  kubernetes-test:
+    description: kubernetes-test snap
+    filename: kubernetes-test.snap
+    type: file
+series:
+- xenial
+summary: Run end-2-end validation of a clusters conformance
+tags:
+- validation
+- conformance

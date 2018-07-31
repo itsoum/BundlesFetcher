@@ -1,0 +1,21 @@
+categories:
+- application
+description: "Magento community edition is an open source content management platform\
+  \ for \ne-commerce web sites.  \n"
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: magento
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+  search:
+    interface: solr
+  sessions:
+    interface: memcache
+  slow-storage:
+    interface: nfs
+  storage:
+    interface: mount
+summary: An open source eCommerce platform using PHP

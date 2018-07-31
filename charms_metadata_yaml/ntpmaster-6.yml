@@ -1,0 +1,16 @@
+description: 'This charm provides NTP master services for use with other
+
+  charms through the use of the ntp subordinate charm.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: ntpmaster
+peers:
+  peer:
+    interface: ntp
+provides:
+  master:
+    interface: ntp
+summary: NTP master services for your charms
+tags:
+- misc

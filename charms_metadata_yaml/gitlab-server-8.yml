@@ -1,0 +1,20 @@
+description: 'This charm will install and configure Gitlab CE.
+
+  Gitlab is a Git repository management system similar
+
+  to Github.
+
+  '
+maintainers:
+- Tom Barber <tom@spicule.co.uk>
+name: gitlab-server
+provides:
+  website:
+    interface: http
+series:
+- xenial
+- trusty
+summary: Gitlab CE charm.
+tags:
+- version_control
+- application

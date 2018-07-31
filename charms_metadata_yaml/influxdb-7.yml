@@ -1,0 +1,17 @@
+description: 'Scalable Time Series DB.
+
+  '
+maintainers:
+- Chris MacNaughton <chris.macnaughton@canonical.com>
+name: influxdb
+provides:
+  admin:
+    interface: http
+  query:
+    interface: influxdb-api
+series:
+- xenial
+- trusty
+summary: Scalable Time Series DB
+tags:
+- database

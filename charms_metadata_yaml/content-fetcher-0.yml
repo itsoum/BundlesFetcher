@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'Subordinate charm used to populate a directory with content grabbed
+  from an
+
+  external source. Can be used with the apache2 charm to populate the docroot
+
+  '
+maintainer: liam.young@canonical.com
+name: content-fetcher
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+  remote-content:
+    interface: docroot
+    scope: container
+subordinate: true
+summary: Populate a directory with content grabbed from an external src

@@ -1,0 +1,20 @@
+description: IBM Platform Symphony (Symphony) is enterprise-class software that distributes
+  and virtualizes compute-intensive application services and processes across existing
+  heterogeneous IT resources
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-symphony
+provides:
+  master:
+    interface: symphony
+requires:
+  node:
+    interface: symphony
+subordinate: false
+summary: IBM Platform Symphony
+tags:
+- ibm
+- soa_gridserver
+- symphony
+- application_optimization
+- cluster
+- virtualization

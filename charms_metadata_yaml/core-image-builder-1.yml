@@ -1,0 +1,13 @@
+description: 'Runs core-image-builder service from a given service tarball (provided
+  as
+
+  files/core-image-builder.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: core-image-builder
+summary: 'Deploy a service to request tests for new ubuntucore images via
+
+  rabbit queue.
+
+  '

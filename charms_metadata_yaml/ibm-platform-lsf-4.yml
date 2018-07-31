@@ -1,0 +1,29 @@
+description: '# DEPRECATED
+
+  This charm is no longer being maintained. Please use `ibm-platform-lsf-storage`,
+
+  `ibm-platform-lsf-master` and `ibm-platform-lsf-server` instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-lsf
+provides:
+  master-host:
+    interface: lsf
+  storage:
+    interface: lsf
+requires:
+  master-candt-host:
+    interface: lsf
+  master-host-storage:
+    interface: lsf
+  server-host:
+    interface: lsf
+  server-host-storage:
+    interface: lsf
+subordinate: false
+summary: IBM Platform LSF
+tags:
+- workload_management
+- job_scheduler
+- ibm

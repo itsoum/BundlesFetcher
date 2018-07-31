@@ -1,0 +1,9 @@
+categories:
+- Communications
+description: '<Multi-line description here>
+
+  '
+maintainer: Sebastien Chapuis <sebastien.chapuis@6wind.com>
+name: firstcharm
+subordinate: false
+summary: IRC server

@@ -1,0 +1,21 @@
+description: "Pentaho Data Integration is the component of Pentaho \nthat is responsible\
+  \ for the Extract, Transform and Load\nprocesss\n"
+maintainer: Spicule <info@spicule.co.uk>
+name: pentaho-data-integration
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  mysql:
+    interface: mysql
+series:
+- xenial
+- zesty
+subordinate: false
+summary: Pentaho Data Integration Server
+tags:
+- analytics
+- big_data

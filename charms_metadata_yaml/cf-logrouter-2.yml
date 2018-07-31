@@ -1,0 +1,21 @@
+categories:
+- misc
+description: 'The Log Router (aka Log Traffic Controller) acts as an endpoint for
+  DEAs
+
+  and routes logs to the appropriate loggregator instance.
+
+  '
+maintainer: cf-charmers <cf-charmers@lists.launchpad.net>
+name: cf-logrouter
+provides:
+  logrouter:
+    interface: logrouter
+requires:
+  loggregator:
+    interface: loggregator
+  nats:
+    interface: nats
+  router:
+    interface: router
+summary: Traffic Controller (Log Router) is a component of CloudFoundry PAAS.

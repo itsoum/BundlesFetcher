@@ -1,0 +1,12 @@
+description: "VIVO enables the discovery of researchers across institutions. \nParticipants\
+  \ in the network include institutions with local installations\nof VIVO or those\
+  \ with research discovery and profiling applications that \ncan provide semantic\
+  \ web-compliant data. \n"
+name: vivo
+provides:
+  vivo:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: VIVO is a semantic web project built on the Jena semantic web framework

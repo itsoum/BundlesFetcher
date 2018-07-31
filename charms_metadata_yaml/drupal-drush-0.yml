@@ -1,0 +1,16 @@
+description: 'Installs Drupal. Upon the database provider
+
+  providing the required database, and the relation settings
+
+  necessary to access it, completes the configuration of Drupal
+
+  and makes it available on the web.
+
+  '
+ensemble: formula
+name: drupal
+requires:
+  db:
+    interface: mysql
+revision: 9
+summary: Drupal website

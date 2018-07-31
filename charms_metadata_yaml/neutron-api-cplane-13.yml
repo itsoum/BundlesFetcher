@@ -1,0 +1,32 @@
+description: 'CPlane is an extremely lightweight Neutron plugin for Openstack.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: amarendra <info@cplanenetworks.com>
+name: neutron-api-cplane
+provides:
+  cplane-neutron:
+    interface: cplane-neutron
+  cplane-ovs:
+    interface: cplane-ovs
+  neutron-plugin-api-subordinate:
+    interface: neutron-plugin-api-subordinate
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+  container:
+    interface: juju-info
+    scope: container
+  cplane-controller:
+    interface: cplane-controller
+  shared-db:
+    interface: mysql-shared
+subordinate: true
+summary: Cplane neutron plugin for Openstack
+tags:
+- network
+- openstack

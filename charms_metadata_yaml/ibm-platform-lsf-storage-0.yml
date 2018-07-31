@@ -1,0 +1,45 @@
+description: 'IBM Platform LSF is a powerful workload management platform for demanding,
+  distributed High Performance Computing(HPC) environments.
+
+  It provides a comprehensive set of intelligent, policy-driven scheduling features
+  that enable you to utilize all of your compute infrastructure resources
+
+  and ensure optimal application performance. The Storage server will act as a shared
+  file system where LSF will be installed. All the other nodes i.e. Master,
+
+  Master Candidates and Servers will be accessing this storage server. The shared
+  LSF directory /usr/share/lsf will be mounted to each host.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0.0
+name: ibm-platform-lsf-storage
+provides:
+  storage:
+    interface: nfsstorage
+resources:
+  ibm_lsf_entitlement_file:
+    description: LSF Entitlement file
+    filename: platform_lsf_std_entitlement.dat
+    type: file
+  ibm_lsf_installation_ppcle:
+    description: LSF distribution packages
+    filename: lsf9.1.3_lnx310-lib217-ppc64le.tar.Z
+    type: file
+  ibm_lsf_installation_x86:
+    description: LSF distribution packages
+    filename: lsf9.1.3_linux2.6-glibc2.3-x86_64.tar.Z
+    type: file
+  ibm_lsf_installer:
+    description: LSF installer scripts package
+    filename: lsf9.1.3_lsfinstall.tar.Z
+    type: file
+subordinate: false
+summary: IBM Platform LSF Storage
+tags:
+- ibm
+- lsf
+- job_scheduler
+- workload_management
+terms:
+- ibm-platform-lsf/1

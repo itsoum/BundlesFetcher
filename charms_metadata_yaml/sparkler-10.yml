@@ -1,0 +1,29 @@
+description: 'A web crawler is a bot program that fetches resources from the web for
+  the sake of building applications like search engines, knowledge bases, etc. Sparkler
+  (contraction of Spark-Crawler) is a new web crawler that makes use of recent advancements
+  in distributed computing and information retrieval domains by conglomerating various
+  Apache projects like Spark, Kafka, Lucene/Solr, Tika, and Felix. Sparkler is an
+  extensible, highly scalable, and high-performance web crawler that is an evolution
+  of Apache Nutch and runs on Apache Spark Cluster.
+
+  '
+maintainer: Sparkler Developers
+name: sparkler
+provides:
+  java:
+    interface: java
+    scope: container
+requires:
+  kafka:
+    interface: kafka
+  solr:
+    interface: solr
+  spark:
+    interface: spark
+series:
+- trusty
+- xenial
+subordinate: false
+summary: Sparkler Web Crawler
+tags:
+- big_data

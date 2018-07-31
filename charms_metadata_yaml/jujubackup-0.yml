@@ -1,0 +1,13 @@
+description: Backup data on Ubuntu One using duplicity.
+maintainer: Green
+name: jujubackup
+provides:
+  backup:
+    interface: jujubackup
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: jujubackup

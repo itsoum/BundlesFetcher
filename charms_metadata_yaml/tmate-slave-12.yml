@@ -1,0 +1,11 @@
+description: 'tmate-slave is the server side part of tmate.io, see
+
+  https://github.com/nviennot/tmate-slave.
+
+  '
+maintainer: JuanJo Ciarlante <juanjosec@gmail.com>
+name: tmate-slave
+subordinate: false
+summary: tmate-slave is the server side part of tmate.io
+tags:
+- application_development

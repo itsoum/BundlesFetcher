@@ -1,0 +1,32 @@
+description: "Network monitoring system with many features.\nIt can be used for:\n\
+  \n - high level monitoring of IT services;\n - centralized monitoring of your servers\
+  \ and applications;\n - monitoring of SNMP-enabled devices;\n - performance monitoring\
+  \ (process load, network activity, disk\n   activity, memory usage, OS parameters\
+  \ etc.);\n - data visualization.\n"
+maintainer: Alexey Pustovalov <Alexey.Pustovalov@ubuntu>
+name: zabbix-server
+provides:
+  agent-active:
+    interface: agent-active
+  frontend:
+    interface: frontend
+  proxy-active:
+    interface: proxy-active
+requires:
+  agent-passive:
+    interface: agent-passive
+    optional: true
+  database-mysql:
+    interface: mysql-shared
+    limit: 1
+  java-gateway:
+    interface: java-gateway
+    limit: 1
+    optional: true
+  proxy-passive:
+    interface: proxy-passive
+    optional: true
+subordinate: false
+summary: Network monitoring solution - Zabbix server
+tags:
+- monitoring

@@ -1,0 +1,16 @@
+description: "The IPython Notebook is an interactive computational environment, in\
+  \ which\nyou can combine code execution, rich text, mathematics, plots, and rich\
+  \ media.\nIPython Notebook and Spark\u2019s Python API are a powerful combination\
+  \ for data\nscience.\n"
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: apache-spark-notebook
+requires:
+  spark:
+    interface: spark
+    scope: container
+subordinate: true
+summary: A web-based IPython Notebook for Apache Spark.
+tags:
+- bigdata
+- hadoop
+- apache

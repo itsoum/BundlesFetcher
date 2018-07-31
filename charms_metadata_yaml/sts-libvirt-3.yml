@@ -1,0 +1,15 @@
+description: 'This charm installs libvirt and configures it in a manner consistent
+  with
+
+  the Ubuntu Openstack training course. It will also install and configure
+
+  a VM named maas to be used as the MAAS node within the training environment.
+
+  Once installed the user will need to log into the MAAS node and install
+
+  and configure MAAS in accordance with the training workbook.
+
+  '
+maintainer: Larry Works <larry.works@canonical.com>
+name: sts-libvirt
+summary: Libvirt installation for Ubuntu Openstack training environment

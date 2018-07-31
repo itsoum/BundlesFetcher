@@ -1,0 +1,15 @@
+categories:
+- misc
+description: dummy charm to test the DNS charm. no useful function otherwise
+maintainer: charles <charles.butler@ubuntu.com>
+name: dtest
+provides:
+  nothing:
+    interface: none
+requires:
+  programmable:
+    interface: dns
+  programmable-multiple:
+    interface: dns-multi
+subordinate: false
+summary: dummy charm to test the DNS charm

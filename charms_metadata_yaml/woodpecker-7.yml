@@ -1,0 +1,18 @@
+description: "Woodpecker is a charm for testing networking between peers, and/or \n\
+  to arbitrary host:port combinations, e.g. www.google.com:80, with or\nwithout a\
+  \ 'send' string and a 'receive' string.\n"
+maintainer: Andrew McLeod <andrew.mcleod@canonical.com>
+name: woodpecker
+peers:
+  woodpecker:
+    interface: woodpecker
+series:
+- xenial
+- trusty
+- precise
+- yakkety
+summary: Woodpecker layer - check remote network ports and test firewall rules
+tags:
+- testing
+- CI
+- networking

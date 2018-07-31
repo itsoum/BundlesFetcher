@@ -1,0 +1,17 @@
+description: 'Installs an NFS server that other charms can relate to in order
+
+  to create exports and attach to the NFS storage
+
+  '
+maintainer: Mike Wilson <mike.wilson@canonical.com>
+name: nfs
+provides:
+  nfs:
+    interface: mount
+series:
+- xenial
+subordinate: false
+summary: NFS server
+tags:
+- storage
+- network

@@ -1,0 +1,16 @@
+description: 'Azul Zulu is open source implementation of OpenJDK.
+
+  It provides both JRE and JDK.
+
+  More information at http://www.azulsystems.com/products/zulu
+
+  '
+maintainer: Azul Systems <azul_openjdk@azulsystems.com>
+name: zulu8
+provides:
+  provides-relation:
+    interface: JDK
+subordinate: false
+summary: Azul implementation of OpenJDK
+tags:
+- application_development

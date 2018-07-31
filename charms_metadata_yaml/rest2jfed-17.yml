@@ -1,0 +1,12 @@
+description: ''
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: rest2jfed
+provides:
+  rest2jfed:
+    interface: http
+series:
+- trusty
+subordinate: false
+summary: Installs the rest2jfed server
+tags:
+- big_data

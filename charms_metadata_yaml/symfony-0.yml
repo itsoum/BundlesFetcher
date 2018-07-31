@@ -1,0 +1,13 @@
+description: "It provides an architecture, components and tools for developers to\
+  \ build complex web applications faster. Choosing symfony allows you to release\
+  \ your applications earlier, host and scale them without problem, and maintain them\
+  \ over time with no surprise. \n"
+name: symfony
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Symfony is a full-stack framework, a library of cohesive classes written
+  in PHP.

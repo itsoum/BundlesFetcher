@@ -1,0 +1,23 @@
+description: 'Jenkins is a Continous Integration server supporting
+
+  flexible continous integration and deployment methodologies.
+
+  .
+
+  This charm installs and configures a jenkins slaves to do distributed work.
+
+  '
+maintainer: Curtis Hovey <curtis.hovey@canonical.com>
+name: jenkins-slave
+provides:
+  slave:
+    interface: jenkins-slave
+series:
+- xenial
+- trusty
+- precise
+- yakkety
+- zesty
+summary: Jenkins CI Slave
+tags:
+- ci

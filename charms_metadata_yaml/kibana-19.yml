@@ -1,0 +1,21 @@
+description: 'Kibana lets you visualize your Elasticsearch data and navigate the Elastic
+
+  Stack.
+
+  '
+maintainers:
+- Paul Czarkowski <paul@paulcz.net>
+- Chris MacNaughton <chris.macnaughton@canonical.com>
+name: kibana
+provides:
+  web:
+    interface: http
+requires:
+  rest:
+    interface: elasticsearch
+series:
+- xenial
+- trusty
+summary: Your Window into the Elastic Stack
+tags:
+- applications

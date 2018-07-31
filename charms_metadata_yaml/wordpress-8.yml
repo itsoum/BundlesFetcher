@@ -1,0 +1,24 @@
+description: 'This charm provides Wordpress.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: wordpress
+provides:
+  website:
+    interface: http
+requires:
+  mysql:
+    interface: mysql
+resources:
+  wordpress:
+    description: Latest Wordpress Build
+    filename: latest.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Wordpress CMS
+tags:
+- blog
+- CMS
+- wordpress

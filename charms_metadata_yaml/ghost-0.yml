@@ -1,0 +1,31 @@
+description: 'Ghost is a simple, powerful publishing platform.
+
+  '
+maintainers:
+- Adam Stokes <adam.stokes@ubuntu.com>
+name: ghost
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+resources:
+  stable:
+    description: Ghost Stable release source
+    filename: ghost.zip
+    type: file
+series:
+- xenial
+- trusty
+storage:
+  app:
+    location: /srv/app
+    type: filesystem
+summary: 'Ghost is a simple, powerful publishing platform.
+
+  '
+tags:
+- nodejs
+- javascript
+- blog

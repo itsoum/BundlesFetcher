@@ -1,0 +1,24 @@
+description: "ElasticSearch is a distributed RESTful search engine built for the cloud.\
+  \ Features include:\n\n- Distributed and Highly Available Search Engine.\n  - Each\
+  \ index is fully sharded with a configurable number of shards.\n  - Each shard can\
+  \ have one or more replicas.\n  - Read / Search operations performed on either one\
+  \ of the replica shard.\n- Multi Tenant with Multi Types.\n  - Support for more\
+  \ than one index.\n  - Support for more than one type per index.\n  - Index level\
+  \ configuration (number of shards, index storage, \u2026).\n- Various set of APIs\n\
+  \  - HTTP RESTful API\n  - Native Java API.\n  - All APIs perform automatic node\
+  \ operation rerouting.\n- Document oriented\n  - No need for upfront schema definition.\n\
+  \  - Schema can be defined per type for customization of the indexing process.\n\
+  - Reliable, Asynchronous Write Behind for long term persistency.\n- (Near) Real\
+  \ Time Search.\n- Built on top of Lucene\n  - Each shard is a fully functional Lucene\
+  \ index\n  - All the power of Lucene easily exposed through simple configuration\
+  \ / plugins.\n- Per operation consistency\n  - Single document level operations\
+  \ are atomic, consistent, isolated and durable.\n- Open Source under Apache 2 License.\n\
+  - Original charm by Luis Arias <luis@balsamiq.com>\n"
+maintainer: Paul Czarkowski <paul@paulcz.net>
+name: elasticsearch
+provides:
+  cluster:
+    interface: elasticsearch
+  rest:
+    interface: elasticsearch
+summary: Open Source, Distributed, RESTful, Search Engine built on Apache Lucene

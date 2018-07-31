@@ -1,0 +1,37 @@
+description: Apache Drill Drillbit
+maintainer: Tom Barber <tom@analytical-labs.com>
+name: apache-drill
+provides:
+  java:
+    interface: java
+    scope: container
+  jdbc:
+    interface: jdbc
+requires:
+  hbase:
+    interface: hbase
+  hdfs:
+    interface: dfs
+  mongodb:
+    interface: mongodb
+  mysql:
+    interface: mysql
+  pgsql:
+    interface: pgsql
+  zookeeper:
+    interface: zookeeper
+resources:
+  mysql-jar:
+    description: The MySQL connector jar
+    filename: mysql-connector.jar
+    type: file
+  pgsql-jar:
+    description: The Postgres JDBC Driver
+    filename: psql-connector.jar
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Apache Drill Drillbit
+tags:
+- big_data

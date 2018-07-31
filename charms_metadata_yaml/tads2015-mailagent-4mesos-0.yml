@@ -1,0 +1,15 @@
+description: 'send stats to email
+
+  '
+maintainer: gedubina <gdubina@dataart.com>
+name: tads2015-mailagent-4mesos
+requires:
+  mesos:
+    interface: juju-info
+    scope: container
+  redis:
+    interface: redis
+subordinate: true
+summary: send stats to email
+tags:
+- misc

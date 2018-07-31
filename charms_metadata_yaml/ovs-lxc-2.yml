@@ -1,0 +1,17 @@
+description: 'This fires up lxc compute nodes linked by an openvswitch tunnel.
+
+  Each node sets up openvswitch, all are linked to the master''s node
+
+  (allowing all to communicate) and the master runs dnsmasq on it.
+
+  The default lxc.conf is updated to hook containers to the ovs bridge.
+
+  '
+name: ovs-lxc
+provides:
+  master:
+    interface: ovs-lxc
+requires:
+  slave:
+    interface: ovs-lxc
+summary: Lxc compute nodes with containers joined by openvswitch

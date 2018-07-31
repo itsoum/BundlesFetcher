@@ -1,0 +1,16 @@
+description: 'The strongSwan VPN suite is based on the IPsec stack in standard Linux
+
+  kernels. It supports both the IKEv1 and IKEv2 protocols.  This
+
+  metapackage installs the packages required to maintain IKEv1 and IKEv2
+
+  connections via ipsec.conf or ipsec.secrets.
+
+  '
+maintainer: jammin-irving <jammin.irving@gmail.com>
+name: strongswan
+subordinate: false
+summary: IPsec VPN solution
+tags:
+- network
+- security

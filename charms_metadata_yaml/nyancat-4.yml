@@ -1,0 +1,8 @@
+description: 'Nyancat, available as a convenient telnet service!
+
+  Nyan nyan nyan nyan nyan nyan nyan nyan nyan nyan
+
+  '
+maintainer: Ryan Finnie <ryan.finnie@canonical.com>
+name: nyancat
+summary: Nyancat telnet server

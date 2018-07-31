@@ -1,0 +1,35 @@
+description: 'The Murano Project introduces an application catalog to OpenStack,
+
+  enabling application developers and cloud administrators to publish various
+
+  cloud-ready applications in a browsable categorized catalog
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@list.ubuntu.com>
+name: murano
+peers:
+  cluster:
+    interface: openstack-ha
+requires:
+  amqp:
+    interface: rabbitmq
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+- trusty
+- yakkety
+subordinate: false
+summary: OpenStack Application Catalog Service
+tags:
+- openstack
+- openstack

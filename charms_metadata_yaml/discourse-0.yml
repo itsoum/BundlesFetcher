@@ -1,0 +1,25 @@
+categories:
+- application
+description: 'Discourse is the 100% open source, next-generation discussion platform
+
+  built for the next 10 years of the Internet. Whenever you need a mailing
+
+  list, a forum to discuss something, a chat room where you can type paragraphs,
+
+  then consider Discourse.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: discourse
+peers:
+  discourse:
+    interface: discourse
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+  queue-db:
+    interface: redis
+summary: A platform for community discussion. Free, open, simple.

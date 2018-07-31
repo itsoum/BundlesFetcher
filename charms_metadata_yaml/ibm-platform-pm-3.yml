@@ -1,0 +1,37 @@
+description: 'Process Manager(PM) is a workload management tool that allows users
+  to automate their   business processes. Using the Process Manager Client, users
+  can create and sub  mit complex flow definitions to Process Manager Server, which
+  manages the dependencies within a flow and controls the submission of jobs to the
+  IBM Platform LSF(LSF)   master host.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-pm
+requires:
+  master:
+    interface: platformmaster
+    scope: container
+resources:
+  ibm_ppm_installer:
+    description: IBM Spectrum LSF PM installation package
+    filename: ppm9.1.3.0_pinstall.tar.Z
+    type: file
+  ibm_ppm_installer1:
+    description: IBM Platform PM installation package
+    filename: ppm9.1.3.0_fm_lnx26-ppc64le.tar.Z
+    type: file
+  ibm_ppm_installer2:
+    description: IBM Platform PM installation package
+    filename: ppm9.1.3.0_svr_lnx26-ppc64le.tar.Z
+    type: file
+subordinate: true
+summary: IBM Platform LSF Process Manager is a workload management tool
+tags:
+- ibm
+- apt
+- leadership
+- lsf_dashboard
+- workload_management
+- job_scheduler
+terms:
+- ibm-platform-process-manager/1

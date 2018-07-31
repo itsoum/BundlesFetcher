@@ -1,0 +1,17 @@
+description: '<Multi-line description here>
+
+  '
+maintainers:
+- Navid Nikaein <navid.nikaein@eurecom.fr>
+- Andrea Bordone Molini <bordone@eurecom.fr>
+name: oaisim-enb-ue
+requires:
+  epc:
+    interface: S1-C
+subordinate: false
+summary: OpenAirInterface LTE/LTE-A eNB and UE emulator
+tags:
+- network
+- lte
+- lte enb
+- lte ue

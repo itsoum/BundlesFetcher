@@ -1,0 +1,23 @@
+description: ''
+maintainer: Sebastien Pattyn <sebastien.pattyn@tengu.io>
+name: sojobo-api
+provides:
+  nginx_stats:
+    interface: nginx-stats
+  proxy:
+    interface: http
+  sojobo:
+    interface: sojobo
+  trial:
+    interface: sojobo
+  website:
+    interface: http
+requires:
+  arango:
+    interface: arangodb
+series:
+- xenial
+subordinate: false
+summary: This Charm sets up a Tengu Sojobo API.
+tags:
+- big_data

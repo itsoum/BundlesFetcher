@@ -1,0 +1,30 @@
+description: "CFSSL is CloudFlare's PKI/TLS swiss army knife. It is both a command\
+  \ line tool\nand an HTTP API server for signing, verifying, and bundling TLS certificates.\n\
+  CFSSL consists of:\n - a set of packages useful for building custom TLS PKI tools\n\
+  \ - the cfssl program, which is the canonical command line utility using the CFSSL\
+  \ packages.\n - the multirootca program, which is a certificate authority server\
+  \ that can use multiple signing keys.\n - the mkbundle program is used to build\
+  \ certificate pool bundles.\n - the cfssljson program, which takes the JSON output\
+  \ from the cfssl and multirootca\n   programs and writes certificates, keys, CSRs,\
+  \ and bundles to disk.\n"
+maintainer: Charles Butler <Charles.Butler@canonical.com>
+name: certificate-authority
+provides:
+  ca:
+    interface: certificate-authority
+resources:
+  cfssl:
+    description: Cloud Flare SSL Binary
+    filename: cfssl
+    type: file
+  cfssljson:
+    description: Cloud Flare SSL JSON utility
+    filename: cfssljson
+    type: file
+series:
+- xenial
+- trusty
+subordinate: false
+summary: Deploy a CFSSL self signed certificate authority
+tags:
+- security

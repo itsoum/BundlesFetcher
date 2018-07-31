@@ -1,0 +1,17 @@
+categories:
+- misc
+description: "SPECjbb2005 (Java Server Benchmark) is SPEC's benchmark for evaluating\
+  \ the\nperformance of server side Java. Like its predecessor, SPECjbb2000,\nSPECjbb2005\
+  \ evaluates the performance of server side Java by emulating a\nthree-tier client/server\
+  \ system (with emphasis on the middle tier). The\nbenchmark exercises the implementations\
+  \ of the JVM (Java Virtual Machine),\nJIT (Just-In-Time) compiler, garbage collection,\
+  \ threads and some aspects of\nthe operating system. It also measures the performance\
+  \ of CPUs, caches,\nmemory hierarchy and the scalability of shared memory processors\
+  \ (SMPs).\nSPECjbb2005 provides a new enhanced workload, implemented in a more\n\
+  object-oriented manner to reflect how real-world applications are designed\nand\
+  \ introduces new features such as XML processing and BigDecimal\ncomputations to\
+  \ make the benchmark a more realistic reflection of today's\napplications. \n"
+maintainer: dann frazier <dannf@precise64.dannf>
+name: specjbb2005
+subordinate: false
+summary: SPECjbb2005

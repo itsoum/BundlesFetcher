@@ -1,0 +1,15 @@
+categories:
+- misc
+description: 'Setup PES archive environment.
+
+  Run with apache2 charm
+
+  '
+maintainer: Shawn Wang <shawn.wang@canonical.com>
+name: chives
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Canonical PES Archive

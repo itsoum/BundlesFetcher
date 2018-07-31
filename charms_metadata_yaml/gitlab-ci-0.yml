@@ -1,0 +1,15 @@
+categories:
+- application
+description: "Gitlab-CI integrates with your GitLab installation and runs tests for\
+  \ your projects. \nLogin with your GitLab account, add projects with one click,\
+  \ and enjoy running continuous integration.\n"
+maintainer: Charles Butler <chuck@dasroot.net>
+name: gitlab-ci
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+subordinate: false
+summary: Installs Ruby, and Deploys Gitlab-CI

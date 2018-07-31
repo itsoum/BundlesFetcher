@@ -1,0 +1,22 @@
+categories:
+- applications
+description: 'Postfix is Wietse Venema''s mail transport agent that started life as
+  an
+
+  alternative to the widely-used Sendmail program.  Postfix attempts to
+
+  be fast, easy to administer, and secure, while at the same time being
+
+  sendmail compatible enough to not upset existing users. Thus, the
+
+  outside has a sendmail-ish flavor, but the inside is completely
+
+  different.
+
+  '
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: postfix
+provides:
+  mta:
+    interface: postfix
+summary: High-performance mail transport agent

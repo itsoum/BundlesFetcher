@@ -1,0 +1,25 @@
+description: 'Bottled Water uses PostgreSQL 9.4''s logical replication feature to
+  replicate databases in real-time into Apache''s Kafka messaging-system.
+
+  '
+maintainer: Stuart Bishop <stuart.bishop@canonical.com>
+name: bottledwater
+requires:
+  kafka:
+    interface: kafka
+    limit: 1
+    optional: false
+  postgresql:
+    interface: pgreplication
+    limit: 1
+    optional: false
+  schema-registry:
+    interface: http
+    limit: 1
+    optional: false
+subordinate: false
+summary: Change Data Capture from PostgreSQL into Kafka.
+tags:
+- database
+- big_data
+- streaming

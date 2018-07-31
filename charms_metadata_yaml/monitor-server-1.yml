@@ -1,0 +1,21 @@
+description: 'custom simple server
+
+  '
+maintainer: gdubina <gdubina@dataart.com>
+name: monitor-server
+provides:
+  monitor-server:
+    interface: monitor-server
+requires:
+  api-server:
+    interface: http
+  essearch:
+    interface: elasticsearch
+  mesos-master:
+    interface: juju-info
+  redis:
+    interface: redis
+subordinate: false
+summary: custom simple monitor server
+tags:
+- misc

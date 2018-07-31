@@ -1,0 +1,19 @@
+description: 'A platform for us to share photos in an environment that respects our
+
+  freedom and independence. In the future MediaGoblin will include support
+
+  other media, like video, and provide tools to facilitate collaboration
+
+  on media projects.
+
+  '
+name: mediagoblin
+peers:
+  db:
+    interface: mongodb
+  sessions:
+    interface: memcache
+provides:
+  website:
+    interface: http
+summary: A de-centralized, federated Web Application for sharing media

@@ -1,0 +1,18 @@
+description: 'DEPRECATED: please use ibm-spectrum-scale-manager and ibm-spectrum-scale-client
+  instead.
+
+  '
+maintainer: jujusupp@us.ibm.com
+name: ibm-spectrum-scale
+provides:
+  manager:
+    interface: gpfs
+requires:
+  client:
+    interface: gpfs
+subordinate: false
+summary: Charm for IBM's General Parallel File System
+tags:
+- storage
+- big_data
+- ibm

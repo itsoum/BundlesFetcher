@@ -1,0 +1,15 @@
+description: 'Postfix is the default mail transport agent on Ubuntu.
+
+  This charm implements a mail relay for cloud instances.
+
+  '
+maintainers:
+- Canonical IS <root@admin.canonical.com>
+name: postfix-relay
+provides:
+  postfix:
+    interface: mta
+subordinate: false
+summary: Postfix relay
+tags:
+- network

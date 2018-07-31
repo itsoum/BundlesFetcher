@@ -1,0 +1,13 @@
+description: 'This charm is used to deploy and run the chaos monkey.
+
+  '
+maintainer: John George <john.george@canonical.com>
+name: chaos-monkey
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Chaos Monkey
+tags:
+- misc

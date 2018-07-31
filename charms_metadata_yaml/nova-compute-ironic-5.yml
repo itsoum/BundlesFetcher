@@ -1,0 +1,19 @@
+description: 'OpenStack Compute is a cloud computing fabric controller.
+
+  This charm supports integration of OpenStack Ironic compute into OpenStack.
+
+  '
+maintainer: ibalutoiu <ibalutoiu@cloudbasesolutions.com>
+name: nova-compute-ironic
+provides:
+  cloud-compute:
+    interface: nova-compute
+requires:
+  amqp:
+    interface: rabbitmq
+  ironic-api:
+    interface: ironic-api
+subordinate: false
+summary: OpenStack Compute - Ironic
+tags:
+- openstack

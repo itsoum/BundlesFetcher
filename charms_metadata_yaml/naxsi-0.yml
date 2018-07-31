@@ -1,0 +1,10 @@
+description: Naxsi is an open source, high performance, low rules maintenance, Web
+  Application Firewall module for Nginx, the famous web server and reverse-proxy.
+name: naxsi
+provides:
+  website:
+    interface: http
+requires:
+  reverseproxy:
+    interface: http
+summary: Naxsi is an open source, high performance, low rules maintenance

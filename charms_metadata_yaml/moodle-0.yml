@@ -1,0 +1,22 @@
+description: 'Moodle is a learning platform designed to provide educators, administrators
+  and learners with a single robust, secure and integrated system to create personalised
+  learning environments.
+
+  This charm deploys Moodle as outlined by the Moodle Installation Guide.
+
+  '
+maintainer: Gianni Marzulli gianni.marzulli@garr.it
+name: moodle
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+series:
+- xenial
+summary: Moodle (Modular Object-Oriented Dynamic Learning Environment) is a free open-source
+  learning management system or e-Learning platform.
+tags:
+- lms
+- social

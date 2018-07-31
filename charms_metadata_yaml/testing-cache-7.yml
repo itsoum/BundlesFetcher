@@ -1,0 +1,23 @@
+description: 'Installs the Graylog log management system. Connections to elasticsearch
+  and mongodb are required for a fully functioning system. https://www.graylog.org/
+
+  '
+maintainer: Tim Kuhlman <timothy.kuhlman@canonical.com>
+name: graylog
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  mongodb:
+    interface: mongodb
+series:
+- xenial
+subordinate: false
+summary: Graylog log management system
+tags:
+- misc

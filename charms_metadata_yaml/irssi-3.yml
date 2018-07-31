@@ -1,0 +1,17 @@
+description: 'This charm provides an irssi client
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: irssi
+provides:
+  irssi:
+    interface: irssi
+requires:
+  ircd:
+    interface: inspircd
+subordinate: false
+summary: irssi instance for testing ircd charms
+tags:
+- misc

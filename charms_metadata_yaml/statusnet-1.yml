@@ -1,0 +1,18 @@
+description: 'StatusNet helps people in a community, company or group to exchange
+  short
+
+  (140 characters) messages over the Web and a variety of other mediums.
+
+  '
+maintainer: Nathan Osman <admin@quickmediasolutions.com>
+name: statusnet
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: a free and open source microblogging platform
+tags:
+- application
+- blog

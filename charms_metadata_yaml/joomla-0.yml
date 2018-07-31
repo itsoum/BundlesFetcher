@@ -1,0 +1,13 @@
+description: "Joomla is an award-winning content management system (CMS), \nwhich\
+  \ enables you to build Web sites and powerful online \napplications.\n"
+maintainer: Helio L Mota <helio.mota@gmail.com>
+name: joomla
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Joomla content management system (CMS)
+tags:
+- applications

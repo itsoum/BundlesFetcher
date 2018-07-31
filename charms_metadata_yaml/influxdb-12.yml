@@ -1,0 +1,19 @@
+description: 'Scalable Time Series DB.
+
+  '
+maintainers:
+- InfluxDB Charmers <influxdb-charmers@lists.launchpad.net>
+name: influxdb
+provides:
+  admin:
+    interface: http
+  grafana-source:
+    interface: grafana-source
+  query:
+    interface: influxdb-api
+series:
+- xenial
+- trusty
+summary: Scalable Time Series DB
+tags:
+- database

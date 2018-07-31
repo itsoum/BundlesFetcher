@@ -1,0 +1,15 @@
+categories:
+- miscellaneous
+description: 'This charm installs and configures logstash-forwarder, a lightweight
+
+  alternative to logstash-agent.
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: logstash-forwarder
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Installs and configures logstash-forwarder

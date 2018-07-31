@@ -1,0 +1,7 @@
+description: Instance backups and restore.
+maintainer: Kapil Thangavelu <kapil.foss@gmail.com>
+name: aws-snapshot
+requires:
+  tags:
+    interface: juju-info
+summary: Amazon Automated Backups

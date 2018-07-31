@@ -1,0 +1,26 @@
+description: A charm for hosting the webteam's Python projects
+maintainer: Canonical Webteam <webteam@canonical.com>
+name: wsgi-app
+provides:
+  verify:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  mongo:
+    interface: mongodb
+  postgres:
+    interface: pgsql
+resources:
+  build:
+    description: A tarball containing the application code
+    filename: build.tar.gz
+    type: file
+series:
+- xenial
+summary: A charm for hosting the webteam's Python projects
+tags:
+- python
+- webservice
+- resources

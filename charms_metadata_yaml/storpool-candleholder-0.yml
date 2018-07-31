@@ -1,0 +1,12 @@
+description: 'This charm does nothing, yet it allows subordinate charms to be installed.
+
+  '
+maintainer: StorPool <support@storpool.com>
+name: storpool-candleholder
+requires:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+summary: Let subordinate charms be installed on a node.
+tags:
+- ops

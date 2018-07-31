@@ -1,0 +1,20 @@
+description: 'DEPRECATED: please use ibm-java instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibmjavasdk
+requires:
+  default:
+    interface: juju-info
+    scope: container
+  sdk:
+    interface: sdk
+    scope: container
+subordinate: true
+summary: IBM Java SDK Product (deprecated, use ibm-java)
+tags:
+- misc
+- ibm
+- java sdk
+- jdk
+- jre

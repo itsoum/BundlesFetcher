@@ -1,0 +1,8 @@
+description: 'This charm provides the stunnel server daemon service
+
+  '
+name: stunnel-server
+provides:
+  stunnel-server:
+    interface: stunnel
+summary: Server for SSL tunnel connections

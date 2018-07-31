@@ -1,0 +1,13 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Vzzual <contact@vzzual.com>
+name: vzzualmobileapi
+provides:
+  vzzual:
+    interface: vzzual
+    scope: container
+subordinate: false
+summary: Vzzual Demo Mobile API
+tags:
+- misc

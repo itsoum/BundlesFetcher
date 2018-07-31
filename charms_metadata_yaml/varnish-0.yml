@@ -1,0 +1,28 @@
+description: 'Varnish Cache is a state of the art web accelerator written with
+
+  performance and flexibility in mind.  Varnish Cache stores web pages
+
+  in memory so web servers don''t have to create the same web page over
+
+  and over again. Varnish serves pages much faster than any application
+
+  server; giving the website a significant speed up.  Some of the
+
+  features include: * A modern design * VCL - a very flexible
+
+  configuration language * Load balancing with health checking of
+
+  backends * Partial support for ESI - Edge Side Includes * URL
+
+  rewriting * Graceful handling of "dead" backends
+
+  '
+maintainer: Nathan Williams <nathan@nathanewilliams.com>
+name: varnish
+provides:
+  website:
+    interface: http
+requires:
+  reverseproxy:
+    interface: http
+summary: state of the art, high-performance web accelerator

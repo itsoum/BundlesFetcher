@@ -1,0 +1,35 @@
+description: 'IBM DB2 Direct Advanced Edition provides a set of new license metrics
+  to facilitate hybrid cloud deployments. The DB2 Direct Editions provide the same
+  DB2 functionality
+
+  but add ease of purchase and licensing flexibility using a newly introduced simplified
+  license metric, the Virtual Processor Core (VPC) sold as a monthly license charge.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-db2-dae
+provides:
+  db:
+    interface: db2
+resources:
+  ibm_db2_dae_installer:
+    description: IBM DB2 DAE installer archive
+    filename: ibm_db2_dae_installer.tar.gz
+    type: file
+  ibm_db2_dae_license:
+    description: IBM DB2 DAE activation files
+    filename: ibm_db2_dae_license.zip
+    type: file
+series:
+- xenial
+subordinate: false
+summary: IBM DB2 Direct Advanced Edition
+tags:
+- ibm
+- db2
+- database
+- misc
+- ibm-z
+terms:
+- ibmcharmers/ibm-db2-dae/1

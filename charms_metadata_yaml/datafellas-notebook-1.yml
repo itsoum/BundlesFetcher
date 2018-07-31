@@ -1,0 +1,35 @@
+description: 'Originally forked from the amazing scala-notebook,
+
+  almost entirely refactored for Massive Dataset Analysis using Apache Spark.
+
+
+  The tool allows performing reproducible analysis with Scala, Apache Spark and more.
+
+
+  This is achieved through an interactive web-based editor that can combine Scala
+  code,
+
+  SQL queries, Markup or even JavaScript in a collaborative manner.
+
+
+  The Spark is available out of the box, and is simply accessed by the variable sparkContext.
+
+  '
+maintainer: Francois Bayart <francois.bayart@data-fellas.guru>
+name: datafellas-notebook
+provides:
+  notebook:
+    interface: http
+requires:
+  mesos:
+    interface: mesos-master
+    scope: container
+series:
+- trusty
+subordinate: true
+summary: Interactive and Reactive Data Science using Scala and Spark
+tags:
+- bigdata
+- hadoop
+- apache
+- spark

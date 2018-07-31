@@ -1,0 +1,17 @@
+description: 'SuiteCRM is SugarCRM supercharged.
+
+  '
+maintainer: Joe Liau <joe@ubuntuvancouver.org>
+name: suitecrm
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  database:
+    interface: mysql
+subordinate: false
+summary: SuiteCRM is SugarCRM supercharged.
+tags:
+- crm, applications

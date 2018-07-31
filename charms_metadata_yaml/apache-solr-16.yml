@@ -1,0 +1,19 @@
+description: Build for search,  Solr provides scalable search services using an easy
+  to use REST interface to extract the data.
+maintainer: Tom Barber <tom@spicule.co.uk>
+name: apache-solr
+provides:
+  java:
+    interface: java
+    scope: container
+  solr-interface:
+    interface: solr
+requires:
+  zookeeper:
+    interface: zookeeper
+series:
+- xenial
+subordinate: false
+summary: Solr Charm for deployment of Apache Solr to Juju.
+tags:
+- misc

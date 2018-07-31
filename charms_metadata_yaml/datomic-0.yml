@@ -1,0 +1,9 @@
+description: 'Deploy the free version of datomic
+
+  '
+maintainer: Matthew Williams <mattyw@me.com>
+name: datomic
+provides:
+  provides-relation:
+    interface: datomic-db
+summary: Deploy the free version of datomic

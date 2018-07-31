@@ -1,0 +1,7 @@
+description: "Can be used to create bonds statically or using dhcp. \n"
+maintainer: plumgrid <plumgrid@maas-ctr>
+name: plumgrid-network-config
+subordinate: false
+summary: Used to configure networking on node
+tags:
+- misc

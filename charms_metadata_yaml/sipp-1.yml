@@ -1,0 +1,12 @@
+description: "voip testing tool \n"
+maintainer: Ilya Lebedev <lebedev@dataart.com>
+name: sipp
+requires:
+  dns-server:
+    interface: dns-server
+  sip:
+    interface: http
+subordinate: false
+summary: sipp charm
+tags:
+- network

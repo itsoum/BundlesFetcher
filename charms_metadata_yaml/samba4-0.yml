@@ -1,0 +1,12 @@
+description: 'Samba 4 is an Active Directory Domain Controller.
+
+  '
+name: samba4
+provides:
+  kerberos-dc:
+    interface: kerberos
+  ldap-server:
+    interface: ldap
+  smb-server:
+    interface: smb
+summary: Active Directory server

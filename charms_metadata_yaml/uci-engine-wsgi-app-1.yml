@@ -1,0 +1,44 @@
+categories:
+- app-servers
+description: 'Deploys a web application using the restish, pyramid, or django frameworks
+
+  '
+maintainer: Andy Doan <andy.doan@ubuntu.com>
+name: wsgi-app
+provides:
+  json_status:
+    interface: json_status
+    optional: true
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  oauth-server:
+    interface: http
+    optional: true
+  website:
+    interface: http
+    optional: true
+  wsgi:
+    interface: wsgi
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+    optional: true
+  intercom:
+    interface: http
+    optional: true
+  lander:
+    interface: lander
+    optional: true
+  oauth-client:
+    interface: http
+    optional: true
+  pgsql:
+    interface: pgsql
+    optional: true
+subordinate: false
+summary: Deploy a python-restish or python-pyramid or python-django service

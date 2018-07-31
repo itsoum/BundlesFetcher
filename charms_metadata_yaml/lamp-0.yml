@@ -1,0 +1,17 @@
+description: "Provides a working webserver\n- Runtime:\n - PHP\n- MySQL:\n - /var/webconfig/mysql\
+  \ contains the ip of the latest mysql server to use\n - /var/webconfig/{ip} contains\
+  \ the details to be able to connect to the db\n - /var/webconfig/opendb.php opens\
+  \ a connection to the db\n - mysql_conf is used to setup the db, either add it to\
+  \ config/ in charm or bzr branch\n"
+maintainer: Victor Palau <vtuson@ubuntu.com>
+name: lamp
+provides:
+  website:
+    interface: http
+requires:
+  shared-db:
+    interface: mysql-shared
+summary: set up an apache server with php and supports a connection to mysql
+tags:
+- framework
+- app-servers

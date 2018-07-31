@@ -1,0 +1,21 @@
+description: 'Use Chronograf with the other components of the TICK stack to visualize
+
+  your monitoring data and easily create alerting and automation rules.
+
+  '
+maintainer: Michiel Ghyselinck <michiel.ghyselinck@tengu.io>
+name: chronograf
+provides:
+  http:
+    interface: http
+requires:
+  influxdb:
+    interface: influxdb-api
+  kapacitor:
+    interface: kapacitor
+series:
+- xenial
+subordinate: false
+summary: "Chronograf is InfluxData\u2019s open source web application."
+tags:
+- monitoring

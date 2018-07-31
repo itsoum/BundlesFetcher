@@ -1,0 +1,22 @@
+description: 'IBM WebSphere Application Server Network Deployment provides an advanced,
+  flexible runtime environment for large-scale application deployments. It offers
+  near-continuous availability with advanced performance and management capabilities
+  for mission-critical applications.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-was-nd-dm
+provides:
+  dm-node:
+    interface: dm-node
+  was-ihs:
+    interface: was-ihs
+  was-nd:
+    interface: was-nd
+subordinate: false
+summary: WebSphere Application Server Network Deployment Deployment Manager
+tags:
+- ibm
+- misc
+terms:
+- ibm-was-nd/1

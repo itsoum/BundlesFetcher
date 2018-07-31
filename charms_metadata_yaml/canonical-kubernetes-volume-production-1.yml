@@ -1,0 +1,5 @@
+description: 'canonical-kubernetes bundle with kubernetes-e2e added.
+
+  '
+name: canonical-kubernetes-volume-production
+summary: canonical-kubernetes customized to run in the solutions-qa test environment.

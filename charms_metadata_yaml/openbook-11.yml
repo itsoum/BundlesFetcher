@@ -1,0 +1,23 @@
+description: 'The OpenBook Billing Engine offers a sophisticated cloud billing platform,
+  with granular rate plans for various personas of tenants and usage patterns, supporting
+  billing, chargeback or showback for private or public clouds. Resellers experience
+  the same range of flexibility as the root cloud owner. Invoice and cost accounting
+  information can easily be shared with CRM and accounting packages via Rest-based
+  APIs.
+
+  '
+maintainer: Michael Garza <mike@talligent.com>
+name: openbook
+requires:
+  db-admin:
+    interface: mysql-root
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: 'Openbook billing engine for OpenStack
+
+  '
+tags:
+- openstack
+- monitoring

@@ -1,0 +1,16 @@
+categories:
+- applications
+description: "The hsenidmobile-ctap Telco APIs by hSenid Mobile provide a rich framework\
+  \ for app developers to build various apps by integrating Telco assets such as SMS,\
+  \ USSD, Charging, Location and Subscription to create various types of Telco apps\
+  \ that range from enterprise level to entertainment. Following are the list of Telco\
+  \ APIs available and its functions \nhttp://devspace.hsenidmobile.com/ \n"
+maintainer: hSenidmobile <ctap@hsenidmobile.com>
+name: hsenidmobile-ctap-doc
+provides:
+  doc:
+    interface: http
+requires:
+  backend:
+    interface: http
+summary: API Guide will assist you to build Telco apps easily with minimum time.

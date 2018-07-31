@@ -1,0 +1,17 @@
+categories:
+- applications
+description: "Dashing is a Sinatra based framework that lets you build beautiful dashboards.\n\
+  Key features:\n  * Use premade widgets, or fully create your own with scss, html,\
+  \ and coffeescript.\n  * Widgets harness the power of data bindings to keep things\
+  \ DRY and simple. Powered by batman.js.\n  * Use the API to push data to your dashboards,\
+  \ or make use of a simple ruby DSL for fetching data.\n  * Drag & Drop interface\
+  \ for re-arranging your widgets.\n  * Host your dashboards on Heroku in less than\
+  \ 30 seconds.\n  * This project was created at Shopify for displaying custom dashboards\
+  \ on TVs around the office.\n"
+maintainer: Samuel Cozannet <samuel.cozannet@m4x.org>
+name: dashing
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: The exceptionally handsome dashboard framework

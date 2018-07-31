@@ -1,0 +1,14 @@
+description: Collaborative document sharing for the Internet
+maintainer: James Page <james.page@ubuntu.com>
+name: etherpad-lite
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+    optional: true
+summary: Etherpad Lite
+tags:
+- social
+- network

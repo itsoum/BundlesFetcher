@@ -1,0 +1,23 @@
+description: UCARP - derived from the BSD project CARP (common address redundancy
+  protocol) . This charm supports .... .. . . .  ..
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: ucarp
+peers:
+  ucarp:
+    interface: ucarp
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- zesty
+- trusty
+- artful
+subordinate: true
+summary: UCARP for HA
+tags:
+- openstack
+- openstack
+- ha
+- cluster

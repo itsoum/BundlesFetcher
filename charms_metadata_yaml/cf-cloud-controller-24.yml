@@ -1,0 +1,29 @@
+categories:
+- misc
+description: 'The Cloud Controller is written in Ruby and provides REST API endpoints
+
+  for clients to access the system. The Cloud Controller maintains a database
+
+  with tables for orgs, spaces, apps, services, service instances, user roles,
+
+  and more. (http://docs.cloudfoundry.com/docs/running/architecture/cloud-controller.html)
+
+  '
+maintainer: Alexnder Prismakov <prismakov@gmail.com>
+name: cf-cloud-controller
+provides:
+  cc:
+    interface: controller
+requires:
+  db:
+    interface: mysql
+    optional: true
+  nats:
+    interface: nats
+  router:
+    interface: router
+  service:
+    interface: mysql-service
+    optional: true
+subordinate: false
+summary: Cloud Foundry Cloud Controller

@@ -1,0 +1,8 @@
+description: 'Fill me in.
+
+  '
+maintainer: Chris Glass <tribaal@gmail.com>
+name: counter-strike-go-server
+summary: A Dedicated server for Valve's Counter-Strike:GO game.
+tags:
+- games

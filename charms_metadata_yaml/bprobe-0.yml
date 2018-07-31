@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'Boundary.com bprobe subordinate charm
+
+  '
+maintainer: JuanJo Ciarlante <juan.ciarlante@canonical.com>
+name: bprobe
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Boundary.com bprobe tool subordinate charm.

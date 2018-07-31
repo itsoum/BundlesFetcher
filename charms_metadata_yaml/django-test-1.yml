@@ -1,0 +1,13 @@
+description: A Django charm.
+maintainer: Tim Van Steenburgh <tvansteenburgh@gmail.com>
+name: django
+provides:
+  website:
+    interface: http
+requires:
+  postgres:
+    interface: pgsql
+summary: A Django charm.
+tags:
+- django
+- cms

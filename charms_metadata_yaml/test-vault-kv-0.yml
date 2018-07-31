@@ -1,0 +1,10 @@
+description: vault-kv dummy consumer charm
+maintainer: James Page <james.page@ubuntu.com>
+name: test-vault-kv
+requires:
+  secrets-storage:
+    interface: vault-kv
+series:
+- xenial
+- bionic
+summary: quick test of vault-kv

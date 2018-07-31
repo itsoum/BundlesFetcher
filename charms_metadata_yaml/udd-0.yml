@@ -1,0 +1,4 @@
+description: "This service synchronizes Ubuntu and Debian packages with \nBazaar branches\
+  \ representing the history of those packages.\n"
+name: udd
+summary: Ubuntu Distributed Development importer

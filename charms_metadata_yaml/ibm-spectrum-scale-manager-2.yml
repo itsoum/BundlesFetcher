@@ -1,0 +1,45 @@
+description: "Spectrum Scale provides simplified data management and integrated information\
+  \ lifecycle tools capable of managing petabytes of data and billions \nof files,\
+  \ in order to arrest the growing cost of managing ever growing amounts of data.\n\
+  A Spectrum Scale manager node is any server that  has the Spectrum Scale product\
+  \ installed with direct storage access or network access to another node. A manager\
+  \ node will be part of the node pool from which file system managers and token managers\
+  \ can be selected.\n"
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-spectrum-scale-manager
+peers:
+  quorum:
+    interface: gpfs
+provides:
+  gpfsmanager:
+    interface: gpfs
+resources:
+  ibm_spectrum_scale_fixpack:
+    description: IBM Spectrum Scale fixpack install archive
+    filename: Spectrum_Scale_Standard_Fixpack.tar.gz
+    type: file
+  ibm_spectrum_scale_installer_manager:
+    description: IBM Spectrum Scale install archive
+    filename: ibm_spectrum_scale_installer.tar.gz
+    type: file
+series:
+- trusty
+- xenial
+storage:
+  disks:
+    multiple:
+      range: 0-
+    type: block
+subordinte: false
+summary: IBM SPECTRUM SCALE MANAGER
+tags:
+- ibm
+- apt
+- leadership
+- ibm
+- storage
+- big_data
+- gpfs
+terms:
+- ibm-spectrum-scale/1

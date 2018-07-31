@@ -1,0 +1,35 @@
+description: "IBM Data Server Manager is an integrated database management tools platform\
+  \ for DB2 for Linux\nIt is simple to set up, easy to use, and enterprise ready\n\
+  with the ability to manage hundreds of databases. \nThis Charm installs and configures\
+  \ IBM DSM Enterprise Edition only.\n"
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-dsm-enterprise
+requires:
+  ibm-dsm-db2:
+    interface: db2
+resources:
+  ibm_dsm_fixpack:
+    description: DSM installer fixpack archive.
+    filename: ibm_dsm.fixpack.tgz
+    type: file
+  ibm_dsm_fixpack_license:
+    description: DSM license fixpack archive.
+    filename: ibm_dsm.fixpack_license.tgz
+    type: file
+  ibm_dsm_installer:
+    description: DSM installer archive.
+    filename: ibm_dsm.installer.tgz
+    type: file
+  ibm_dsm_license:
+    description: DSM installer license archive.
+    filename: ibm_dsm.license.tgz
+    type: file
+subordinate: false
+summary: IBM Dataserver manager Enterprise
+tags:
+- misc
+- ibm
+- dsm
+- enterprise
+terms:
+- ibmcharmers/ibm-dsm-enterprise/1

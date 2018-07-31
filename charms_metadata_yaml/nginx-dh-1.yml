@@ -1,0 +1,14 @@
+description: 'Nginx accelerates content and application delivery, improves security,
+  facilitates availability and scalability for the busiest web sites on the Internet.
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: nginx-dh
+requires:
+  dh:
+    interface: http
+subordinate: false
+summary: Nginx is a web server with a strong focus on high concurrency, performance
+  and low memory usage.
+tags:
+- misc

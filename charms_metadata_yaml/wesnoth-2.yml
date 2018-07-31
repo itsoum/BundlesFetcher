@@ -1,0 +1,10 @@
+description: 'The Battle for Wesnoth is a Free, turn-based tactical strategy game
+
+  with a high fantasy theme, featuring both single-player, and
+
+  online/hotseat multiplayer combat. This charm deploys the server part.
+
+  '
+maintainer: Javier Lopez <chilicuil@ubuntu.com>
+name: wesnoth
+summary: Wesnoth Server

@@ -1,0 +1,14 @@
+categories:
+- app
+description: 'deploys the genghisapp gem, defaults to running on port 80. No additional
+  relations are required to speak to the MongoDB Service. All data relating to the
+  connection is stored in the browser Local Storage engine.
+
+  '
+maintainer: Charles Butler <chuck@dasroot.net>
+name: genghisapp
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: Genghisapp the single file MongoDB administration tool

@@ -1,0 +1,37 @@
+description: 'Deploys a 5 service application as standalone to perform voting and
+  result
+
+  analysis. Supports relations which will reconfigure the application from
+
+  stand-alone to scale-out usage.
+
+  '
+maintainer: Juanita Bagodonuts <test@test.com>
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+name: voting-app
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  results:
+    interface: http
+  voting:
+    interface: http
+requires:
+  postgres:
+    interface: pgsql
+  redis:
+    interface: redis
+series:
+- trusty
+- wily
+- xenial
+subordinate: false
+summary: multi-tiered voting app
+tags:
+- containers
+- layer
+- application-server
+- containers

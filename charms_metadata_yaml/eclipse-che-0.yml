@@ -1,0 +1,20 @@
+description: 'Installs the Eclipse Che cloud editor with support for creating Juju
+  Charms.
+
+  '
+maintainers:
+- Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: eclipse-che
+provides:
+  dockerhost:
+    interface: docker-image-host
+  editor:
+    interface: http
+series:
+- xenial
+subordinate: false
+summary: Installs the Eclipse Che cloud editor with Juju Charms support.
+tags:
+- containers
+- layer
+- application_development

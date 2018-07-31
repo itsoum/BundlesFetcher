@@ -1,0 +1,21 @@
+description: 'Metal as a Service - Region controller
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: maas-region
+provides:
+  http:
+    interface: http
+  region:
+    interface: maas
+requires:
+  postgresql:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: MAAS Region controller
+tags:
+- maas
+- metal
+- region

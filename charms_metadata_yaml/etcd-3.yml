@@ -1,0 +1,42 @@
+description: 'This charm supports deploying Etcd from the upstream binaries with resources.
+
+  It will also TLS wrap your service, and distribute client keys to any service
+
+  connecting. Etcd is a highly available key/value store.
+
+  '
+maintainers:
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+min-juju-version: 2.0-beta6
+name: etcd
+peers:
+  certificates:
+    interface: tls
+  cluster:
+    interface: etcd
+provides:
+  db:
+    interface: etcd
+  proxy:
+    interface: etcd-proxy
+resources:
+  etcd:
+    description: Etcd binary release
+    filename: etcd
+    type: file
+  etcdctl:
+    description: Etcdctl binary release
+    filename: etcdctl
+    type: file
+series:
+- xenial
+- trusty
+subordinate: false
+summary: Deploy a TLS terminated ETCD Cluster
+tags:
+- infrastructure
+- security
+- database
+- keystore
+- layer

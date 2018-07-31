@@ -1,0 +1,12 @@
+categories:
+- app-servers
+description: Deploy a user-defined node.js application
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: node-app
+provides:
+  website:
+    interface: http
+requires:
+  mongodb:
+    interface: mongodb
+summary: Deploy a node.js application

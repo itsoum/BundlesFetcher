@@ -1,0 +1,13 @@
+description: Veritas HyperScale compute charm for nova compute configuration.
+maintainer: DL-VTAS-ENG-SDIO-HyperScale-Opensource@veritas.com
+name: hyperscale-compute-conf
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: HyperScale integration for openstack nova compute.
+tags:
+- openstack

@@ -1,0 +1,18 @@
+categories:
+- app-servers
+- security
+- network
+- cloudfoundary
+description: 'Enable Juju based OpenStack to use OPNFV Promise
+
+  '
+maintainer: hironobu maeda <hmaeda@clearpathnet.com>
+name: opnfv-promise
+provides:
+  command:
+    interface: yfc
+requires:
+  nodejs:
+    interface: node
+subordinate: false
+summary: Promise Juju Plugin

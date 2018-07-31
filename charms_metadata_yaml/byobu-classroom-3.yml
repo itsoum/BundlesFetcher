@@ -1,0 +1,15 @@
+categories:
+- applications
+description: 'byobu-class provides remote terminal access through a web browser,
+
+  using https, ajaxterm, and byobu.  It operates in a one-writer,
+
+  many reader mode.
+
+  '
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: byobu-classroom
+provides:
+  website:
+    interface: https
+summary: Remote terminal classroom over https

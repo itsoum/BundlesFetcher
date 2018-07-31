@@ -1,0 +1,24 @@
+description: 'The MidoNet Gateway is a charm that pulls midonet-agent into the host
+
+  and talks to midonet-api in order to announce itself as one of the gateways
+
+  for the service. Can''t be deployed LXC.
+
+  '
+maintainer: Midokura
+name: midonet-gateway
+provides:
+  gateway:
+    interface: midonet-gateway
+requires:
+  container:
+    interface: juju-info
+    scope: container
+  midonet-host:
+    interface: midonet-host
+    scope: container
+subordinate: true
+summary: charm for MidoNet gateways
+tags:
+- midonet
+- network

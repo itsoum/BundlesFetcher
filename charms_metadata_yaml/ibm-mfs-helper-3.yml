@@ -1,0 +1,18 @@
+description: 'Enable a SSH connection to remote machine.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-mfs-helper
+provides:
+  helper:
+    interface: helper
+requires:
+  db:
+    interface: db2
+    scope: container
+subordinate: true
+summary: Helper charm to be used with IBM MobileFirst Server product charm.
+tags:
+- misc
+- helper
+- ibm

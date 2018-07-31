@@ -1,0 +1,11 @@
+categories:
+- database
+description: 'Depricated
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: cassandra-dh
+provides:
+  dhc:
+    interface: ca-dhc
+summary: Cassandra for DeviceHive

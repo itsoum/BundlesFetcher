@@ -1,0 +1,8 @@
+description: 'Will deploy OpenJDK 6 JRE and the latest Minecraft server
+
+  '
+maintainer: MattyW <gh@mattyw.net>
+name: minecraft
+summary: Minecraft Server
+tags:
+- app-servers

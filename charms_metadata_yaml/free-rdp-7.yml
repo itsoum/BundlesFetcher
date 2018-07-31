@@ -1,0 +1,45 @@
+description: 'FreeRDP is a free implementation of the Remote Desktop Protocol (RDP)
+
+  released under the Apache license.
+
+  '
+maintainer: Denis Buliga <dbuliga@cloudbasesolutions.com>
+name: free-rdp
+provides:
+  free-rdp:
+    interface: free-rdp
+requires:
+  ad-join:
+    interface: ad-join
+    optional: false
+  identity-credentials:
+    interface: keystone-credentials
+    optional: false
+resources:
+  free-rdp-msi-installer:
+    description: Free RDP MSI installer
+    filename: free-rdp.msi
+    type: file
+  free-rdp-zip-installer:
+    description: Free RDP ZIP installer
+    filename: free-rdp.zip
+    type: file
+  vcredist-x64:
+    description: Visual C++ Redistributable Packages for Visual Studio 2013 x64 installer
+    filename: vcredist-x64.exe
+    type: file
+series:
+- win2012
+- win2012r2
+- win2012hv
+- win2012hvr2
+- win2016
+- win2016nano
+summary: Free RDP Windows charm
+tags:
+- openstack
+- windows
+- rdp
+- console
+- web
+- proxy

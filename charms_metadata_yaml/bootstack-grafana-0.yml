@@ -1,0 +1,16 @@
+description: 'Grafana is the leading graph and dashboard builder for visualizing
+
+  time series metrics.
+
+  '
+maintainer: Alvaro Uria <alvaro.uria@canonical.com>
+name: bootstack-grafana
+requires:
+  target:
+    interface: http
+    scope: container
+subordinate: true
+summary: Graph and Dashboard builder
+tags:
+- misc
+- monitoring

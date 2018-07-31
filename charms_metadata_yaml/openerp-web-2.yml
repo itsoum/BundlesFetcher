@@ -1,0 +1,26 @@
+description: 'Open ERP, previously known as TinyERP, is a complete ERP and CRM. The
+
+  main features are accounting (analytic and financial), stock
+
+  management, sales and purchases management, tasks automation,
+
+  marketing campaigns, help desk, POS, etc. Technical features include a
+
+  distributed server, flexible workflows, an object database, a dynamic
+
+  GUI, customizable reports, and NET-RPC and XML-RPC interfaces.  This
+
+  package contains the Open ERP server, install openerp-client package
+
+  for the client.
+
+  '
+maintainer: Patrick Hetu <patrick.hetu@gmail.com>
+name: openerp-web
+provides:
+  website:
+    interface: http
+requires:
+  openerp:
+    interface: xmlrpc
+summary: Enterprise Resource Management (server)

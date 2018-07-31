@@ -1,0 +1,25 @@
+description: "IBM Platform LSF is a powerful workload management platform for demanding,\
+  \ distributed High Performance Computing(HPC) environments. \nIt provides a comprehensive\
+  \ set of intelligent, policy-driven scheduling features that enable you to utilize\
+  \ all of your compute infrastructure resources\nand ensure optimal application performance.\
+  \ LSF server host that acts as the overall coordinator for that cluster. Each cluster\
+  \ has one master host to do \nall job scheduling and dispatch.\n"
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-lsf-master
+peers:
+  cluster:
+    interface: platformmaster
+provides:
+  master:
+    interface: platformmaster
+requires:
+  storage:
+    interface: nfsstorage
+subordinate: false
+summary: IBM Platform LSF Master
+tags:
+- ibm
+- lsf-master
+- job_scheduler
+- workload_management
+- lsf-master-candidate

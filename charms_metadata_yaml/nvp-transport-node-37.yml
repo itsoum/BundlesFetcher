@@ -1,0 +1,21 @@
+description: 'Nicira NVP provides a highly flexible, high performance, secure network
+
+  virtualization solution for data centers.
+
+  .
+
+  This charm is used to configure a principle service as a transport node
+
+  in a NVP cluster.  This includes installing and configuring OpenvSwitch
+
+  to be controlled by the NVP cluster.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: nvp-transport-node
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Nicira NVP - Transport Node

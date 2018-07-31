@@ -1,0 +1,8 @@
+categories:
+- databases
+description: Proxy charm for postgresql
+name: postgresql-proxy
+provides:
+  db:
+    interface: pgsql
+summary: Proxy for postgresql

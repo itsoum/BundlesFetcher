@@ -1,0 +1,19 @@
+description: 'This charm provides Consul server.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: consul
+peers:
+  cluster:
+    interface: raft
+provides:
+  admin:
+    interface: http
+  api:
+    interface: consul
+series:
+- xenial
+summary: Reactive charm for Consul server.
+tags:
+- ops
+- network

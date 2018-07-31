@@ -1,0 +1,29 @@
+description: 'This charm can grant select permissions to instances of applications
+
+  related to it which enable integration with AWS specific features,
+
+  such as ELB, EBS, etc.
+
+  '
+display-name: AWS-Integrator
+maintainers:
+- Cory Johns <cory.johns@canonical.com>
+name: aws-integrator
+provides:
+  aws:
+    interface: aws-integration
+resources:
+  aws-cli:
+    description: Resource to side-load aws-cli snap in network-restricted deployments.
+    filename: aws-cli.snap
+    type: file
+series:
+- xenial
+- bionic
+summary: 'Charm to enable AWS integrations via Juju relations.
+
+  '
+tags:
+- aws
+- native
+- integration

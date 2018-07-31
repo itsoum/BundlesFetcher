@@ -1,0 +1,26 @@
+description: 'Consul is a HashiCorp tool for service discovery, failure detection
+  (health
+
+  checks), key/value storage, that works with multiple datacenters.
+
+  '
+maintainers:
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Whit Morriss <whit.morriss@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+name: consul
+peers:
+  cluster:
+    interface: raft
+provides:
+  admin:
+    interface: http
+  api:
+    interface: consul
+requires:
+  stats:
+    interface: statsd
+summary: A distributed tool for discovery and configuration.
+tags:
+- ops
+- network

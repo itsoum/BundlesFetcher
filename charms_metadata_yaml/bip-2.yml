@@ -1,0 +1,6 @@
+categories:
+- misc
+description: multiuser irc proxy with conversation replay and more
+maintainer: Brad Marshall <brad.marshall@canonical.com>
+name: bip
+summary: Bip

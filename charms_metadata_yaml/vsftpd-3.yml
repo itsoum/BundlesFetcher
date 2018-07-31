@@ -1,0 +1,17 @@
+categories:
+- file-servers
+description: 'This package provides the "Very Secure FTP Daemon", written from the
+
+  ground up with security in mind.  It supports both anonymous and non-
+
+  anonymous FTP access, PAM authentication, bandwidth limiting, and the
+
+  Linux sendfile() facility.
+
+  '
+maintainer: Nathan Williams <nathan@nathanewilliams.com>
+name: vsftpd
+provides:
+  ftp-server:
+    interface: ftp
+summary: lightweight, efficient FTP server written for security

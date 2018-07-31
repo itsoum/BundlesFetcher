@@ -1,0 +1,18 @@
+description: 'Adds the salt minion to a machine for pairing with salt-master charm
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: salt-minion
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  saltmaster:
+    interface: salt
+series:
+- xenial
+subordinate: true
+summary: Installs salt-minion for use with salt-master
+tags:
+- misc
+- ops

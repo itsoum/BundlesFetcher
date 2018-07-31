@@ -1,0 +1,9 @@
+description: 'Installs a SchoolTool instance with default plugins enabled.
+
+  '
+maintainer: Gediminas Paulauskas <menesis@pov.lt>
+name: schooltool
+provides:
+  website:
+    interface: http
+summary: SchoolTool SIS

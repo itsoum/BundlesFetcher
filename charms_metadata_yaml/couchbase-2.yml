@@ -1,0 +1,17 @@
+description: 'Couchbase Server 2.0 is a distributed, document-oriented NoSQL
+
+  database system that unites the simplicity and reliability of
+
+  CouchDB, with the performance of Memcached and elasticity of
+
+  Couchbase technology.
+
+  '
+name: couchbase
+peers:
+  cluster:
+    interface: couchbase-cluster
+provides:
+  db:
+    interface: couchbase
+summary: Couchbase Server

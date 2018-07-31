@@ -1,0 +1,26 @@
+description: 'This charm provides the Mailman suite.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: mailman
+provides:
+  website:
+    interface: http
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  mysql:
+    interface: mysql-shared
+  postgresql:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: Reacyive charm for Mailman bundle.
+tags:
+- MTA
+- SMTP
+- postfix
+- mailman
+- productivity
+- email

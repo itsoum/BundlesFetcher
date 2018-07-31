@@ -1,0 +1,20 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: cloud-controller-v1
+provides:
+  cc:
+    interface: controller
+  cc-db:
+    interface: controller-db
+requires:
+  db:
+    interface: mysql
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+  uaa:
+    interface: http
+summary: CF Cloud Controller, the brains of the operation

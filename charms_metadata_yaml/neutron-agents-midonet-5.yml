@@ -1,0 +1,23 @@
+description: 'For the VMs to have access to Nova''s metadata and DHCP services, it
+  is
+
+  necessary that neutron-metadata-agent and neutron-dhcp-agent run in a
+
+  machine connected to the MidoNet topology. This charm takes care of that.
+
+  '
+maintainer: midokura
+name: neutron-agents-midonet
+provides:
+  neutron_agents:
+    interface: quantum
+requires:
+  neutron-plugin-api:
+    interface: neutron-plugin-api
+    scope: container
+subordinate: true
+summary: Neutron metadata and dhcp agents for midonet
+tags:
+- openstack
+- network
+- midonet

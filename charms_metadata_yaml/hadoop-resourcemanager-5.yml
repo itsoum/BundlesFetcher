@@ -1,0 +1,30 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the YARN master node (ResourceManager).
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: hadoop-resourcemanager
+provides:
+  benchmark:
+    interface: benchmark
+  java:
+    interface: java
+    scope: container
+  resourcemanager:
+    interface: mapred
+requires:
+  namenode:
+    interface: dfs
+  nodemanager:
+    interface: mapred-slave
+summary: YARN master (ResourceManager) for Apache Bigtop platform
+tags:
+- bigdata
+- apache
+- applications
+- bigdata
+- bigtop
+- hadoop
+- apache

@@ -1,0 +1,15 @@
+categories:
+- applications
+description: Installs Liferay Portal, a Java-based, open source enterprise portal.
+  Liferay provides a powerful Web CMS, collaboration, and enterprise integration functionality
+  with a lightweight footprint and flexible development model.  See http://liferay.com
+  for details.
+maintainer: James Falkner <james.falkner@liferay.com>
+name: liferay
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Liferay Portal, an open source, Java-based web development platform

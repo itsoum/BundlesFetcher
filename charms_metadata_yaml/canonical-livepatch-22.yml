@@ -1,0 +1,22 @@
+description: 'This charms installs and configures the Ubuntu Linux Livepatching Utility
+  and Daemon
+
+  '
+maintainer: Livepatch charm developers <livepatch-charmers@lists.launchpad.net>
+name: canonical-livepatch
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- trusty
+subordinate: true
+summary: Ubuntu Linux Livepatching Utility and Daemon
+tags:
+- security

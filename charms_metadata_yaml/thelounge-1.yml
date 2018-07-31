@@ -1,0 +1,18 @@
+description: 'The Lounge is a modern web IRC client designed for self-hosting.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: thelounge
+provides:
+  http:
+    interface: http
+resources:
+  theloungeirc:
+    description: thelounge IRC snap
+    filename: theloungeirc.snap
+    type: file
+series:
+- xenial
+summary: The self-hosted web IRC client
+tags:
+- irc

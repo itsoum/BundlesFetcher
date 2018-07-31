@@ -1,0 +1,19 @@
+description: "Simple alerting system for Graphite metrics.\n\nFeatures:\n  - Simplest\
+  \ installation (one python package dependency);\n  - No software dependencies (Databases,\
+  \ AMQP and etc);\n  - Light and full asyncronous;\n  - SMTP, Hipchat, Slack, Pagerduty,\
+  \ HTTP handlers (Please make a request for additional handlers);\n  - Easy configurable\
+  \ and support \"historical values\"\n"
+name: graphite-beacon
+provides:
+  conn-check:
+    interface: conn-check
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  wsgi:
+    interface: wsgi
+    scope: container
+summary: Simple alerting system for Graphite metrics
+tags:
+- monitoring

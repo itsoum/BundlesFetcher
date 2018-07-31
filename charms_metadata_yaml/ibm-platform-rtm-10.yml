@@ -1,0 +1,67 @@
+description: 'IBM Platform RTM is an operational dashboard for IBM Platform LSF environments
+  that provides comprehensive workload monitoring, reporting and management.
+
+  It makes cluster administrators more efficient in their day-to-day activities and
+  provides the information and tools needed to improve cluster efficiency,
+
+  enable better user productivity, and contain or reduce costs.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-rtm
+requires:
+  db:
+    interface: mysql-root
+    scope: container
+resources:
+  ibm_prtm_installer:
+    description: IBM Platform RTM installation package
+    filename: rtm-poller-9.1.4-ub14-ppc64le.tar.gz
+    type: file
+  ibm_prtm_installer1:
+    description: IBM Platform RTm file.
+    filename: rtm-server-9.1.4-ub14-ppc64le.tar.gz
+    type: file
+  ibm_prtm_installers:
+    description: Plugin
+    filename: plugin%3Aboost-v4.3-1.tgz
+    type: file
+  ibm_prtm_installers1:
+    description: Plugin
+    filename: plugin%3Aclog-v1.6-1.tgz
+    type: file
+  ibm_prtm_installers2:
+    description: Plugin
+    filename: plugin%3Anectar-v0.34-1.tgz
+    type: file
+  ibm_prtm_installers3:
+    description: Plugin
+    filename: cacti-plugin-0.8.7g-PA-v2.9.tar.gz
+    type: file
+  ibm_prtm_installers4:
+    description: Plugin
+    filename: plugin%3Asettings-v0.71-1.tgz
+    type: file
+  ibm_prtm_installers5:
+    description: Plugin
+    filename: plugin%3Asuperlinks-v1.4-2.tgz
+    type: file
+  ibm_prtm_installers6:
+    description: Plugin
+    filename: adodb492.tgz
+    type: file
+  ibm_prtm_installers7:
+    description: Plugin
+    filename: plugin%3Asyslog-v1.22-2.tgz
+    type: file
+subordinate: true
+summary: IBM Platform RTM is a dashboard for IBM Platform LSF
+tags:
+- ibm
+- apt
+- leadership
+- lsf_dashboard
+- workload_management
+- job_scheduler
+terms:
+- ibm-rtm/1

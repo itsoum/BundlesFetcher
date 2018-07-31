@@ -1,0 +1,25 @@
+description: 'Tor is free software and an open network that helps you defend against
+
+  traffic analysis, a form of network surveillance that threatens personal
+
+  freedom and privacy, confidential business activities and relationships, and
+
+  state security.
+
+
+  This charm deploys a configurable Tor relay. By default, this charm relays
+
+  traffic internally for the Tor network but does not permit outbound traffic.
+
+  '
+maintainer: Casey Marshall <tor-charms@cmars.tech>
+name: tor-relay
+series:
+- xenial
+- trusty
+subordinate: false
+summary: Tor relay
+tags:
+- anonymity
+- privacy
+- freedom

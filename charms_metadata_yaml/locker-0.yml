@@ -1,0 +1,10 @@
+description: Locker is a container for personal data, which gives the owner the ability
+  to control how it's protected and shared. It retrieves and consolidates data from
+  multiple sources, to create a single collection of the things you see and do online:|
+  the photos you take, the places you visit, the links you share, contact details
+  for the people you communicate with, and much more.
+name: locker
+provides:
+  locker:
+    interface: http
+summary: Virtual Container for Personal Data

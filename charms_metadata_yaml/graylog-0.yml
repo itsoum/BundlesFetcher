@@ -1,0 +1,30 @@
+description: 'Installs the Graylog log management system. Connections to elasticsearch
+  and mongodb are required for a fully functioning system. https://www.graylog.org/
+
+  '
+maintainer: Graylog Charmers <graylog-charmers@lists.launchpad.net>
+name: graylog
+provides:
+  beats:
+    interface: elastic-beats
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  mongodb:
+    interface: mongodb
+resources:
+  graylog:
+    description: Graylog snap
+    filename: graylog.snap
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Graylog log management system
+tags:
+- misc

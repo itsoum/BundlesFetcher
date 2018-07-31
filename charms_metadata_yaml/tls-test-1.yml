@@ -1,0 +1,14 @@
+description: 'Summary
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: tls-test
+peers:
+  certificates:
+    interface: tls
+series:
+- xenial
+subordinate: false
+summary: tls-test
+tags:
+- misc

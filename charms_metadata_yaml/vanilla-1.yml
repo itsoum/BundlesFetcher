@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Vanilla Ice Cream
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: ice-cream_vanilla
+provides:
+  ice-cream:
+    interface: ice-cream
+summary: Vanilla Ice Cream

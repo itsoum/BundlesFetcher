@@ -1,0 +1,20 @@
+description: "IBM XL C/C++ for Linux is an industry standards-based programming tool\
+  \ used \nto develop large and complex applications in the C and C++ programming\
+  \ \nlanguages. Optimized for IBM Power Systems, including the latest POWER8\nprocessors,\
+  \ XL C/C++ for Linux supports vector and parallel programming. \nThis compiler complies\
+  \ with the ISO C99 and ISO C++03 standards.\n"
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-xlc
+requires:
+  default:
+    interface: juju-info
+    scope: container
+  xlc-compiler:
+    interface: xlc-compiler
+    scope: container
+subordinate: true
+summary: IBM XL C/C++ compiler for Linux
+tags:
+- compilers
+- C/C++
+- ibm

@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Strawberries
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: topping_strawberries
+requires:
+  topping:
+    interface: ice-cream
+summary: Strawberries

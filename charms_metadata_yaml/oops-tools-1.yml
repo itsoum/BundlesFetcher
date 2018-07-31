@@ -1,0 +1,14 @@
+description: 'Django app to analyse and aggregate OOPS reports
+
+  '
+maintainer: Diogo Matsubara <diogo.matsubara@canonical.com>
+name: oops-tools
+provides:
+  website:
+    interface: http
+requires:
+  amqp:
+    interface: rabbitmq
+  db:
+    interface: pgsql
+summary: Oops tools

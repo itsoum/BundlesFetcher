@@ -1,0 +1,8 @@
+description: 'DEPRECATED: please use apache-hadoop-resourcemanager instead.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-hadoop-yarn-master
+summary: YARN master (deprecated, use apache-hadoop-resourcemanager)
+tags:
+- deprecated

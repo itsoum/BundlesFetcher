@@ -1,0 +1,22 @@
+categories:
+- applications
+description: 'https://wiki.ubuntu.com/Kernel/Systemtap
+
+
+  Systemtap allows you harness both static and dynamic instrumentation without
+
+  recompiling your code. It can perform simple things like dynamically inserting
+
+  a printk anywhere, or changing a critical data structure of the kernel (guru mode).
+
+  While Systemtap has many safeguards in place to sandbox dangerous, system crashing
+
+  actions, it''s not infallible. Proceed at your own risk.
+
+  '
+maintainer: Peter M Petrakis <peter.petrakis@canonical.com>
+name: systemtap
+provides:
+  client:
+    interface: systemtap-client
+summary: A systemtap client

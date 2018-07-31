@@ -1,0 +1,19 @@
+description: Provides Webhook Token Authorization to charm kubernetes-master by creating
+  a deployment that receives the token requests from kubernetes and handles them to
+  keystone.
+maintainers:
+- Giuesppe Attardi <giuseppe.attardi@garr.it>
+name: kubernetes-keystone
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Provides Webhook Token Authorization to charm kubernetes-master.
+tags:
+- misc
+- infrastructure
+- kubernetes
+- master

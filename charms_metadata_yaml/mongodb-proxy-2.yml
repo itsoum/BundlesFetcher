@@ -1,0 +1,8 @@
+categories:
+- databases
+description: Proxy charm for mongodb
+name: mongodb-proxy
+provides:
+  database:
+    interface: mongodb
+summary: Proxy for mongodb

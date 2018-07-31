@@ -1,0 +1,17 @@
+categories:
+- applications
+description: 'The hsenidmobile-ctap-simulator creates a virtual environment for the
+  developers to test the created applications before connecting with the real-world
+  system. The applications can be tested with actual validations using the simulator.
+  The simulator will act as a dummy mobile to ensure the message flow and it supports
+  all the telco assets
+
+  http://devspace.hsenidmobile.com/
+
+  '
+maintainer: hSenidmobile <ctap@hsenidmobile.com>
+name: hewani-life-charm
+provides:
+  ctap:
+    interface: ussd
+summary: Test your application offline using our simulators.

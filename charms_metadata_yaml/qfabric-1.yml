@@ -1,0 +1,25 @@
+description: 'Deploys network layer Quortus LTE EPC network fabric in Docker continers
+  using Juju.
+
+  '
+maintainer: Brian Baird <brian.baird@expeto.io>
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+name: qfabric
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  ovpn:
+    interface: vpn
+requires:
+  epc:
+    interface: S1-C
+subordinate: false
+summary: EPIC PaaS deployment of network fabric for the LTE cEPC
+tags:
+- containers
+- layer
+- telecom
+- containers

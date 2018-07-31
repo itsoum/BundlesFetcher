@@ -1,0 +1,3 @@
+description: Build Ruby 1.9.3-p194 from source code.
+name: juju-ruby
+summary: Ruby 1.9.3-p194

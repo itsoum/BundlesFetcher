@@ -1,0 +1,26 @@
+categories:
+- Application
+description: 'Apache Accumulo is a highly scalable structured and distributed key/value
+  store for high performance data storage and retrieval..
+
+  '
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: hdp-accumulo
+peers:
+  tabletserver-node:
+    interface: quorum
+provides:
+  accumulo-server:
+    interface: master
+requires:
+  hadoop-nodes:
+    interface: mapred
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+  tabletserver:
+    interface: master
+  zookeeper:
+    interface: zookeeper
+summary: Accumulo is a highly scalable structured and distributed data store.

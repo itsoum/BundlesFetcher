@@ -1,0 +1,14 @@
+description: "Liberty profile is a dynamic profile of IBM WebSphere Application Server\
+  \ (WAS) \nthat enables the WAS server to provision only the features required by\
+  \ the \napplication (or set of applications) deployed to the server.\n"
+maintainer: Juju Support Team <jujusupp@us.ibm.com>
+name: websphere-liberty
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: WebSphere Application Server Liberty Profile
+tags:
+- misc
+- ibm
+- application

@@ -1,0 +1,19 @@
+description: 'This charm is simply designed to be deployed as a subordinate to manage
+
+  custom sysctls on a machine
+
+  '
+maintainer: Chris MacNaughton <charm-sysctl@chris.centaurisolutions.nl>
+name: sysctl
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- bionic
+- xenial
+- trusty
+subordinate: true
+summary: Sysctl is a charm to manage custom sysctls
+tags:
+- system

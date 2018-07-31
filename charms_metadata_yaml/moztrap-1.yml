@@ -1,0 +1,13 @@
+description: 'This is the MozTrap test case management system. It lives at https://github.com/mozilla/moztrap/.
+
+  '
+name: moztrap
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  database:
+    interface: pgsql
+summary: Moztrap test case management system

@@ -1,0 +1,18 @@
+categories:
+- file-servers
+description: "This charm installs Apache2, Apache-Mod-PHP5, and configures OwnCloud\
+  \ with \nsqlite as a standalone server. Provides relationship hooks with NFS file\
+  \ \nstorage, MySQL Databases, and HAProxy reverse proxy charms. \n"
+maintainer: Jose Antonio Rey <jose@ubuntu.com>
+name: owncloud
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+    optional: true
+  shared-fs:
+    interface: mount
+    optional: true
+summary: owncloud

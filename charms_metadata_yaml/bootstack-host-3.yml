@@ -1,0 +1,17 @@
+description: 'This deploys Ubuntu Server, plus plus Bootstack specific needed host
+  initializations,
+
+  see exec.d/*/charm-pre-install
+
+  '
+maintainer: Canonical Bootstack Team <bootstack-is@canonical.com>
+name: bootstack-host
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+summary: 'A pristine Ubuntu Server plus Bootstack specific customization.
+
+  '
+tags:
+- misc

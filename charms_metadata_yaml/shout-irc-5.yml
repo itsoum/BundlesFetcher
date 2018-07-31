@@ -1,0 +1,13 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: shout-irc
+provides:
+  website:
+    interface: http
+series:
+- xenial
+summary: The self-hosted web IRC client
+tags:
+- irc

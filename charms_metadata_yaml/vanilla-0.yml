@@ -1,0 +1,14 @@
+categories:
+- applications
+description: "Vanilla is designed to deploy and grow small communities to scale. This\
+  \ charm deploys Vanilla Forums \nas outlined by the Vanilla Forums installation\
+  \ guide\n"
+maintainer: Marco <marco@ceppi.net>
+name: vanilla
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+summary: Vanilla is an open-source, pluggable, themable, multi-lingual forum.

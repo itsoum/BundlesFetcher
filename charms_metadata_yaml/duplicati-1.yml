@@ -1,0 +1,14 @@
+description: 'Duplicati backup server with reverse-proxy interface support
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: duplicati
+requires:
+  reverseproxy:
+    interface: reverseproxy
+series:
+- xenial
+subordinate: false
+summary: duplicati backup
+tags:
+- misc

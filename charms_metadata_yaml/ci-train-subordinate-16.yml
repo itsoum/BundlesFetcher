@@ -1,0 +1,14 @@
+description: 'This is the CI Train subordinate charm, it builds on top of the Jenkins
+  charm
+
+  and configures Jenkins to provide the CI Train service found on ci-train.ubuntu.com
+
+  '
+maintainer: Robert Bruce Park <robert.park@canonical.com>
+name: ci-train
+requires:
+  extension:
+    interface: jenkins-extension
+    scope: container
+subordinate: true
+summary: Provides ci-train.ubuntu.com

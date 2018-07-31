@@ -1,0 +1,9 @@
+description: 'Charm that adds jxaas server
+
+  '
+name: jxaas
+provides:
+  api:
+    interface: http
+revision: 1
+summary: Deploy jxaas service

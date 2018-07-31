@@ -1,0 +1,22 @@
+description: 'BlocksCAD is a drag-and-drop 3D Computer Aided Design and modeling tool
+
+  designed for use by elementary-age children. It is simple enough to
+
+  learn in a few short hours of instruction, but still has the features,
+
+  flexibility, and power of a professional-level program. It was developed
+
+  at Einstein''s Workshop, a hands-on learning center and kids makerspace
+
+  in the Boston area.
+
+  '
+maintainer: Robert C Jennings <robert.jennings@ubuntu.com>
+name: blockscad
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: Easy, Open-Source Solid CAD for Everyone!
+tags:
+- misc

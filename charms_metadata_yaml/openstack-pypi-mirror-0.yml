@@ -1,0 +1,12 @@
+description: blah blah blah . More blah blah blah
+maintainer: Edward Hope-Morley <edward.hope-morley@canonical.com>
+name: openstack-pypi-mirror
+provides:
+  pypi-mirror:
+    interface: pypi-mirror
+  website:
+    interface: http
+requires:
+  apache:
+    interface: pypi-mirror
+summary: Openstack PyPi Mirror

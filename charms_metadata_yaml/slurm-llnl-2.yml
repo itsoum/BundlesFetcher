@@ -1,0 +1,22 @@
+description: 'SLURM stands for Simple Linux Utility for Resource Management, it is
+  an
+
+  open-source cluster resource management and job scheduling system that
+
+  strives to be simple, scalable, portable, fault-tolerant, and
+
+  interconnect agnostic.
+
+  '
+maintainer: Max Speransky <max.speransky@hpcstack.org>
+name: slurm-llnl
+peers:
+  slurm-cluster:
+    interface: slurm-ctl
+provides:
+  application:
+    interface: slurm
+subordinate: false
+summary: Simple Linux Utility for Resource Management
+tags:
+- misc

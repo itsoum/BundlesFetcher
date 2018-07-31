@@ -1,0 +1,25 @@
+description: 'This charm installs IBM Platform Symphony master.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-symphony-master
+peers:
+  cluster:
+    interface: platformmaster
+provides:
+  master:
+    interface: platformmaster
+requires:
+  storage:
+    interface: nfsstorage
+subordinate: false
+summary: IBM Platform Symphony master
+tags:
+- ibm
+- apt
+- leadership
+- ibm
+- symphony master
+- application_optimization
+- cluster
+- virtualization

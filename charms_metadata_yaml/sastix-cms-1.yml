@@ -1,0 +1,15 @@
+description: 'A general purpose java Content Management System based on Spring Boot.
+
+  '
+maintainer: Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+name: sastix-cms
+requires:
+  mysql:
+    interface: mysql
+series:
+- xenial
+summary: CMS from Sastix Ltd
+tags:
+- java
+- Spring Boot
+- CMS

@@ -1,0 +1,29 @@
+description: 'OpenAttestation (OAT) is a Intel initiated open source project providing
+
+  a SDK for managing host integrity verification using TCG-defined
+
+  remote attestation protocol, targeting to be integrated into cloud and
+
+  enterprise management tools.
+
+  .
+
+  This charm provides the host agent which uses Java and the NIARL TPM
+
+  Module to acquire integrity measurement data from the host''s Trusted
+
+  Platform Module (TPM).  The data is compiled into an integrity report
+
+  and sent to the OAT appraisal server.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: oat-client
+requires:
+  appraiser:
+    interface: oat
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Host agent for Open Attestation

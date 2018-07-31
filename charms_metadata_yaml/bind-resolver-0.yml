@@ -1,0 +1,17 @@
+categories:
+- misc
+description: 'This charm provides a templated bind resolver, configured as a forwarder
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: bind-resolver
+provides:
+  bind-resolver-service:
+    interface: bind-resolver
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+subordinate: false
+summary: BIND resolver

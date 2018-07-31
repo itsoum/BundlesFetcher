@@ -1,0 +1,56 @@
+description: 'Neutron is a virtual network service for Openstack, and a part of
+
+  Netstack. Just like OpenStack Nova provides an API to dynamically
+
+  request and configure virtual servers, Neutron provides an API to
+
+  dynamically request and configure virtual networks. These networks
+
+  connect "interfaces" from other OpenStack services (e.g., virtual NICs
+
+  from Nova VMs). The Neutron API supports extensions to provide
+
+  advanced network capabilities (e.g., QoS, ACLs, network monitoring,
+
+  etc.)
+
+  .
+
+  This charm provides central Neutron networking services as part
+
+  of a Neutron based OpenStack deployment
+
+  '
+extra-bindings:
+  data: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: neutron-gateway
+peers:
+  cluster:
+    interface: quantum-gateway-ha
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  quantum-network-service:
+    interface: quantum
+requires:
+  amqp:
+    interface: rabbitmq
+  amqp-nova:
+    interface: rabbitmq
+  ha:
+    interface: hacluster
+    scope: container
+  neutron-plugin-api:
+    interface: neutron-plugin-api
+  zeromq-configuration:
+    interface: zeromq-configuration
+    scope: container
+series:
+- xenial
+- zesty
+- trusty
+summary: OpenStack Networking - Neutron Gateway
+tags:
+- openstack

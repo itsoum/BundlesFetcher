@@ -1,0 +1,28 @@
+description: 'Encapsulates the Twister framework (client and server)
+
+  '
+maintainer: Spirent
+name: twister
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+  rest:
+    interface: vnflcv-rest
+resources:
+  db-template:
+    description: Structure for Twister database
+    filename: twister_demo.sql
+    type: file
+  twister-src:
+    description: Archive containing Twister source code
+    filename: twister-src.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Encapsulates the Twister framework (client and server)
+tags:
+- misc

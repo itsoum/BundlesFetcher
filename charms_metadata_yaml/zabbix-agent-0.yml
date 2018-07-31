@@ -1,0 +1,26 @@
+description: 'Zabbix is a server/client network monitoring system with many features.
+
+  It can be used for:  - high level monitoring of IT services; -
+
+  centralized monitoring of your servers and applications; - monitoring
+
+  of SNMP-enabled devices; - performance monitoring (process load,
+
+  network activity, disk   activity, memory usage, OS parameters etc.);
+
+  - data visualization. This package provides the software needed to
+
+  monitor a host using a Zabbix agent.
+
+  '
+maintainer: Nobuto MURATA <nobuto@ubuntu.com>
+name: zabbix-agent
+provides:
+  agent:
+    interface: zabbix-info
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: network monitoring solution - agent

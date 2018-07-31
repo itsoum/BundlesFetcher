@@ -1,0 +1,28 @@
+description: 'Joshua is an open-source statistical machine translation decoder |
+
+  for phrase-based (new in 6.0), hierarchical, and syntax-based    |
+
+  machine translation, written in Java. It is developed at the     |
+
+  Human Language Technology Center of Excellence at Johns Hopkins  |
+
+  University. Currently under incubation at the ASF.
+
+  '
+maintainer: Joshua Project <dev@joshua.incubator.apache.org>
+name: joshua-full
+provides:
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+series:
+- trusty
+- xenial
+summary: Joshua Runtime environment for language translation.
+tags:
+- bigdata
+- hadoop
+- big_data

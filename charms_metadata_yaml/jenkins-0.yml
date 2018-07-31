@@ -1,0 +1,16 @@
+description: 'Jenkins is a continuous integration (CI) server.
+
+  '
+ensemble: formula
+name: jenkins
+provides:
+  master:
+    interface: jenkins
+  website:
+    interface: http
+requires:
+  slave:
+    interface: jenkins
+    optional: true
+revision: 2
+summary: Continuous integration server

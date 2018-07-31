@@ -1,0 +1,14 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Sandor Zeestraten <sandor.zeestraten@ntnu.no>
+name: slurm-controller
+provides:
+  slurm-cluster:
+    interface: slurm-cluster
+series:
+- xenial
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- slurm

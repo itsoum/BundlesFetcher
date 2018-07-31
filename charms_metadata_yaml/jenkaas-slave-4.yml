@@ -1,0 +1,15 @@
+description: 'Installs the jenkins slave package and connects a jenkins master using
+
+  juju relations.
+
+  '
+maintainer: 'Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+
+  '
+name: jenkaas-slave
+requires:
+  jenkaas-slave:
+    interface: jenkaas-slave
+summary: 'Deploy a jenkins slave service to connect to a jenkins master service.
+
+  '

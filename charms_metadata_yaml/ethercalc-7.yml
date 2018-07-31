@@ -1,0 +1,13 @@
+description: Your data is saved on the web, and people can edit the same document
+  at the same time. Everybody's changes are instantly reflected on all screens. Work
+  together on inventories, survey forms, list management, brainstorming sessions and
+  more!
+maintainer: Joe Liau <joe@ubuntuvancouver.org>
+name: ethercalc
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: EtherCalc is a web spreadsheet
+tags:
+- applications

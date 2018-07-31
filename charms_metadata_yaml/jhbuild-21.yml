@@ -1,0 +1,31 @@
+description: 'Jhbuild is a program that can be used to pull a number of modules from
+
+  Git, CVS, Subversion, Bazaar and other types of repositories or from
+
+  tarballs and build them in the correct order.  Unlike some build
+
+  scripts, jhbuild lets you specify what modules you want built and it
+
+  will then go and build those modules plus dependencies.  Although
+
+  jhbuild was originally developed to build GNOME, it has since been
+
+  extended to work with other projects as well. Extending it to handle
+
+  new modules is usually trivial assuming the build infrastructure
+
+  matches the other modules it handles.
+
+  .
+
+  This charm deploys jhbuild and setup the environment for automated
+
+  building and testing of gnome or any other collection of source packages.
+
+  '
+maintainer: Jean-Baptiste Lallement <jean-baptiste@canonical.com>
+name: jhbuild
+provides:
+  package-tester:
+    interface: jhbuild
+summary: jhbuild environment

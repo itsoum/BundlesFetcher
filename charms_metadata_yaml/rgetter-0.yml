@@ -1,0 +1,12 @@
+description: 'A client side example with a single relation to show values appearing
+  on
+
+  the other side
+
+  '
+maintainer: Peter Petrakis <peter.petrakis@canonical.com>
+name: rgetter
+requires:
+  rtest:
+    interface: passit
+summary: An example of relation handshaking

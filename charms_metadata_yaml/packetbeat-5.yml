@@ -1,0 +1,20 @@
+description: "An open source data shipper that integrates with Elasticsearch to provide\
+  \ \nreal-time network analytics for web, database, and other network protocols.\n"
+maintainer: Charles Butler <charles.butler@canonical.com>
+name: packetbeat
+requires:
+  beats-host:
+    interface: juju-info
+    scope: container
+  elasticsearch:
+    interface: elasticsearch
+  logstash:
+    interface: elastic-beats
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Real-Time Network Packet Analytics
+tags:
+- logging
+- monitoring

@@ -1,0 +1,22 @@
+description: "Fast\nA single Kafka broker can handle hundreds of megabytes of reads\
+  \ and writes per \nsecond from thousands of clients.\n\nCurrently deploys Apache\
+  \ Kafka 2.9.2-0.8.2.1\n\nScalable\nKafka is designed to allow a single cluster to\
+  \ serve as the central data \nbackbone for a large organization. It can be elastically\
+  \ and transparently \nexpanded without downtime. Data streams are partitioned and\
+  \ spread over a \ncluster of machines to allow data streams larger than the capability\
+  \ of any \nsingle machine and to allow clusters of co-ordinated consumers\n\nDurable\n\
+  Messages are persisted on disk and replicated within the cluster to prevent \ndata\
+  \ loss. Each broker can handle terabytes of messages without performance \nimpact.\n\
+  \nDistributed by Design\nKafka has a modern cluster-centric design that offers strong\
+  \ durability and \nfault-tolerance guarantees.\n"
+maintainer: "Valeriu Palo\u015F <me@vpalos.com>"
+name: kafka
+provides:
+  client:
+    interface: kafka
+requires:
+  zk:
+    interface: zookeeper
+summary: High-performance pub/sub as distributed commit log.
+tags:
+- big_data

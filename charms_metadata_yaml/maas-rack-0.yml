@@ -1,0 +1,18 @@
+description: 'MAAS runs a software-defined data centre - it turns a collection of
+  physical
+
+  servers and switches into a bare metal cloud with full open source IP address
+
+  management (IPAM) and instant provisioning on demand.
+
+  '
+maintainer: MAAS Maintainers <maas-devel@canonical.com>
+name: maas-rack
+requires:
+  rpc:
+    interface: maas-rpc
+series:
+- xenial
+summary: Rack controller for MAAS.
+tags:
+- network

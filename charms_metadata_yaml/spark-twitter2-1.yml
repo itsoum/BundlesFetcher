@@ -1,0 +1,25 @@
+description: This charm will run a simple Sentiment Analysis in a Spark Streaming
+  Cluster.
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: spark-twitter
+provides:
+  spark-twitter:
+    interface: spark-twitter
+requires:
+  db:
+    interface: redis
+  hadoop-client:
+    interface: hadoop-client
+    scope: container
+  master:
+    interface: spark
+    scope: container
+  nodejs:
+    interface: http
+  zookeeper:
+    interface: zookeeper
+subordinate: true
+summary: This is a simple sentiment to deploy on a Spark Streaming Cluster
+tags:
+- social
+- big_data

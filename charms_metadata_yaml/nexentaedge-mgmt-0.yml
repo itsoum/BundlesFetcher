@@ -1,0 +1,28 @@
+description: 'A combined NexentaEdge management and data node.
+
+  All NexentaEdge cluster must have one management node in addition to 3 data nodes.
+
+  The management node enables command line based management of the NexentaEdge cluster
+  and services.
+
+  '
+maintainer: Nexenta <nexenta.juju@nexenta.com>
+name: nexentaedge-mgmt
+provides:
+  cinder-gw:
+    interface: cinder-gw
+  cinder-nedge:
+    interface: cinder-nedge
+  nedge:
+    interface: nedge
+  swift-gw:
+    interface: swift-gw
+requires:
+  identity-service:
+    interface: keystone
+subordinate: false
+summary: Distributed object storage management node
+tags:
+- openstack
+- storage
+- file-servers

@@ -1,0 +1,14 @@
+description: nopaas-chat is a chat with good intentions.
+maintainer: demismg72@gmail.com
+name: nopaas-chat
+provides:
+  frontend:
+    interface: http
+requires:
+  backend:
+    interface: http
+  database:
+    interface: mysql
+summary: nopaas-chat is a chat! :D
+tags:
+- web_server

@@ -1,0 +1,12 @@
+description: A layer to enable functionality and manage an Ubuntu OS.
+maintainer: Adam Israel <adam.israel@canonical.com>
+name: ubuntu-os
+series:
+- trusty
+- xenial
+subordinate: false
+summary: A layer to enable functionality and manage an Ubuntu OS.
+tags:
+- misc
+- osm
+- vnf

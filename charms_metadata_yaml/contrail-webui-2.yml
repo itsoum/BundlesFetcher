@@ -1,0 +1,23 @@
+categories:
+- misc
+description: 'Runs the administrator web-based user interface service
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-webui
+peers:
+  cluster:
+    interface: webui-cluster
+provides:
+  website:
+    interface: http
+requires:
+  cfgm:
+    interface: cfgm
+  collector:
+    interface: collector
+  database:
+    interface: cassandra
+  openstack:
+    interface: nova
+summary: Contrail controller 'webui' role

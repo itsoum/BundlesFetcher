@@ -1,0 +1,54 @@
+description: 'Telegraf is an agent written in Go for collecting metrics from the system
+  it''s running on, or from other services, and writing them into InfluxDB or other
+  outputs. Design goals are to have a minimal memory footprint with a plugin system
+  so that developers in the community can easily add support for collecting metrics
+  from well known services (like Hadoop, Postgres, or Redis) and third party APIs
+  (like Mailchimp, AWS CloudWatch, or Google Analytics). New input and output plugins
+  are designed to be easy to contribute, we''ll eagerly accept pull requests and will
+  manage the set of plugins that Telegraf supports. See the contributing guide for
+  instructions on writing new plugins.
+
+  '
+maintainer: Guillermo Gonzalez <guillermo.gonzalez@canonical.com>
+name: telegraf
+provides:
+  prometheus-client:
+    interface: http
+  prometheus-rules:
+    interface: prometheus-rules
+requires:
+  apache:
+    interface: apache-website
+    scope: container
+  elasticsearch:
+    interface: elasticsearch
+    scope: container
+  exec:
+    interface: telegraf-exec
+    scope: container
+  haproxy:
+    interface: statistics
+    scope: container
+  influxdb-api:
+    interface: influxdb-api
+  juju-info:
+    interface: juju-info
+    scope: container
+  memcached:
+    interface: memcache
+    scope: container
+  mongodb:
+    interface: mongodb
+    scope: container
+  mysql:
+    interface: mysql-root
+  postgresql:
+    interface: pgsql
+series:
+- xenial
+- trusty
+- bionic
+subordinate: true
+summary: The plugin-driven server agent for collecting & reporting metrics.
+tags:
+- monitoring

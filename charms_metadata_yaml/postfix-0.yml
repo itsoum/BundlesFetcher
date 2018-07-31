@@ -1,0 +1,11 @@
+description: 'PostFix provides a fast, easy-to-administer mail transfer agent for
+  sending
+
+  email.
+
+  '
+name: postfix
+provides:
+  smtp:
+    interface: postfix
+summary: Mail Transfer Agent

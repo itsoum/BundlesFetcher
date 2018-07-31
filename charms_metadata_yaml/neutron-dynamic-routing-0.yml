@@ -1,0 +1,23 @@
+description: 'Neutron Dynamic Routing Agent acts as a BGP speaker advertising OpenStack
+
+  networks to the BGP infrastructure.
+
+  '
+extra-bindings:
+  provider: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: neutron-dynamic-routing
+provides:
+  bgp-speaker:
+    interface: bgp
+    optional: true
+requires:
+  amqp:
+    interface: rabbitmq
+series:
+- xenial
+- bionic
+subordinate: false
+summary: Neutron Dyanamic Routing Agent
+tags:
+- openstack

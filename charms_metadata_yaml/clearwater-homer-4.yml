@@ -1,0 +1,16 @@
+categories:
+- misc
+description: Homer charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-homer
+peers:
+  homer:
+    interface: homer-interface
+provides:
+  xdms-user:
+    interface: 3GPP-Ut
+requires:
+  programmable-multiple:
+    interface: dns-multi
+subordinate: false
+summary: Homer charm for Project Clearwater

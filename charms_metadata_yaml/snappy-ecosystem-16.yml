@@ -1,0 +1,12 @@
+description: 'deploy packages for snappy-ecosystem in the cloud
+
+  '
+maintainer: Heber Parrucci <heber.parrucci@canonical.com>
+name: snappy-ecosystem
+series:
+- xenial
+- yakkety
+- zesty
+summary: deploy packages for snappy-ecosystem environment in the cloud
+tags:
+- openstack

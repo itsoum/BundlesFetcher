@@ -1,0 +1,12 @@
+description: 'DEPRECATED: please use ibm-was-nd instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: was-nd
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: WebSphere Application Server Network Deployment (deprecated, use ibm-was-nd)
+tags:
+- ibm

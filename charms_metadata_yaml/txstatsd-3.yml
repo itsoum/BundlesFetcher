@@ -1,0 +1,14 @@
+description: 'A network daemon that listens for statistics, like counters and timers,
+  sent over UDP and sends aggregates to one or more pluggable backend services (e.g.,
+  Graphite).
+
+  '
+name: txstatsd
+provides:
+  txstatsd:
+    interface: txstatsd
+requires:
+  carbon-pickle:
+    interface: carbon-pickle
+summary: A network daemon for aggregating statistics (counters and timers), rolling
+  them up, then sending them to graphite.

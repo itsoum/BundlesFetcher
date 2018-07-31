@@ -1,0 +1,6 @@
+categories:
+- applications
+description: This charm does nothing, but can be used as the parent of a subordinate
+  charm
+name: empty
+summary: Dummy charm that does nothing

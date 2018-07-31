@@ -1,0 +1,25 @@
+description: 'Represents an Apache Storm bolt
+
+  '
+maintainer: Sander Borny <sander.borny@ugent.be>
+name: bolt
+provides:
+  stormelement:
+    interface: storm-element
+requires:
+  coworker:
+    interface: storm-element
+  database:
+    interface: mongodb
+  master:
+    interface: storm
+    scope: container
+  topology:
+    interface: stormtopology
+    scope: container
+series:
+- trusty
+subordinate: true
+summary: Represents an Apache Storm bolt
+tags:
+- misc

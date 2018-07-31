@@ -1,0 +1,19 @@
+categories:
+- application
+description: 'Alfresco Community Edition is free software,LGPL[2] licensed open source
+  and open standards. It has some important limitations in terms of scalability and
+  availability, since the clustering feature has been removed from the community repository
+  and is only available in the enterprise editionAlfresco includes a content repository,
+  an out-of-the-box web portal framework for managing and using standard portal content,
+  a CIFS interface that provides file system compatibility on Microsoft Windows and
+  Unix-like operating systems, a web content management system capable of virtualizing
+  webapps and static sites via Apache Tomcat, Lucene indexing, and Activiti workflow.
+  The Alfresco system is developed using Java technology.
+
+  '
+maintainer: Shantanu <shantanu@techblue.co.uk>
+name: alfresco
+provides:
+  website:
+    interface: http
+summary: Open Source Enterprise Content Management platform.

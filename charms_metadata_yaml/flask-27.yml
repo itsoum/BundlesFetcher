@@ -1,0 +1,17 @@
+description: Flask is a microframework for Python based on Werkzeug, Jinja 2 and good
+  intentions. This charm is not provided by pococo.org, that created the framework,
+  but by a undergraduated student for better study the Juju and the Flask.
+maintainer: demismg72@gmail.com
+name: flask
+provides:
+  frontend:
+    interface: http
+requires:
+  backend:
+    interface: http
+  database:
+    interface: mysql
+summary: Flask is a microframework for Python based on Werkzeug, Jinja 2 and good
+  intentions.
+tags:
+- web_server

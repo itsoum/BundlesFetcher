@@ -1,0 +1,17 @@
+categories:
+- misc
+description: 'A web frontend to the CI Airlines Ticketing System.
+
+  '
+maintainer: Joe Talbott <joe.talbott@canonical.com>
+name: webui
+requires:
+  json_status:
+    interface: json_status
+  juju-info:
+    interface: juju-info
+    scope: container
+  proxy_logs:
+    interface: proxy_logs
+subordinate: true
+summary: CI Airlines Web Frontend

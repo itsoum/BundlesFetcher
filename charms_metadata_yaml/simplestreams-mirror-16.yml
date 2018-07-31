@@ -1,0 +1,23 @@
+categories:
+- openstack
+description: 'Within an OpenStack environment, this charm creates a local mirror of
+
+  Ubuntu install images. The images are downloaded from a repository
+
+  and stored in Glance, and their metadata are stored in Swift.
+
+  '
+maintainer: Nicola Larosa <nicola.larosa@canonical.com>
+name: simplestreams-mirror
+provides:
+  image-sync:
+    interface: simplestreams-mirror
+requires:
+  identity-service:
+    interface: keystone
+  image-service:
+    interface: glance
+  object-store:
+    interface: swift-proxy
+subordinate: false
+summary: Local mirroring of Ubuntu install images in OpenStack.

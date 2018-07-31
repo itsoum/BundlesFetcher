@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'This charm provides Launchpad integration to Jenkins
+
+  '
+maintainer: Aaron Bentley <aaron.bentley@canonical.com>
+name: jenkins-launchpad
+requires:
+  extension:
+    interface: jenkins-extension
+    scope: container
+subordinate: true
+summary: Launchpad integration for Jenkins

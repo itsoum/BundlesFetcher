@@ -1,0 +1,20 @@
+description: 'OpenPhoto is a complete photo management application:
+
+  - YOU DECIDE WHERE TO STORE YOUR PHOTOS
+
+  -  YOU LET US SCOUR YOUR PHOTO ACCOUNTS (only limited by your database)
+
+  - RELAX, ORGANIZE AND ENJOY YOUR PHOTOS
+
+
+  and much more.  See http://www.theopenphotoproject.org/ for details.
+
+  '
+name: openphoto
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: OpenPhoto is a complete photo management application

@@ -1,0 +1,26 @@
+description: 'Cloud controller node for Openstack nova.  Contains nova-schedule,
+
+  nova-api, nova-network and nova-objectstore.
+
+  '
+ensemble: formula
+name: nova-cloud-controller
+provides:
+  cloud-controller:
+    interface: nova
+  network-manager:
+    interface: nova-network
+requires:
+  amqp:
+    interface: rabbitmq
+  cloud-compute:
+    interface: nova-compute
+  identity-service:
+    interface: keystone
+  image-service:
+    interface: glance
+  instance-storage:
+    interface: nova-volume
+  shared-db:
+    interface: mysql-shared
+summary: Openstack nova controller node.

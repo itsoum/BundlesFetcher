@@ -1,0 +1,39 @@
+categories:
+- applications
+description: "Hadoop is a software platform that lets one easily write and\nrun applications\
+  \ that process vast amounts of data.\n.\nHere's what makes Hadoop especially useful:\n\
+  .\n* Scalable: Hadoop can reliably store and process petabytes.\n* Economical: It\
+  \ distributes the data and processing across clusters\n  of commonly available computers.\
+  \ These clusters can number\n  into the thousands of nodes.\n* Efficient: By distributing\
+  \ the data, Hadoop can process it in parallel\n  on the nodes where the data is\
+  \ located. This makes it\n  extremely rapid.\n* Reliable: Hadoop automatically maintains\
+  \ multiple copies of data and\n  automatically redeploys computing tasks based on\
+  \ failures.\n.\nHadoop implements MapReduce, using the Hadoop Distributed File System\
+  \ (HDFS).\nMapReduce divides applications into many small blocks of work. HDFS creates\n\
+  multiple replicas of data blocks for reliability, placing them on compute\nnodes\
+  \ around the cluster. MapReduce can then process the data where it is\nlocated.\n\
+  .\nThis charm provides a subordinate of the Cassandra charm that provides a\nlocal\
+  \ datanode and tasktracker.\n"
+maintainer: Evan Dandrea <evan.dandrea@canonical.com>
+name: hadoop-cassandra
+provides:
+  ganglia:
+    interface: monitor
+  jobtracker:
+    interface: mapred
+  namenode:
+    interface: dfs
+requires:
+  datanode:
+    interface: dfs
+  local-info:
+    interface: juju-info
+    scope: container
+  mapred-namenode:
+    interface: dfs
+  secondarynamenode:
+    interface: dfs
+  tasktracker:
+    interface: mapred
+subordinate: true
+summary: Software platform for processing vast amounts of data (Cassandra integration)

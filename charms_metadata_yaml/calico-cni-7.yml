@@ -1,0 +1,34 @@
+description: 'Calico CNI
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+name: calico-cni
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  etcd:
+    interface: etcd
+resources:
+  calico-cni:
+    description: Calico CNI resource tarball.
+    filename: calico-cni.tar.gz
+    type: file
+series:
+- xenial
+subordinate: true
+summary: Calico CNI
+tags:
+- containers
+- layer
+- networking

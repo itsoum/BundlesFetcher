@@ -1,0 +1,14 @@
+description: 'DEPRECATED: please use ibm-wxs-catalog, ibm-wxs-container and ibm-wxs-client
+  instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-wxs
+peers:
+  quorum:
+    interface: wxs-quorum
+subordinate: false
+summary: IBM WebSphere Extreme Scale
+tags:
+- misc
+- IBM

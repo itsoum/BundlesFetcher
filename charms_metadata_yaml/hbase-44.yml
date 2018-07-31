@@ -1,0 +1,44 @@
+description: 'HBase is the Hadoop database. This charm provides version 1.1.9 of the
+  HBase application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: hbase
+peers:
+  hbpeer:
+    interface: hbase-quorum
+provides:
+  benchmark:
+    interface: benchmark
+  giraph:
+    interface: giraph
+    scope: container
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  hbclient:
+    interface: hbase
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+requires:
+  zookeeper:
+    interface: zookeeper
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: HBase from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2
+- hadoop

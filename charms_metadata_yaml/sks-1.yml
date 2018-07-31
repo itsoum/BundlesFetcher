@@ -1,0 +1,24 @@
+categories:
+- applications
+description: 'SKS provides OpenPGP public key directory services over the HTTP Keyserver
+
+  Protocol (HKP). SKS instances propagate public key certification changes
+
+  over a reconciliation gossip protocol.
+
+  '
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: sks
+peers:
+  cluster:
+    interface: recon
+provides:
+  keyserver:
+    interface: hkp
+  peer:
+    interface: recon
+requires:
+  gossip:
+    interface: recon
+    optional: true
+summary: SKS is a synchronizing OpenPGP public key server.

@@ -1,0 +1,17 @@
+description: 'A minimalist docker charm layer for use with juju compose,
+
+  powered by the reactive framework
+
+  '
+maintainer: brian baird <brian.baird@expeto.io>
+name: hss
+provides:
+  fabric:
+    interface: SDN
+  hss:
+    interface: S6a-hss
+subordinate: false
+summary: Evolved Packet Core for LTE Evolved Packet Core (EPIC) HSS
+tags:
+- networking
+- teleco

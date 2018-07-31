@@ -1,0 +1,23 @@
+description: 'This layer provides the prometheus "node_exporter"
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: prometheus-node-exporter
+provides:
+  scrape:
+    interface: prometheus
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+resources:
+  node-exporter:
+    description: Prometheus Node Exporter
+    filename: node_exporter
+    type: file
+series:
+- xenial
+subordinate: true
+summary: Prometheus node exporter component
+tags:
+- prometheus

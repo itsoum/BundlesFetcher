@@ -1,0 +1,11 @@
+categories:
+- misc
+description: 'Charm to exercise lis-test in OIL (OpenStack Interoperability Lab)
+
+  See https://github.com/LIS/lis-test
+
+  '
+maintainer: Mark Wenning <mark.wenning@canonical.com>
+name: lis-test-charm
+subordinate: false
+summary: Charm to exercise lis-test in OIL (OpenStack Interoperability Lab).

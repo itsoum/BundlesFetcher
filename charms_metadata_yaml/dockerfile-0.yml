@@ -1,0 +1,19 @@
+description: 'Deploy a docker application from a dockerfile. The target of this charm
+  is
+
+  github repository based workflows, with a post commit hook. This charm is
+
+  the representation of the repository, and this charm relates to the
+
+  docker build hook subordinate service.
+
+  '
+maintainer: Charles Butler <charles.butler@ubuntu.com>
+name: dockerfile
+provides:
+  project:
+    interface: dockerfile
+subordinate: false
+summary: Deploy a docker application from a dockerfile
+tags:
+- misc

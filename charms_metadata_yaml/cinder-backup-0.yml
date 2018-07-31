@@ -1,0 +1,24 @@
+categories:
+- miscellaneous
+description: 'Cinder is a storage service for the Openstack project.
+
+  It provides the tools for creating volume backups.
+
+  .
+
+  This charm enables backups (in swift) as an add-on
+
+  feature.
+
+  '
+maintainer: "Alvaro Ur\xEDa <alvaro.uria@canonical.com>"
+name: cinder-backup
+provides:
+  cinder-backup-service:
+    interface: cinder
+requires:
+  cinder-volume-service:
+    interface: cinder
+    scope: container
+subordinate: true
+summary: Cinder OpenStack backup service

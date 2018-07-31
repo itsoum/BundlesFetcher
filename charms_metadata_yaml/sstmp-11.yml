@@ -1,0 +1,19 @@
+categories:
+- applications
+description: 'A secure, effective and simple way of getting mail off a system to your
+
+  mail hub. It contains no suid-binaries or other dangerous things - no mail
+
+  spool to poke around in, and no daemons running in the background. Mail is
+
+  simply forwarded to the configured mailhost. Extremely easy configuration.
+
+  '
+maintainer: Caio Begotti <caio.begotti@canonical.com>
+name: ssmtp
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: SSMTP is a extremely simple MTA to get mail off the system

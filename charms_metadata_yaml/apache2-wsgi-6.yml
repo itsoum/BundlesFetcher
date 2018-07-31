@@ -1,0 +1,27 @@
+categories:
+- app-servers
+description: 'Install apache2 with mod_wsgi
+
+  Install python dependencies, from requirements.txt or from directory
+
+  Install ruby dependencies, from Gemfile or from directory
+
+  Extract app files
+
+  Serve the app on ports 80 and 443
+
+  '
+maintainer: Robin Winslow <robin.winslow@canonical.com>
+name: apache2-wsgi
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  http:
+    interface: http
+  mongodb:
+    interface: mongodb
+summary: Apache python app server, using mod_wsgi

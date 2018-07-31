@@ -1,0 +1,20 @@
+description: This charm provides an HTTPS mirror with BasicAuth of an Ubuntu archive.
+maintainer: Canonical Landscape Team <landscape-crew@lists.canonical.com>
+name: archive-auth-mirror
+peers:
+  ssh-peers:
+    interface: ssh-peers
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  basic-auth-check:
+    interface: basic-auth-check
+series:
+- xenial
+summary: Sync an Ubuntu repository and provide an authenticate mirror
+tags:
+- security

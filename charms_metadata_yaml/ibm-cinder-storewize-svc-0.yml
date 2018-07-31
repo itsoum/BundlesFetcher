@@ -1,0 +1,9 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: root <root@ubuntu>
+name: ibm-cinder-storewize-svc
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- misc

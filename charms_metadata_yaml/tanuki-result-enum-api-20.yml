@@ -1,0 +1,19 @@
+description: 'Runs result-enum-api using gunicorn from given code tarball
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: result-enum-api
+provides:
+  conn-check:
+    interface: conn-check
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+    optional: true
+requires:
+  mongodb:
+    interface: mongodb
+summary: Deploys a web_app to display test results from a mongo database

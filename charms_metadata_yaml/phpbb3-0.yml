@@ -1,0 +1,17 @@
+description: 'phpBB is a high powered, fully scalable, and highly customizable
+
+  bulletin board, with a user-friendly interface, simple and
+
+  straightforward administration panel, and helpful FAQ.  It supports a
+
+  choice of database back-ends.
+
+  '
+name: phpbb3
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: full-featured, skinnable non-threaded web forum

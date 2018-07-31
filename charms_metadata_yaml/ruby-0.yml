@@ -1,0 +1,10 @@
+categories:
+- misc
+description: description
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: ruby
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: summary

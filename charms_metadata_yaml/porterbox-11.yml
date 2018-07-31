@@ -1,0 +1,6 @@
+description: 'Provide a standardized porter box with sbuild preconfigured.
+
+  '
+maintainer: Robert Bruce Park <robert.park@canonical.com>
+name: porterbox
+summary: Provides a standardized porter box unit.

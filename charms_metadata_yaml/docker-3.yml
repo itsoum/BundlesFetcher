@@ -1,0 +1,4 @@
+description: Deploy docker
+maintainer: matthew.williams@canonical.com
+name: docker
+summary: Deploy docker

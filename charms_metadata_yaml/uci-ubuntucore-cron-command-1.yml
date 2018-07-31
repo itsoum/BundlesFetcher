@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'A subordinate charm to setup cron tasks
+
+  '
+maintainer: Joe Talbott <joe.talbott@ubuntu.com>
+name: uci-snappy-cron-command
+requires:
+  cron:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: A charm to setup cron tasks

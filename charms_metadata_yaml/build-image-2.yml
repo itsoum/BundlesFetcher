@@ -1,0 +1,7 @@
+categories:
+- misc
+description: "This tool builds factory preload image and installer based on curtin\
+  \ \n"
+maintainer: Manoj Iyer <manoj.iyer@canonical.com>
+name: build-image
+summary: Factory preload image and installer build tool

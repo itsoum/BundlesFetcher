@@ -1,0 +1,34 @@
+description: 'OpenStack Compute, codenamed Nova, is a cloud computing fabric controller.
+  In
+
+  addition to its "native" API (the OpenStack API), it also supports the Amazon
+
+  EC2 API.
+
+  .
+
+  This charm acts as a proxy to remotely configure multiple z/KVM or PowerKVM
+
+  hosts which are not running Ubuntu.
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: nova-compute-proxy
+provides:
+  cloud-compute:
+    interface: nova-compute
+requires:
+  amqp:
+    interface: rabbitmq
+  image-service:
+    interface: glance
+  neutron-plugin-api:
+    interface: neutron-plugin-api
+series:
+- xenial
+- bionic
+- cosmic
+- trusty
+summary: OpenStack Compute Proxy for PowerKVM and z/KVM
+tags:
+- openstack

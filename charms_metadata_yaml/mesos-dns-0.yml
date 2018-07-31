@@ -1,0 +1,16 @@
+description: 'mesos-dns docker
+
+  '
+maintainer: Gennadiy Dubina <gdubina@dataart.com>
+name: mesos-dns
+provides:
+  dns-server:
+    interface: dns-server
+requires:
+  zookeeper:
+    interface: zookeeper
+subordinate: false
+summary: mesos-dns docker
+tags:
+- ops
+- network

@@ -1,0 +1,19 @@
+description: 'this charm, when deployed and configured, will provide a secure virtualized
+
+  provider edge router.
+
+  '
+maintainers:
+- Marco Ceppi <marco.ceppi@canonical.com>
+- Adam Israel <adam.israel@canonical.com>
+name: vpe-router
+peers:
+  loadbalance:
+    interface: vpe-router
+series:
+- trusty
+- xenial
+summary: setup a virtualized PE Router with GRE tunnels
+tags:
+- vnf
+- network

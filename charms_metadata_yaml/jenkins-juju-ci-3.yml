@@ -1,0 +1,26 @@
+description: 'Reconfigure the host and install testing tools to run Juju CI tests.
+
+  .
+
+  This charm will move /var/lib/<jenkins | lxd | lxc> to a big partition
+
+  if available. Several sets of tools are installed. Once configuration
+
+  is complete, the jenkins-slave is ready to run Juju CI tests.
+
+  '
+maintainer: Curtis Hovey <curtis.hovey@canonical.com>
+name: jenkins-juju-ci
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+- precise
+- yakkety
+subordinate: true
+summary: Juju CI tools for jenkins
+tags:
+- ci

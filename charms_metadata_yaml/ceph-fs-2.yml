@@ -1,0 +1,36 @@
+description: 'Ceph is a distributed storage and network file system designed to provide
+
+  excellent performance, reliability, and scalability.
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: ceph-fs
+peers:
+  mon:
+    interface: ceph
+provides:
+  client:
+    interface: ceph-client
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  osd:
+    interface: ceph-osd
+  radosgw:
+    interface: ceph-radosgw
+requires:
+  ceph-mds:
+    interface: ceph-mds
+series:
+- xenial
+subordinate: false
+summary: Highly scalable distributed storage
+tags:
+- openstack
+- storage
+- file-servers
+- misc
+- openstack
+- storage
+- file-servers
+- misc

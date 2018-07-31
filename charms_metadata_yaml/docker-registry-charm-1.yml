@@ -1,0 +1,32 @@
+description: 'The Docker registry is a stateless, highly scalable server side application
+
+  that stores and lets you distribute Docker images.
+
+  '
+maintainer: Caio Begotti <caio.begotti@canonical.com>
+name: docker-registry
+provides:
+  website:
+    interface: http
+resources:
+  registry:
+    description: The tarball of the Docker registry, as saved after a Docker pull
+    filename: registry.tar
+    type: file
+series:
+- xenial
+- trusty
+storage:
+  docker-registry:
+    description: 'Image data files (i.e. $REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY).
+      Stores all of your data and images layers.
+
+      '
+    location: /srv/data
+    minimum-size: 100M
+    type: filesystem
+subordinate: false
+summary: Docker registry server
+tags:
+- application-server
+- containers

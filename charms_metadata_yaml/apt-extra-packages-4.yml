@@ -1,0 +1,11 @@
+description: 'Subordinate charm to install the extra required packages via APT.
+
+  '
+maintainer: Haw Loeung <haw.loeung@canonical.com>
+name: apt-extra-packages
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Installs extra packages via APT.

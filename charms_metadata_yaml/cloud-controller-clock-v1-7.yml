@@ -1,0 +1,19 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: cloud-controller-clock-v1
+requires:
+  cc:
+    interface: controller
+  ccdb:
+    interface: mysql
+  loggregator:
+    interface: loggregator
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+  uaa:
+    interface: uaa
+summary: A shared clock

@@ -1,0 +1,25 @@
+description: 'This charm will import  glance images from a master  openstack installations.
+
+  It will copy image files and metadata with rsync over ssh to local disk and import
+  into glance from there.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: Manuel Seelaus <manuel.seelaus@canonical.com>
+name: glance-sync-slave
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  keystone-admin:
+    interface: keystone-admin
+series:
+- xenial
+- trusty
+summary: slave unit to sync glance images from a master and import into glance
+tags:
+- openstack

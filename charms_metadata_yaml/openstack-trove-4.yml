@@ -1,0 +1,18 @@
+categories:
+- openstack
+description: 'openstack-trove is designed to deploy a trove using juju.
+
+  '
+maintainer: jiasir <jiasir@icloud.com>
+name: openstack-trove
+peers:
+  trove-peer:
+    interface: trove
+provides:
+  openstack-trove:
+    interface: openstack-trove
+requires:
+  shared-db:
+    interface: mysql-shared
+subordinate: false
+summary: OpenStack trove compents

@@ -1,0 +1,12 @@
+description: 'This simply deploys Ubuntu Server.
+
+  '
+maintainer: Charmers <juju@lists.ubuntu.com>
+name: ubuntu
+provides:
+  conn-check:
+    interface: conn-check
+    scope: container
+summary: A pristine Ubuntu Server
+tags:
+- misc

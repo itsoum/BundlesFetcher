@@ -1,0 +1,16 @@
+description: 'This charm sets the default gateway in /etc/network/interfaces
+
+  '
+maintainer: gianni.marzulli@garr.it
+name: defaultgw
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: This charm set default gateway in /etc/network/interfaces
+tags:
+- network

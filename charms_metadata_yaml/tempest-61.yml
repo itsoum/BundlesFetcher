@@ -1,0 +1,25 @@
+description: 'Tempest is a set of integration tests to be run against a live Openstack
+
+  cluster. Tempest has batteries of tests for Openstack API validation,
+
+  scenarios, and other specific tests useful in validating an Openstack
+
+  deployment.
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: tempest
+requires:
+  dashboard:
+    interface: http
+  identity-admin:
+    interface: keystone-admin
+series:
+- xenial
+- bionic
+- cosmic
+- trusty
+subordinate: false
+summary: OpenStack integration test suite
+tags:
+- openstack

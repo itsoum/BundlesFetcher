@@ -1,0 +1,13 @@
+description: vpil metric collector
+maintainer:
+- George Kraft <george.kraft@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+name: vpil-collector
+requires:
+  application:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: vpil metric collector
+tags:
+- misc

@@ -1,0 +1,17 @@
+description: 'Mimimalist charm for adding custom configuration to logstash
+
+  '
+maintainer: Tilman Baumann <tilman@baumann.name>
+name: logstash-conf-d
+requires:
+  host-system:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- xenial
+- zesty
+subordinate: true
+summary: Conf.d snipped for logstash
+tags:
+- logstash

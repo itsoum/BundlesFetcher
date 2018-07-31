@@ -1,0 +1,50 @@
+description: 'WebSphere Application Server is a proven, high-performance transaction
+  engine that can help build, run, integrate, and manage dynamic web applications.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-was-base
+provides:
+  was-ihs:
+    interface: was-ihs
+requires:
+  wasdb:
+    interface: db2
+  wasmessaging:
+    interface: ibm-mq
+resources:
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+  ibm_java_sdk_fp:
+    description: IBM Java SDK fix pack archive
+    filename: ibm_java_sdk_fp.zip
+    type: file
+  ibm_java_sdk_installer:
+    description: IBM Java SDK installer archive
+    filename: ibm_java_sdk.zip
+    type: file
+  ibm_was_base_fp:
+    description: WAS Base fix pack archive
+    filename: ibm_was_base_fp.zip
+    type: file
+  ibm_was_base_installer:
+    description: WAS Base installer archive
+    filename: ibm_was_base_installer.zip
+    type: file
+series:
+- xenial
+- trusty
+subordinate: false
+summary: WebSphere Application Server Base Edition
+tags:
+- ibm
+- im
+- ibm-z
+- misc
+- ibm

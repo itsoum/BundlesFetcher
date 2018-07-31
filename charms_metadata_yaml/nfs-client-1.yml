@@ -1,0 +1,16 @@
+description: "Installs and configures an nfs4 daemon with\nthe standard accompanying\
+  \ services, portmapd\nand idmapd.\n\nTo use this, client services must implement\n\
+  hooks for a storage relation that is compatible\nwith the 'mount' interface \n(\
+  \ 'http://juju.ubuntu.com/Interfaces/mount' ).\n\nExported shares get created as\
+  \ new services\nare joined.  \n\nFor now, service units with the same servicename\n\
+  share the same exported filesystem.\n"
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: nfs-client
+requires:
+  local:
+    interface: juju-info
+    scope: container
+  nfs:
+    interface: mount
+subordinate: true
+summary: NFS formula for shared data storage

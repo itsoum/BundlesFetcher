@@ -1,0 +1,16 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: router-v1
+provides:
+  router:
+    interface: http
+requires:
+  loggregator:
+    interface: loggregator
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: CF Router

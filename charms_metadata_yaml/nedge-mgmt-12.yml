@@ -1,0 +1,22 @@
+description: NEDGE is a distributed object storage system designed to provide excellent
+  performance, reliability, and scalability.
+maintainer: Anton <Anton.Skriptsov@nexenta.com>
+name: nedge-mgmt
+provides:
+  cinder-gw:
+    interface: cinder-gw
+  cinder-nedge:
+    interface: cinder-nedge
+  nedge:
+    interface: nedge
+  swift-gw:
+    interface: swift-gw
+requires:
+  identity-service:
+    interface: keystone
+subordinate: false
+summary: Distributed object storage management node
+tags:
+- openstack
+- storage
+- file-servers

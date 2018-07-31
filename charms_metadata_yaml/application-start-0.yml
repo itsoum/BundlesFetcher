@@ -1,0 +1,11 @@
+description: 'Builds an Ubuntu Desktop system, logs in using the Dummy X11 driver,
+
+  and measures how long it takes for a given application to start.
+
+  '
+maintainer: Ted Gould <ted@ubuntu.com>
+name: application-start
+requires:
+  db:
+    interface: cassandra
+summary: Application Startup Performance Measurement

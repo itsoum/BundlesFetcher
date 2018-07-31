@@ -1,0 +1,14 @@
+categories:
+- misc
+description: 'This is the Yo charm, inspired by the venerable Yo app.
+
+  It''s that simple.
+
+  '
+maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+name: yo
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: This is the Yo charm, yo.

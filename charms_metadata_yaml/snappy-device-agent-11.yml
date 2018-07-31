@@ -1,0 +1,9 @@
+description: 'Runs snappy-device-agent service from a given service tarball (provided
+  as files/snappy-device-agent.tgz) with the SPI agent provided in files/spi-agent.tgz).
+
+  '
+maintainer: Paul Larson <paul.larson@canonical.com>
+name: snappy-device-agent
+summary: 'Deploy a service to handle device requests from SPI
+
+  '

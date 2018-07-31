@@ -1,0 +1,20 @@
+description: 'This is the Pentaho Data Integration charm for Extract, Transform
+
+  and Load data operations. The charm will install Pentaho Data Integration
+
+  and configure and start the Carte server for optional remote operation and
+
+  management.
+
+  '
+maintainer: Tom Barber <tom@analytical-labs.com>
+name: pentahodataintegration
+provides:
+  java:
+    interface: java
+    scope: container
+summary: Pentaho Data Integration ETL Server and Runtime.
+tags:
+- data_management
+- etl
+- big_data

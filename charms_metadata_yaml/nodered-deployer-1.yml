@@ -1,0 +1,17 @@
+description: 'This charm makes it possible to easily import your dataflows into Node-Red
+
+  '
+maintainer: "S\xE9bastien Pattyn <sebastien.pattyn@tengu.io>"
+name: nodered-deployer
+requires:
+  dataflow:
+    interface: nodered-flow
+  nodered:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: This charm deploys the nodered-deployer
+tags:
+- misc

@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'This dummy charm is used to verify that a relationship is created correctly
+
+  '
+maintainer: Aaron Bentley <aaron.bentley@canonical.com>
+name: dummy-sink
+provides:
+  source:
+    interface: dummy-token
+series:
+- trusty
+- precise
+- utopic
+- vivid
+- wily
+- xenial
+- yakkety
+summary: Dummy charm that accepts data

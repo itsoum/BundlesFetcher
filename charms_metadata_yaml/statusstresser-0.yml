@@ -1,0 +1,16 @@
+categories:
+- misc
+description: 'This simply deploys Ubuntu Server calling a lot of set-status in the
+  hooks.
+
+  '
+maintainer: Charmers <juju@lists.ubuntu.com>
+name: statusstresser
+series:
+- trusty
+- precise
+- utopic
+- vivid
+- wily
+- xenial
+summary: A pristine Ubuntu Server that has a lot of status calls

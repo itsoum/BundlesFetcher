@@ -1,0 +1,21 @@
+description: 'This charm deploys a Tensorflow inception model trained to classify
+  images,
+
+  as a service.
+
+  '
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: inception
+provides:
+  serving:
+    interface: tf-inception-api
+  workload:
+    interface: kubernetes-workload
+requires:
+  node-guest:
+    interface: node-local
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: A Tensorflow model trained to classify images, as a service

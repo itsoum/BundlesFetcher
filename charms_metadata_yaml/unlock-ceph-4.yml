@@ -1,0 +1,18 @@
+description: 'unlock_ceph stores Ceph''s disk encryption keys in Vault and restores
+
+  them to a tmpfs and links them in for Ceph''s use
+
+  '
+maintainers:
+- Chris MacNaughton <chris.macnaughton@canonical.com>
+name: unlock-ceph
+requires:
+  requires:
+    interface: juju-info
+    scope: container
+  vault:
+    interface: vault
+subordinate: true
+summary: unlock_ceph takes Ceph's encryption keys off of the local disk
+tags:
+- security

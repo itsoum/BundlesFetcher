@@ -1,0 +1,19 @@
+description: 'OpenCart is a turn-key ready "out of the box" shopping cart solution.
+  You
+
+  simply deploy, select your template, add products and you''re ready to start
+
+  accepting orders.
+
+  '
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: opencart
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: OpenCart is a turn-key ready "out of the box" shopping cart solution.
+tags:
+- ecommerce

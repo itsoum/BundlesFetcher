@@ -1,0 +1,26 @@
+description: 'IBM MQ provides for messaging services to transport multiple types of
+  data.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-mq
+provides:
+  messaging:
+    interface: ibm-mq
+resources:
+  ibm_mq_installer:
+    description: IBM MQ installer archive
+    filename: ibm_mq_installer.tar.gz
+    type: file
+series:
+- trusty
+- xenial
+subordinate: false
+summary: IBM MQ messaging Product
+tags:
+- ibm
+- mq
+- ibm-z
+- messaging
+terms:
+- ibmcharmers/ibm-mq/1

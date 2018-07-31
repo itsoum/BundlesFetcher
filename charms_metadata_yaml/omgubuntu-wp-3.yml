@@ -1,0 +1,19 @@
+description: 'WordPress is a full featured web blogging tool.
+
+  OMG! Ubuntu! is a blog using WordPress
+
+  '
+name: omgubuntu-wp
+peers:
+  loadbalancer:
+    interface: reversenginx
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+    optional: true
+  db:
+    interface: mysql
+summary: WordPress is a full featured web blogging tool, OMG! Ubuntu! is a blog.

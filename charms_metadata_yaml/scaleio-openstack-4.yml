@@ -1,0 +1,30 @@
+description: 'ScaleIO OpenStack integration charm
+
+  '
+maintainer: Alexandre Levine <alexandrelevine@gmail.com>
+name: scaleio-openstack
+provides:
+  ephemeral-backend:
+    interface: ephemeral-backend
+    scope: container
+  image-backend:
+    interface: glance-backend
+    scope: container
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  scaleio-gw:
+    interface: scaleio-gw
+series:
+- xenial
+- trusty
+- precise
+subordinate: true
+summary: ScaleIO OpenStack integration charm
+tags:
+- storage
+- openstack

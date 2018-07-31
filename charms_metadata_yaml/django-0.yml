@@ -1,0 +1,12 @@
+description: "Django makes it easier to build better Web apps more quickly and with\
+  \ less code. \n"
+maintainer: Dave Lawson <dave.lawson@canonical.com>
+name: django
+requires:
+  databases:
+    interface: pgsql
+series:
+- bionic
+summary: Deploy and manage your Django applications with juju.
+tags:
+- frameworks

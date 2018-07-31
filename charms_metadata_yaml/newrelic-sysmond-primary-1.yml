@@ -1,0 +1,14 @@
+description: 'The New Relic agent for server monitoring
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: newrelic-sysmond
+series:
+- yakkety
+- xenial
+- trusty
+subordinate: false
+summary: The New Relic agent for server monitoring
+tags:
+- monitoring
+- misc

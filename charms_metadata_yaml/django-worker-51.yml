@@ -1,0 +1,32 @@
+description: 'This layer provides the Django/Celery worker reactive layer.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: django-worker
+provides:
+  website:
+    interface: http
+requires:
+  db-info:
+    interface: db-info
+  elasticsearch:
+    interface: elasticsearch
+  memcache:
+    interface: memcache
+  redis:
+    interface: redis
+series:
+- xenial
+subordinate: false
+summary: Django/Celery worker component
+tags:
+- git
+- deploy
+- elasticsearch
+- django
+- flask
+- rails
+- client
+- memcache
+- web
+- worker

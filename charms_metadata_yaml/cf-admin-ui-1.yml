@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'cf-admin-ui
+
+  '
+maintainer: cf-charmers <cf-charmers@lists.launchpad.net>
+name: cf-admin-ui
+requires:
+  nats:
+    interface: nats
+  router:
+    interface: router
+summary: cf-admin-ui

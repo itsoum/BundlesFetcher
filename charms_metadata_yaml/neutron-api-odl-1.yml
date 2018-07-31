@@ -1,0 +1,19 @@
+description: 'Configure ODL api server
+
+  '
+maintainer: Liam Young <liam.young@canonical.com>
+name: neutron-api-odl
+provides:
+  neutron-plugin-api-subordinate:
+    interface: neutron-plugin-api-subordinate
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+  odl-controller:
+    interface: odl-controller-api
+subordinate: true
+summary: Configure ODL api server
+tags:
+- openstack

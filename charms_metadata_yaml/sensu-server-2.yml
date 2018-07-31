@@ -1,0 +1,12 @@
+categories:
+- applications
+description: Sensu is a distributed scaling monitoring application.
+maintainer: Paul Czarkowski <username.taken@gmail.com>
+name: sensu-server
+provides:
+  website:
+    interface: http
+requires:
+  amqp:
+    interface: rabbitmq
+summary: sensu is a monitoring app

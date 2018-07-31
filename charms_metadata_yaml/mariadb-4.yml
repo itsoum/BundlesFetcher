@@ -1,0 +1,35 @@
+categories:
+- databases
+description: 'An enhanced, drop-in replacement for MySQL.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: mariadb
+peers:
+  cluster:
+    interface: mysql-ha
+provides:
+  db:
+    interface: mysql
+  db-admin:
+    interface: mysql-root
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  master:
+    interface: mysql-oneway-replication
+  monitors:
+    interface: monitors
+  munin:
+    interface: munin-node
+  shared-db:
+    interface: mysql-shared
+requires:
+  ceph:
+    interface: ceph-client
+  ha:
+    interface: hacluster
+    scope: container
+  slave:
+    interface: mysql-oneway-replication
+summary: MariaDB is a fast, stable and true multi-user, multi-threaded SQL database

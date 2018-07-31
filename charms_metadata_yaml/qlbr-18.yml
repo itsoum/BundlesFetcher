@@ -1,0 +1,26 @@
+categories:
+- applications
+description: 'QA Launchpad Bug Reports provides caching and organization of bugs from
+  multiple Launchpad projects.
+
+  '
+maintainer: Max Brustkern <max@canonical.com>
+name: qlbr
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+    optional: true
+  wsgi-file:
+    interface: wsgi
+    scope: container
+requires:
+  memcached:
+    interface: memcache
+  pgsql:
+    interface: pgsql
+    optional: false
+subordinate: false
+summary: QA Launchpad Bug Reports

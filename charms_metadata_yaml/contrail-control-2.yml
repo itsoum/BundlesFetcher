@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'Runs Contrail control plane service
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-control
+peers:
+  cluster:
+    interface: control-cluster
+provides:
+  control:
+    interface: control
+requires:
+  cfgm:
+    interface: cfgm
+  collector:
+    interface: collector
+summary: Contrail controller 'control' role

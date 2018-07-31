@@ -1,0 +1,9 @@
+description: ''
+maintainer: Adam Gandelman <adamg@canonical.com>
+name: openstack-dashboard
+requires:
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql
+summary: a Django web interface to OpenStack

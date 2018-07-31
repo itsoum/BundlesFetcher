@@ -1,0 +1,14 @@
+description: "IBM DB2 Enterprise Server Edition provides scalable database server\
+  \ software to handle the demanding workloads of large and midsize enterprise servers.\
+  \ \n"
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-db2
+provides:
+  db:
+    interface: db2
+subordinate: false
+summary: IBM DB2
+tags:
+- misc
+- database
+- ibm

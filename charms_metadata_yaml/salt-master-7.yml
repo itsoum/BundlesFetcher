@@ -1,0 +1,24 @@
+description: 'Installs the salt master on Ubuntu
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: salt-master
+provides:
+  saltinfo:
+    interface: salt
+resources:
+  private-key:
+    description: private ssh key
+    filename: id_rsa
+    type: file
+  public-key:
+    description: public ssh key
+    filename: id_rsa.pub
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Install's the salt master
+tags:
+- misc
+- ops

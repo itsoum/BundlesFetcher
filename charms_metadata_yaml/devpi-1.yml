@@ -1,0 +1,16 @@
+categories:
+- misc
+description: 'The MIT-licensed devpi system features a powerful PyPI-compatible server
+
+  and a complimentary command line tool to drive packaging, testing and
+
+  release activities with Python.
+
+  '
+maintainer: Ricardo Kirkner <ricardo@kirkner.com.ar>
+name: devpi
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: PyPI server and packaging/testing/release tool

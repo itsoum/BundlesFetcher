@@ -1,0 +1,30 @@
+description: 'Kafka is a high-performance, scalable, distributed messaging system.
+
+  This charm provides version 0.10.1.1 of the Kafka application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: kafka
+provides:
+  client:
+    interface: kafka
+  java:
+    interface: java
+    scope: container
+requires:
+  zookeeper:
+    interface: zookeeper
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: Kafka from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2

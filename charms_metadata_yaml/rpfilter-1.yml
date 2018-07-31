@@ -1,0 +1,16 @@
+description: 'This charm disable rp filters
+
+  '
+maintainer: nuvola-admin@sns.it
+name: rpfilter
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: This charm disable rp filters
+tags:
+- network

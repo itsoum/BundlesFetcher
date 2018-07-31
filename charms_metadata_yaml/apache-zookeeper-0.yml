@@ -1,0 +1,20 @@
+description: "Apache ZooKeeper is a centralized, reliable, service for maintaining\n\
+  configuration information, naming, providing distributed\nsynchronization, and group\
+  \ services. All of these kinds of services\nare used in some form or another by\
+  \ distributed applications. \nIn order to install and configure Apache HBase and\
+  \ other Hadoop ecosystem\ncomponents, you must start the ZooKeeper service. \n"
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: apache-zookeeper
+peers:
+  quorum:
+    interface: zookeeper-quorum
+provides:
+  zookeeper:
+    interface: zookeeper
+series:
+- trusty
+summary: High-performance coordination service for distributed applications
+tags:
+- bigdata
+- hadoop
+- apache

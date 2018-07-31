@@ -1,0 +1,12 @@
+description: "This is a subordinate charm that helps facilitate \nthe installation\
+  \ configuration, maintenance of isc-dhcp server.\n"
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: isc-dhcp
+requires:
+  machine:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Install, configure and maintain isc-dhcp server.
+tags:
+- ops

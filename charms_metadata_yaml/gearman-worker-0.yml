@@ -1,0 +1,17 @@
+description: 'Gearman is a system to farm out work to other machines, dispatching
+
+  function calls to machines that are better suited to do work, to do
+
+  work in parallel, to load balance lots of function calls, or to call
+
+  functions between languages.  This package contains some command line
+
+  tools for manipulating gearman jobs.
+
+  '
+maintainer: Juan Negron <juan.negron@canonical.com>
+name: gearman-worker
+requires:
+  gearman:
+    interface: gearman
+summary: Tools for the Gearman distributed job queue

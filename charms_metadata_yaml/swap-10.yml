@@ -1,0 +1,15 @@
+categories:
+- misc
+description: 'Generic swap charm subordinate.  Intended to be a simple way to add
+
+  swap to your service units.
+
+  '
+maintainer: David Britton <davidpbritton@gmail.com>
+name: swap
+requires:
+  container:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Swap subordinate charm to create swap on your service

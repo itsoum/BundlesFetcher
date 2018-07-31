@@ -1,0 +1,10 @@
+categories:
+- miscellaneous
+description: "Checkbox is a hardware testing tool useful for certifying servers,\n\
+  desktops and laptops. \n"
+maintainer: Ashley Lai <ashley.lai@canonical.com>
+name: checkbox
+requires:
+  iperf-service:
+    interface: iperf
+summary: Hardware testing tool

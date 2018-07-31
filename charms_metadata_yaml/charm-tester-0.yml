@@ -1,0 +1,8 @@
+description: "The charm-tester service provides a central control point\nfor executing\
+  \ tests and collating results ithin other service \nunits.\n"
+ensemble: formula
+name: charm-tester
+provides:
+  tester:
+    interface: testing
+summary: Service for testing other juju charms

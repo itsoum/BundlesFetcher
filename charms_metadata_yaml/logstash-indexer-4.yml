@@ -1,0 +1,11 @@
+description: 'logstash is a tool for managing events and logs. You can use it to collect
+  logs, parse them, and store them for later use (like, for searching).
+
+  '
+name: logstash-indexer
+requires:
+  amqp:
+    interface: rabbitmq
+  rest:
+    interface: elasticsearch
+summary: This agent will parse and index your logs as they come in over AMQP.

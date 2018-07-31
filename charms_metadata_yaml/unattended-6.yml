@@ -1,0 +1,18 @@
+description: 'Configure unattended upgrades and reboots.  Report status of pending
+  updates and reboots.
+
+  '
+maintainer: Paul Gear <paul.gear@canonical.com>
+name: unattended
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- trusty
+subordinate: true
+summary: Configure and report on unattended upgrades and reboots
+tags:
+- ops

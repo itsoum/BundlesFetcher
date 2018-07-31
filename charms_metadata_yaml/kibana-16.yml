@@ -1,0 +1,54 @@
+description: 'Kibana is an open source analytics and visualization platform designed
+  to work with Elasticsearch.
+
+  You use Kibana to search, view, and interact with data stored in Elasticsearch indices.
+  You can easily
+
+  perform advanced data analysis and visualize your data in a variety of charts, tables,
+  and maps.
+
+
+  Kibana makes it easy to understand large volumes of data. Its simple, browser-based
+  interface enables
+
+  you to quickly create and share dynamic dashboards that display changes to Elasticsearch
+  queries in real time.
+
+  '
+extra-bindings:
+  cluster: null
+  public: null
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: kibana
+provides:
+  http:
+    interface: http
+  website:
+    interface: http
+requires:
+  elasticsearch:
+    interface: elasticsearch
+resources:
+  elastic-deb:
+    description: Deb as obtained from https://www.elastic.co/downloads
+    filename: elastic.deb
+    type: file
+series:
+- xenial
+- bionic
+subordinate: false
+summary: Open Source, Distributed, RESTful Search Engine
+tags:
+- elastic
+- misc
+- installer
+- elasticsearch
+- django
+- flask
+- rails
+- client
+- elastic.co
+- elasticstack
+- kibana
+- datavis
+- visualization

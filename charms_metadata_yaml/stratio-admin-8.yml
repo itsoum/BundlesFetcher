@@ -1,0 +1,46 @@
+description: "At Stratio our goal is to make Big Data child\u2019s play for companies,\
+  \ and to do so we have developed Stratio. Our mission is to\nhelp install and use\
+  \ Spark in companies without the need to invest in new recruits or train existing\
+  \ staff in the use of this\nnew technology.\n"
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: stratio-admin
+provides:
+  admin:
+    interface: stratio
+requires:
+  cassandra:
+    interface: stratio
+  connector_deep:
+    interface: stratio
+  connector_hdfs:
+    interface: stratio
+  connector_streaming:
+    interface: stratio
+  crossdata:
+    interface: stratio
+  elasticsearch:
+    interface: stratio
+  hdfs_datanode:
+    interface: stratio
+  hdfs_journalnode:
+    interface: stratio
+  hdfs_namenode:
+    interface: stratio
+  kafka:
+    interface: stratio
+  mesos_master:
+    interface: stratio
+  mesos_slave:
+    interface: stratio
+  mongodb:
+    interface: stratio
+  node:
+    interface: stratio
+  streaming_processing:
+    interface: stratio
+  zookeeper:
+    interface: stratio
+subordinate: false
+summary: Stratio is a and open source Spark Distribution edited by Stratio.com
+tags:
+- bigdata

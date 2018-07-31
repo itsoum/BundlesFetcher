@@ -1,0 +1,10 @@
+description: 'MooseFS is a distributed storage and file system.
+
+  '
+name: mfs-master
+provides:
+  mfs:
+    interface: mount
+  mfs-master:
+    interface: mfs
+summary: distributed storage and file system

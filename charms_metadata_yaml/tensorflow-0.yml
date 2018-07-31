@@ -1,0 +1,19 @@
+description: "TensorFlow\u2122 is an open source software library for\nnumerical computation\
+  \ using data flow graphs.\n\nThis charm creates a TensorFlow environment suitable\n\
+  for running or even developing TensorFlow applications.\n"
+name: tensorflow
+resources:
+  tensorflow-x86_64:
+    description: Python 3 wheel for TensorFlow on x86_64
+    filename: tensorflow-0.10.0-cp35-cp35m-linux_x86_64.whl
+    type: file
+  tensorflow-x86_64-gpu:
+    description: Python 3 wheel for TensorFlow on x86_64 w/ GPU support
+    filename: tensorflow-0.10.0-cp35-cp35m-linux_x86_64.whl
+    type: file
+series:
+- xenial
+summary: "A basic TensorFlow\u2122 environment"
+tags:
+- bigdata
+- machine_learning

@@ -1,0 +1,45 @@
+description: 'Prometheus is a systems and service monitoring system. It collects
+
+  metrics from configured targets at given intervals, evaluates rule
+
+  expressions, displays the results, and can trigger alerts if some
+
+  condition is observed to be true.
+
+  Due to signifidant database changes in version 2.0 this charm
+
+  supports prometheus 2.0 and later only
+
+  '
+maintainer: Prometheus Charmers <prometheus-charmers@lists.launchpad.net>
+name: prometheus2
+provides:
+  grafana-source:
+    interface: grafana-source
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  alertmanager-service:
+    interface: http
+  blackbox-exporter:
+    interface: http
+  scrape:
+    interface: prometheus
+  snmp-exporter:
+    interface: http
+  target:
+    interface: http
+storage:
+  metrics-filesystem:
+    description: Storage for prometheus data
+    location: /var/snap
+    multiple:
+      range: 0-1
+    type: filesystem
+subordinate: false
+summary: Monitoring system and timeseries database. v2.0 and later only
+tags:
+- monitoring

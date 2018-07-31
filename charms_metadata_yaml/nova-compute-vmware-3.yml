@@ -1,0 +1,29 @@
+categories:
+- openstack
+description: 'OpenStack Compute, codenamed Nova, is a cloud computing fabric controller.
+  In
+
+  addition to its "native" API (the OpenStack API), it also supports the Amazon
+
+  EC2 API.
+
+  .
+
+  This charm supports integration of VMware vSphere resources into OpenStack.
+
+  '
+maintainer: James Page <james.page@canonical.com>
+name: nova-compute-vmware
+provides:
+  cloud-compute:
+    interface: nova-compute
+requires:
+  amqp:
+    interface: rabbitmq
+  image-service:
+    interface: glance
+  pgsql-db:
+    interface: pgsql
+  shared-db:
+    interface: mysql-shared
+summary: OpenStack compute - VMware

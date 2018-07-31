@@ -1,0 +1,19 @@
+description: 'Installs and configures a compute node for OpenVIM
+
+  '
+extra-bindings:
+  internal: null
+  public: null
+maintainers:
+- Adam Israel <adam.israel@canonical.com>
+name: openvim-compute
+provides:
+  compute:
+    interface: openvim-compute
+series:
+- trusty
+summary: Open Virtual Infrastructure Manager
+tags:
+- nfv
+- telco
+- osm

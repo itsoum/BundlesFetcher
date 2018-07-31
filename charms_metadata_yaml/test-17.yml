@@ -1,0 +1,19 @@
+description: Test charm for upgrading resources in libjuju
+maintainers:
+- George Kraft <george.kraft@canonical.com>
+name: test
+resources:
+  test0:
+    filename: test0
+    type: file
+  test1:
+    filename: test1
+    type: file
+  test2:
+    filename: test2
+    type: file
+series:
+- xenial
+summary: Test charm for upgrading resources in libjuju
+tags:
+- misc

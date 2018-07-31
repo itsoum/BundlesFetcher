@@ -1,0 +1,18 @@
+description: 'Cronify delivers a single cron.d file and a payload for executing scheduled
+
+  tasks.
+
+  '
+maintainer: francis.ginther@canonical.com
+name: cron
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Deliver a cron.d file and payload.
+tags:
+- misc

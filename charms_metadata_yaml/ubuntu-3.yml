@@ -1,0 +1,9 @@
+description: The normal Ubuntu charm takes ages to install unneeded deps. This does
+  not
+name: ubuntu
+series:
+- bionic
+- xenial
+- trusty
+- precise
+summary: A minimal Ubuntu charm - no deps to install

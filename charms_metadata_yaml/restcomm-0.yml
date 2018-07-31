@@ -1,0 +1,14 @@
+description: restcomm
+maintainer: Mark Mims <mark.mims@ubuntu.com>
+name: restcomm
+provides:
+  mediaserver:
+    interface: http
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+  restcomm:
+    interface: http
+summary: RestComm

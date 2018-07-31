@@ -1,0 +1,14 @@
+description: "Install Thingworx Foundation Server on Ubuntu \n"
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: thingworx-foundation-server
+resources:
+  foundation-server:
+    description: Foundation Server zip file
+    filename: thingworx-platform.zip
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Install Thingworx Foundation Server
+tags:
+- misc

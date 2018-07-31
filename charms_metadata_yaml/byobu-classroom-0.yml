@@ -1,0 +1,13 @@
+description: 'byobu-class provides remote terminal access through a web browser,
+
+  using https, ajaxterm, and byobu.  It operates in a one-writer,
+
+  many reader mode.
+
+  '
+ensemble: formula
+name: byobu-classroom
+provides:
+  website:
+    interface: website
+summary: Remote terminal classroom over https

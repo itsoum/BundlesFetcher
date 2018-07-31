@@ -1,0 +1,19 @@
+description: 'Uses a Syslog source, memory channel, and Avro sink in Apache Flume
+
+  to ingest log data.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-flume-syslog
+provides:
+  syslog:
+    interface: syslog
+requires:
+  flume-sink:
+    interface: flume-agent
+series:
+- xenial
+summary: Ingest syslog events with Apache Flume
+tags:
+- apache
+- big_data

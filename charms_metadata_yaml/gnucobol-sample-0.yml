@@ -1,0 +1,36 @@
+categories:
+- applications
+description: 'GNU Cobol, and a few web space applications. Some
+
+  new and some old, thin wrapped in COBOL web.
+
+  This is strictly a proof of concept charm.
+
+  Production deployments will require customizations.
+
+  This sample: loads a fresh gnu-cobol-2.1,
+
+  downloads and compiles an OCCSide cobweb,
+
+  and prepares the web space. gnucobol-sample is a
+
+  mishmash of experimental COBOL.  cobweb will
+
+  be refined. The web index provides links to
+
+  COBOL sources. Dirt simple moving legacy COBOL
+
+  to the web.  The plugin architecture is
+
+  intriguing, the COBOL CALL verb providing most
+
+  of the engine, for free.
+
+  '
+maintainer: Brian Tiffin <btiffin@gnu.org>
+name: gnucobol-sample
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: GNU Cobol charm example

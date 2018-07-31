@@ -1,0 +1,15 @@
+description: 'Installs and connects the cqlsh tool for interacting with a
+
+  Cassandra database cluster.
+
+  '
+maintainer: Stuart Bishop <stuart.bishop@canonical.com>
+name: cqlsh
+requires:
+  database:
+    interface: cassandra
+series:
+- bionic
+summary: Command line Cassandra client
+tags:
+- databases

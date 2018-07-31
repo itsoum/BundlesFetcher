@@ -1,0 +1,13 @@
+description: 'Deploy your Django project as an Apache mod_wsgi app.
+
+  '
+name: summit
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  db:
+    interface: pgsql
+summary: Apache+wsgi+Django Conference Scheduling Application

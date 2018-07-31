@@ -1,0 +1,13 @@
+categories:
+- app-servers
+description: "WildFly is a flexible, lightweight, managed application runtime that\
+  \ helps you build amazing applications. \n"
+maintainer: Saurabh <saurabh.kumar@techblue.co.uk>
+name: wildfly-ha-slave
+provides:
+  wildfly-slave:
+    interface: wildfly-slave
+requires:
+  wildfly:
+    interface: wildfly
+summary: wildfly Application Server.

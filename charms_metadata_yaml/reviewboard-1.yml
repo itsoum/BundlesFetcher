@@ -1,0 +1,12 @@
+description: 'Installs the Review Board code review webapp, relates to MySQL and
+
+  memcached.
+
+  '
+name: reviewboard
+requires:
+  cache:
+    interface: memcache
+  db:
+    interface: mysql
+summary: Review Board Code Reviews

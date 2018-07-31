@@ -1,0 +1,29 @@
+description: 'Nuage VRS provides a highly flexible, high performance, secure network
+
+  virtualization solution for data centers.
+
+  .
+
+  This charm is used to configure VRS service inside a NOVA Compute Node and controlled
+  by Nuage VSC/VSD.
+
+  '
+maintainer: Aniket Bhat <abhat@nuagenetworks.net>
+name: nuage-vrs
+provides:
+  neutron-plugin:
+    interface: neutron-plugin
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+  identity-credentials:
+    interface: keystone-credentials
+  vrs-controller-service:
+    interface: nuage-vrs-control
+subordinate: true
+summary: Nuage VRS
+tags:
+- openstack
+- miscellaneous

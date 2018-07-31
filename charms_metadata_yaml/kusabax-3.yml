@@ -1,0 +1,14 @@
+categories:
+- applications
+description: 'Deploys KusabaX
+
+  '
+maintainer: Chris Hardee <shazzner@gmail.com>
+name: kusabax
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Kusaba X is a continuation of the Imageboard software Kusaba

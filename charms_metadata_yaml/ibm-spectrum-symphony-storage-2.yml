@@ -1,0 +1,43 @@
+description: 'IBM Spectrum Symphony software helps you control the massive compute
+  power available in your current and future technical
+
+  computing systems to address challenging and  complex problems. This software can
+  help you achieve breakthrough results in
+
+  business and research by addressing challenges in parallel application development
+  and deployment,
+
+  and technical computing infrastructure management.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-spectrum-symphony-storage
+provides:
+  storage:
+    interface: nfsstorage
+resources:
+  ibm_ss_entitlement:
+    description: IBM Spectrum Symphony entitlement file.
+    filename: ibm_ss_entitlement.dat
+    type: file
+  ibm_ss_installer:
+    description: IBM Spectrum Symphony installation package
+    filename: ibm_ss_installer.bin
+    type: file
+series:
+- trusty
+- xenial
+subordinate: false
+summary: IBM Spectrum Symphony Storage
+tags:
+- ibm
+- ibm
+- symphony
+- storage_server
+- application_optimization
+- cluster
+- spectrum
+- virtualization
+terms:
+- ibm-spectrum-symphony/1

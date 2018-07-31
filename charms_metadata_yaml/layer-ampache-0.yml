@@ -1,0 +1,10 @@
+description: "This charm deploys ampache media streaming server. https://github.com/ampache/ampache.\
+  \ \n"
+maintainer: Manoj Iyer <manoj.iyer@canonical.com>
+name: ampache
+requires:
+  database:
+    interface: mysql
+summary: ampache is a web-based audio file management system
+tags:
+- social

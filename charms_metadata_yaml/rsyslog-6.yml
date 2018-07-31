@@ -1,0 +1,17 @@
+categories:
+- applications
+description: "Rsyslog is a multi-threaded implementation of syslogd (a system utility\n\
+  providing support for message logging), with features that include:\n\n* reliable\
+  \ syslog over TCP, SSL/TLS and RELP\n* on-demand disk buffering\n* email alerting\n\
+  * writing to MySQL or PostgreSQL databases (via separate output plugins)\n* permitted\
+  \ sender lists\n* filtering on any part of the syslog message\n* on-the-wire message\
+  \ compression\n* fine-grained output format control\n* failover to backup destinations\n\
+  * enterprise-class encrypted syslog relaying\n\nThis is a simple rsyslogd logging\
+  \ server. It is most interesting\nwhen paired with the rsyslog-forwarder subordinate\
+  \ charm. \n"
+maintainer: Jorge Niedbalski R <jorge.niedbalski@canonical.com>
+name: rsyslog
+provides:
+  aggregator:
+    interface: syslog
+summary: reliable system and kernel logging service

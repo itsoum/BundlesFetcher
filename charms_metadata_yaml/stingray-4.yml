@@ -1,0 +1,21 @@
+categories:
+- cache-proxy
+description: "Riverbed\xAE Stingray\u2122 Traffic Manager is a full performance software\
+  \ and virtual\nLayer 7 application delivery controller (ADC) that enables enterprises\
+  \ and \ncloud operators to create, manage, and deliver key services more quickly,\
+  \ more\nflexibly, and at a lower cost. Stingray Traffic Manager offers much more\
+  \ than\njust load balancing. It controls and optimizes end-user services by inspecting,\n\
+  transforming, prioritizing, and routing application traffic.\n"
+maintainer: Marco Ceppi <marco.ceppi@canonical.com>
+name: stingray
+provides:
+  master:
+    interface: stingray-cluster
+  website:
+    interface: http
+requires:
+  reverseproxy:
+    interface: http
+  slave:
+    interface: stingray-cluster
+summary: Traffic Manager and Load Balancer

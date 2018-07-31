@@ -1,0 +1,15 @@
+description: 'This charms installs and configures Ksplice/Uptrack and allows for a
+  variety of configuration options to be specified.  Additionally, the charm can be
+  used to trigger updates post-deployment.
+
+  '
+maintainer: is-charms@canonical.com
+name: ksplice
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Install and configure uptrack.
+tags:
+- security

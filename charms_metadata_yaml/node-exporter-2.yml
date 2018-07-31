@@ -1,0 +1,19 @@
+description: 'Prometheus exporter for machine metrics, written in Go with pluggable
+  metric
+
+  collectors.
+
+  '
+maintainer: JuanJo Ciarlante <JuanJo.Ciarlante@localhost>
+name: node-exporter
+provides:
+  target:
+    interface: http
+requires:
+  host:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Prometheus node_exporter
+tags:
+- monitoring

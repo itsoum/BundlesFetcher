@@ -1,0 +1,10 @@
+description: 'This fires up a libvirt node which, when joined with a
+
+  kvm-test-block-src, will have its qemu instance migrated to it.
+
+  '
+name: kvm-test-block-dest
+provides:
+  slave:
+    interface: kvm-test-block-dest
+summary: Test kvm block migration - destination node

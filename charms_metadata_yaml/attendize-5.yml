@@ -1,0 +1,21 @@
+description: 'Sell tickets online.
+
+  Attendize is a free, open-source & self-hosted ticket selling and event management
+  platform.
+
+  '
+maintainer: Joe Liau <joseph@liau.ca>
+name: attendize
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+series:
+- xenial
+subordinate: false
+summary: https://www.attendize.com/
+tags:
+- social
+- ecommerce

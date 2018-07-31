@@ -1,0 +1,19 @@
+categories:
+- applications
+description: "The CakePHP framework provides a robust base for your application. It\
+  \ can \nhandle every aspect, from the user's initial request all the way to the\
+  \ final\nrendering of a web page. And since the framework follows the principles\
+  \ of \nMVC, it allows you to easily customize and extend most aspects of your \n\
+  application.\n\nThe framework also provides a basic organizational structure, from\
+  \ filenames \nto database table names, keeping your entire application consistent\
+  \ and \nlogical. This concept is simple but powerful. Follow the conventions and\
+  \ \nyou'll always know exactly where things are and how they're organized.\n"
+maintainer: Federico Gimenez Nieto <fgimenez@coit.es>
+name: cakephp
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+summary: 'CakePHP: the rapid development php framework'

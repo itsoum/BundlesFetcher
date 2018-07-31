@@ -1,0 +1,20 @@
+description: 'Subordinate charm that will connect logstash to elasticsearch
+
+  '
+maintainer: Tilman Baumann <Tilman.Baumann@canonical.com>
+name: logstash-input-elasticsearch
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  host-system:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- xenial
+- zesty
+subordinate: true
+summary: Connect logstash to read from elasticsearch
+tags:
+- elasticsearch
+- logstash

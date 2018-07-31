@@ -1,0 +1,29 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the YARN master node (ResourceManager).
+
+  '
+maintainer: bigdata-dev <bigdata-dev@canonical.com>
+name: apache-hadoop-resourcemanager
+provides:
+  benchmark:
+    interface: benchmark
+  ganglia:
+    interface: monitor
+  resourcemanager:
+    interface: mapred
+requires:
+  namenode:
+    interface: dfs
+  nodemanager:
+    interface: mapred-slave
+series:
+- xenial
+- trusty
+summary: YARN master (ResourceManager) for Apache Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

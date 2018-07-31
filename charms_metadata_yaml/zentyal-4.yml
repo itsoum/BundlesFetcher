@@ -1,0 +1,17 @@
+description: 'Zentyal is a Linux small business server that can act as
+
+  a Gateway, Unified Threat Manager, Office Server, Infrastructure
+
+  Manager, Unified Communications Server or a combination of them.
+
+  '
+name: zentyal
+provides:
+  slave:
+    interface: zentyal-slave
+  website:
+    interface: https
+requires:
+  master:
+    interface: zentyal-slave
+summary: A Linux small business server.

@@ -1,0 +1,14 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Adam Israel <adam.israel@canonical.com>
+name: resources-example
+resources:
+  words:
+    description: An insanely large dictionary.
+    filename: words.tgz
+    type: file
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- misc

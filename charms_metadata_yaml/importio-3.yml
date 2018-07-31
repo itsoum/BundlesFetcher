@@ -1,0 +1,13 @@
+categories:
+- applications
+description: "This is the import.io's application running as a command-line crawler.\
+  \ Once provided with a relation and configuration it will \ncrawl a site based on\
+  \ the configuration provided into the relation provided. \n\nFor more information\
+  \ on the command-line crawler see our support page here:- http://support.import.io/knowledgebase/articles/325728\n"
+maintainer: support@import.io
+name: importio
+requires:
+  rest:
+    interface: elasticsearch
+subordinate: false
+summary: import.io's Command Line Crawler

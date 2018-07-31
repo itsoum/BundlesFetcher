@@ -1,0 +1,17 @@
+description: 'Allows prometheus to scrape Juju internal metrics
+
+  '
+maintainer: Junien Fridrick <junien.fridrick@canonical.com>
+name: juju-introspection-proxy
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+subordinate: true
+summary: Allows prometheus to scrape Juju internal metrics
+tags:
+- monitoring
+- performance

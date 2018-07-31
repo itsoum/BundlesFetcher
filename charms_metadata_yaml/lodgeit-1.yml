@@ -1,0 +1,11 @@
+description: 'LodgeIt provides an easy way to store and view short snippets of code
+  with syntax highlighting for common languages and a built-in diff tool for comparing
+  snippets.
+
+  '
+maintainer: Nathan Osman <admin@quickmediasolutions.com>
+name: lodgeit
+provides:
+  website:
+    interface: http
+summary: A Python-based pastebin that provides storage for small code snippets.

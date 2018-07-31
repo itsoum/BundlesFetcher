@@ -1,0 +1,23 @@
+description: 'This charm installs IBM Platform Symphony node.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-symphony-node
+requires:
+  master:
+    interface: platformmaster
+  storage:
+    interface: nfsstorage
+subordinate: false
+summary: IBM Platform Symphony node
+tags:
+- ibm
+- apt
+- leadership
+- ibm
+- symphony node
+- application_optimization
+- cluster
+- virtualization
+terms:
+- lorem-ipsum/1

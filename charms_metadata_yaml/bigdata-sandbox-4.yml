@@ -1,0 +1,15 @@
+description: 'Hadoop and Spark are software platforms that lets one easily write and
+
+  run applications that process vast amounts of data.
+
+  '
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: bigdata-sandbox
+provides:
+  ganglia:
+    interface: monitor
+summary: Big Data Sandbox for Hadoop and Spark
+tags:
+- bigdata
+- hadoop
+- apache

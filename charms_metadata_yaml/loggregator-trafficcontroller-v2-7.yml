@@ -1,0 +1,18 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: loggregator-trafficcontroller-v2
+provides:
+  ltc:
+    interface: loggregator_trafficcontroller
+requires:
+  cc:
+    interface: controller
+  etcd:
+    interface: etcd
+  loggregator:
+    interface: loggregator
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: loggregator-trafficcontroller

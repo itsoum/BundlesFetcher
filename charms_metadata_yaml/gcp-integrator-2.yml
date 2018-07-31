@@ -1,0 +1,29 @@
+description: 'This charm can grant select permissions to instances of applications
+
+  related to it which enable integration with GCP specific features,
+
+  such as firewalls, load balancing, block storage, object storage, etc.
+
+  '
+display-name: GCP-Integrator
+maintainers:
+- Cory Johns <cory.johns@canonical.com>
+name: gcp-integrator
+provides:
+  gcp:
+    interface: gcp-integration
+resources:
+  gcloud:
+    description: Resource to side-load gcloud snap in network-restricted deployments.
+    filename: gcloud.snap
+    type: file
+series:
+- xenial
+- bionic
+summary: 'Pharm to enable GCP integrations via Juju relations.
+
+  '
+tags:
+- gcp
+- native
+- integration

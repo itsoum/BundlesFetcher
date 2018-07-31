@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Granola
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: topping_granola
+requires:
+  topping:
+    interface: ice-cream
+summary: Granola

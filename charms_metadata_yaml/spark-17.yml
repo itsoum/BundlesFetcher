@@ -1,0 +1,37 @@
+description: 'Apache Spark is a fast and general engine for large-scale data processing.
+
+  Learn more at http://spark.apache.org.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: spark
+peers:
+  sparkpeers:
+    interface: spark-quorum
+provides:
+  benchmark:
+    interface: benchmark
+  client:
+    interface: spark
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+requires:
+  zookeeper:
+    interface: zookeeper
+series:
+- xenial
+summary: Apache Spark from Apache Bigtop platform
+tags:
+- apache
+- big_data
+- bigtop
+- bigdata
+- hadoop
+- applications

@@ -1,0 +1,25 @@
+description: 'Open-source error tracking that helps developers monitor and fix crashes
+  in real time. Iterate continuously. Boost efficiency. Improve user experience.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: sentry
+provides:
+  http:
+    interface: http
+requires:
+  postgresql:
+    interface: pgsql
+  redis:
+    interface: redis
+resources:
+  sentry:
+    description: Semtry snap
+    filename: sentry.snap
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Traceback aggregator
+tags:
+- sentry

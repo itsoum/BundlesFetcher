@@ -1,0 +1,13 @@
+description: 'Runs vivid-edge-core-image-watcher server from a given service tarball
+  (provided as
+
+  files/vivid-edge-core-image-watcher.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: vivid-edge-core-image-watcher
+summary: 'Deploy a service to request tests for new ubuntucore images via
+
+  rabbit queue.
+
+  '

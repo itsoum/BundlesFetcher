@@ -1,0 +1,23 @@
+description: 'Cinder is the block storage service for the Openstack project.
+
+  .
+
+  This charm provides an XtremIO storage backend for Cinder
+
+  '
+maintainers:
+- Samantha Jian-Pielak <samantha.jian-pielak@canonical.com>
+name: cinder-xtremio
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: EMC XtremIO integration for OpenStack Block Storage
+tags:
+- openstack
+- storage

@@ -1,0 +1,50 @@
+description: 'Cinder is the block storage service for the OpenStack.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: cinder
+peers:
+  cluster:
+    interface: cinder-ha
+provides:
+  cinder-volume-service:
+    interface: cinder
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+  backup-backend:
+    interface: cinder-backup
+    scope: container
+  ceph:
+    interface: ceph-client
+  certificates:
+    interface: tls-certificates
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  image-service:
+    interface: glance
+  shared-db:
+    interface: mysql-shared
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+series:
+- xenial
+- bionic
+- artful
+- trusty
+summary: OpenStack block storage service
+tags:
+- openstack
+- storage
+- misc

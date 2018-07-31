@@ -1,0 +1,33 @@
+description: "Neutron is a virtual network service for OpenStack, and a part of\n\
+  Netstack. Neutron provides an API to dynamically request and configure\nvirtual\
+  \ networks. PLUMgrid is a plugin in Neutron, which takes over\nnetworking in the\
+  \ OpenStack environment.\n\nPLUMgrid Neutron Plugin enables PLUMgrid Open Networking\
+  \ Suite, which is\na secure, comprehensive and open software solution that delivers\
+  \ terabits\nof performance and scales across tens of thousands of workloads.\nThe\
+  \ product suite provides highly automated workflows that significantly\nreduce the\
+  \ deployment time of OpenStack clouds, enables users to create\nprivate Virtual\
+  \ Domains\u2122 for their projects and is compatible with the\nleading OpenStack\
+  \ distributions.\n"
+maintainer: Bilal Baqar <bbaqar@plumgrid.com>
+name: neutron-api-plumgrid
+provides:
+  neutron-plugin-api-subordinate:
+    interface: neutron-plugin-api-subordinate
+    scope: container
+  plumgrid-plugin:
+    interface: plumgrid-plugin
+requires:
+  container:
+    interface: neutron-plugin-api
+    scope: container
+  identity-admin:
+    interface: keystone-admin
+  plumgrid-configs:
+    interface: plumgrid-configs
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Openstack Neutron PLUMgrid Plugin
+tags:
+- openstack

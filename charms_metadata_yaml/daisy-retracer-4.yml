@@ -1,0 +1,17 @@
+description: 'Installs a retracer for the Daisy error reporting server for Ubuntu,
+  relates
+
+  to Cassandra and RabbitMQ.
+
+  '
+name: daisy-retracer
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+  db:
+    interface: cassandra
+summary: Daisy error reporting server retracer

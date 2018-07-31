@@ -1,0 +1,15 @@
+description: 'Run an Ubuntu system, but don''t do a whole lot else.
+
+  '
+maintainer: John Arbash Meinel <john@arbash-meinel.com>
+name: ubuntu-leader
+provides:
+  ubuntu: ubuntu
+series:
+- xenial
+- trusty
+subordinate: false
+summary: Trivial charm that exercises leadership code
+tags:
+- misc
+- application_development

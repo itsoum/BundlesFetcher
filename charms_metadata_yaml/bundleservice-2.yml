@@ -1,0 +1,19 @@
+description: Juju Bundle Service provides information about bundles.
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: bundleservice
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+resources:
+  logfile:
+    description: logs
+    filename: logs
+    type: file
+series:
+- trusty
+- xenial
+subordinate: false
+summary: provide bundle information
+tags:
+- applications

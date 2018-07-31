@@ -1,0 +1,30 @@
+description: 'A PLUMgrid Edge is an OpenStack compute node running IO Visor. IO Visor
+
+  provides the data plane and network connectivity for OpenStack tenant
+
+  instances. Communication between instances on compute nodes is enabled
+
+  by creation of VXLAN based overlay tunnels and networks.
+
+  '
+maintainer: Bilal Baqar <bbaqar@plumgrid.com>
+name: plumgrid-edge
+provides:
+  neutron-plugin:
+    interface: neutron-plugin
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+  plumgrid:
+    interface: plumgrid
+  plumgrid-plugin:
+    interface: plumgrid-plugin
+series:
+- xenial
+- trusty
+subordinate: true
+summary: PLUMgrid IO Visor Edge
+tags:
+- openstack

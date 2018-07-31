@@ -1,0 +1,16 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Adam Israel <adam.israel@canonical.com>
+name: mysql-benchmark
+provides:
+  benchmark:
+    interface: benchmark
+requires:
+  db:
+    interface: mysql
+    scope: container
+subordinate: true
+summary: Benchmark for mysql-compatible databases
+tags:
+- misc

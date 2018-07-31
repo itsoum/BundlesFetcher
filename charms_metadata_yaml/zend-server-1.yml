@@ -1,0 +1,24 @@
+description: "What Zend Server Does:\n- Helps developers write better code and solve\
+  \ issues long before their code reaches production (\u2018Left Shifting\u2019).\n\
+  - Automates all steps in the release of PHP applications, from code to production,\
+  \ including provisioning, versioning and rollback.\n- Optimizes performance through\
+  \ dynamic scaling, code acceleration, code and data caching, job queuing and more.\n\
+  - Helps to detect and fix production issues in applications, faster and with less\
+  \ disruption.\n- See README for how to deploy. Use the regular Apache htdocs for\
+  \ basic PHP usage. Log into the Zend Server gui at http://<Server_IP>:10081/ZendServer\
+  \ for advanced usage.\n"
+maintainer: Amir Friedman <amir@zend.com>
+name: zend-server
+peers:
+  cluster:
+    interface: mysql
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql-root
+subordinate: false
+summary: Zend Server is the integrated PHP application platform
+tags:
+- app-servers

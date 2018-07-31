@@ -1,0 +1,16 @@
+description: 'benchmark-collector uses collectd to capture system metrics.
+
+  '
+maintainer: Adam Israel <adam.israel@canonical.com>
+name: benchmark-collector
+provides:
+  collector:
+    interface: benchmark-collector
+requires:
+  benchmark:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: A collectd daemon that collects system performance metrics.
+tags:
+- misc

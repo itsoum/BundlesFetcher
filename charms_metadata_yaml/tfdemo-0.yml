@@ -1,0 +1,19 @@
+description: 'This demo web application displays a form where you can paste in the
+
+  URL to an image to be classified by a remote Tensorflow model.
+
+  '
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: tfdemo
+provides:
+  website:
+    interface: http
+requires:
+  client:
+    interface: tf-inception-api
+series:
+- xenial
+subordinate: false
+summary: Demo image classification with remote Tensorflow model
+tags:
+- misc

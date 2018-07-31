@@ -1,0 +1,12 @@
+description: 'Install and manage locust loadtesting.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: locust
+provides:
+  locust:
+    interface: load-test
+subordinate: false
+summary: Install and manage locust loadtesting.
+tags:
+- ops

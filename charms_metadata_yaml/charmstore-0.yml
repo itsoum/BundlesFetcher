@@ -1,0 +1,11 @@
+description: The Juju charm store serves charm metadata and content to Juju and supporting
+  services.
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: charmstore
+provides:
+  website:
+    interface: http
+requires:
+  mongo:
+    interface: mongodb
+summary: Juju charm store service

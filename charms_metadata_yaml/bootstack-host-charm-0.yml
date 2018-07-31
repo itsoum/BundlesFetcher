@@ -1,0 +1,8 @@
+description: 'This simply deploys Ubuntu Server.
+
+  '
+maintainer: Charmers <juju@lists.ubuntu.com>
+name: ubuntu
+summary: A pristine Ubuntu Server
+tags:
+- misc

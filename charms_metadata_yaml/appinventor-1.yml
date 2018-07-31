@@ -1,0 +1,20 @@
+description: 'MIT App Inventor is a blocks-based programming tool that allows everyone,
+
+  even novices, to start programming and build fully functional apps for
+
+  Android devices.
+
+  '
+maintainer: Chris Donati <chrisdonati@gmail.com>
+name: appinventor
+provides:
+  website:
+    interface: http
+requires:
+  appscale:
+    interface: http
+    scope: container
+subordinate: true
+summary: An programming tool for building Android apps.
+tags:
+- application_development

@@ -1,0 +1,16 @@
+description: 'Simple client to test rabbitmq-server
+
+  '
+maintainer: David Ames <david.ames@canonical.com>
+name: amqp-client
+requires:
+  amqp:
+    interface: rabbitmq
+series:
+- xenial
+- trusty
+- yakkety
+subordinate: false
+summary: Simple client to test rabbitmq-server
+tags:
+- misc

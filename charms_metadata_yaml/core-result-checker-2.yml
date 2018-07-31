@@ -1,0 +1,13 @@
+description: 'Runs core-result-checker server from a given service tarball (provided
+  as
+
+  files/core-result-checker.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: core-result-checker
+summary: 'Deploy a service to request tests for new ubuntucore images via
+
+  rabbit queue.
+
+  '

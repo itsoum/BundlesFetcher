@@ -1,0 +1,8 @@
+description: 'OpenERP is an open source business application to manage HR, finance...
+
+  '
+name: openerp
+requires:
+  db:
+    interface: pgsql
+summary: Open source business application

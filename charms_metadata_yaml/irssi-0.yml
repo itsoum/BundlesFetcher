@@ -1,0 +1,13 @@
+description: 'Irssi is a terminal based IRC client for UNIX systems. It also supports
+
+  SILC and ICB protocols via plugins.  Features include: * Autologging *
+
+  Formats and themes * Configurable keybindings * Paste detection * Perl
+
+  scripting * Irssi-proxy * Transparent upgrading * Recode support
+
+  This charm is just an experiment using puppet in the install script.
+
+  '
+name: irssi
+summary: terminal based IRC client

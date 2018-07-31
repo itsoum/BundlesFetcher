@@ -1,0 +1,13 @@
+description: Doesn't do anything at all.
+maintainer: Nate Finch <nate.finch@gmail.com>
+name: starsay
+resources:
+  data:
+    description: Data the charm code works with.
+    filename: data.go
+    type: file
+series:
+- xenial
+summary: A dumb little test charm for resources.
+tags:
+- application

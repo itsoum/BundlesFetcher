@@ -1,0 +1,13 @@
+categories:
+- misc
+description: Ralf charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-ralf
+peers:
+  ralf-relation:
+    interface: ralf-interface
+requires:
+  dns-agent:
+    interface: dns-register
+subordinate: false
+summary: Ralf charm for Project Clearwater

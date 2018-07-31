@@ -1,0 +1,9 @@
+description: 'An HTTP/HTTPS stress tester
+
+  '
+maintainer: dann frazier <dann.frazier@canonical.com>
+name: siege
+requires:
+  website:
+    interface: http
+summary: HTTP regression testing and benchmarking utility

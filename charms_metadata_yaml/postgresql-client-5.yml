@@ -1,0 +1,20 @@
+description: 'The ''psql'' PostgreSQL command line client, providing command line
+
+  access to a PostgreSQL Juju Application. It is useful for testing,
+
+  or when shell access to the PostgreSQL service is not suitable.
+
+  '
+maintainer: Stuart Bishop <stuart.bishop@canonical.com>
+name: postgresql-client
+requires:
+  db:
+    interface: pgsql
+series:
+- xenial
+- trusty
+- bionic
+subordinate: false
+summary: front-end programs for PostgreSQL (supported version)
+tags:
+- database

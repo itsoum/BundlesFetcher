@@ -1,0 +1,24 @@
+description: "A highly-available key value store for shared configuration and service\n\
+  discovery. etcd is inspired by Apache ZooKeeper and doozer, with a\nfocus on being:\n\
+  \n Simple: curl'able user facing API (HTTP+JSON)\n Secure: optional SSL client cert\
+  \ authentication\n Fast: benchmarked 1000s of writes/s per instance\n Reliable:\
+  \ properly distributed using Raft\n\netcd is written in Go and uses the Raft consensus\
+  \ algorithm to\nmanage a highly-available replicated log.\n"
+maintainers:
+- Whit Morriss <whit.morriss@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+- Matt Bruzek <matthew.bruzek@canonical.com>
+name: etcd
+peers:
+  cluster:
+    interface: etcd-raft
+provides:
+  client:
+    interface: etcd
+  proxy:
+    interface: etcd-proxy
+summary: A distributed key value store for configuration and service discovery.
+tags:
+- coordination
+- service discovery
+- ops

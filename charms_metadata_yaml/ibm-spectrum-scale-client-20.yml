@@ -1,0 +1,40 @@
+description: "IBM Spectrum Scale is a flexible software-defined storage that can be\
+  \ deployed as high performance file storage\nor a cost optimized large-scale content\
+  \ repository. IBM Spectrum Scale, previously known as IBM General Parallel\nFile\
+  \ System (GPFS), is built from the ground up to scale performance and capacity with\
+  \ no bottlenecks.\nA client node is any server that has the Spectrum Scale product\
+  \ installed but do not support direct attached disks.\nA client node will not be\
+  \ part of the node pool from where file system managers and token managers are selected.\
+  \ \n"
+extra-bindings:
+  storage_network: null
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-spectrum-scale-client
+peers:
+  quorum:
+    interface: gpfs
+provides:
+  client:
+    interface: spectrum-scale-client
+requires:
+  gpfsmanager:
+    interface: gpfs
+resources:
+  ibm_spectrum_scale_client_fixpack:
+    description: IBM Spectrum Scale fixpack install archive
+    filename: Spectrum_Scale_Standard_Fixpack.tar.gz
+    type: file
+  ibm_spectrum_scale_installer_client:
+    description: IBM Spectrum Scale install archive
+    filename: ibm_spectrum_scale_installer.tar.gz
+    type: file
+series:
+- xenial
+summary: IBM SPECTRUM SCALE CLIENT
+tags:
+- ibm
+- gpfs
+- filesystem
+- storage
+terms:
+- ibm-spectrum-scale/1

@@ -1,0 +1,41 @@
+description: 'Samhain is an integrity checker and host intrusion detection system
+  that
+
+  can be used on single hosts as well as large, UNIX-based networks. It
+
+  supports central monitoring as well as powerful (and new) stealth
+
+  features to run undetected on memory using steganography.  Main
+
+  features    * Complete integrity check         + uses cryptographic
+
+  checksums of files to detect           modifications,         + can
+
+  find rogue SUID executables anywhere on disk, and    * Centralized
+
+  monitoring         + native support for logging to a central server
+
+  via encrypted           and authenticated connections    * Tamper
+
+  resistance         + database and configuration files can be signed
+
+  + logfile entries and e-mail reports are signed         + support for
+
+  stealth operation
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: samhain
+provides:
+  logrotate:
+    interface: logrotate
+  nrpe-external-master:
+    interface: nrpe-external-master
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Data integrity and host intrusion alert system
+tags:
+- security

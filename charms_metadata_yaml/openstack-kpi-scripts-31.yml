@@ -1,0 +1,11 @@
+description: 'Scripts to gather OpenStack KPIs from external sources.
+
+  '
+maintainers:
+- James Page <james.page@ubuntu.com>
+name: openstack-kpi-scripts
+series:
+- xenial
+summary: Scripts to gather OpenStack KPIs from external sources
+tags:
+- kpi

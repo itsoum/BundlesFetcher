@@ -1,0 +1,24 @@
+description: 'The Storage Made Easy File Fabric enables IT to regain control of
+
+  "cloud data sprawl" by unifying on-premises and cloud storage into a single,
+
+  easily managed, converged infrastructure with policy-based controls for
+
+  governance, audit and security. This charm downloads and installs File Fabric
+
+  on an Ubuntu system.
+
+  '
+maintainer: Storage Made Easy <support@storagemadeeasy.com>
+name: sme
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+series:
+- xenial
+summary: Storage Made Easy File Fabric for enterprise file sync and share
+tags:
+- applications

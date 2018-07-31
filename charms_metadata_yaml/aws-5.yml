@@ -1,0 +1,27 @@
+description: 'This charm can grant select permissions to instances of applications
+
+  related to it which enable integration with AWS specific features,
+
+  such as ELB, EBS, etc.
+
+  '
+maintainers:
+- Cory Johns <johnsca@gmail.com>
+name: aws
+provides:
+  aws:
+    interface: aws
+resources:
+  aws-cli:
+    description: Resource to side-load aws-cli snap in network-restricted deployments.
+    filename: aws-cli.snap
+    type: file
+series:
+- xenial
+summary: 'Proxy charm to enable AWS integrations via Juju relations.
+
+  '
+tags:
+- aws
+- native
+- integration

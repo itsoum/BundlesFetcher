@@ -1,0 +1,16 @@
+description: 'This subordinate charm copies the necessairy files to enable the use
+  of google-type clouds and restarts the api.
+
+  '
+maintainer: Sebastien Pattyn <sebastien.pattyn@tengu.io>
+name: controller-google
+requires:
+  sojobo:
+    interface: sojobo
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Enables the use of google-clouds in the Sojobo-api
+tags:
+- misc

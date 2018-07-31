@@ -1,0 +1,15 @@
+description: 'CephDash is a dashboard that goes along with the ceph-collector
+
+  '
+maintainers:
+- Chris MacNaughton <chris.macnaughton@canonical.com>
+name: ceph-dash
+requires:
+  influx:
+    interface: influxdb-api
+series:
+- xenial
+- trusty
+summary: CephDash is a dashboard for Ceph metrics
+tags:
+- monitoring

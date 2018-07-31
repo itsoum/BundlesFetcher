@@ -1,0 +1,19 @@
+categories:
+- miscellaneous
+description: 'Provides an Ubuntu archive mirror and keeps it up-to-date using rsync
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: ubuntu-mirror
+provides:
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  log-archive:
+    interface: log-archive
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  ubuntu-mirror:
+    interface: ubuntu-mirror
+summary: Mirror of archive.ubuntu.com

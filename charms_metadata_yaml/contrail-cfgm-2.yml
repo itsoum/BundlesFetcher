@@ -1,0 +1,21 @@
+categories:
+- misc
+description: 'Runs Contrail configuration manager (config-node)
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-cfgm
+peers:
+  cluster:
+    interface: cfgm-cluster
+provides:
+  cfgm:
+    interface: cfgm
+requires:
+  collector:
+    interface: collector
+  database:
+    interface: cassandra
+  openstack:
+    interface: keystone
+summary: Contrail controller 'cfgm' role

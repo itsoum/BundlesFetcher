@@ -1,0 +1,16 @@
+description: 'This charm has been superceeded by apache-hadoop-hdfs-secondary. No
+  future updates will be made to this charm. Please update any references to this
+  charm with apache-hadoop-hdfs-secondary.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: apache-hadoop-hdfs-checkpoint
+requires:
+  hdfs-master:
+    interface: dfs
+summary: HDFS Checkpoint node (i.e. Secondary Namenode) for Apache Hadoop
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

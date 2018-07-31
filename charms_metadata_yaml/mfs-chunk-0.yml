@@ -1,0 +1,10 @@
+description: 'MFS Distributed storage and file system chunk server
+
+  '
+name: mfs-chunk
+requires:
+  mfs-master:
+    interface: mfs
+  mfs-metalogger:
+    interface: mfs
+summary: MFS Distributed storage and file system chunk server

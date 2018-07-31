@@ -1,0 +1,38 @@
+categories:
+- app-servers
+description: 'BitTornado is a bittorrent client built on the original BitTorrent
+
+  client from BitTorrent Inc.
+
+
+  This client features a console and curses mode, lots of features, and is   one of
+  the original bittorrent clients created.
+
+
+  Features include:
+
+  * upload/download speed limitation
+
+  * prioritised downloading when downloading batches (several files)
+
+  * detailed information about connections to other peers
+
+  * encryption (PE/MSE) support (with the recommended python-crypto)
+
+  * console mode for running from scripts
+
+  * curses mode for running interactively
+
+  * tracker for the distribution of files
+
+
+  This charm installs the bittornado package without GUI.
+
+  It is primarily intended for running a headless tracker and/or seeder
+
+  in a cloud environment.
+
+  '
+maintainer: Alexander List <alexander.list@canonical.com>
+name: bittornado
+summary: bittorrent client (and tracker) with console and curses interfaces

@@ -1,0 +1,20 @@
+categories:
+- applications
+description: 'Installs a Chef server (Opscode) which can then be used to deploy other
+
+  services.
+
+  '
+maintainer: Edward Hope-Morley <edward.hope-morley@canonical.com>
+name: chef-server
+provides:
+  http-rest-api:
+    interface: http
+    optional: false
+    scope: global
+  website:
+    interface: http
+    limit: 1
+    optional: false
+    scope: global
+summary: Installs a Chef Server.

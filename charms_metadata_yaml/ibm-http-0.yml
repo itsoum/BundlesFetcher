@@ -1,0 +1,66 @@
+description: 'IBM HTTP Server is a full-featured web server that is included with
+  other products such as IBM WebSphere Application Server at no charge.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-http
+requires:
+  ihs:
+    interface: was-ihs
+    scope: container
+resources:
+  ibm_http_installer1:
+    description: Http Server installer part1 archive.
+    filename: ibm_http.installer1.zip
+    type: file
+  ibm_http_installer2:
+    description: Http Server installer part2 archive.
+    filename: ibm_http.installer2.zip
+    type: file
+  ibm_http_installer3:
+    description: Http Server installer part3 archive..
+    filename: ibm_http.installer3.zip
+    type: file
+  ibm_http_server_WCT_fixpack1:
+    description: Http Server fix pack WCT part1 archive.
+    filename: ibm_http_server_WCT_fixpack1.zip
+    type: file
+  ibm_http_server_fixpack1:
+    description: Http Server fix pack part1 archive.
+    filename: ibm_http_server_fixpack1.zip
+    type: file
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+series:
+- xenial
+- trusty
+- xenial
+- trusty
+- xenial
+- trusty
+subordinate: true
+summary: IBM HTTP-SERVER Product
+tags:
+- ibm
+- im
+- ibm-z
+- ibm
+- im
+- ibm-z
+- ibm
+- im
+- ibm-z
+- was-ihs
+terms:
+- ibmcharmers/ibm-im/1
+- ibmcharmers/ibm-im/1
+- ibmcharmers/ibm-im/1
+- ibm-http-z/1
+- ibm-http-plg-z/1
+- ibm-http-wct-z/1

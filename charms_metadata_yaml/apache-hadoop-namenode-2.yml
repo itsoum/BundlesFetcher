@@ -1,0 +1,29 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the HDFS master node (NameNode).
+
+  '
+maintainer: bigdata-dev <bigdata-dev@canonical.com>
+name: apache-hadoop-namenode
+peers:
+  namenode-cluster:
+    interface: namenode-cluster
+provides:
+  benchmark:
+    interface: benchmark
+  ganglia:
+    interface: monitor
+  namenode:
+    interface: dfs
+requires:
+  datanode:
+    interface: dfs-slave
+  zookeeper:
+    interface: zookeeper
+summary: HDFS master (NameNode) for Apache Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

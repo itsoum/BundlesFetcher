@@ -1,0 +1,14 @@
+description: 'Provides a kubernetes node for running containers
+
+  See http://goo.gl/CSggxE
+
+  '
+name: kubernetes
+requires:
+  api:
+    interface: kubernetes-api
+  etcd:
+    interface: etcd
+  network:
+    interface: overlay-network
+summary: Container Cluster Management Node

@@ -1,0 +1,11 @@
+categories:
+- cache
+description: 'Solr
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: solr
+provides:
+  serach:
+    interface: solr
+summary: hey

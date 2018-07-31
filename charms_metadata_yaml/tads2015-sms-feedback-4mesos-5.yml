@@ -1,0 +1,22 @@
+description: 'Send sms when call is completed
+
+  '
+maintainer: gedubina <gdubina@dataart.com>
+name: tads2015-sms-feedback-4mesos
+provides:
+  haproxy:
+    interface: http
+requires:
+  mesos:
+    interface: juju-info
+    scope: container
+  recorder:
+    interface: http
+  redis:
+    interface: redis
+  restcomm:
+    interface: http
+subordinate: true
+summary: Send sms when call is completed
+tags:
+- misc

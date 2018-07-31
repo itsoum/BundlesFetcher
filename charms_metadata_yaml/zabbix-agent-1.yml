@@ -1,0 +1,18 @@
+categories:
+- applications
+description: 'Zabbix is the ultimate enterprise-level software designed for monitoring
+  availability and performance of IT infrastructure components. Zabbix is open source
+  and comes at no cost.
+
+  '
+maintainer: Samuel Cozannet <samuel.cozannet@canonical.com>
+name: zabbix-agent
+provides:
+  agent:
+    interface: zabbix-info
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: network monitoring solution - agent

@@ -1,0 +1,19 @@
+description: This connects to Hue and publishes a MR job to Hadoop to analyze tweets.
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: mr-twitter
+provides:
+  mr-twitter:
+    interface: mr-twitter
+requires:
+  cm-agent:
+    interface: cm
+  db:
+    interface: redis
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: This is a sentiment analysis Map Reduce to publish on a Hadoop Cluster
+tags:
+- social
+- big_data

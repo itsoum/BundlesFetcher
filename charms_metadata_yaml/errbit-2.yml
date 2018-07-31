@@ -1,0 +1,18 @@
+categories:
+- application
+description: 'Will deploy Errbit, Nginx, MongoDB and Sendmail by default.
+
+  '
+maintainer: Charles Butler <chuck@dasroot.net>
+name: errbit
+peers:
+  errbit:
+    interface: errbit
+provides:
+  website:
+    interface: http
+requires:
+  mongodb:
+    interface: mongodb
+    optional: true
+summary: errbit is an open source exception catcher

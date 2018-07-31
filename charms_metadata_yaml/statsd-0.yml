@@ -1,0 +1,17 @@
+description: "A network daemon that runs on the Node.js platform \nand listens for\
+  \ statistics, like counters and timers,\nsent over UDP or TCP and sends aggregates\
+  \ to one or more pluggable backend services (e.g., Graphite).\n\nIt requires a relation\
+  \ to the influxdb charm.\n\nExample: \n   juju deploy cs:~alesstimec/trusty/statsd\n\
+  \   juju deploy cs:~alesstimec/trusty/influxdb\n   juju add-relation statsd influxdb\n"
+maintainer: Ales Stimec <Ales.Stimec@ubuntu>
+name: statsd
+provides:
+  monitoring:
+    interface: statsd
+requires:
+  db-api:
+    interface: influxdb-api
+subordinate: false
+summary: A statsd network daemon.
+tags:
+- monitoring

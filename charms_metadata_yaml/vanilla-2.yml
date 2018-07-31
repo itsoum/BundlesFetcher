@@ -1,0 +1,19 @@
+description: 'Vanilla is designed to deploy and grow small communities to scale.
+
+  This charm deploys Vanilla Forums as outlined by the Vanilla Forums installation
+  guide.
+
+  '
+maintainer: Your Name <your@email.tld>
+name: vanilla
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+series:
+- trusty
+summary: Vanilla is an open-source, pluggable, themeable, multi-lingual forum.
+tags:
+- social

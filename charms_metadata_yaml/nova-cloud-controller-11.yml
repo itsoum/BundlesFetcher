@@ -1,0 +1,43 @@
+categories:
+- openstack
+description: 'Cloud controller node for Openstack nova.  Contains nova-schedule,
+
+  nova-api, nova-network and nova-objectstore.
+
+  '
+maintainer: Adam Gandelman <adamg@canonical.com>
+name: nova-cloud-controller
+peers:
+  cluster:
+    interface: nova-ha
+provides:
+  cloud-controller:
+    interface: nova
+requires:
+  amqp:
+    interface: rabbitmq
+  cinder-volume-service:
+    interface: cinder
+  cloud-compute:
+    interface: nova-compute
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  image-service:
+    interface: glance
+  nova-vmware:
+    interface: nova-vmware
+    scope: container
+  nova-volume-service:
+    interface: nova-volume
+  pgsql-neutron-db:
+    interface: pgsql
+  pgsql-nova-db:
+    interface: pgsql
+  quantum-network-service:
+    interface: quantum
+  shared-db:
+    interface: mysql-shared
+summary: Openstack nova controller node.

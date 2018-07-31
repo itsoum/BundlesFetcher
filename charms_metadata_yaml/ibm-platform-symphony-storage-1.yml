@@ -1,0 +1,36 @@
+description: 'This charm provides storage server for IBM Platform Symphony so that
+  symphony master and compute node can be installed in the remote machine.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-platform-symphony-storage
+provides:
+  storage:
+    interface: nfsstorage
+resources:
+  ibm_ps_entitlement:
+    description: IBM Platform Symphony entitlement file.
+    filename: ibm_ps_entitlement.dat
+    type: file
+  ibm_ps_installer:
+    description: IBM Platform Symphony installation package
+    filename: ibm_ps_installer.bin
+    type: file
+series:
+- trusty
+- xenial
+subordinate: false
+summary: IBM Platform Symphony Storage
+tags:
+- ibm
+- apt
+- leadership
+- ibm
+- symphony
+- storage_server
+- application_optimization
+- cluster
+- virtualization
+terms:
+- ibm-platform-symphony/1

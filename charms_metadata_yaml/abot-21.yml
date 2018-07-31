@@ -1,0 +1,22 @@
+description: "A Test Automation Framework for network services that is built on the\
+  \ behaviour-oriented testing model. \nThis enables users to define test cases as\
+  \ feature files based on domain-specific language. \nThese feature files could subsequently\
+  \ be executed in automated manner on multiple environments.\n"
+maintainer: Rebaca Technologies <reachus@rebaca.com>
+name: abot
+requires:
+  cscf-abot:
+    interface: 3GPP-Gm
+    optional: true
+  hss-abot:
+    interface: homestead-prov-interface
+    optional: true
+  programmable-multiple:
+    interface: dns-multi
+    optional: true
+subordinate: false
+summary: An Automation Framework built on behaviour-oriented testing model
+tags:
+- misc
+- test-automation
+- ims

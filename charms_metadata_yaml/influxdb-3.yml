@@ -1,0 +1,21 @@
+description: 'Scalable Time Series DB for use with Grafana.
+
+  Derived from: cs:~alesstimec/influxdb/trusty/0
+
+  '
+maintainers:
+- Ales Stimec <ales.stimec@canonical.com>
+- Chris MacNaughton <chris.macnaughton@canonical.com>
+name: influxdb
+provides:
+  admin:
+    interface: http
+  api:
+    interface: influxdb-api
+  datastore:
+    interface: sockserver
+  query:
+    interface: influxdb-http
+summary: Scalable Time Series DB
+tags:
+- database

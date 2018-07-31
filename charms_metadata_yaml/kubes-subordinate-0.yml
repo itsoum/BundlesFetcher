@@ -1,0 +1,25 @@
+description: 'Provides a kubernetes node for running containers
+
+  See http://goo.gl/CSggxE
+
+  '
+maintainers:
+- Matt Bruzek <matthew.bruzek@canonical.com>
+- Whit Morris <whit.morris@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+name: kubes-subordinate
+requires:
+  api:
+    interface: kubernetes-api
+  docker-host:
+    interface: juju-info
+    scope: container
+  etcd:
+    interface: etcd
+  network:
+    interface: overlay-network
+subordinate: true
+summary: Container Cluster Management Node
+tags:
+- ops
+- network

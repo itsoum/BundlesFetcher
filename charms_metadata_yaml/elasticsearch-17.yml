@@ -1,0 +1,43 @@
+description: 'Elasticsearch is a search server based on Lucene. It provides a
+
+  distributed, multitenant-capable full-text search engine with a
+
+  RESTful web interface and schema-free JSON documents.  This package
+
+  contains the infrastructure needed to an ElasticSearch node.
+
+  '
+extra-bindings:
+  cluster: null
+  public: null
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: elasticsearch
+peers:
+  member:
+    interface: elasticsearch
+provides:
+  client:
+    interface: elasticsearch
+  provide-master:
+    interface: elasticsearch
+requires:
+  require-master:
+    interface: elasticsearch
+resources:
+  elastic-deb:
+    description: Deb as obtained from https://www.elastic.co/downloads
+    filename: elastic.deb
+    type: file
+series:
+- xenial
+storage:
+  data:
+    location: /srv/elasticsearch-data
+    type: filesystem
+subordinate: false
+summary: Open Source, Distributed, RESTful Search Engine
+tags:
+- elastic
+- misc
+- installer
+- elasticsearch

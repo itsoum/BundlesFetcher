@@ -1,0 +1,17 @@
+description: 'This charm implements the interface reverseproxy so that charms that
+  do not support the interface can be related
+
+  without modifying the original charm.
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: reverseproxy
+requires:
+  reverseproxy:
+    interface: reverseproxy
+series:
+- xenial
+subordinate: false
+summary: Implements the reverseproxy interface
+tags:
+- misc

@@ -1,0 +1,13 @@
+categories:
+- applications
+description: "Shelr.tv is a service and a tool for terminal screencasting. Service\
+  \ allow you to share your terminal \nrecords like this (http://shelr.tv/records/4f427daf96a5690001000003)\n"
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: shelrtv
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mongodb
+summary: Shelr.tv - record your shell and publish it

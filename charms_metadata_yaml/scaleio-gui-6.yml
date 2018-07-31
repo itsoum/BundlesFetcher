@@ -1,0 +1,12 @@
+description: 'ScaleIO GUI
+
+  '
+maintainer: Alexandre Levine <alexandrelevine@gmail.com>
+name: scaleio-gui
+series:
+- xenial
+- trusty
+- precise
+summary: ScaleIO GUI service
+tags:
+- storage

@@ -1,0 +1,21 @@
+description: 'IBM MQ provides for messaging services to transport multiple types of
+  data.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-mq
+provides:
+  messaging:
+    interface: ibm-mq
+subordinate: false
+summary: IBM MQ messaging Product
+tags:
+- ibm
+- ibm
+- apt
+- leadership
+- mq
+- misc
+- ibm
+- messaging

@@ -1,0 +1,49 @@
+description: 'The OpenStack Dashboard provides a full feature web interface for interacting
+
+  with instances, images, volumes and networks within an OpenStack deployment.
+
+  '
+extra-bindings:
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: openstack-dashboard
+peers:
+  cluster:
+    interface: openstack-dashboard-ha
+provides:
+  dashboard-plugin:
+    interface: dashboard-plugin
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+  websso-trusted-dashboard:
+    interface: websso-trusted-dashboard
+requires:
+  certificates:
+    interface: tls-certificates
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+  websso-fid-service-provider:
+    interface: websso-fid-service-provider
+resources:
+  theme:
+    description: Custom dashboard theme
+    filename: theme.tgz
+    type: file
+series:
+- xenial
+- bionic
+- cosmic
+- trusty
+summary: Web dashboard for OpenStack
+tags:
+- openstack
+- misc

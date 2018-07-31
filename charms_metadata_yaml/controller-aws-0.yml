@@ -1,0 +1,16 @@
+description: 'This subordenate charm copies the necessairy files to enable the use
+  of aws-type clouds and restarts the api.
+
+  '
+maintainer: Mathijs Moerman <mathijs.moerman@qrama.io>
+name: controller-aws
+requires:
+  sojobo:
+    interface: sojobo
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Enables the use of aws-clouds in the Sojobo-api
+tags:
+- misc

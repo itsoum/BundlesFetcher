@@ -1,0 +1,15 @@
+categories:
+- misc
+description: 'Sets up a PyPi caching mirror service
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: pypi-mirror
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+subordinate: false
+summary: Creates a PyPi Caching Mirror

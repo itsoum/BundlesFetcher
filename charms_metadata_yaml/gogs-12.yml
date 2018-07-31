@@ -1,0 +1,23 @@
+description: 'A painless self-hosted Git service.
+
+  '
+maintainer: Casey Marshall <charmed@cmars.tech>
+name: gogs
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+resources:
+  bdist:
+    description: Binary distribution of gogs, obtained from https://gogs.io
+    filename: gogs.tar.gz
+    type: file
+series:
+- trusty
+- xenial
+summary: Go Git Service
+tags:
+- applications
+- git

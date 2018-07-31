@@ -1,0 +1,11 @@
+description: Basic LDAP install with know test data (see files/)
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: ldap-test-fixture
+series:
+- xenial
+- trusty
+- yakkety
+- zesty
+summary: LDAP test fixture for OpenStack Testing
+tags:
+- misc

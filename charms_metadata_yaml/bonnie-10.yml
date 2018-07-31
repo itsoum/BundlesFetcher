@@ -1,0 +1,9 @@
+description: "A subordinate charm that executes Bonnie++ \n"
+maintainer: Michael Reed <michael.reed@canonical.com>
+name: bonnie
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Bonnie++ Benchmark

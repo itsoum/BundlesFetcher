@@ -1,0 +1,18 @@
+description: 'Thruk web interface for multiple backends of Nagios
+
+  '
+maintainer: Brad Marshall <bradm@serenity>
+name: thruk-master
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: httpd
+requires:
+  thruk-agent:
+    interface: thruk-agent
+subordinate: false
+summary: Thruk web interface for multiple backends of Nagios
+tags:
+- ops, monitoring

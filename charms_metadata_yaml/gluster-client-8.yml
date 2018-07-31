@@ -1,0 +1,16 @@
+description: 'For connecting Gluster as a Shared Filesystem to other services
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: gluster-client
+provides:
+  shared-fs:
+    interface: mount
+requires:
+  gluster-server:
+    interface: gluster
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Cluster Filesystem Client

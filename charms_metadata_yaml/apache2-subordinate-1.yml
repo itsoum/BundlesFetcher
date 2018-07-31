@@ -1,0 +1,16 @@
+categories:
+- app-servers
+description: Apache2 subordinate charm
+maintainer: Jacek Nykis <jacek.nykis@canonical.com>
+name: apache2-subordinate
+provides:
+  log-archive:
+    interface: log-archive
+  website:
+    interface: http
+requires:
+  webservice:
+    interface: webservice
+    scope: container
+subordinate: true
+summary: Apache2 subordinate charm

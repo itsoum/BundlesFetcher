@@ -1,0 +1,10 @@
+description: 'Runs adt-image-mapper using gunicorn from given code tarball
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: adt-image-mapper
+provides:
+  website:
+    interface: http
+    optional: true
+summary: Deploys a web_app to provide cloud image metadata for tests

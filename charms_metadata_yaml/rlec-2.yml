@@ -1,0 +1,13 @@
+description: 'Redis Labs Enterprise Cluster enables you to install an enterprise-grade
+  cluster that acts as a container for managing and running multiple Redis databases
+  in a highly available and scalable manner, with predictable and stable top performance.
+
+  '
+maintainer: matan@redislabs.com
+name: rlec
+peers:
+  node:
+    interface: rlec-node
+summary: Redis Labs Enterprise Cluster
+tags:
+- database

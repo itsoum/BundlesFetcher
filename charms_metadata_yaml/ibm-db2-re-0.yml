@@ -1,0 +1,24 @@
+description: 'IBM DB2 Recovery Expert for Linux, UNIX, and Windows is a data analysis
+  and recovery tool that accesses DB2 systems through a browser client and a command
+  line processor (CLP)
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-db2-re
+resources:
+  ibm_db2_re_installer:
+    description: IBM DB2 Recovery expert installer archive
+    filename: ibm_db2_re_installer.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: IBM DB2 RecoveryExpert
+tags:
+- ibm
+- ibm-z
+- db2 re
+- database
+- misc
+terms:
+- ibmcharmers/ibm-db2-re/1

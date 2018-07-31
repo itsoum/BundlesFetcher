@@ -1,0 +1,22 @@
+description: This charm will install a simple Sentiment Analysis Storm Topology on
+  a Storm Cluster.
+maintainer: Samuel Cozannet <Samuel.Cozannet@desktop01>
+name: storm-twitter
+provides:
+  storm-twitter:
+    interface: storm-twitter
+requires:
+  db:
+    interface: redis
+  nimbus:
+    interface: nimbus
+    scope: container
+  nodejs:
+    interface: http
+  zookeeper:
+    interface: zookeeper
+subordinate: true
+summary: This is a simple sentiment topology to deploy on a Storm Cluster
+tags:
+- social
+- big_data

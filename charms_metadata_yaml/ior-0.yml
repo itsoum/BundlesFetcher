@@ -1,0 +1,19 @@
+description: 'interfaces and access patterns.  IOR uses MPI for process
+
+  synchronization. IOR version 2 is a complete rewrite of the original
+
+  IOR (Interleaved-Or-Random) version 1 code.
+
+  '
+maintainer: Max Speransky <speransky@gmail.com>
+name: ior
+provides:
+  ior:
+    interface: ior
+requires:
+  shared-fs:
+    interface: lustre
+subordinate: false
+summary: IOR can be used for testing performance of parallel file systems
+tags:
+- misc

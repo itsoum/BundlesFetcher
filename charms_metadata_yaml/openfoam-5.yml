@@ -1,0 +1,37 @@
+categories:
+- applications
+description: 'The OpenFOAM (Open Field Operation and Manipulation) CFD Toolbox is
+  a free, open source CFD software package developed by OpenCFD Ltd at ESI Group and
+  distributed by the OpenFOAM Foundation. It has a large user base across most areas
+  of engineering and science, from both commercial and academic organisations. OpenFOAM
+  has an extensive range of features to solve anything from complex fluid flows involving
+  chemical reactions, turbulence and heat transfer, to solid dynamics and electromagnetics.
+  It includes tools for meshing, and for pre- and post-processing. Almost everything
+  runs in parallel as standard, enabling users to take full advantage of computer
+  hardware at their disposal.
+
+  By being open, OpenFOAM offers users complete freedom to customise and extend its
+  existing functionality, either by themselves or through support from OpenCFD. It
+  follows a highly modular code design in which collections of functionality (e.g.
+  numerical methods, meshing, physical models, etc.) are each compiled into their
+  own shared library. OpenFOAM includes over 80 solver applications that simulate
+  specific problems in engineering mechanics and over 170 utility applications that
+  perform pre- and post-processing tasks, e.g. meshing, data visualisation, etc.
+
+  The user sets a case according to the usual file structure and organization of OpenFOAM
+  cases. The decomposeParDict dictionary that provides case decomposition information
+  must be located in the case/system directory. Its correct settings of equal distribution
+  to all listed cores are automatically written by the charm. Solver information are
+  read from the main controlDict dictionary, also located in the case/system directory.
+  The charm executes the necessary applications in a correct order, including pre-processing,
+  case decomposition, solver run, and case reconstruction. The post-processing can
+  then be performed by user with a paraFoam application.
+
+  '
+maintainer: Ales Stimec <ales.stimec@xlab.si>
+name: openfoam
+provides:
+  openfoam:
+    interface: openfoam_rel
+subordinate: false
+summary: This charms the OpenFOAM to install itself on the target machine.

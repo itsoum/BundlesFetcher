@@ -1,0 +1,22 @@
+description: 'Spirent code for VNF Lifecycle Validation
+
+  '
+maintainer: Spirent
+name: vnflcv
+provides:
+  restapi:
+    interface: vnflcv-rest
+requires:
+  elasticsearch:
+    interface: elasticsearch
+resources:
+  vnflcv-src:
+    description: Archive containing VNF Lifecycle Validation source code
+    filename: vnflcv-src.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Spirent code for VNF Lifecycle Validation
+tags:
+- misc

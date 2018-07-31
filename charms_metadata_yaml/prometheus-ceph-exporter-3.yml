@@ -1,0 +1,29 @@
+description: 'This is an exporter that exposes information gathered from Ceph
+
+  for use by the Prometheus monitoring system.
+
+  '
+extra-bindings:
+  cluster: null
+  public: null
+maintainer: Prometheus Charmers <prometheus-charmers@lists.launchpad.net>
+name: prometheus-ceph-exporter
+provides:
+  ceph-exporter:
+    interface: http
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  ceph:
+    interface: ceph-client
+series:
+- xenial
+- bionic
+- trusty
+subordinate: false
+summary: Ceph exporter for Prometheus
+tags:
+- monitoring
+- prometheus
+- ceph

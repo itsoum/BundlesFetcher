@@ -1,0 +1,32 @@
+description: 'Redis is a key-value database in a similar vein to memcache but the
+
+  dataset is non-volatile. Redis additionally provides native support
+
+  for atomically manipulating and querying data structures such as lists
+
+  and sets.  The dataset is stored entirely in memory and periodically
+
+  flushed to disk.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: redis
+provides:
+  redis:
+    interface: redis
+resources:
+  redis-bdx:
+    description: Redis bdx snap
+    filename: redis-bdx.snap
+    type: file
+series:
+- xenial
+- trusty
+- zesty
+- artful
+subordinate: false
+summary: Persistent key-value database with network interface
+tags:
+- cache
+- db
+- redis

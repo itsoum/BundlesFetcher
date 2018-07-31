@@ -1,0 +1,8 @@
+description: "Apachebench is a tool for benchmarking your Apache Hypertext Transfer\
+  \ Protocol HTTP \n"
+maintainer: Michael Reed <michael.reed@canonical.com>
+name: apachebench
+requires:
+  website:
+    interface: http
+summary: A benchmark for Apache HTTP

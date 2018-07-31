@@ -1,0 +1,15 @@
+description: 'This charm provides access to a MySQL server running outside
+
+  of the Juju environment.  It is far more limited than the full
+
+  MySQL charm, and must be configured manually.
+
+  '
+maintainer: Cory Johns <cory.johns@canonical.com>
+name: mysql-external-proxy
+provides:
+  db:
+    interface: mysql
+summary: Proxy charm for an external MySQL server
+tags:
+- databases

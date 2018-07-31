@@ -1,0 +1,21 @@
+description: 'deploys drone.io, docker, and exposes port 80. Additional actions are
+
+  available to further enhance the DroneCI service, such as drone-wall a CI
+
+  status board for your team to keep an eye on builds. See the `readme` for
+
+  more information.
+
+  '
+maintainer: Charles Butler <Charles.Butler@Bushido>
+name: drone
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+subordinate: false
+summary: Drone.IO is a docker based CI system written in golang
+tags:
+- misc

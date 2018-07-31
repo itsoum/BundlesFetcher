@@ -1,0 +1,20 @@
+categories:
+- misc
+description: 'Metal-As-A-Service (MAAS) is the defaul Ubuntu''s provisioning service.
+
+  It allows you to deploy Ubuntu on different hardware and works in
+
+  conjuction with Juju to deploy workloads on top. This charm provides
+
+  the MAAS Cluster Controller.
+
+  '
+maintainer: Andres Rodriguez <andres.rodriguez@canonical.com>
+name: maas-cluster
+provides:
+  maas-cluster:
+    interface: maas-cluster
+requires:
+  maas:
+    interface: maas-region
+summary: MAAS Cluster Controller

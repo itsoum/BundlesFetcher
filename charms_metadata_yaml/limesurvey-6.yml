@@ -1,0 +1,32 @@
+categories:
+- Application
+description: 'Limesurvey is a complete web survey application:
+
+  - Unlimited number of surveys at the same time
+
+  - Unlimited number of questions in a survey (only limited by your database)
+
+  - Unlimited number of participants to a survey
+
+  - Multi-lingual surveys
+
+  - User-management
+
+  - 20 different question types with more to come
+
+  - WYSIWYG HTML editor
+
+  - Quotas management
+
+  and much more.  See http://www.limesurvey.org/ for details.
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: limesurvey
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Limesurvey is a complete web survey application

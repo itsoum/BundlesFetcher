@@ -1,0 +1,26 @@
+description: 'The IO Visor technology is the programmable data plane component used
+  to
+
+  implement distributed network functions. It provides connectivity to
+
+  virtual machines, other Virtual Domains, physical network infrastructure
+
+  and the Internet. The IO Visor provides the capability to develop new
+
+  data plane functions through the SDK. It allows new network
+
+  functions to be loaded at run-time and without requiring a reboot.
+
+  '
+maintainer: Bilal Baqar <bbaqar@plumgrid.com>
+name: neutron-iovisor
+provides:
+  plumgrid-plugin:
+    interface: plumgrid-plugin
+requires:
+  neutron-plugin-api:
+    interface: neutron-plugin-api
+subordinate: false
+summary: PLUMgrid IO Visor
+tags:
+- openstack

@@ -1,0 +1,14 @@
+categories:
+- applications
+description: '<Haste is an open-source pastebin software writen in node.js, which
+  is easily installable in any netwrok. A publicly available version can be found
+  at hastebin.com>
+
+  '
+maintainer: David Zachar <davidolf@gmail.com>
+name: haste-server
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: <Open-source pastebin server written in node.js>

@@ -1,0 +1,20 @@
+description: 'Apache Mesos abstracts CPU, memory, storage, and othercompute resources
+  away from machines (physical or virtual),
+
+  enabling fault-tolerant and elastic distributed systems to easily be built and run
+  effectively.
+
+  '
+maintainer: Joao Ribeiro <jonnybgod@gmail.com>
+name: mesos-slave
+provides:
+  mesos-slave:
+    interface: mesos-slave
+requires:
+  mesos-master:
+    interface: mesos-master
+subordinate: false
+summary: Provides a Mesos Cluster slave for building distributed systems
+tags:
+- ops
+- network

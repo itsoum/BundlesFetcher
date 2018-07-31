@@ -1,0 +1,11 @@
+description: 'HP Virtualrooms requires a proprietary plugin that is only available
+  for
+
+  32-bit browsers. You can use this charm to deploy a 32-bit desktop in the
+
+  cloud that has a browser with the HP Virtualroom plug-in enabled.
+
+  '
+maintainer: dann frazier <dann.frazier@canonical.com>
+name: hpvirtualrooms-vnc
+summary: Access HP Virtualrooms in the cloud over VNC

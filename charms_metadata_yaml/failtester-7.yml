@@ -1,0 +1,23 @@
+categories:
+- mis
+description: 'WARNING: This is charm is for Juju development testing only.
+
+  In order to allow for testing of real charm failures in
+
+  real environments you can use this charm and set the appropriate
+
+  configuration values for the failure you would like to test.
+
+  '
+maintainer: Jeff Pihach <jeff.pihach@canonical.com>
+name: failtester
+peers:
+  loopback:
+    interface: lbfailtest
+provides:
+  prov-reltest:
+    interface: failtest
+requires:
+  req-reltest:
+    interface: failtest
+summary: Charm which allows you to test failures.

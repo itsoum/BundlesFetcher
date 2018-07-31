@@ -1,0 +1,31 @@
+description: 'The Apache Mahout project''s goal is to build an environment for quickly
+  creating scalable, performant machine learning applications.
+
+  This charm provides version 0.13.0 of the Mahout application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: mahout
+provides:
+  java:
+    interface: java
+    scope: container
+requires:
+  mahout:
+    interface: mahout
+    scope: container
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+subordinate: true
+summary: Mahout from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2

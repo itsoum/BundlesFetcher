@@ -1,0 +1,20 @@
+categories:
+- app-servers
+description: 'Apache Tomcat 7 implements the Java Servlet 3.0 and JSP 2.0 specification
+
+  from Sun Microsystems/Oracle and provides a pure Java HTTP web server.
+
+  '
+maintainer: Juan Negron <juan.negron@canonical.com>
+name: tomcat7
+peers:
+  cluster:
+    interface: tomcat-cluster
+provides:
+  website:
+    interface: http
+requires:
+  tester:
+    interface: testing
+    optional: true
+summary: Tomcat 7 Servlet and JSP engine

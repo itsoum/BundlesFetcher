@@ -1,0 +1,20 @@
+description: "This charms allows you to deploy the OAI RRU using Juju out of the box\
+  \ on any cloud infrastructure. It supports multiple radio frontends, namely EXMIMO,\
+  \ SODERA, BLADERF, and USRP and complies with NGFI IF5 and IF4p5 fronthaul interface.\
+  \ \n"
+maintainers:
+- Navid Nikaein <navid.nikaein@eurecom.fr>
+name: oai-rru
+provides:
+  rru:
+    interface: FH-ETH
+subordinate: false
+summary: OpenAirInterface Remote Radio Unit
+tags:
+- Telecom, Network
+- 4G, 5G, LTE
+- Remote Radio Unit
+- RRU, RRH
+- OpenAirInterface, OAI, oai
+- MOSIAC-5Gx
+- Eurecom

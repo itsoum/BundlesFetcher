@@ -1,0 +1,11 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: dea-v1
+requires:
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: DEA runs CF apps in containers

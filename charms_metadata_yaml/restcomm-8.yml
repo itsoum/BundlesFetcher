@@ -1,0 +1,36 @@
+description: 'Restcomm-Connect installation based on docker
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- gdubina <gdubina@dataart.com>
+name: restcomm
+provides:
+  api:
+    interface: http
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+  sip:
+    interface: http
+requires:
+  dns:
+    interface: dns
+  loadbalancer:
+    interface: sip-balancer
+  mysql:
+    interface: mysql
+  outbound-proxy:
+    interface: 3GPP-Mw
+subordinate: false
+summary: Restcomm-Connect
+tags:
+- containers
+- layer
+- misc
+- sip
+- voip

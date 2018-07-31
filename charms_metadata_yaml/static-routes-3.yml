@@ -1,0 +1,9 @@
+description: This charm configure a set of static routes
+maintainer: cripto <paolo.de.rosa@canonical.com>
+name: static-routes
+series:
+- trusty
+summary: Configure static routes
+tags:
+- routing
+- system

@@ -1,0 +1,17 @@
+description: 'Drop current conference
+
+  '
+maintainer: gedubina <gdubina@dataart.com>
+name: tads2015-drop-conference
+requires:
+  mesos:
+    interface: juju-info
+    scope: container
+  redis:
+    interface: redis
+  restcomm:
+    interface: http
+subordinate: true
+summary: Drop current conference
+tags:
+- misc

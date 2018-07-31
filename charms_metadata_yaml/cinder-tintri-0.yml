@@ -1,0 +1,27 @@
+description: 'Cinder is the block storage service for the Openstack project.
+
+  .
+
+  This charm provides a Tintri storage backend for Cinder
+
+  '
+maintainers:
+- Skyler Berg <openstack-dev@tintri.com>
+- Apoorva Deshpande <openstack-dev@tintri.com>
+name: cinder-tintri
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+  tintri-nova:
+    interface: tintri-nova
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Tintri VMstore integration for OpenStack Cinder
+tags:
+- openstack
+- storage

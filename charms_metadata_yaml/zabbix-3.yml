@@ -1,0 +1,16 @@
+categories:
+- applications
+description: 'This is zabbix server with MySQL support
+
+  '
+maintainer: Ayrton Araujo <ayrton@ubuntu.com>
+name: zabbix
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+  remote-agent:
+    interface: zabbix-info
+summary: Zabbix server

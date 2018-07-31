@@ -1,0 +1,16 @@
+description: NEDGE is a distributed object storage system designed to provide excellent
+  performance, reliability, and scalability.
+maintainer: Anton <Anton.Skriptsov@nexenta.com>
+name: nedge-cinder-gw
+provides:
+  cinder-nedge:
+    interface: cinder-nedge
+requires:
+  cinder-gw:
+    interface: cinder-gw
+subordinate: false
+summary: Nexenta Edge cinder gateway node. Can be used as object storage node
+tags:
+- openstack
+- storage
+- file-servers

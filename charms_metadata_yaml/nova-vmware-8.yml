@@ -1,0 +1,15 @@
+description: 'nova-compute VMware integration.
+
+  '
+maintainer: Adam Gandelman <adam.gandelman@canonical.com>
+name: nova-vmware
+provides:
+  nova-vmware:
+    interface: nova-vmware
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: nova-compute VMware integration.

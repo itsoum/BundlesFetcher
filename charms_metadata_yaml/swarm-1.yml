@@ -1,0 +1,36 @@
+description: 'Swarm is a multi-host scheduler for application container workloads.
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matt Bruzek <matthew.bruzek@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+- Matt Bruzek <matthew.bruzek@canonical.com>
+name: swarm
+peers:
+  certificates:
+    interface: tls
+provides:
+  api:
+    interface: swarm
+  dockerhost:
+    interface: dockerhost
+    scope: container
+requires:
+  consul:
+    interface: consul
+  etcd:
+    interface: etcd
+series:
+- trusty
+- xenial
+subordinate: false
+summary: Swarm is a native method to cluster docker hosts.
+tags:
+- containers
+- layer
+- infrastructure
+- security
+- containers
+- layer

@@ -1,0 +1,15 @@
+categories:
+- cache-proxy
+description: TelScale Load Balancer
+maintainer: Jean Deruelle <jean.deruelle@telestax.com>
+name: telscale-load-balancer
+provides:
+  load-balancer:
+    interface: telscale-load-balancer
+  website:
+    interface: http
+requires:
+  clearwater-ellis:
+    interface: as-register
+    optional: true
+summary: TelScale Load Balancer

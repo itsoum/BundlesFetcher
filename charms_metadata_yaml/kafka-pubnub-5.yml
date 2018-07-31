@@ -1,0 +1,11 @@
+description: 'Ingest sample data from PubNub.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: kafka-pubnub
+requires:
+  kafka:
+    interface: kafka
+summary: Ingest sample data from PubNub
+tags:
+- bigdata

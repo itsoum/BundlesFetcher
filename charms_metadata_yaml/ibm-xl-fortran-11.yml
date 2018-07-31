@@ -1,0 +1,19 @@
+description: 'IBM XL Fortran for Linux, is an advanced, high-performance compiler
+  that can be used for developing complex, computationally intensive programs.
+
+  '
+maintainer: IBM Juju Support team <jujusupp@us.ibm.com>
+name: ibm-xl-fortran
+requires:
+  default:
+    interface: juju-info
+    scope: container
+  ftn-compiler:
+    interface: ftn-compiler
+    scope: container
+subordinate: true
+summary: IBM XL Fortran
+tags:
+- compilers
+- Fortran
+- ibm

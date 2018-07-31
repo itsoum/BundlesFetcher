@@ -1,0 +1,10 @@
+categories:
+- misc
+description: Bono charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-bono
+requires:
+  dns-agent:
+    interface: dns-register
+subordinate: false
+summary: Bono charm for Project Clearwater

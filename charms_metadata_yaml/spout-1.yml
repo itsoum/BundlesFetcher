@@ -1,0 +1,20 @@
+description: 'This charm implements a spout class in an Apache Storm topology.
+
+  '
+maintainer: Sander Borny <sander.borny@ugent.be>
+name: spout
+requires:
+  master:
+    interface: storm
+    scope: container
+  stormelement:
+    interface: storm-element
+  topology:
+    interface: stormtopology
+    scope: container
+series:
+- trusty
+subordinate: true
+summary: Represents a spout class in an Apache Storm topology
+tags:
+- misc

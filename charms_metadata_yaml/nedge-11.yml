@@ -1,0 +1,13 @@
+description: NEDGE is a distributed object storage system designed to provide excellent
+  performance, reliability, and scalability.
+maintainer: Anton <Anton.Skriptsov@nexenta.com>
+name: nedge
+requires:
+  nedge:
+    interface: nedge
+subordinate: false
+summary: Distributed object storage node
+tags:
+- openstack
+- storage
+- file-servers

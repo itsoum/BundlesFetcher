@@ -1,0 +1,13 @@
+categories:
+- app-servers
+description: 'Deploys system-image server for hosting touch images.
+
+  '
+maintainer: Caio Begotti <caio.begotti@canonical.com>
+name: system-image-server
+requires:
+  website:
+    interface: http
+    scope: container
+subordinate: true
+summary: Deploy a system-image service

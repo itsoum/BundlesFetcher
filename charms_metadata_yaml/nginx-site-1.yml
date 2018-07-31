@@ -1,0 +1,20 @@
+categories:
+- application
+description: 'This will deploy the repository listed in confiruation as a virtual-host
+  on whichever engine the charm is related to
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: website
+provides:
+  website:
+    interface: http
+requires:
+  apache-engine:
+    interface: apache-vhost
+    scope: container
+  nginx-engine:
+    interface: nginx-vhost
+    scope: container
+subordinate: true
+summary: static site for Nginx or Apache2 web engine

@@ -1,0 +1,17 @@
+description: 'avahi-daemon publishes services via mDNS. This subordinate charm is
+  only
+
+  useful in a controlled network environment where mDNS is allowed. By default,
+
+  it will advertise the current unit name as the hostname via the eth0 interface.
+
+  '
+format: 2
+maintainer: Sidnei da Silva <sidnei.da.silva@canonical.com>
+name: avahi
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Avahi Daemon Subordinate

@@ -1,0 +1,17 @@
+description: 'This charm facilitates the installation, configuration,
+
+  and maintanence puppetserver.
+
+  '
+maintainers:
+- James Beedy <jamesbeedy@gmail.com>
+name: puppet-server
+provides:
+  puppet-http:
+    interface: http
+subordinate: false
+summary: Puppet Labs puppetserver
+tags:
+- ops
+- puppetlabs
+- infra

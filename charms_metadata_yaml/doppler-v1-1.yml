@@ -1,0 +1,16 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: Successor of loggregator.
+name: doppler-v1
+provides:
+  doppler:
+    interface: doppler
+requires:
+  etcd:
+    interface: etcd
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: successor of loggregator

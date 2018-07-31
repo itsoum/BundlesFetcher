@@ -1,0 +1,14 @@
+categories:
+- misc
+description: 'This charm passes the vxlan image to nova-cloud-controller and upload
+  it to the glance
+
+  '
+maintainer: Dulanjalie Ganegedara <ddhanapa@cisco.com>
+name: vxlan-gateway
+requires:
+  openstack-nova:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: The charm automates uploading of Nexus1K vxlan-gateway image to glance

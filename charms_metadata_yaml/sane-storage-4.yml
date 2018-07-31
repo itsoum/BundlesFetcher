@@ -1,0 +1,29 @@
+categories:
+- file-servers
+description: 'Generic storage charm subordinate.  Intended to aid in making charms
+
+  easier to interface with external storage solutions without having
+
+  to speak and understand each type.  Presents a single mount point on
+
+  the unit, and communicates that back to your service through the data
+
+  relation.
+
+  This charm is a fork of storage, and is a total rewrite in python to make
+
+  unit testing and quality easier to enforce.
+
+  '
+maintainer: Christopher Glass <tribaal@ubuntu.com>
+name: storage-ng
+requires:
+  block-storage:
+    interface: volume-request
+  data:
+    interface: block-storage
+    scope: container
+  nfs:
+    interface: mount
+subordinate: true
+summary: Storage subordinate charm to help you persist data.

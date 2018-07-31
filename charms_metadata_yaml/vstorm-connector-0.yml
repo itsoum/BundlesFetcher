@@ -1,0 +1,21 @@
+description: 'This is a subordinate charm that facilitates the connection between
+  a
+
+  vStorm Enterprise server and a hadoop cluster. This charm must be deployed
+
+  on a hadoop master node.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: vstorm-connector
+provides:
+  vsemanager:
+    interface: vstorm-vse
+requires:
+  namenode:
+    interface: dfs
+    scope: container
+subordinate: true
+summary: Connects a vStorm Enterprise server to a hadoop cluster.
+tags:
+- big_data

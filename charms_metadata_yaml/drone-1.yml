@@ -1,0 +1,22 @@
+description: 'Drone is a hosted continuous integration service. It enables you to
+
+  conveniently set up projects to automatically build, test, and
+
+  deploy as you make changes to your code.
+
+
+  Drone integrates seamlessly with Github, Bitbucket and Google Code
+
+  as well as third party services such as Heroku, Dotcloud, Google
+
+  AppEngine and more.
+
+  '
+name: drone
+provides:
+  ui:
+    interface: http
+requires:
+  mysql:
+    interface: mysql
+summary: A continous integration server built on docker

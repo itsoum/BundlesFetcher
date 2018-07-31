@@ -1,0 +1,39 @@
+description: 'Calico subordinate charm
+
+  '
+maintainers:
+- George Kraft <george.kraft@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+name: calico
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  etcd:
+    interface: etcd
+resources:
+  calico:
+    description: Calico resource tarball.
+    filename: calico.tar.gz
+    type: file
+series:
+- xenial
+subordinate: true
+summary: Calico subordinate charm
+tags:
+- misc
+- containers
+- layer
+- networking

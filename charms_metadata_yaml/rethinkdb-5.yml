@@ -1,0 +1,21 @@
+description: "RethinkDB is the first open-source, scalable JSON database built from\
+  \ the\nground up for the realtime web. It inverts the traditional database\narchitecture\
+  \ by exposing an exciting new access model \u2013 instead of polling\nfor changes,\
+  \ the developer can tell RethinkDB to continuously push updated\nquery results to\
+  \ applications in realtime. RethinkDB\u2019s realtime push\narchitecture dramatically\
+  \ reduces the time and effort necessary to build\nscalable realtime apps.\n\nIn\
+  \ addition to being designed from the ground up for realtime apps, RethinkDB\noffers\
+  \ a flexible query language, intuitive operations and monitoring APIs,\nand is easy\
+  \ to setup and learn.\n"
+maintainer: Adam Stokes <adam.stokes@ubuntu.com>
+name: rethinkdb
+provides:
+  database:
+    interface: rethinkdb
+  rethinkdb-master:
+    interface: rethinkdb
+subordinate: false
+summary: RethinkDB is the first open-source, scalable JSON database built from the
+  ground up for the realtime web
+tags:
+- database

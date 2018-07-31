@@ -1,0 +1,10 @@
+description: 'virtme allows you to virtualize a physical server, create
+
+  a number of virtual machines (using KVM) and register them
+
+  back into maas using virsh for power control.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: virtme
+summary: Virtualize physical resources for use with MAAS

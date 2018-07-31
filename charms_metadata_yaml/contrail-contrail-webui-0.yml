@@ -1,0 +1,28 @@
+description: 'OpenContrail is a network virtualization solution that provides an overlay
+
+  virtual-network to virtual-machines, containers or network namespaces.
+
+  .
+
+  This charm provides the Web UI node component.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: contrail-webui
+provides:
+  website:
+    interface: http
+requires:
+  cassandra:
+    interface: cassandra
+  contrail_api:
+    interface: contrail-api
+  contrail_discovery:
+    interface: contrail-discovery
+  identity_admin:
+    interface: keystone-admin
+  redis:
+    interface: redis
+summary: OpenContrail WebUI Node
+tags:
+- openstack

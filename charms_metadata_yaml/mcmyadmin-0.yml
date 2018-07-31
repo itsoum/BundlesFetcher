@@ -1,0 +1,14 @@
+description: 'Deploys a web interface for managing a Minecraft server
+
+  '
+maintainer: Charles Butler <charles@Bushido>
+name: mcmyadmin
+provides:
+  game:
+    interface: minecraft
+  website:
+    interface: http
+subordinate: false
+summary: minecraft server administrator
+tags:
+- misc

@@ -1,0 +1,14 @@
+description: 'This is the core (server) component of Quassel, a modern,
+
+  cross-platform, distributed IRC platform.  One or more Quassel
+
+  clients can attach to and detach from this central core.
+
+  '
+maintainer: Paul Gear <paul.gear@canonical.com>
+name: quassel-core
+summary: distributed IRC platform - core (server) component
+tags:
+- app-servers
+- social
+- cache-proxy

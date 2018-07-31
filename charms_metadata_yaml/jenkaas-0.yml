@@ -1,0 +1,36 @@
+description: 'Jenkins is a Continous Integration server supporting
+
+  flexible continous integration and deployment methodologies
+
+  and more.
+
+  .
+
+  This charm provides the Jenkins master instance in a
+
+  deployment
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: jenkins
+provides:
+  api:
+    interface: jenkins-api
+    optional: true
+  extension:
+    interface: jenkins-extension
+    optional: true
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  master:
+    interface: jenkins-slave
+    optional: true
+  zuul:
+    interface: zuul
+    optional: true
+summary: Jenkins Continuous Integration server

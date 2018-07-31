@@ -1,0 +1,46 @@
+description: "Canal is a community-driven initiative that aims to allow users to easily\n\
+  deploy Calico and flannel networking together as a unified networking\nsolution\
+  \ - combining Calico\u2019s industry-leading network policy enforcement\nwith the\
+  \ rich superset of Calico and flannel overlay and non-overlay network\nconnectivity\
+  \ options.\n"
+maintainers:
+- Tim Van Steenburgh <tim.van.steenburgh@canonical.com>
+- George Kraft <george.kraft@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+- Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+name: canal
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  etcd:
+    interface: etcd
+resources:
+  calico:
+    description: Calico resource tarball.
+    filename: calico.tar.gz
+    type: file
+  flannel:
+    description: A tarball packaged release of flannel
+    filename: flannel.tar.gz
+    type: file
+series:
+- xenial
+- bionic
+subordinate: true
+summary: A Software Defined Network based on Flannel and Calico
+tags:
+- misc
+- containers
+- layer
+- networking

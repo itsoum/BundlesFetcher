@@ -1,0 +1,29 @@
+description: 'Open source, private cloud Slack-alternative.
+
+
+  Workplace messaging for web, PCs and phones. MIT-licensed. Hundreds of contributors.
+  11 languages. Secure, configurable, and scalable from teams to enterprise.
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: mattermost
+provides:
+  website:
+    interface: http
+requires:
+  postgres:
+    interface: pgsql
+resources:
+  bdist:
+    description: Binary distribution of Mattermost, obtained from https://www.mattermost.org/download/
+    filename: mattermost.tar.gz
+    type: file
+series:
+- xenial
+summary: Mattermost is an open source, self-hosted Slack-alternative.
+tags:
+- applications
+- messaging
+- groupware
+terms:
+- isrg-lets-encrypt

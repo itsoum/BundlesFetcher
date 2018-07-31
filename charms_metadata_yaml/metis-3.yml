@@ -1,0 +1,11 @@
+categories:
+- databases
+- file-servers
+description: This will install and setup the Metis backend system.
+maintainer: Joshua Strobl <joshua@stroblindustries.com>
+name: metis
+provides:
+  website:
+    interface: http
+    scope: container
+summary: 'Metis is an open source JSON distributed storage solution. '

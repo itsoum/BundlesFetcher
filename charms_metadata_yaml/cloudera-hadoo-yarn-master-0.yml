@@ -1,0 +1,24 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the YARN master node (ResourceManager).
+
+  '
+maintainer: Cory Johns <cory.johns@canonical.com>
+name: cloudera-hadoop-yarn-master
+provides:
+  ganglia:
+    interface: monitor
+  resourcemanager:
+    interface: mapred
+requires:
+  namenode:
+    interface: dfs
+  nodemanager:
+    interface: mapred-slave
+summary: YARN master (ResourceManager) for CDH Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

@@ -1,0 +1,12 @@
+categories:
+- database
+description: 'PostgreSQL is an object-relational database management system (ORDBMS)
+  with an emphasis on extensibility and on standards-compliance.
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: postgresql-dh
+provides:
+  dh:
+    interface: dh-pg
+summary: PostgreSQL object-relational SQL database

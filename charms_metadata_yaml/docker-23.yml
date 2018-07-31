@@ -1,0 +1,19 @@
+description: "A Juju charm layer that handles installing Docker, including a library\
+  \ to \nmake it easier to use Docker containers inside a Juju model.\n"
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+name: docker
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+series:
+- trusty
+- wily
+- xenial
+subordinate: false
+summary: A Juju charm layer to use Docker containers in charms.
+tags:
+- containers
+- layer

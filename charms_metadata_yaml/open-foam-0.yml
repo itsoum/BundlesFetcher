@@ -1,0 +1,18 @@
+description: 'OpenFOAM is free, open source software for CFD from the OpenFOAM Foundation.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: open-foam
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: openFOAM
+tags:
+- fluid-dynamics
+- openfoam
+- foam
+- slurm

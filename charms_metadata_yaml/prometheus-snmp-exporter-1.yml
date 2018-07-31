@@ -1,0 +1,17 @@
+description: 'This is an exporter that exposes information gathered from SNMP
+
+  for use by the Prometheus monitoring system.
+
+  '
+maintainer: Jacek Nykis <jacek.nykis@canonical.com>
+name: prometheus-snmp-exporter
+provides:
+  snmp-exporter:
+    interface: http
+series:
+- xenial
+- bionic
+subordinate: false
+summary: SNMP exporter for Prometheus
+tags:
+- monitoring

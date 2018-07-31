@@ -1,0 +1,15 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: shout-irc
+provides:
+  website:
+    interface: http
+storage:
+  app:
+    location: /srv/app
+    type: filesystem
+summary: The self-hosted web IRC client
+tags:
+- irc

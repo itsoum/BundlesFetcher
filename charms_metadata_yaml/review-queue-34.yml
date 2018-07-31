@@ -1,0 +1,25 @@
+description: 'Review Queue web app
+
+  '
+maintainers:
+- Tim Van Steenburgh <tim.van.teenburgh@canonical.com>
+name: review-queue
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  amqp:
+    interface: rabbitmq
+  ci:
+    interface: cwr-ci
+  db:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: Review Queue web app
+tags:
+- web-app

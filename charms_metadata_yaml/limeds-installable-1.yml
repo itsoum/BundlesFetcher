@@ -1,0 +1,17 @@
+description: 'This charm deploys an installable onto LimeDS and creates a segment
+  from that installable. You can specify the installable id, the segment id and the
+  segment config in the config of this charm.
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: limeds-installable
+requires:
+  limeds:
+    interface: limeds
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Plugin for LimeDS that deploys an installable and creates a segment.
+tags:
+- analytics

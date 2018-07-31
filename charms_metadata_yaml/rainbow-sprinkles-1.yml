@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Rainbow-Sprinkles
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: topping_rainbow-sprinkles
+requires:
+  topping:
+    interface: ice-cream
+summary: Rainbow-Sprinkles

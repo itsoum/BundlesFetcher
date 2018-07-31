@@ -1,0 +1,16 @@
+description: 'A suite of network-related utilities, such as ping and traceroute, that
+
+  can be deployed into a data center in order to diagnose connectivity issues.
+
+  '
+maintainer: Adam Israel <adam.israel@canonical.com>
+name: netutils
+series:
+- trusty
+- xenial
+subordinate: false
+summary: A suite of network-related utilities.
+tags:
+- ops
+- network
+- performance

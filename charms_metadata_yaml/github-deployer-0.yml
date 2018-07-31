@@ -1,0 +1,8 @@
+description: 'This charm clones a github repo from the given url and runs the desired
+
+  command to setup whatever came from the repo.
+
+  '
+maintainer: MattyW <gh@mattyw.net>
+name: github-deployer
+summary: The github deployer

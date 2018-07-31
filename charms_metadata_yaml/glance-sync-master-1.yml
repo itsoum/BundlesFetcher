@@ -1,0 +1,29 @@
+description: 'This charm is the master source of glance images that will be synced
+  to other openstack installations.
+
+  It provides the image files as well as an accompanying metadata file containing
+  any glance tags etc.
+
+  Slaves can register their public ssh keys with the master to be allowed rsync over
+  ssh access.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: Manuel Seelaus <manuel.seelaus@canonical.com>
+name: glance-sync-master
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  keystone-admin:
+    interface: keystone-admin
+series:
+- xenial
+- trusty
+summary: master source for glance images sync
+tags:
+- openstack

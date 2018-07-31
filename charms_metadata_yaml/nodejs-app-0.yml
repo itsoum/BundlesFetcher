@@ -1,0 +1,20 @@
+description: 'Deploy a user-defined Node.js application.
+
+
+  Borrows heavily from existing node-app charms.
+
+  '
+maintainer: Waldemar Bautista <wbautista@agsx.net>
+name: nodejs-app
+provides:
+  website:
+    interface: http
+requires:
+  pgsql:
+    interface: pgsql
+  redis:
+    interface: redis
+subordinate: false
+summary: Deploy a Node.js application
+tags:
+- misc

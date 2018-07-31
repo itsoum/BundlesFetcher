@@ -1,0 +1,20 @@
+categories:
+- applications
+description: "OpenMRS is a software platform and a reference application which enables\
+  \ \ndesign of a customized medical records system with no programming knowledge\
+  \ \n(although medical and systems analysis knowledge is required). It is a \ncommon\
+  \ platform upon which medical informatics efforts in developing \ncountries can\
+  \ be built. The system is based on a conceptual database \nstructure which is not\
+  \ dependent on the actual types of medical information \nrequired to be collected\
+  \ or on particular data collection forms and so can \nbe customized for different\
+  \ uses.\n"
+maintainer: Matt Bruzek <mbruzek@gmail.com>
+name: openmrs
+requires:
+  database:
+    interface: mysql
+  tomcat-war:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: OpenMRS enables design of a customized medical records system.

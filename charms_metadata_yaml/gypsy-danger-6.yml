@@ -1,0 +1,15 @@
+description: 'Parse Apache logs into the DB.
+
+  '
+maintainer: Richard Harding <rick.harding@canonical.com>
+name: gypsy-danger
+provides:
+  grafana-source:
+    interface: grafana-source
+requires:
+  db:
+    interface: mysql
+series:
+- xenial
+subordinate: false
+summary: Parse server logs and dump into mysql for reporting

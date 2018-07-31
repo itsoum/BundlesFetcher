@@ -1,0 +1,8 @@
+categories:
+- openstack
+description: 'Sets up the openstack installer for ease of testing
+
+  '
+maintainer: Adam Collard <adam.collard@canonical.com>
+name: unmanaged-installer-testing
+summary: Testing setup for the unmanaged OpenStack installer.

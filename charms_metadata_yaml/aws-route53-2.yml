@@ -1,0 +1,10 @@
+description: Provides dns names for service units.
+maintainer: Kapil Thangavelu <kapil.foss@gmail.com>
+name: aws-route53
+provides:
+  dns:
+    interface: route53-dns
+requires:
+  service:
+    interface: juju-info
+summary: Amazon DNS service for Juju environments

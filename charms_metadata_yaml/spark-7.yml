@@ -1,0 +1,18 @@
+categories:
+- application
+description: '<Multi-line description here>
+
+  '
+maintainer: Amir Sanjar <sanjar@sanjar-N550JA>
+name: spark
+provides:
+  master:
+    interface: monitor
+requires:
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+  slave:
+    interface: monitor
+summary: <Fill in summary here>

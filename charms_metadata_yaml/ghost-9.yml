@@ -1,0 +1,19 @@
+description: 'Ghost is a simple, powerful publishing platform.
+
+  '
+maintainers:
+- Adam Stokes <adam.stokes@ubuntu.com>
+name: ghost
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+summary: 'Ghost is a simple, powerful publishing platform.
+
+  '
+tags:
+- nodejs
+- javascript
+- blog

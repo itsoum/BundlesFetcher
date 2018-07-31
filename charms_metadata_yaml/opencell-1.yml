@@ -1,0 +1,15 @@
+description: Opencell Billing
+maintainer: "Antoine Mich\xE9a <antoine.michea@opencellsoft.com>"
+name: opencell
+provides:
+  opencell:
+    interface: http-alt
+requires:
+  clearwater-ellis:
+    interface: api-client
+    optional: true
+  database:
+    interface: pgsql
+summary: Opencell Billing
+tags:
+- cloudfoundry

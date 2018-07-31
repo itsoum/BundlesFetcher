@@ -1,0 +1,9 @@
+description: 'Starts up and sends the message to the commander to shut us down
+
+  '
+maintainer: Ted Gould <ted@ubuntu.com>
+name: juju-commander-test-shutdown
+requires:
+  amqp:
+    interface: rabbitmq
+summary: Test to see if the Juju commander can shut us down

@@ -1,0 +1,12 @@
+description: 'record conference call
+
+  '
+maintainer: gdubina <gdubina@dataart.com>
+name: conference-recorder
+provides:
+  api:
+    interface: http
+subordinate: false
+summary: record conference call
+tags:
+- misc

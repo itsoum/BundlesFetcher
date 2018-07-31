@@ -1,0 +1,23 @@
+categories:
+- miscellaneous
+description: 'This charm installs and configures rkhunter, a rootkit scanner.
+
+  It is a subordinate charm that can be installed alongside your
+
+  primary charm to help protect the unit from attackers.
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: rkhunter
+provides:
+  logrotate:
+    interface: logrotate
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Installs and configures rkhunter

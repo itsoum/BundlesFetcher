@@ -1,0 +1,23 @@
+description: 'The mailman3 mail processing sub-system providing the various queue
+  runners, etc.
+
+  '
+maintainer: Dave Lawson <dave.lawson@canonical.com>
+name: mailman3-core
+provides:
+  mailman3:
+    interface: generic-ip-port-user-pass
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  db:
+    interface: pgsql
+  mailman3archiver:
+    interface: generic-ip-port-user-pass
+series:
+- bionic
+subordinate: false
+summary: The Mailman3 mail processing sub-system.
+tags:
+- ops

@@ -1,0 +1,23 @@
+description: 'Couchpotato Server installation for relation to sabnzbd charm
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: couchpotato
+requires:
+  plex-info:
+    interface: plex-info
+  reverseproxy:
+    interface: reverseproxy
+  usenet-downloader:
+    interface: usenet-downloader
+resources:
+  couchconfig:
+    description: Tar file of configuration folder to restore on install
+    filename: couchconfig.tgz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Couchpotato Server
+tags:
+- misc

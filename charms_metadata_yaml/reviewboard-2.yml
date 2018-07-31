@@ -1,0 +1,19 @@
+categories:
+- applications
+description: 'Installs the Review Board code review webapp, relates to MySQL and
+
+  memcached.
+
+  '
+maintainer: David Zachar <davidolf@gmail.com>
+name: reviewboard
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  db:
+    interface: mysql
+subordinate: false
+summary: Review Board Code Reviews

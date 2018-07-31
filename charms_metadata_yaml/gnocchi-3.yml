@@ -1,0 +1,25 @@
+description: 'This Charm deploys Gnocchi (https://docs.openstack.org/developer/gnocchi/)
+
+
+  Gnocchi is a multi-tenant timeseries, metrics and resources database. It provides
+  an HTTP REST interface to create and manipulate the data. It is designed to store
+  metrics at a very large scale while providing access to metrics and resources information
+  and history.
+
+  '
+maintainer: Giuseppe Attardi <giuseppe.attardi@garr.it>
+name: gnocchi
+provides:
+  ceilometer-service:
+    interface: ceilometer
+  metrics:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+series:
+- xenial
+summary: This charm deploys the Gnocchi Metric as a Service.
+tags:
+- openstack
+- application_development

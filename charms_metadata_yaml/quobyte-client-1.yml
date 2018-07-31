@@ -1,0 +1,27 @@
+description: 'Quobyte is a distributed file system that turns commodity servers into
+  a unified software storage system. As a genuine data center file system it supports
+  high-performance workloads ranging from Big Data to VMs. It is completely fault-tolerant
+  and massively scalable.
+
+  .
+
+  Quobyte simplifies the design, deployment, and management of storage infrastructures
+  of any size.
+
+  .
+
+  The Quobyte-Client charm provides a Quobyte Volume as a mounted folder.
+
+  '
+maintainer: Bruno Ranieri <bruno@quobyte.com>
+name: quobyte-client
+requires:
+  quobyte-registry:
+    interface: quobyte-registry
+subordinate: false
+summary: Quobyte Data Service
+tags:
+- openstack
+- storage
+- file-servers
+- misc

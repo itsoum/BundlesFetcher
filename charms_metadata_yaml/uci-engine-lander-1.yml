@@ -1,0 +1,22 @@
+categories:
+- misc
+description: Deploys the lander service
+maintainer: Francis Ginther <francis.ginther@canonical.com>
+name: lander
+provides:
+  json_status:
+    interface: json_status
+    optional: true
+  lander:
+    interface: lander
+  proxy_logs:
+    interface: proxy_logs
+    optional: true
+requires:
+  amqp:
+    interface: rabbitmq
+  website:
+    interface: http
+    scope: container
+subordinate: true
+summary: Deploy the Lander service

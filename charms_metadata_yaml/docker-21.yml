@@ -1,0 +1,27 @@
+description: 'A minimalist docker charm layer for use with juju compose,
+
+  powered by the reactive framework
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matt Bruzek <matthew.bruzek@canonical.com>
+name: docker
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+series:
+- trusty
+- wily
+- xenial
+storage:
+  disk-pool:
+    multiple:
+      range: 0-
+    type: block
+subordinate: false
+summary: juju-compose layer for Docker
+tags:
+- containers
+- layer

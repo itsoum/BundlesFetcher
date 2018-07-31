@@ -1,0 +1,6 @@
+description: 'Test charm to try various things.
+
+  '
+maintainer: Haw Loeung <haw.loeung@canonical.com>
+name: test
+summary: My own test charm

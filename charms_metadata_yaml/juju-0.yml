@@ -1,0 +1,28 @@
+description: 'Run juju inside of juju.
+
+
+  This is a charm to install and manage a juju client.  Use this
+
+  to run the juju cli against environments passed as config.
+
+
+  As a subordinate, this can enable a juju cli for any service.
+
+  This is typically useful as a subordinate to jenkins-slave for
+
+  charmtesting or to turn byobu-classroom into juju-classroom.
+
+
+  As a standalone charm, this can be useful when experimenting
+
+  with different environments/providers.
+
+  '
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: juju
+requires:
+  local-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: juju client

@@ -1,0 +1,23 @@
+description: 'Moodle is a learning platform designed to provide educators, administrators
+  and learners with a single robust, secure and integrated system to create personalised
+  learning environments.
+
+  This charm deploys Moodle as outlined by the Moodle Installation Guide.
+
+  '
+maintainer: GARR Cloud <cloud-support@garr.it>
+name: moodle
+provides:
+  website:
+    interface: http
+requires:
+  mysql-db:
+    interface: mysql
+  pgsql-db:
+    interface: pgsql
+series:
+- xenial
+summary: Moodle is a free open-source LMF for e-Learning.
+tags:
+- lms
+- social

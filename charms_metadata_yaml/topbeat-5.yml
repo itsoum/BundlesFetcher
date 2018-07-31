@@ -1,0 +1,19 @@
+description: 'Topbeat is an open source shipper for per-process CPU, memory, and disk
+  usage metrics
+
+  '
+maintainer: Charles Butler <charles.butler@canonical.com>
+name: topbeat
+requires:
+  beats-host:
+    interface: juju-info
+    scope: container
+  elasticsearch:
+    interface: elasticsearch
+  logstash:
+    interface: elastic-beats
+subordinate: true
+summary: Deploys topbeat
+tags:
+- logging
+- monitoring

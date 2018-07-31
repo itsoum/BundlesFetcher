@@ -1,0 +1,19 @@
+description: 'Opencell billing
+
+  '
+maintainer: gedubina <gdubina@dataart.com>
+name: opencell-billing
+requires:
+  mesos:
+    interface: juju-info
+    scope: container
+  opencell:
+    interface: http-alt
+  redis:
+    interface: redis
+  restcomm:
+    interface: http
+subordinate: true
+summary: Opencell billing
+tags:
+- misc

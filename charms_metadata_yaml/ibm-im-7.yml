@@ -1,0 +1,28 @@
+description: 'IBM IM is an installation tool that helps install many IBM products.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-im
+resources:
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+series:
+- trusty
+- xenial
+subordinate: false
+summary: IBM Installation Manager
+tags:
+- ibm
+- apt
+- leadership
+- ibm
+- im
+terms:
+- lorem-ipsum/1

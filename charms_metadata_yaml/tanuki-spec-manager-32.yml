@@ -1,0 +1,21 @@
+description: 'Runs spec-manager using gunicorn from given code tarball
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: spec-manager
+provides:
+  conn-check:
+    interface: conn-check
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+    optional: true
+requires:
+  db:
+    interface: pgsql
+  db-admin:
+    interface: pgsql
+summary: Deploys a web_app to manage tests opportunities

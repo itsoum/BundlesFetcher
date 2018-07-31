@@ -1,0 +1,19 @@
+categories:
+- applications
+description: 'Installs and configures Tracks.  Tracks is a Ruby on Rails based
+
+  web service that helps you manage your to do lists and get things done.
+
+
+  This setup uses a mysql instance and the built-in webserver.
+
+  '
+maintainer: Matt Fischer <matt@mattfischer.com>
+name: tracks
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: 'Tracks: Getting Things Done'

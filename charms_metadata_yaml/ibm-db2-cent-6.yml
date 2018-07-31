@@ -1,0 +1,32 @@
+description: 'IBM DB2 Connection Enterprise Edition connects LAN-based systems and
+  their desktop applications to your company''s mainframe and minicomputer host databases.
+
+  Now you can consolidate your host access through a gateway that makes it easy to
+  deploy web and multi tier applications.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-db2-cent
+requires:
+  db2-cent:
+    interface: db2
+resources:
+  ibm_db2_cent_installer:
+    description: IBM DB2 Connection Enterprise Edition installer archive
+    filename: ibm_db2_cent_installer.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: IBM DB2 Connection Enterprise Edition
+tags:
+- ibm
+- db2
+- connection
+- connect
+- cent
+- misc
+- ibm-z
+terms:
+- ibmcharmers/ibm-db2-cent/1

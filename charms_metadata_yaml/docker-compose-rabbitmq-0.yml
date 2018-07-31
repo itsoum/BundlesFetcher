@@ -1,0 +1,18 @@
+description: "Compose is a tool for defining and running complex applications with\
+  \ Docker.\nWith Compose, you define a multi-container application in a single file,\n\
+  then spin your application up in a single command which does everything\nthat needs\
+  \ to be done to get it running.\nThis charm deploys RabbitMQ as a Docker container\
+  \ via Compose. \n"
+maintainer: Samuel Cozannet <samuel.cozannet@canonical.com>
+name: docker-compose-rabbitmq
+provides:
+  amqp:
+    interface: rabbitmq
+requires:
+  docker-host:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: deploy rabbitmq in docker container
+tags:
+- misc

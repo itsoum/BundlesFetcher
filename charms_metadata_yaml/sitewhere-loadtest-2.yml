@@ -1,0 +1,20 @@
+description: "SiteWhere is the Open Platform for the Internet of Things. This charm\
+  \ \nadds the ability to dynamically load test one or more SiteWhere server \ninstances\
+  \ using a highly configurable load testing framework. \nSiteWhere load test nodes\
+  \ can be scaled out to push the limits \nof server configurations, revealing bottlenecks\
+  \ and providing \nperformance numbers for various configurations and environments.\
+  \  \n"
+maintainer: sitewhere <admin@sitewhere.org>
+name: sitewhere-loadtest
+provides:
+  website:
+    interface: http
+requires:
+  broker:
+    interface: mqtt
+  sitewhere:
+    interface: sitewhere-api
+subordinate: false
+summary: SiteWhere Load Test Node
+tags:
+- misc

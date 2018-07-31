@@ -1,0 +1,13 @@
+description: "IBM MQ provides for messaging services to transport multiple types of\
+  \ \ndata. \n"
+maintainer: Juju Support <jujusupp@us.ibm.com>
+name: ibm-mq
+provides:
+  messaging:
+    interface: ibm-mq
+subordinate: false
+summary: IBM MQ Messaging product
+tags:
+- misc
+- messaging
+- ibm

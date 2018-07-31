@@ -1,0 +1,15 @@
+description: 'This will start a QEMU instance running Ubuntu. Currently this charm
+  uses the
+
+  ARM/highbank model running Ubuntu 12.04 armhf, but could be expanded for
+
+  other models in the future. A host port will be forwarded to the ssh port of
+
+  the QEMU instance. Note: this service models a 4G system, so a memory
+
+  constraint of >= 5G is recommended (deploy --constraints mem=5G).
+
+  '
+maintainer: dann frazier <dann.frazier@canonical.com>
+name: qemu-cloud
+summary: A QEMU model running Ubuntu on the cloud

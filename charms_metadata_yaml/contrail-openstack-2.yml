@@ -1,0 +1,21 @@
+categories:
+- openstack
+description: 'Runs OpenStack services such as Nova, Quantum, and the like
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-openstack
+peers:
+  cluster:
+    interface: openstack-cluster
+provides:
+  keystone:
+    interface: keystone
+  nova:
+    interface: nova
+  openstack:
+    interface: openstack
+requires:
+  cfgm:
+    interface: cfgm
+summary: Contrail controller 'openstack' role

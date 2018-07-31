@@ -1,0 +1,22 @@
+description: 'anope is a portable, secure set of open source, modular IRC
+
+  services, designed to run on many IRC server implementations.
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: anope
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  db:
+    interface: mysql
+  ircdservices:
+    interface: services
+subordinate: false
+summary: anope
+tags:
+- app-servers

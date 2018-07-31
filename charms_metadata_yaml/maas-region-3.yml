@@ -1,0 +1,17 @@
+categories:
+- app-servers
+description: 'MAAS provides cloud like provisioning capabilities for physical
+
+  hardware or ''virsh'' hardware.
+
+  .
+
+  This charm installs the MAAS region controller.
+
+  '
+maintainer: Scott Moser <smoser@ubuntu.com>
+name: maas-region
+provides:
+  region:
+    interface: maas
+summary: Region controller for MAAS

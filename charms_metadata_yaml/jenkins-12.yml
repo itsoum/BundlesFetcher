@@ -1,0 +1,23 @@
+categories:
+- applications
+- operational
+description: "Jenkins is an extenable open source continuous\nintegration server that\
+  \ monitors executions of\nrepeated jobs. The focus of Jenkins is the \nbuilding/testing\
+  \ of software project continuously, \nand monitoring executions of externally-run\
+  \ jobs.\nMore information at http://jenkins-ci.org/.\n\nThis charm provides the\
+  \ Jenkins master service,\nand when paired with the jenkins-slave charm \nprovides\
+  \ an easy way to deploy Jenkins on Ubuntu\nserver, and scale out Jenkins slaves.\n"
+maintainer: James Page <james.page@ubuntu.com>
+name: jenkins
+provides:
+  extension:
+    interface: jenkins-extension
+    optional: true
+    scope: container
+  website:
+    interface: http
+requires:
+  master:
+    interface: jenkins-slave
+    optional: true
+summary: Jenkins Continuous Integration Server

@@ -1,0 +1,28 @@
+description: 'MediaWiki is a wiki engine (a program for creating a collaboratively
+
+  edited website). It is designed to handle heavy websites containing
+
+  library-like document collections, and supports user uploads of
+
+  images/sounds, multilingual content, TOC autogeneration, ISBN links,
+
+  etc.
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: mediawiki
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  db:
+    interface: mysql
+  slave:
+    interface: mysql
+series:
+- trusty
+summary: Website engine for collaborative work
+tags:
+- applications

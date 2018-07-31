@@ -1,0 +1,32 @@
+description: 'IBM MobileFirst Server is mobile-optimized middleware that serves as
+  a gateway between applications, back-end systems and cloud-based services.
+
+  '
+maintainer: IBM Juju Support team <jujusupp@us.ibm.com>
+name: ibm-mobilefirst-server
+requires:
+  mobilefirstserverdb:
+    interface: db2
+  website:
+    interface: http
+    scope: container
+resources:
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+  ibm_mobilefirstserver_installer:
+    description: IBM Mobile First Server Package
+    filename: ibm_worklight_installer.zip
+    type: file
+subordinate: true
+summary: IBM MobileFirst Server
+tags:
+- ibm
+- im
+- ibm-z
+- misc

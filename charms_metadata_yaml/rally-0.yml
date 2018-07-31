@@ -1,0 +1,25 @@
+description: 'Rally is a Benchmark-as-a-Service project for OpenStack which allows
+  users
+
+  to make sure their OpenStack configurations are as performant as they intend
+
+  '
+maintainers:
+- Marco Ceppi <marco@ceppi.net>
+name: rally
+provides:
+  openstack-benchmark:
+    interface: benchmark
+  rally:
+    interface: rally
+  website:
+    interface: http
+requires:
+  credentials:
+    interface: keystone-admin
+  test-runner:
+    interface: tempest
+summary: Benchmark system of OpenStack
+tags:
+- openstack
+- benchmark

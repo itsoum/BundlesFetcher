@@ -1,0 +1,14 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Adam Israel <adam.israel@canonical.com>
+name: siege
+requires:
+  benchmark:
+    interface: benchmark
+  website:
+    interface: http
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- misc

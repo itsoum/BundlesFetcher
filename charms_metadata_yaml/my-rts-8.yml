@@ -1,0 +1,19 @@
+description: 'This is my first charm
+
+  '
+maintainer: ankit <ankit@pradeep-pc>
+name: my-rts
+provides:
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+requires:
+  requires-relation:
+    interface: hadoop
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- social

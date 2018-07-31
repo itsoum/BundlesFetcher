@@ -1,0 +1,11 @@
+description: 'Adds related services to a single specified ELB
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: elb
+requires:
+  elb-target:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Amazon Elastic Load Balancer Client

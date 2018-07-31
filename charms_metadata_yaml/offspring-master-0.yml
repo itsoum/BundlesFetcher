@@ -1,0 +1,23 @@
+description: 'Offspring is a scalable image building service.
+
+  .
+
+  This charm provides the Offspring master controller service
+
+  which is responsible for dispatching builds to slaves.
+
+  '
+name: offspring-master
+provides:
+  master:
+    interface: offspring-master
+requires:
+  db:
+    interface: pgsql
+  slave:
+    interface: offspring-slave
+    optional: true
+  web:
+    interface: offspring-web
+    optional: true
+summary: Offspring image building master controller

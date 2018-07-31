@@ -1,0 +1,16 @@
+description: 'Landscape is a web-based tool for managing Ubuntu systems. This package
+
+  is necessary if you want your machine to be managed in a Landscape
+
+  account.  This package provides the Landscape client and requires a
+
+  Landscape account.
+
+  '
+name: landscape-client
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: The Landscape administration system client

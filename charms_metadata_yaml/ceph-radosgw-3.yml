@@ -1,0 +1,20 @@
+description: 'Ceph is a distributed storage and network file system designed to provide
+
+  excellent performance, reliability, and scalability.
+
+  .
+
+  This charm provides the RADOS HTTP gateway supporting S3 and Swift protocols
+
+  for object storage.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: ceph-radosgw
+provides:
+  gateway:
+    interface: http
+requires:
+  mon:
+    interface: ceph-radosgw
+summary: Highly scalable distributed storage - RADOS HTTP Gateway

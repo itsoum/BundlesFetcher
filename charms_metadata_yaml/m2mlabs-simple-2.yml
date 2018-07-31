@@ -1,0 +1,13 @@
+description: 'M2MLabs is an open source application framework for building server-side
+  Internet of Things applications.
+
+  '
+maintainer: Jim <jim@m2mlabs.com>
+name: m2mlabs-simple
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: machine-to-machine application framework
+tags:
+- app-server

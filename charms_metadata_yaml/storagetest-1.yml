@@ -1,0 +1,19 @@
+categories:
+- misc
+description: '<Multi-line description here>
+
+  '
+maintainer: Andrew Wilkins <Andrew.Wilkins@ultra>
+name: storagetest
+storage:
+  block:
+    multiple:
+      range: 0+
+    type: block
+  filesystem:
+    location: /srv
+    multiple:
+      range: 1+
+    type: filesystem
+subordinate: false
+summary: <Fill in summary here>

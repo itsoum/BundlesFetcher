@@ -1,0 +1,36 @@
+description: 'Apache Tomcat implements the Java Servlet and the JavaServer Pages (JSP)
+
+  specifications from Sun Microsystems, and provides a "pure Java" HTTP
+
+  web server environment for Java code to run.
+
+  Apache Tomcat 7 implements the Java Servlet 3.0 and JSP 2.0 specification
+
+  from Sun Microsystems/Oracle and provides a pure Java HTTP web server.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: vstorm-tomcat
+peers:
+  cluster:
+    interface: tomcat-cluster
+provides:
+  website:
+    interface: http
+requires:
+  jndi-db-mysql:
+    interface: mysql-shared
+    optional: true
+  jndi-db-pgsql:
+    interface: pgsql
+    optional: true
+  jndi-memcached:
+    interface: memcache
+    optional: true
+  jndi-terracotta:
+    interface: terracotta
+    optional: true
+  terracotta:
+    interface: terracotta
+    optional: true
+summary: Tomcat 6 or 7 Servlet and JSP engine

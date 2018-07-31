@@ -1,0 +1,25 @@
+description: 'Hadoop is a software platform that lets one easily write and
+
+  run applications that process vast amounts of data.
+
+  '
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: hdp-hadoop
+peers:
+  compute-nodes:
+    interface: mapred
+provides:
+  hadoop-nodes:
+    interface: mapred
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+requires:
+  datanode:
+    interface: dfs
+  nodemanager:
+    interface: mapred
+summary: Software platform for processing vast amounts of data
+tags:
+- applications

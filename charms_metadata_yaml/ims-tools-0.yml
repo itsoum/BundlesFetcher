@@ -1,0 +1,30 @@
+description: 'ims-tools adapter server
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- gdubina <gdubina@dataart.com>
+name: ims-tools
+provides:
+  api:
+    interface: http
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  homestead:
+    interface: homestead-prov-interface
+  restcomm:
+    interface: http
+subordinate: false
+summary: ims-tools adapter server
+tags:
+- containers
+- layer
+- misc
+- sip
+- voip

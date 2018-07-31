@@ -1,0 +1,25 @@
+description: 'A hypervisor for LXC containers
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: lxd
+peers:
+  lxd-migration:
+    interface: lxd-migration
+provides:
+  lxd:
+    interface: containers
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- artful
+subordinate: true
+summary: A hypervisor for LXC containers
+tags:
+- misc
+- openstack

@@ -1,0 +1,13 @@
+description: 'Runs core-image-publisher service from a given service tarball (provided
+  as
+
+  files/core-image-publisher.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: core-image-publisher
+summary: 'Deploy a service to request tests for new ubuntucore images via
+
+  rabbit queue.
+
+  '

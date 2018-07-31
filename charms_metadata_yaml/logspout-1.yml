@@ -1,0 +1,21 @@
+description: Application Container log routing adapter
+maintainer: Charles Butler <charles.butler@canonical.com>
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matt Bruzek <matthew.bruzek@canonical.com>
+name: logspout
+requires:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  logstash:
+    interface: logstash-client
+subordinate: true
+summary: 'Deploy logspout in an app container and route your container logs to a log
+
+  aggregator like logstash
+
+  '
+tags:
+- containers
+- layer

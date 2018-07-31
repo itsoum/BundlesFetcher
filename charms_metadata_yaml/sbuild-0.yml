@@ -1,0 +1,9 @@
+description: 'Installs an sbuild and schroot environment for package building.
+
+  '
+maintainer: Kees Cook <kees@ubuntu.com>
+name: sbuild
+provides:
+  package-builder:
+    interface: sbuild
+summary: sbuild environment

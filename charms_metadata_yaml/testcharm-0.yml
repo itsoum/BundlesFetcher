@@ -1,0 +1,6 @@
+categories:
+- application
+description: Doesn't do anything at all.
+maintainer: Nate Finch <nate.finch@gmail.com>
+name: testcharm
+summary: A dumb little test charm.

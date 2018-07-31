@@ -1,0 +1,21 @@
+description: 'Nuage VSD provides a highly scalable, high availability, high performance
+  SDN controller for network virtualization of data centers.
+
+  .
+
+  This charm is used to configure the VSD node as a VM inside a KVM machine orchestrated
+  by Juju and is used to control the Nuage VSC.
+
+  '
+maintainer: Aniket Bhat <abhat@nuagenetworks.net>
+name: nuage-vsd
+provides:
+  vsd-rest-api:
+    interface: vsd-rest-api
+  vsd-service:
+    interface: nuage-xmpp
+subordinate: false
+summary: Nuage VSD component
+tags:
+- misc
+- openstack

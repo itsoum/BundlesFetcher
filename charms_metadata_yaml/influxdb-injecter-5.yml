@@ -1,0 +1,21 @@
+description: 'Inject data into influxDB
+
+  '
+maintainers:
+- Ian Booth <ian.booth@canonical.com>
+- Michael Hudson-Doyle <michael.hudson@canonical.com>
+- Matthew Williams <matthew.williams@canonical.com>
+- Cheryl Jennings <cheryl.jennings@canonical.com>
+- Eric Snow <eric.snow@canonical.com>
+name: influxdb-injecter
+provides:
+  number-listener:
+    interface: sockserver
+requires:
+  datastore:
+    interface: sockserver
+    scope: container
+subordinate: true
+summary: Inject data into influxDB
+tags:
+- monitoring

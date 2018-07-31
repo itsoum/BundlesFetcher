@@ -1,0 +1,21 @@
+description: 'Cassandra backup subordinate charm using CQL COPY ... TO. This is
+
+  experimental with aims to eventually merge into the main Cassandra
+
+  charm.
+
+  '
+maintainer: Haw Loeung <haw.loeung@canonical.com>
+name: cassandra-backup
+requires:
+  database:
+    interface: cassandra
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Cassandra Backup
+tags:
+- backup
+- database

@@ -1,0 +1,22 @@
+description: 'This charm is designed to open the SSH port to all nodes of the same
+  type (running the same charm)
+
+  '
+maintainer: Tilman Baumann <Tilman.Baumann@canonical.com>
+name: iptables-peer-ssh
+peers:
+  ssh-peers:
+    interface: peer-discovery
+    scope: global
+requires:
+  host-system:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Will open SSH to all units running the same charm instance
+tags:
+- security
+- network

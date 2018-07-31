@@ -1,0 +1,14 @@
+categories:
+- databases
+description: 'Runs analytics and configuration database services
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-database
+peers:
+  cluster:
+    interface: cassandra-cluster
+provides:
+  database:
+    interface: cassandra
+summary: Contrail controller 'database' role

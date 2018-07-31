@@ -1,0 +1,17 @@
+description: 'Uses a RabbitMQ source, memory channel, and Avro sink in Apache Flume
+
+  to ingest messages published to a RabbitMQ topic.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: apache-flume-rabbitmq
+requires:
+  amqp:
+    interface: rabbitmq
+  flume-agent:
+    interface: flume-agent
+summary: Ingest RabbitMQ messages with Apache Flume
+tags:
+- applications
+- bigdata
+- apache

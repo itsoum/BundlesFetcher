@@ -1,0 +1,16 @@
+description: 'Metal as a Service - Rack controller
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: maas-rack
+requires:
+  rack:
+    interface: maas
+series:
+- xenial
+subordinate: false
+summary: MAAS Rack controller
+tags:
+- maas
+- metal
+- rack

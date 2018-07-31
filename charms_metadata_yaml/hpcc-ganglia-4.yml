@@ -1,0 +1,23 @@
+description: 'Ganglia-monitor service for HPCC cluster.
+
+
+  * Local Provider (LXC)
+
+  * Amazon Web Services Cloud
+
+  '
+maintainer: xiaoming.wang@lexisnexis.com
+name: hpcc-ganglia
+provides:
+  ganglia:
+    interface: service
+  ganglia-node:
+    interface: service
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: HPCC (High Performance Computing Cluster) Ganglia-monitor
+tags:
+- monitoring

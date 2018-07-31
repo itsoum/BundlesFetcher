@@ -1,0 +1,13 @@
+description: 'Consume Kafka messages and store them in Quasardb
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: kafka-quasardb
+requires:
+  database:
+    interface: qdb
+  kafka:
+    interface: kafka
+summary: Consume Kafka messages and store them in Quasardb
+tags:
+- bigdata

@@ -1,0 +1,25 @@
+description: "Cloudera Manager is the industry\u2019s first and most sophisticated\
+  \ management application for Apache Hadoop and the enterprise data hub. Cloudera\
+  \ Manager sets the standard for enterprise deployment by delivering granular visibility\
+  \ into and control over every part of the data hub \u2014 empowering operators to\
+  \ improve performance, enhance quality of service, increase compliance and reduce\
+  \ administrative costs.\n"
+maintainer: sanjar <amir.sanjar@canonical.com>
+name: cdh5-cm
+peers:
+  agent-nodes:
+    interface: cm
+provides:
+  cm-server:
+    interface: cm
+requires:
+  cm-agent:
+    interface: cm
+  db:
+    interface: mysql
+  db-admin:
+    interface: mysql-root
+subordinate: false
+summary: End-to-End Administration for Hadoop
+tags:
+- big_data

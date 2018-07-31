@@ -1,0 +1,15 @@
+description: 'This will install vStorm Enterprise on an existing Tomcat unit.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: vstorm-vse
+requires:
+  appserver:
+    interface: juju-info
+    scope: container
+  connector:
+    interface: juju-info
+subordinate: true
+summary: Subordinate charm to install vStorm Enterprise onto a Tomcat unit.
+tags:
+- big_data

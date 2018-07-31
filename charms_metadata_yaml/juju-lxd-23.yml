@@ -1,0 +1,20 @@
+description: 'This charm provides installation of juju, lxd, and other prerequisites
+  needed
+
+  on a juju managed node that will run openstack-on-lxd bundle from james-page.
+
+  '
+maintainer: Craige McWhirter <craige.mcwhirter@canonical.com>
+name: juju-lxd
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: juju and lxd pre-reqs for openstack-on-lxd charm
+tags:
+- juju
+- lxd
+- openstack-on-lxd

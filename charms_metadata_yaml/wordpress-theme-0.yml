@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'Wordpress theme subordinate charm.
+
+  '
+maintainer: Jacek Nykis <jacek.nykis@canonical.com>
+name: wordpress-theme
+requires:
+  wordpress-theme:
+    interface: wordpress-theme
+    scope: container
+subordinate: true
+summary: Wordpress theme subordinate charm

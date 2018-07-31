@@ -1,0 +1,22 @@
+description: 'Slurm node charm
+
+  '
+maintainer: omnivector <omnivector@omnivector.solutions>
+name: slurm-node-v2
+requires:
+  slurm-cluster:
+    interface: slurm-cluster-v2
+series:
+- bionic
+- xenial
+storage:
+  scratch:
+    description: Scratch storage for Slurm node
+    location: /scratch
+    multiple:
+      range: 0-1
+    type: filesystem
+subordinate: false
+summary: Slurm node charm
+tags:
+- slurm

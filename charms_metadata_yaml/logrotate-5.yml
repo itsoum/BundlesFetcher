@@ -1,0 +1,18 @@
+description: 'Some charms create log files, but don''t provide any mechanism to
+
+  rotate them.  This fixes that.
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: logrotate
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  logrotate:
+    interface: logrotate
+    scope: container
+subordinate: true
+summary: Configures log rotation for services on a unit
+tags:
+- ops

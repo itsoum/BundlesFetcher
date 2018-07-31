@@ -1,0 +1,15 @@
+categories:
+- databases
+description: 'Access to related PostgreSQL services via the
+
+  standard psql command line utility.
+
+  '
+maintainer: stuart.bishop@canonical.com
+name: postgresql-psql
+requires:
+  db:
+    interface: pgsql
+  db-admin:
+    interface: pgsql
+summary: psql command line access to PostgreSQL services.

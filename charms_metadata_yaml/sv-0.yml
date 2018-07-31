@@ -1,0 +1,11 @@
+description: 'Install StoreVirtual VSA.
+
+  '
+maintainer: stack <stack@maas>
+name: sv
+provides:
+  storage:
+    interface: vsa
+summary: setup HP StoreVirtual as OpenStack block storage
+tags:
+- application

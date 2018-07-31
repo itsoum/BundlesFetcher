@@ -1,0 +1,17 @@
+description: 'Installs and configures an nfs4 daemon with
+
+  the standard accompanying services, portmapd
+
+  and idmapd.
+
+
+  Exported shares get created by respective actions.
+
+  '
+maintainer: Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+name: nfs-server
+series:
+- xenial
+summary: NFS formula for shared data storage
+tags:
+- file-servers

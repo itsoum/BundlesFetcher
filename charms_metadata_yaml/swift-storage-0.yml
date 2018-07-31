@@ -1,0 +1,43 @@
+description: 'OpenStack Object Storage (code-named Swift) is open source software
+  for
+
+  creating redundant, scalable object storage using clusters of standardized
+
+  servers to store petabytes of accessible data. It is not a file system or
+
+  real-time data storage system, but rather a long-term storage system for a
+
+  more permanent type of static data that can be retrieved, leveraged, and
+
+  then updated if necessary. Primary examples of data that best fit this
+
+  type of storage model are virtual machine images, photo storage, email
+
+  storage and backup archiving. Having no central "brain" or master point of
+
+  control provides greater scalability, redundancy and permanence.
+
+  .
+
+  This charm deploys the Swift storage service, supporting HTTP based access
+
+  via Swift proxy services.
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: swift-storage
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  swift-storage:
+    interface: swift
+series:
+- xenial
+- bionic
+- artful
+- trusty
+summary: OpenStack Object Storage - Swift storage service
+tags:
+- openstack
+- file-servers

@@ -1,0 +1,15 @@
+description: 'Automates jobs in a ScaleBot Lab.
+
+  '
+maintainer: canonical-hyperscale-team@lists.canonical.com
+name: scalebot-jenkins
+requires:
+  extension:
+    interface: jenkins-extension
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Automation Server for ScaleBot
+tags:
+- ops

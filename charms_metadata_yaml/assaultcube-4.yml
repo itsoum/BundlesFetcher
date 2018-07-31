@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'AssaultCube is a FREE multiplayer first-person shooter game. This
+
+  charm deploys the server part.
+
+  '
+maintainer: Javier Lopez <chilicuil@ubuntu.com>
+name: assaultcube
+provides:
+  assaultcube:
+    interface: assaultcube
+summary: Assaultcube Server

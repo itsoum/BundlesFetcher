@@ -1,0 +1,8 @@
+categories:
+- misc
+description: 'The Berkeley Open Infrastructure for Network Computing (BOINC).
+
+  '
+maintainer: Jorge O. Castro <jorge@ubuntu.com>
+name: boinc
+summary: A distributed computing client

@@ -1,0 +1,20 @@
+categories:
+- openstack
+description: 'OpenContrail is a network virtualization solution that provides an overlay
+
+  virtual-network to virtual-machines, containers or network namespaces.
+
+  .
+
+  This charm provides the control node component.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: contrail-control
+provides:
+  control-node:
+    interface: contrail-control
+requires:
+  contrail-ifmap:
+    interface: contrail-ifmap
+summary: OpenContrail Control Node

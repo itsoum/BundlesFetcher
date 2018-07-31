@@ -1,0 +1,16 @@
+categories:
+- databases
+description: 'This charm is deployed to consume a service, so we can get the properties
+  out.
+
+  '
+maintainer: Justin SB <justin@fathomdb.com>
+name: proxy-client
+requires:
+  db:
+    interface: mysql
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: A stub charm; that takes the place of a remote relation

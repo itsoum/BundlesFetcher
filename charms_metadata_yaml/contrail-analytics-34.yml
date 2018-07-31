@@ -1,0 +1,34 @@
+categories:
+- openstack
+description: 'OpenContrail is a network virtualization solution that provides an overlay
+
+  virtual-network to virtual-machines, containers or network namespaces.
+
+  .
+
+  This charm provides the analytics node component.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: contrail-analytics
+provides:
+  contrail-analytics-api:
+    interface: contrail-analytics-api
+  http-services:
+    interface: http
+requires:
+  cassandra:
+    interface: cassandra
+  contrail-api:
+    interface: contrail-api
+  contrail-discovery:
+    interface: contrail-discovery
+  identity-admin:
+    interface: keystone-admin
+  identity-service:
+    interface: keystone
+  kafka:
+    interface: kafka
+  zookeeper:
+    interface: zookeeper
+summary: OpenContrail Analytics Node

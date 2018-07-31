@@ -1,0 +1,6 @@
+description: charm for testing benchmark results
+maintainer: George Kraft <george.kraft@canonical.com>
+name: benchmark-tests
+summary: benchmark tests
+tags:
+- misc

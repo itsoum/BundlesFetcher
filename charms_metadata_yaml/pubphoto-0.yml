@@ -1,0 +1,14 @@
+categories:
+- applications
+description: 'A simple way to exchange just-taken photos in the pub with people you
+  don''t
+
+  know.
+
+  '
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: pubphoto
+provides:
+  website:
+    interface: http
+summary: A simple way to exchange just-taken photos.

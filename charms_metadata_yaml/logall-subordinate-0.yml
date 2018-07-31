@@ -1,0 +1,13 @@
+description: 'logall collects logs and forwards them to a related mongodb database
+
+  '
+maintainer: Jim Baker <jim.baker@canonical.com>
+name: logall-subordinate
+requires:
+  db:
+    interface: mongodb
+  system:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: logging daemon

@@ -1,0 +1,14 @@
+description: This charm will install a specific Kafka application dedicated to consuming
+  the Twitter Streaming API and send all messages to a Kafka broker.
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: kafka-twitter
+provides:
+  kafka-twitter:
+    interface: kafka-twitter
+requires:
+  kafka:
+    interface: kafka
+subordinate: false
+summary: Provides a Kafka Producer reading the Twitter Streaming API
+tags:
+- social

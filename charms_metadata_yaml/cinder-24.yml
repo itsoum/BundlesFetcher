@@ -1,0 +1,33 @@
+categories:
+- miscellaneous
+description: 'Cinder is a storage service for the Openstack project
+
+  '
+maintainer: Adam Gandelman <adamg@canonical.com>
+name: cinder
+peers:
+  cluster:
+    interface: cinder-ha
+provides:
+  cinder-volume-service:
+    interface: cinder
+requires:
+  amqp:
+    interface: rabbitmq
+  ceph:
+    interface: ceph-client
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  image-service:
+    interface: glance
+  pgsql-db:
+    interface: pgsql
+  shared-db:
+    interface: mysql-shared
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+summary: Cinder OpenStack starage service

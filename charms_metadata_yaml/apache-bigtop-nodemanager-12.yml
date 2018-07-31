@@ -1,0 +1,18 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the YARN slave node (NodeManager).
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-bigtop-nodemanager
+provides:
+  resourcemanager:
+    interface: mapred-slave
+summary: YARN slave node (NodeManager) for Apache Bigtop platform
+tags:
+- applications
+- bigdata
+- bigtop
+- hadoop
+- apache

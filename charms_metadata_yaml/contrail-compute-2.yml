@@ -1,0 +1,23 @@
+categories:
+- misc
+description: 'Runs vRouter service and launches tenant virtual machines (VMs)
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-compute
+peers:
+  cluster:
+    interface: compute-cluster
+provides:
+  compute:
+    interface: compute
+requires:
+  cfgm:
+    interface: cfgm
+  collector:
+    interface: collector
+  control:
+    interface: control
+  openstack:
+    interface: openstack
+summary: Contrail controller 'compute' role

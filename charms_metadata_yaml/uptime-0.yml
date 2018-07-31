@@ -1,0 +1,9 @@
+categories:
+- misc
+description: 'Sample metered charm that reports simple uptime metrics.
+
+  '
+maintainer: cmars <cmars@cloudsong>
+name: uptime
+subordinate: false
+summary: Sample metered charm.

@@ -1,0 +1,16 @@
+categories:
+- application
+description: 'Tiny Tiny RSS is an open source web-based news feed (RSS/Atom) reader
+  and aggregator, designed to allow you to read news from any location, while feeling
+  as close to a real desktop application as possible.
+
+  '
+maintainer: NextRevision <notarobot@nextrevision.net>
+name: tt-rss
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Tiny-Tiny RSS

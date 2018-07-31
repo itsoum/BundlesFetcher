@@ -1,0 +1,13 @@
+categories:
+- applications
+description: "Hadoop is a software platform that lets one easily write and\nrun MapReduce\
+  \ applications that process vast amounts of data. \nThis Charm aids MapReduce application\
+  \ developers to constructing a fully functional \nand isolated hadoop development\
+  \ platform in a local Linux Container or a cloud environment in    \nless then 5\
+  \ minutes.\n"
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: hadoop2-devel
+provides:
+  install:
+    interface: http
+summary: Software platform for processing vast amounts of data

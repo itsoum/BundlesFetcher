@@ -1,0 +1,22 @@
+description: 'The Jupyter Notebook is a web application that allows you to create
+  and share documents
+
+  that contain live code, equations, visualizations and explanatory text.
+
+  Uses include: data cleaning and transformation, numerical simulation, statistical
+  modeling,
+
+  machine learning and much more.
+
+  '
+maintainer: Giuseppe Attardi <giuseppe.attardi@garr.it>
+name: jupyter-notebook
+provides:
+  website:
+    interface: http
+series:
+- xenial
+summary: This charm deploys a Jupyter notebook service.
+tags:
+- web_server
+- application_development

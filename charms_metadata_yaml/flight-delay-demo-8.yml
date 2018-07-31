@@ -1,0 +1,14 @@
+description: "This demo is part of a Machine Learning with Hadoop webinar.\nIt has\
+  \ been ported to Ubuntu and Juju as part of an exercise to demonstrate how Juju\
+  \ can make it much easier to research Data Science by providing reproducible working\
+  \ environments. \n"
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: flight-delay-demo
+requires:
+  notebook:
+    interface: http
+    scope: container
+subordinate: true
+summary: Support charms for a 'Machine Learning with Hadoop' webinar
+tags:
+- big_data

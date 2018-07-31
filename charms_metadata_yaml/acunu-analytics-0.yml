@@ -1,0 +1,8 @@
+description: "Acunu Analytics makes it easy to build real-time Big Data applications.\
+  \ It\ndelivers a low-latency analytics platform that is scalable, robust and\ncost-effective.\
+  \ \n"
+name: acunu-analytics
+requires:
+  db:
+    interface: cassandra
+summary: Acunu's Analytics platform

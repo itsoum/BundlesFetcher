@@ -1,0 +1,16 @@
+description: 'Runs message-hub service using gunicorn from given code tarball
+
+  '
+maintainer: Online Services <online-services@lists.launchpad.net>
+name: message-hub
+provides:
+  conn-check:
+    interface: conn-check
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+    optional: true
+summary: Deploys a web_app to handle CI agents

@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'Subordinate charm to deploy web content to Apache
+
+  '
+maintainer: Liam Young <liam@ubuntu.com>
+name: apache-content
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Subordinate charm to deploy web content to Apache

@@ -1,0 +1,21 @@
+description: 'Create and scale an LXD 3.0 cluster
+
+  '
+maintainers:
+- Michael Skalka <Michael.Skalka@canonical.com>
+- Marco Ceppi <marco@ceppi.net>
+name: lxd-cluster
+peers:
+  cluster:
+    interface: lxd-cluster
+series:
+- xenial
+- bionic
+storage:
+  local:
+    type: block
+subordinate: false
+summary: LXD clustering charm
+tags:
+- lxd
+- cluster

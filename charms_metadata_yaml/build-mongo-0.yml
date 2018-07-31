@@ -1,0 +1,5 @@
+description: 'Abusive charm that builds MongoDB from source.
+
+  '
+name: build-mongo
+summary: Abusive charm that builds MongoDB from source

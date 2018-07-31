@@ -1,0 +1,27 @@
+description: 'pbuilder constructs a chroot system, and builds a package inside the
+
+  chroot. It is an ideal system to use to check that a package has
+
+  correct build-dependencies. It uses apt extensively, and a local
+
+  mirror, or a fast connection to a Debian mirror is ideal, but not
+
+  necessary.  "pbuilder create" uses debootstrap to create a chroot
+
+  image.  "pbuilder update" updates the image to the current state of
+
+  testing/unstable/whatever  "pbuilder build" takes a *.dsc file and
+
+  builds a binary in the chroot image.  pdebuild is a wrapper for Debian
+
+  Developers, to allow running pbuilder just like "debuild", as a normal
+
+  user.
+
+  '
+maintainer: Scott Sweeny <scott.sweeny@canonical.com>
+name: pbuilder
+provides:
+  package-builder:
+    interface: pbuilder
+summary: personal package builder for Debian packages

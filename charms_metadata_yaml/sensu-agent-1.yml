@@ -1,0 +1,17 @@
+categories:
+- applications
+description: 'Sensu is a distributed scaling monitoring application.
+
+  The agent is installed as a subordinate service.
+
+  '
+maintainer: Paul Czarkowski <username.taken@gmail.com>
+name: sensu-agent
+requires:
+  amqp:
+    interface: rabbitmq
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: sensu is a monitoring app

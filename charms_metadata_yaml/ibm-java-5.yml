@@ -1,0 +1,22 @@
+description: 'IBM Java SDK is an installable Java package, which contains the Java
+  API
+
+  that helps you to develop and deploy the application. The Java SDK includes
+
+  Java Compiler, Java Runtime Environment, JVM.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-java
+requires:
+  java:
+    interface: java
+    scope: container
+subordinate: true
+summary: IBM Java SDK Product
+tags:
+- ibm
+- java sdk
+- jdk
+- jre
+- java

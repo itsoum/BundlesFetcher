@@ -1,0 +1,14 @@
+description: 'A way to functionally test mysql by loading an example database
+
+  '
+maintainer: mreed <michael.reed@canonical.com>
+name: mysqltest
+provides:
+  benchmark:
+    interface: benchmark
+requires:
+  db-admin:
+    interface: mysql-root
+summary: Functional Test of mysql
+tags:
+- databases

@@ -1,0 +1,30 @@
+description: Charm for installation and deployment of Veritas HyperScale Controller
+  services. Refer README for more details
+maintainer: DL-VTAS-ENG-SDIO-HyperScale-Opensource@veritas.com
+name: hyperscale-controller
+requires:
+  amqp:
+    interface: rabbitmq
+  glance:
+    interface: glance
+  ha:
+    interface: hacluster
+    scope: container
+  identity-admin:
+    interface: keystone-admin
+  shared-db:
+    interface: mysql-shared
+  zookeeper:
+    interface: zookeeper
+resources:
+  install:
+    description: Tar ball for Veritas HyperScale packages
+    filename: Veritas_HyperScale_for_OpenStack_2.5.0.000.IE.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Veritas HyperScale Controller charm
+tags:
+- openstack
+- storage

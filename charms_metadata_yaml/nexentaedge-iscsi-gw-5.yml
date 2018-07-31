@@ -1,0 +1,25 @@
+description: 'A combined NexentaEdge ISCSI gateway and data node.
+
+  The combined data node and ISCSI gateway provide both data storage capacity to the
+  NexentaEdge cluster,
+
+  and function as a ISCSI service endpoint (target).
+
+  When used with OpenStack, the ISCSI gateway provide block storage for OpenStack
+  Cinder.
+
+  '
+maintainer: Nexenta <nexenta.juju@nexenta.com>
+name: nexentaedge-iscsi-gw
+provides:
+  cinder-nedge:
+    interface: cinder-nedge
+requires:
+  cinder-gw:
+    interface: cinder-gw
+subordinate: false
+summary: Nexenta Edge cinder gateway node. Can be used as object storage node
+tags:
+- openstack
+- storage
+- file-servers

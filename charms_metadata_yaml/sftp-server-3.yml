@@ -1,0 +1,12 @@
+description: 'Configures sftp access with chroot and no shell access for users
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: sftp-server
+series:
+- xenial
+- artful
+subordinate: false
+summary: sftp-server
+tags:
+- misc

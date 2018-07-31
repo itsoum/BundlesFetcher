@@ -1,0 +1,19 @@
+description: 'SugarCRM is a Customer Relationship Management system.
+
+  '
+maintainer: Matt Bruzek <matthew.bruzek@canonical.com>
+name: sugarcrm
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  database:
+    interface: mysql
+  slave:
+    interface: mysql
+subordinate: false
+summary: SugarCRM Community Edition version 6.5
+tags:
+- applications

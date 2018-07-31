@@ -1,0 +1,8 @@
+categories:
+- misc
+description: Experimental home router/gateway/firewall charm. Play around with new
+  technologies such as IPv6, Netfilter's nftables and ISC's new Kea DHCP server.
+maintainer: Haw Loeung <haw.loeung@canonical.com>
+name: haw-firewall
+subordinate: false
+summary: My experimental home router/gateway/firewall charm.

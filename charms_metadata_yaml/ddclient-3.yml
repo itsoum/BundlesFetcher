@@ -1,0 +1,25 @@
+categories:
+- misc
+description: 'This package provides a client to update dynamic IP addresses with
+
+  several dynamic DNS service providers, such as DynDNS.com.  This makes
+
+  it possible to use a fixed hostname (such as myhost.dyndns.org) to
+
+  access a machine with a dynamic IP address.  This client supports both
+
+  dynamic and (near) static services, as  well as MX record and
+
+  alternative name management. It caches the address, and only attempts
+
+  the update when it has changed.
+
+  '
+maintainer: Darryl Weaver <darryl.weaver@canonical.com>
+name: ddclient
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: address updating utility for dynamic DNS services

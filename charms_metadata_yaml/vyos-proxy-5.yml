@@ -1,0 +1,13 @@
+description: 'VyOS Proxy charm
+
+  '
+maintainers:
+- Marco Ceppi <marco.ceppi@canonical.com>
+name: vyos-proxy
+series:
+- xenial
+- trusty
+summary: VyOS Proxy charm for ping
+tags:
+- vnf
+- network

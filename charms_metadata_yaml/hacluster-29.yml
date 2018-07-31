@@ -1,0 +1,23 @@
+description: 'Corosync/Pacemaker
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: hacluster
+peers:
+  hanode:
+    interface: hacluster
+provides:
+  ha:
+    interface: hacluster
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Corosync Cluster Engine - membership, messaging and quorum
+tags:
+- misc

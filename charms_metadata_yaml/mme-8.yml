@@ -1,0 +1,20 @@
+description: 'A minimalist docker charm layer for use with juju compose,
+
+  powered by the reactive framework
+
+  '
+maintainer: brian baird <brian.baird@expeto.io>
+name: mme
+provides:
+  mme:
+    interface: S1-C
+requires:
+  fabric:
+    interface: SDN
+  hss:
+    interface: S6a-hss
+subordinate: false
+summary: LTE Evolved Packet Core (EPIC) MME
+tags:
+- networking
+- teleco

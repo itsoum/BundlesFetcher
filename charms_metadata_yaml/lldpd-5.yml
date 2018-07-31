@@ -1,0 +1,41 @@
+description: 'LLDP is an industry standard protocol designed to supplant proprietary
+
+  Link-Layer protocols such as Extreme''s EDP (Extreme Discovery
+
+  Protocol) and CDP (Cisco Discovery Protocol). The goal of LLDP is to
+
+  provide an inter-vendor compatible mechanism to deliver Link-Layer
+
+  notifications to adjacent network devices.  This implementation
+
+  provides LLDP sending and reception, supports VLAN and includes an
+
+  SNMP subagent that can interface to an SNMP agent through AgentX
+
+  protocol.  This daemon is also able to deal with CDP, SONMP, FDP and
+
+  EDP protocol. It also handles LLDP-MED extension.
+
+  '
+maintainer: "Ante Karamati\u0107 <ante.Karamatic@canonical.com>"
+name: lldpd
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  master:
+    interface: lldp
+series:
+- trusty
+- xenial
+- bionic
+subordinate: true
+summary: implementation of IEEE 802.1ab (LLDP)
+tags:
+- network
+- ops
+- monitoring

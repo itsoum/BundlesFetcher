@@ -1,0 +1,26 @@
+description: 'Apache Spark is a fast and general engine for large-scale data processing.
+
+
+  Learn more at http://spark.apache.org.
+
+  '
+maintainer: Antonio Rosales <antonio.rosales@canonical.com>
+name: apache-spark
+provides:
+  hadoop-plugin:
+    interface: hadoop-plugin
+    scope: container
+  spark:
+    interface: spark
+requires:
+  strongloop:
+    interface: strong-spark
+  system-z:
+    interface: z-connect
+  zos-connect:
+    interface: zos-interface
+summary: Apache Spark is a fast engine for large-scale data processing
+tags:
+- bigdata
+- hadoop
+- apache

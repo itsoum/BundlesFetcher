@@ -1,0 +1,29 @@
+description: 'Cacti is a complete frontend to rrdtool, it stores all of the necessary
+
+  information to create graphs and populates them with data in a MySQL
+
+  database.  The frontend is completely PHP driven.  Along with being
+
+  able to maintain Graphs, Data Sources, and Round Robin Archives in a
+
+  database, cacti handles the data gathering also.  There is also SNMP
+
+  support for those used to creating traffic graphs with MRTG.  This
+
+  package requires a functional MySQL database server on either the
+
+  installation host or remotely accessible system.  If you do not
+
+  already have a database server available, you should also install
+
+  mysql-server.
+
+  '
+name: cacti
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Frontend to rrdtool for monitoring systems and services

@@ -1,0 +1,14 @@
+categories:
+- misc
+description: 'This charm creates and manages an APT archive for all
+
+  supported Ubuntu releases.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: apt-archive
+provides:
+  upload-target:
+    interface: sftp
+subordinate: false
+summary: Debian apt archive manageer

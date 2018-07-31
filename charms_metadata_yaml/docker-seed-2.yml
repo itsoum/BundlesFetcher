@@ -1,0 +1,7 @@
+description: 'The docker-seed charm can serve as inspiration to create
+
+  proper charms based on Docker images.
+
+  '
+name: docker-seed
+summary: Seed charm that can fire any docker container

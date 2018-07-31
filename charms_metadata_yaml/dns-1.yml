@@ -1,0 +1,16 @@
+categories:
+- Applications
+description: Aricent DNS Charm
+maintainer: Anuyog Chauhan
+name: dns
+provides:
+  auto-generated:
+    interface: dns-auto
+  dns-client:
+    interface: dns-client
+  programmable:
+    interface: dns
+  programmable-multiple:
+    interface: dns-multi
+subordinate: false
+summary: Deploys a DNS server or wrapper to manage service name resolution

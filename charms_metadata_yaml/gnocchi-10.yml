@@ -1,0 +1,47 @@
+description: 'Gnocchi is an open-source, multi-tenant timeseries, metrics
+
+  and resources database. It provides an HTTP REST interface
+
+  to create and manipulate the data. It is designed to store
+
+  metrics at a very large scale while providing access to
+
+  metrics and resources information and history.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-dev@lists.openstack.org>
+name: gnocchi
+peers:
+  cluster:
+    interface: openstack-ha
+provides:
+  metric-service:
+    interface: gnocchi
+requires:
+  amqp:
+    interface: rabbitmq
+  certificates:
+    interface: tls-certificates
+  coordinator-memcached:
+    interface: memcache
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+  storage-ceph:
+    interface: ceph-client
+series:
+- xenial
+- bionic
+- artful
+subordinate: false
+summary: Multi-tenant timeseries, metrics and resources database
+tags:
+- openstack

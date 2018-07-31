@@ -1,0 +1,9 @@
+description: 'This charm facilitates nocloud datasource and custom cloud-init
+
+  '
+maintainer: James Beedy <James.Beedy@jbeedy-laptop.local>
+name: cloud-init
+subordinate: false
+summary: This charm facilitates nocloud datasource cloud-init
+tags:
+- ops

@@ -1,0 +1,22 @@
+categories:
+- misc
+description: 'Server Density is a SaaS tool which helps you run your infrastructure.
+  It syncs with the major cloud providers and and allows you to monitor your websites
+  and servers from a single console, API and mobile app so you can diagnose problems,
+  maintain uptime and maximise performance.
+
+
+  This charm installs and configures the Server Density monitoring agent (sd-agent).
+
+  '
+maintainer: Wes Mason <wes@1stvamp.org>
+name: serverdensity
+requires:
+  logging:
+    interface: logging-directory
+    scope: container
+  serverdensity:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: This charm installs and configures the Server Density monitoring agent (sd-agent).

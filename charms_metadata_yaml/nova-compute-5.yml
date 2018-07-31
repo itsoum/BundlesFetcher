@@ -1,0 +1,23 @@
+description: 'OpenStack Compute, codenamed Nova, is a cloud computing fabric controller.
+  In
+
+  addition to its "native" API (the OpenStack API), it also supports the Amazon
+
+  EC2 API.
+
+  '
+maintainer: Adam Gandelman <adamg@canonical.com>
+name: nova-compute
+provides:
+  cloud-compute:
+    interface: nova-compute
+requires:
+  amqp:
+    interface: rabbitmq
+  ceph:
+    interface: ceph-client
+  image-service:
+    interface: glance
+  shared-db:
+    interface: mysql-shared
+summary: OpenStack compute

@@ -1,0 +1,15 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: zeestrat <zeestrat@vagrant.vm>
+name: slurm-controller
+provides:
+  slurm-cluster:
+    interface: slurm-cluster
+series:
+- xenial
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- slurm
+- misc

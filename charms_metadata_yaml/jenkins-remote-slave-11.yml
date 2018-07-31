@@ -1,0 +1,21 @@
+categories:
+- applications
+description: 'Jenkins is a Continous Integration server supporting
+
+  flexible continous integration and deployment methodologies
+
+  and more.
+
+  .
+
+  This charm provides support for remote jenkins slaves connected to an
+
+  existing jenkins master.
+
+  '
+maintainer: Ubuntu Engineering CI Team <canonical-ci-engineering@lists.launchpad.net>
+name: jenkins-remote-slave
+provides:
+  slave:
+    interface: jenkins-remote-slave
+summary: Jenkins CI Remote Slave

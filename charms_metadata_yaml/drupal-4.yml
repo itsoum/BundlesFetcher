@@ -1,0 +1,14 @@
+categories:
+- applications
+description: 'Installs the drupal CMS system.
+
+  '
+maintainer: Darryl Weaver <darryl.weaver@canonical.com>
+name: drupal
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Drupal CMS

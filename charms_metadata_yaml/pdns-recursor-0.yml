@@ -1,0 +1,24 @@
+description: 'PowerDNS is a versatile nameserver which supports a large number of
+
+  different backends ranging from simple zonefiles to relational
+
+  databases and load balancing/failover algorithms. PowerDNS tries to
+
+  emphasize speed and security.  This is the recursive nameserver that
+
+  goes out to the internet and resolve queries about other domains.
+
+
+  Be careful when configuring this to restrict queries to allowed hosts,
+
+  as open DNS recursors are a popular repeater for distributed denial of
+
+  service attacks.
+
+  '
+maintainer: Seth Arnold <seth.arnold@canonical.com>
+name: pdns-recursor
+provides:
+  dns:
+    interface: recursor
+summary: PowerDNS recursor

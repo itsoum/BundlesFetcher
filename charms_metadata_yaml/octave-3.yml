@@ -1,0 +1,13 @@
+categories:
+- applications
+description: "This charm deploys GNU Octave, which is a high-level interpreted \n\
+  language, primarily intended for numerical computations. In relation\nwith the octave-controller\
+  \ charm this service enables user to utilize\nmachines for numerical computations\
+  \ in Octave using mpi.\n"
+maintainer: Ales Stimec <ales.stimec@xlab.si>
+name: octave
+provides:
+  octave:
+    interface: octave_rel
+subordinate: false
+summary: This charms the Octave to install itself on the target machine.

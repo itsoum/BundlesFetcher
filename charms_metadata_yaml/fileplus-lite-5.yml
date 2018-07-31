@@ -1,0 +1,32 @@
+description: '10Duke''s File+ Lite is a file management and file conversion web application.
+
+  File+ Lite provides service through a REST API.
+
+  '
+maintainer: Mikko <mikko@10duke.com>
+name: fileplus-lite
+provides:
+  data:
+    interface: block-storage
+    optional: true
+    scope: container
+  website:
+    interface: http
+requires:
+  nfs:
+    interface: mount
+  persistent-storage:
+    interface: directory-path
+storage:
+  data:
+    location: /srv/data
+    type: filesystem
+subordinate: false
+summary: 10Duke Software - File+ Lite
+tags:
+- file-servers
+- storage
+- conversion
+- transcoding
+- photo
+- video

@@ -1,0 +1,9 @@
+description: 'This charm facilitates the initialization of puppet
+
+  '
+maintainer: James Beedy <James.Beedy@jbeedy-laptop.local>
+name: puppet-init
+subordinate: false
+summary: This charm facilitates the initialization of puppet
+tags:
+- ops

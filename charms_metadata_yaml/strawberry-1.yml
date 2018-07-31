@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Strawberry Ice Cream
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: ice-cream_strawberry
+provides:
+  ice-cream:
+    interface: ice-cream
+summary: Strawberry Ice Cream

@@ -1,0 +1,19 @@
+description: 'Export Prometheus metrics from arbitrary unstructured log data.
+
+  '
+maintainer: Junien Fridrick <junien.fridrick@canonical.com>
+name: prometheus-grok-exporter
+provides:
+  prometheus-client:
+    interface: http
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+subordinate: true
+summary: Export Prometheus metrics from arbitrary unstructured log data.
+tags:
+- monitoring

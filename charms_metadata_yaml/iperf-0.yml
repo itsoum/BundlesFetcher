@@ -1,0 +1,9 @@
+categories:
+- miscellaneous
+description: "This charm installs iperf and runs iperf server. \n"
+maintainer: Ashley Lai <ashley.lai@canonical.com>
+name: iperf
+provides:
+  iperf-service:
+    interface: iperf
+summary: iperf server

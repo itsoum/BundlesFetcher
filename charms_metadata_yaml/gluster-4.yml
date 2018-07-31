@@ -1,0 +1,16 @@
+description: "GlusterFS is an open source, distributed file system capable of scaling\
+  \ \nto several petabytes (actually, 72 brontobytes!) and handling thousands \nof\
+  \ clients. GlusterFS clusters together storage building blocks over \nInfiniband\
+  \ RDMA or TCP/IP interconnect, aggregating disk and memory \nresources and managing\
+  \ data in a single global namespace. GlusterFS \nis based on a stackable user space\
+  \ design and can deliver exceptional \nperformance for diverse workloads.\n"
+name: gluster
+peers:
+  slave:
+    interface: gluster
+provides:
+  gluster-server:
+    interface: gluster
+  nfs:
+    interface: gluster
+summary: Cluster Filesystem capable of scaling to several peta-bytes

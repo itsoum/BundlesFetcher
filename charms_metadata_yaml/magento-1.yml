@@ -1,0 +1,22 @@
+categories:
+- application
+description: 'Deploy and isntall Magento, a php eCommerce platform
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: magento
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+  search:
+    interface: solr
+  sessions:
+    interface: memcache
+  slow-storage:
+    interface: nfs
+  storage:
+    interface: mount
+summary: php eCommerce platform

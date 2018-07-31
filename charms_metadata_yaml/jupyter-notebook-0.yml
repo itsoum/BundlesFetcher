@@ -1,0 +1,19 @@
+description: 'The Jupyter Notebook is a web application that allows you to create
+  and share documents that contain live code, equations, visualizations and explanatory
+  text. Uses include: data cleaning and transformation, numerical simulation, statistical
+  modeling, machine learning and much more.
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: jupyter-notebook
+provides:
+  website:
+    interface: http
+series:
+- xenial
+- trusty
+subordinate: false
+summary: This charm deploys the jupyter-notebook
+tags:
+- big_data
+- analytics

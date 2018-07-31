@@ -1,0 +1,14 @@
+description: 'With open-port you can run the open-port ${port} command on any
+
+  Juju unit that is related to this charm, even if they don''t support
+
+  opening a particular port in their charm code (e.g. Jenkins, Apache).
+
+  '
+name: open-port
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Open-port is a subordinate to open ports in Juju units

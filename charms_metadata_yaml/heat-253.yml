@@ -1,0 +1,37 @@
+description: 'Heat is the main project in the OpenStack Orchestration program. It
+  implements an
+
+  orchestration engine to launch multiple composite cloud applications based on
+
+  templates in the form of text files that can be treated like code.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: heat
+peers:
+  cluster:
+    interface: heat-ha
+requires:
+  amqp:
+    interface: rabbitmq
+  certificates:
+    interface: tls-certificates
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+- bionic
+- artful
+- trusty
+summary: OpenStack orchestration engine
+tags:
+- openstack

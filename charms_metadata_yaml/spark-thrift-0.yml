@@ -1,0 +1,15 @@
+description: 'Expose the Spark Thrift Server so users can connect to Spark via JDBC
+
+  '
+maintainer: Tom Barber <tom@analytical-labs.com>
+name: spark-thrift
+requires:
+  spark:
+    interface: spark
+    scope: container
+subordinate: true
+summary: Expose the Spark Thrift Server
+tags:
+- database
+- big_data
+- analytics

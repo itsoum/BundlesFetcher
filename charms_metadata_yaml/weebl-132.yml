@@ -1,0 +1,18 @@
+description: OIL Dashboard provides insight into OIL. This charm deploys the OIL dashboard.
+maintainer: Jason Hobbs <jason.hobbs@canonical.com>
+name: weebl
+provides:
+  oildashboard:
+    interface: weebl
+  website:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+series:
+- xenial
+summary: Weebl is the OIL Dashboard.
+tags:
+- weebl
+- OIL
+- OIL dashboard

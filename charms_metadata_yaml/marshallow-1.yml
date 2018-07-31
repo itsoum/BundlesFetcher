@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Marshallow
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: topping_marshallow
+requires:
+  topping:
+    interface: ice-cream
+summary: Marshallow

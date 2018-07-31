@@ -1,0 +1,18 @@
+description: 'Phusion Passenger is an application server for Ruby (Rack) apps.
+
+  It allows you to get your web apps online with the least amount of hassle, by taking
+
+  care of pretty much all of the heavy lifting for you when it comes to managing
+
+  your apps'' processes and resources.
+
+  '
+maintainer: Altoros Systems, Inc. <pavel.pachkovskij@altoros.com>
+name: nginx-passenger
+provides:
+  rack:
+    interface: rack
+    scope: container
+  website:
+    interface: http
+summary: Rails and Rack support for Nginx

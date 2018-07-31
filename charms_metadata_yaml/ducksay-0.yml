@@ -1,0 +1,8 @@
+description: 'Testing min juju minjujuversion
+
+  '
+maintainer: juju@canonical.com <Juju>
+minjujuversion: 1.28.0
+name: ducksay
+subordinate: false
+summary: Testing min juju version

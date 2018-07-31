@@ -1,0 +1,15 @@
+description: 'Membase Server is the leading distribution of memcached and
+
+  membase, created and supported by top contributors to the memcached
+
+  and membase open source projects.
+
+  '
+name: membase
+peers:
+  cluster:
+    interface: membase-cluster
+provides:
+  db:
+    interface: membase
+summary: Membase Server

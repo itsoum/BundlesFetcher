@@ -1,0 +1,8 @@
+description: 'Deploys Gitolite
+
+  '
+name: gitolite
+provides:
+  website:
+    interface: http
+summary: Host Git repositories easily and securely

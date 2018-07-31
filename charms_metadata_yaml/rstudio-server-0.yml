@@ -1,0 +1,11 @@
+categories:
+- applications
+description: "RStudio Server is designed to let users operate an IDE for R\nremotely.\
+  \  \n"
+maintainer: Ryan Kather <rkather@missionpenguin.com>
+name: rstudio-server
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: RStudio Server Web Based IDE for R

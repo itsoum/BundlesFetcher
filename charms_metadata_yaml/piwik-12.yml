@@ -1,0 +1,23 @@
+categories:
+- applications
+description: 'Piwik is a free and open source web analytics application written by
+  a team
+
+  of international developers that runs on a PHP/MySQL webserver.
+
+  Piwik tracks online visits to one or more websites and displays reports on
+
+  these visits for analysis.
+
+  '
+maintainer: Thiago Bellini <hackedbellini@async.com.br>
+name: piwik
+provides:
+  analytics:
+    interface: piwik
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Piwik - Free and open source web analytics application

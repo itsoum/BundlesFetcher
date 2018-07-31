@@ -1,0 +1,36 @@
+description: 'Odoo is a comprehensive open source management system. It has a large,
+  active
+
+  community, which has developed modules to handle all facets of company
+
+  management.
+
+  These include, amongst others: Sales Management, CRM, e-commerce,
+
+  Manufacturing, Stock, Accounting, Human Resources, Project Management,
+
+  Logistics, Productivity and Document Management.
+
+  Odoo allows you to start easily with one module to fit a specific need then
+
+  add additional modules as and when you need them enabling you to have a
+
+  powerful feature rich Enterprise Resource Planner.
+
+  '
+maintainer: "Ond\u0159ej Kuzn\xEDk <ondrej.kuznik@credativ.co.uk>"
+name: odoo
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: Odoo ERP
+tags:
+- ecommerce
+- cms
+- social

@@ -1,0 +1,30 @@
+description: 'Cinder is the block storage service for the Openstack project.
+
+  This charm provides a Spectrum Scale storage backend for Cinder
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-cinder-spectrumscale
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+  storage-backend-glance:
+    interface: glance-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  spectrumscale:
+    interface: spectrum-scale-client
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Spectrum Scale integration for OpenStack Block Storage
+tags:
+- openstack
+- storage
+- file-servers
+- misc

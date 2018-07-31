@@ -1,0 +1,16 @@
+description: 'NexentaEdge plugin for Openstack dashboard.
+
+  '
+maintainer: Nexenta <nexenta.juju@nexenta.com>
+name: dashboard-nexentaedge
+requires:
+  dashboard-nedge:
+    interface: dashboard-nedge
+  dashboard-plugin:
+    interface: dashboard-plugin
+    scope: container
+subordinate: true
+summary: Subordinate charm for NexentasEdge plugin for Openstack dashboard
+tags:
+- openstack
+- misc

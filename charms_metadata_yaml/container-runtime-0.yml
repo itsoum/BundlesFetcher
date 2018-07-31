@@ -1,0 +1,22 @@
+description: 'A container runtime with support for optional features
+
+  around networking, storage, and images.
+
+  '
+name: container-runtime
+provides:
+  containers:
+    interface: container-runtime
+    scope: container
+requires:
+  dns:
+    interface: container-dns
+  images:
+    interface: container-images
+  network:
+    interface: overlay-network
+    scope: container
+  storage:
+    interface: block-storage
+    scope: container
+summary: Containers!

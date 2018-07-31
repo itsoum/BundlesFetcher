@@ -1,0 +1,25 @@
+categories:
+- cache-proxy
+description: 'Swift is a distributed virtual object store. This formula deploys the
+  proxy node
+
+  to be related to storage nodes.
+
+  '
+maintainer: Adam Gandelman <adamg@canonical.com>
+name: swift-proxy
+peers:
+  cluster:
+    interface: swift-ha
+provides:
+  object-store:
+    interface: swift-proxy
+requires:
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  swift-storage:
+    interface: swift
+summary: Swift proxy node

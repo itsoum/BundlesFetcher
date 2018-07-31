@@ -1,0 +1,32 @@
+description: 'This is a purpose-oriented charm, to provide a caching proxy mirror
+  of the
+
+  Ubuntu archive on cloud platforms.
+
+  .
+
+  This is a hybrid mirror.  All data except /ubuntu/pool is synced from
+
+  upstream Ubuntu mirrors every 2 hours.  /ubuntu/pool is forwarded internally
+
+  to squid-deb-proxy, which keeps a local cache of .deb files as they are
+
+  '
+maintainer: Robert C Jennings <robert.jennings@canonical.com>
+name: ubuntu-repository-cache
+peers:
+  cluster:
+    interface: ubuntu-repository-cache-ha
+provides:
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+subordinate: false
+summary: Ubuntu archive caching proxy mirror
+tags:
+- cache-proxy

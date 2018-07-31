@@ -1,0 +1,25 @@
+description: 'The Alertmanager handles alerts sent by client applications such as
+  the
+
+  Prometheus server. It takes care of deduplicating, grouping, and routing
+
+  them to the correct receiver integration such as email, PagerDuty,
+
+  or OpsGenie. It also takes care of silencing and inhibition of alerts.
+
+  '
+maintainer: Prometheus Charmers <prometheus-charmers@lists.launchpad.net>
+name: prometheus-alertmanager
+peers:
+  alertmanager-cluster:
+    interface: alertmanger-cluster
+provides:
+  alertmanager-service:
+    interface: http
+series:
+- xenial
+- bionic
+subordinate: false
+summary: Alertmanager for Prometheus
+tags:
+- monitoring

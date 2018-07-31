@@ -1,0 +1,9 @@
+description: 'DEPRECATED: please use ibm-platform-pm instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: platform-pm
+subordinate: false
+summary: IBM Platform Process Manager (deprecated, use ibm-platform-pm)
+tags:
+- workload_management

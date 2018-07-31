@@ -1,0 +1,17 @@
+description: 'The blackbox exporter allows blackbox probing of
+
+  endpoints over HTTP, HTTPS, DNS, TCP and ICMP.
+
+  '
+maintainer: Jacek Nykis <jacek.nykis@canonical.com>
+name: prometheus-blackbox-exporter
+provides:
+  blackbox-exporter:
+    interface: http
+series:
+- xenial
+- bionic
+subordinate: false
+summary: Blackbox exporter for Prometheus
+tags:
+- monitoring

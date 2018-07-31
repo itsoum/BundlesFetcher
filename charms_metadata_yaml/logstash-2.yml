@@ -1,0 +1,29 @@
+description: 'Installs the logstash indexer.   Initially stand alone version with
+  a
+
+  dependency on elasticsearch as the backend provider.
+
+  '
+maintainers:
+- charles <charles.butler@ubuntu.com>
+- Michael Foley <michael.foley@canonical.com>
+name: logstash
+provides:
+  input:
+    interface: redis
+  lumberjack:
+    interface: http
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  rest:
+    interface: elasticsearch
+requires:
+  amqp:
+    interface: rabbitmq
+  client:
+    interface: elasticsearch
+subordinate: false
+summary: Logstash indexer server
+tags:
+- ops

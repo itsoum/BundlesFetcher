@@ -1,0 +1,21 @@
+categories:
+- applications
+description: "This service has two purposes:\n - A website for charm authors to review\
+  \ the details and assess the quality\n   of Juju charms.\n - A RESTful service to\
+  \ browse and search Juju charms.\n"
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: charmworld
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  database:
+    interface: mongodb
+  essearch:
+    interface: elasticsearch
+  reverseproxy:
+    interface: http
+summary: Juju Charm Browser

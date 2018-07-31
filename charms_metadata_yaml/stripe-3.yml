@@ -1,0 +1,21 @@
+description: 'This is a template to use with Django-rainbow called a stripe. Edit
+  the config.yaml files settings with your Django project settings
+
+  and add a relationship to the django-rainbow carm. If you will be using more than
+  one stripe than the entire charm needs
+
+  to be copied and renamed. This will create two stripes with two different Django
+  project settings contained therein. You can re-deploy
+
+  the project by simply adding the relationship back to django rainbow. To update
+  the project code on the server,
+
+  simply re-add the relation back to django-rainbow.
+
+  '
+maintainer: Surgemcgee <robertsteckroth@gmail.com>
+name: stripe-yourproject
+requires:
+  stripe:
+    interface: django-rainbow
+summary: A generic template for the Django-rainbow charm.

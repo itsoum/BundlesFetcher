@@ -1,0 +1,26 @@
+description: 'Quagga is a routing software suite, providing implementations of OSPFv2,
+
+  OSPFv3, RIP v1 and v2, RIPng and BGP-4 for Unix platforms.
+
+  '
+extra-bindings:
+  lan0: null
+  ptp0: null
+  ptp1: null
+  ptp2: null
+  ptp3: null
+maintainer: OpenStack Charmers <openstack-dev@lists.openstack.org>
+name: quagga
+provides:
+  bgpserver:
+    interface: bgp
+requires:
+  bgpclient:
+    interface: bgp
+    optional: true
+series:
+- bionic
+- xenial
+summary: Quagga is a routing software suite.
+tags:
+- network

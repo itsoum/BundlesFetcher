@@ -1,0 +1,23 @@
+description: 'data shipper that integrates with Elasticsearch to provide real-time
+  analytics
+
+  for web, database, and other network protocols
+
+  '
+maintainer: Charles Butler <charles.butler@canonical.com>
+name: packetbeat
+requires:
+  beats-host:
+    interface: juju-info
+    scope: container
+  elasticsearch:
+    interface: elasticsearch
+  logstash:
+    interface: elastic-beats
+series:
+- trusty
+subordinate: true
+summary: Deploys packetbeat
+tags:
+- logging
+- monitoring

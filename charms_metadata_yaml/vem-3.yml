@@ -1,0 +1,15 @@
+categories:
+- misc
+description: "This charm automates the installation of Nexus1K VEM(Virtual\nEthernet\
+  \ Module). For any compute node and selectively network node\nVEM can be a subordinate\
+  \ service which provides virtual machine switch \nservice.\n"
+maintainer: Shiva Prasad Rao <shivrao@cisco.com>
+name: vem
+requires:
+  dvs:
+    interface: dvs
+  openstack-nova:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Charm to automate installation of Cisco N1KV VEM

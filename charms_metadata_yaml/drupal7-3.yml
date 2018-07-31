@@ -1,0 +1,12 @@
+description: 'Installs the drupal CMS system.
+
+  '
+maintainer: Kapil Thangavelu <kapil.foss@gmail.com>
+name: drupal7
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Drupal 7 CMS

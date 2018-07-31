@@ -1,0 +1,17 @@
+description: 'wallabag is a self hostable application for saving web pages. Unlike
+  other
+
+  services, wallabag is free (as in freedom) and open source.
+
+  '
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: wallabag
+provides:
+  website:
+    interface: http
+requires:
+  mysql:
+    interface: mysql
+summary: wallabag
+tags:
+- applications

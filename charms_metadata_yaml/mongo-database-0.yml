@@ -1,0 +1,18 @@
+description: 'This charm will Add a Database on MongoDB.
+
+  '
+maintainer: Sebastien Pattyn <sebastien.pattyn@tengu.io>
+name: mongo-database
+provides:
+  db:
+    interface: mongodb-database
+requires:
+  mongodb:
+    interface: mongodb
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: This charm will Add a Database on MongoDB.
+tags:
+- database

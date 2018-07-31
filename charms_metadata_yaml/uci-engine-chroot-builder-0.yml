@@ -1,0 +1,18 @@
+categories:
+- misc
+description: 'Deploys a set of chroots for the purpose of creating debian
+
+  packages and click packages.
+
+  '
+maintainer: Francis Ginther <francis.ginther@canonical.com>
+name: chroot-builder
+provides:
+  chroot-builder:
+    interface: chroot-builder
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Deploy a set of pbuilder chroots.

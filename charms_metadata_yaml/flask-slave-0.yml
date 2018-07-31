@@ -1,0 +1,12 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: liam <liam@solar>
+name: flask-slave
+provides:
+  flask-slave:
+    interface: slave
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- misc

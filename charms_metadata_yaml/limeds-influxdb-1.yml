@@ -1,0 +1,17 @@
+description: 'This charm installs LimeDS InfluxDB connector.
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: limeds-influxdb
+requires:
+  influxdb:
+    interface: influxdb-api
+  limeds:
+    interface: limeds
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Plugin for LimeDS that creates a InfluxDB connector segment.
+tags:
+- analytics

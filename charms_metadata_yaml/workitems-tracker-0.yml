@@ -1,0 +1,26 @@
+description: 'Tools for collecting work items from blueprints, bugs, and wiki pages,
+
+  and generate burndown charts and per-blueprint/per-assignee reports.
+
+
+  Please see
+
+
+  https://wiki.ubuntu.com/WorkItemsHowto
+
+
+  for instructions and
+
+
+  http://status.ubuntu.com
+
+
+  for the generated report and database for Canonical teams'' Ubuntu work.
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: workitems-tracker
+provides:
+  website:
+    interface: http
+summary: Track work items and generate burndown charts

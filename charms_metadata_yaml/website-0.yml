@@ -1,0 +1,21 @@
+description: 'This subordinate charm will deploy the repository set in the content
+
+  configuration option as a virtual-host on a related web serving charm.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: website
+provides:
+  website:
+    interface: http
+requires:
+  apache-engine:
+    interface: apache-vhost
+    scope: container
+  nginx-engine:
+    interface: nginx-vhost
+    scope: container
+subordinate: true
+summary: static site for Nginx or Apache2 web engine
+tags:
+- application

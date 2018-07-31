@@ -1,0 +1,16 @@
+categories:
+- misc
+description: 'Wordpress plugin subordinate charm. For a list of supported charms,
+  see the
+
+  config.yaml file.
+
+  '
+maintainer: Jacek Nykis <jacek.nykis@canonical.com>
+name: wordpress-plugin
+requires:
+  wordpress-plugin:
+    interface: wordpress-plugin
+    scope: container
+subordinate: true
+summary: Wordpress plugin subordinate charm

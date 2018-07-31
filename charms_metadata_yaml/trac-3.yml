@@ -1,0 +1,15 @@
+categories:
+- applications
+description: "A charm for trac, installs all basic and necessary plugins\nThe charm\
+  \ supports sqlite and mysql as db backends through db_backend config \n"
+maintainer: Ramez Hanna <rhanna@informatiq.org>
+name: trac
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+    optional: true
+subordinate: false
+summary: trac wiki

@@ -1,0 +1,22 @@
+description: 'MAAS providers cloud like provisioning capabilities
+
+  for physical server hardware.
+
+  .
+
+  It also has an unsupported virsh mode which allows it
+
+  to manage KVM virtual machines.
+
+  .
+
+  This charm installs MAAS and configures it to work
+
+  in the mode providing a fully virtualized testing
+
+  environment.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: virtual-maas
+summary: Virtualized MAAS Environment for testing

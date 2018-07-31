@@ -1,0 +1,28 @@
+description: 'Cinder is the block storage service for the Openstack project.
+
+  .
+
+  This subordinate charm configures the Cinder backup service.
+
+  '
+maintainer: Edward Hope-Morley <opentastic@gmail.com>
+name: cinder-backup
+provides:
+  backup-backend:
+    interface: cinder-backup
+    scope: container
+requires:
+  ceph:
+    interface: ceph-client
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- artful
+- trusty
+subordinate: true
+summary: Cinder-backup integration for OpenStack Block Storage
+tags:
+- miscellaneous

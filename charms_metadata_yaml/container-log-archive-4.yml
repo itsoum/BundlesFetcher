@@ -1,0 +1,25 @@
+description: 'We want to keep archive logs for a while, but they''re big.
+
+  Solution: store them in containers (it works for shipping companies!)
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: container-log-archive
+provides:
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  log-archive:
+    interface: log-archive
+    scope: container
+subordinate: true
+summary: Archives log files to container-based storage (S3, Swift, GCE or Azure)
+tags:
+- miscellaneous

@@ -1,0 +1,11 @@
+categories:
+- misc
+description: 'A test Suite that validate the reliability, robustness, and stability
+  of
+
+  a system
+
+  '
+maintainer: Michael Reed <michael.reed@canonical.com>
+name: ltp
+summary: Linux Test Project

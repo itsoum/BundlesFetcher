@@ -1,0 +1,15 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: root <root@na2-juju2-cli>
+name: filesubstitution
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: <Fill in summary here>
+tags:
+- misc

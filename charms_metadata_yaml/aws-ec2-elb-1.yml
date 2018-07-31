@@ -1,0 +1,12 @@
+categories:
+- cache-proxy
+description: ''
+maintainer: James Sapara <james@picatic.com>
+name: aws-ec2-elb
+provides:
+  website:
+    interface: http
+requires:
+  reverseproxy:
+    interface: http
+summary: ELB configuration for AWS EC2 instances in Juju

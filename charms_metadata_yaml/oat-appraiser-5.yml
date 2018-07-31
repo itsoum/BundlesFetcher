@@ -1,0 +1,23 @@
+description: 'OpenAttestation (OAT) is a Intel initiated open source project providing
+
+  a SDK for managing host integrity verification using TCG-defined
+
+  remote attestation protocol, targeting to be integrated into cloud and
+
+  enterprise management tools.
+
+  .
+
+  The OAT appraisal server is used to evaluate the trust status of OAT
+
+  clients.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: oat-appraiser
+provides:
+  appraiser:
+    interface: oat
+  attester:
+    interface: https
+summary: Appraisal Server for Open Attestation

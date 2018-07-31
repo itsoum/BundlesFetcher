@@ -1,0 +1,45 @@
+description: 'Apache Zeppelin is a web-based notebook that enables interactive data
+  analytics. You can make beautiful data-driven, interactive, and collaborative documents
+  with SQL, Scala and more.
+
+  This charm provides version 0.7.2 of the Zeppelin application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: zeppelin
+provides:
+  client:
+    interface: zeppelin
+  giraph:
+    interface: giraph
+    scope: container
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+requires:
+  hive:
+    interface: hive
+  spark:
+    interface: spark
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: Zeppelin from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2
+- hadoop
+- analytics

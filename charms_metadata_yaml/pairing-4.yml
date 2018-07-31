@@ -1,0 +1,15 @@
+description: 'Deploys and configures system users, wemux, and installs common recipes
+  for
+
+  projects to work on.
+
+  '
+maintainer: Charles Butler <Charles.Butler@ubuntu.com>
+name: pairing
+provides:
+  wemux:
+    interface: wemux
+subordinate: false
+summary: Deploys a configured Pairing service for pair programming
+tags:
+- misc

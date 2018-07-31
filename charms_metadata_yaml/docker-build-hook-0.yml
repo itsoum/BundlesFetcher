@@ -1,0 +1,19 @@
+description: 'Homebrew post-commit hook for building/deploying a docker container
+  from github.
+
+  '
+maintainer: Charles Butler <charles.butler@ubuntu.com>
+name: docker-build-hook
+provides:
+  api:
+    interface: http
+requires:
+  docker-host:
+    interface: juju-info
+    scope: container
+  project:
+    interface: dockerfile
+subordinate: true
+summary: Deploys a build-hook service to pull/build a dockerfile project
+tags:
+- misc

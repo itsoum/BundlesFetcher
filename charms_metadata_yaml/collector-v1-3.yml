@@ -1,0 +1,11 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: collector-v1
+requires:
+  carbon:
+    interface: tcp
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: collect health information on cf internal services

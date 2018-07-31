@@ -1,0 +1,15 @@
+description: "Sos is a set of tools that gathers information about system hardware\
+  \ and\nconfiguration. The information can then be used for diagnostic purposes and\n\
+  debugging. Sos is commonly used to help support technicians and developers.\n.\n\
+  This charm will install sosreport on the designated unit. Two actions are\navailable\
+  \ :\n  collect - will run sosreport and create a tarball to be copied\n  cleanup\
+  \ - will delete tarballs previously created\n"
+maintainer: Louis Bouchard <louis.bouchard@ubuntu.com>
+name: sosreport
+series:
+- trusty
+- xenial
+subordinate: false
+summary: Charm to install and collect tool to troubleshooting data from a system
+tags:
+- misc

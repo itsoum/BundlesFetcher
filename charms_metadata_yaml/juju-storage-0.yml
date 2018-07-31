@@ -1,0 +1,19 @@
+description: 'Storage subordinate that uses juju storage as the block-storage source.
+
+  '
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: juju-storage
+requires:
+  storage:
+    interface: block-storage
+    scope: container
+series:
+- xenial
+- bionic
+storage:
+  data:
+    type: block
+subordinate: true
+summary: Subordinate charm the provides juju storage as a storage relation.
+tags:
+- storage

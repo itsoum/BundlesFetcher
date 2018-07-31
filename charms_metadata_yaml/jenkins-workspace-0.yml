@@ -1,0 +1,21 @@
+description: 'Deploys the workspace configuration to customize build projects in Jenkins.
+
+  '
+maintainers:
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+name: jenkins-workspace
+requires:
+  jenkins-host:
+    interface: juju-info
+    scope: container
+resources:
+  workspace:
+    description: "A tar file containing a Jenkins workspace files expanded to the\
+      \ \ndirectory: /var/lib/jenkins/jobs/\n"
+    filename: workspace.tgz
+    type: file
+subordinate: true
+summary: A subordinate charm for Jenkins allowing customization.
+tags:
+- addon

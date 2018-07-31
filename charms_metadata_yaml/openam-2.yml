@@ -1,0 +1,29 @@
+description: 'The only "all-in-one" open source access management solution provides
+  the most comprehensive consumer-facing identity relationship management (IRM) services,
+
+  as well as traditional access management capabilities.
+
+  Designed from inception to provide services for the web, cloud, mobile devices and
+  things, OpenAM has a highly scalable, modular, easy to deploy architecture that
+  includes Authentication, SSO, Authorization, Federation, Entitlements, Adaptive
+  Authentication, Strong Authentication and Web Services Security - in a single, unified
+  product.
+
+  - See more at: http://forgerock.com/products/open-identity-stack/openam
+
+  '
+maintainer: Stein Myrseth <stein.myrseth@forgerock.com>
+name: openam
+provides:
+  datastore-dj:
+    interface: ldap-v3
+    optional: true
+  openam-agent:
+    interface: openam-agent
+    optional: true
+  openidc-discovery:
+    interface: openidc
+    optional: true
+summary: OpenAM - AM made easy and secure for the web
+tags:
+- applications

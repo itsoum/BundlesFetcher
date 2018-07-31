@@ -1,0 +1,17 @@
+categories:
+- applications
+description: 'A WikiWikiWeb is a collaborative hypertext environment, with an emphasis
+
+  on easy access to and modification of information. MoinMoin is a
+
+  Python WikiClone that allows you to easily set up your own wiki, only
+
+  requiring a Web server and a Python installation.
+
+  '
+maintainer: Brad Marshall <brad.marshall@canonical.com>
+name: python-moinmoin
+provides:
+  website:
+    interface: http
+summary: Python clone of WikiWiki - library

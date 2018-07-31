@@ -1,0 +1,11 @@
+description: "This charm deploys Neo4j. Neo4j is a highly scalable native graph database\
+  \ that leverages data relationships as first-class entities, helping enterprises\
+  \ build intelligent applications to meet today\u2019s evolving data challenges.\n"
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: neo4j
+series:
+- xenial
+subordinate: false
+summary: Neo4j is a highly scalable native graph database.
+tags:
+- database

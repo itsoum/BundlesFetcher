@@ -1,0 +1,35 @@
+description: 'This layer provides the Django-Web reactive layer.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: django-web
+provides:
+  db-info:
+    interface: db-info
+  http:
+    interface: http
+  website:
+    interface: http
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  memcache:
+    interface: memcache
+  pgsql:
+    interface: pgsql
+  redis:
+    interface: redis
+series:
+- xenial
+subordinate: false
+summary: Django web component
+tags:
+- git
+- deploy
+- elasticsearch
+- django
+- flask
+- rails
+- client
+- memcache
+- web

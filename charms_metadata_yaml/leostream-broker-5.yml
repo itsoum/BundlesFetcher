@@ -1,0 +1,11 @@
+description: 'The Leostream VDI Broker
+
+  '
+maintainer: Leostream Corp <support@leostream.com>
+name: leostream-broker
+series:
+- xenial
+subordinate: false
+summary: The Leostream VDI Broker
+tags:
+- vdi

@@ -1,0 +1,22 @@
+categories:
+- applications
+description: 'This reviewboard extension allows authentication via OAuth.
+
+
+  See https://bitbucket.org/ericsnowcurrently/rb_oauth_extension
+
+
+  Currently github is the only supported OAuth provider.
+
+  '
+maintainer: Eric Snow <ericsnowcurrently@gmail.com>
+name: reviewboard-oauth
+provides:
+  reviewboard-oauth-authentication:
+    interface: reviewboard-oauth-authentication
+requires:
+  reviewboard:
+    interface: http
+    scope: container
+subordinate: true
+summary: A reviewboard extension that enables authentication via OAuth.

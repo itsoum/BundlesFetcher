@@ -1,0 +1,41 @@
+description: 'Quobyte is a distributed file system that turns commodity servers into
+  a unified software storage system. As a genuine data center file system it supports
+  high-performance workloads ranging from Big Data to VMs. It is completely fault-tolerant
+  and massively scalable.
+
+  .
+
+  Quobyte simplifies the design, deployment, and management of storage infrastructures
+  of any size.
+
+  .
+
+  The Registry service is at the top of the Quobyte service hierarchy. During normal
+  operation, most services and clients talk to the Registry service to synchronize
+  their time and lookup identifiers that are not in their caches yet.
+
+  The registry is usually replicated across three registry service instances.
+
+  '
+maintainer: Bruno Ranieri <bruno@quobyte.com>
+name: quobyte-registry
+peers:
+  quobyte-registry-replica:
+    interface: quobyte-registry-replica
+provides:
+  quobyte-registry:
+    interface: quobyte-registry
+storage:
+  registry-storage:
+    description: registry storage
+    minimum-size: 2G
+    multiple:
+      range: '1'
+    type: block
+subordinate: false
+summary: Quobyte Registry Service
+tags:
+- openstack
+- storage
+- file-servers
+- misc

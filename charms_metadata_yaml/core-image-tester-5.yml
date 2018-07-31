@@ -1,0 +1,13 @@
+description: 'Runs core-image-tester service from a given service tarball (provided
+  as
+
+  files/core-image-tester.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: core-image-tester
+summary: 'Deploy a service to test new ubuntucore images receiving requests via
+
+  rabbit queues.
+
+  '

@@ -1,0 +1,20 @@
+description: 'Restcomm-Connect call assistance app
+
+  '
+maintainers:
+- gdubina <gdubina@dataart.com>
+- gdubina <gdubina@dataart.com>
+name: restcomm-call-assistance
+requires:
+  container:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Restcomm-Connect call assistance app
+tags:
+- misc
+- sip
+- voip
+- misc
+- sip
+- voip

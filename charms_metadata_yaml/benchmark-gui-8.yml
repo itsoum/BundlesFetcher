@@ -1,0 +1,14 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: benchmark-gui
+provides:
+  website:
+    interface: http
+requires:
+  benchmarker:
+    interface: benchmark
+summary: Benchmark GUI is an interface to manage and submit benchmarks
+tags:
+- benchmarking

@@ -1,0 +1,8 @@
+description: 'This charm provides the stunnel client daemon service
+
+  '
+name: stunnel-client
+provides:
+  stunnel-client:
+    interface: stunnel
+summary: Client for SSL tunnel connections

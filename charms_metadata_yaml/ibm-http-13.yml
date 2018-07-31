@@ -1,0 +1,70 @@
+description: 'IBM HTTP Server is a full-featured web server that is included with
+  other products such as IBM WebSphere Application Server at no charge.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-http
+requires:
+  ihs:
+    interface: was-ihs
+    scope: container
+resources:
+  ibm_http_installer1:
+    description: Http Server installer part1 archive.
+    filename: ibm_http.installer1.zip
+    type: file
+  ibm_http_installer2:
+    description: Http Server installer part2 archive.
+    filename: ibm_http.installer2.zip
+    type: file
+  ibm_http_installer3:
+    description: Http Server installer part3 archive..
+    filename: ibm_http.installer3.zip
+    type: file
+  ibm_http_power_installer:
+    description: Http Server power installer archive.
+    filename: ibm_http_power_installer.zip
+    type: file
+  ibm_http_server_WCT_fixpack1:
+    description: Http Server fix pack WCT part1 archive.
+    filename: ibm_http_server_WCT_fixpack1.zip
+    type: file
+  ibm_http_server_WCT_fixpack2:
+    description: Http Server fix pack WCT part2 archive.
+    filename: ibm_http_server_WCT_fixpack2.zip
+    type: file
+  ibm_http_server_fixpack1:
+    description: Http Server fix pack part1 archive.
+    filename: ibm_http_server_fixpack1.zip
+    type: file
+  ibm_http_server_fixpack2:
+    description: Http Server fix pack part2 archive.
+    filename: ibm_http_server_fixpack2.zip
+    type: file
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+series:
+- trusty
+- xenial
+subordinate: true
+summary: IBM HTTP-SERVER Product
+tags:
+- ibm
+- im
+- ibm
+- apt
+- leadership
+- ibm
+- was-ihs
+terms:
+- ibm-im/1
+- lorem-ipsum/1
+- ibm-http-server/2
+- ibm-http-plg/1
+- ibm-http-wct/1

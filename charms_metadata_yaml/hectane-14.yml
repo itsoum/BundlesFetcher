@@ -1,0 +1,15 @@
+description: 'Hectane is an open-source SMTP client designed to simplify the process
+  of
+
+  delivering emails from a web application. Messages are delivered to the
+
+  daemon through an HTTP API and then queued for eventual delivery. Messages
+
+  awaiting delivery are stored on disk to avoid data loss.
+
+  '
+maintainer: Nathan Osman <nathan@quickmediasolutions.com>
+name: hectane
+summary: Lightweight SMTP client
+tags:
+- network

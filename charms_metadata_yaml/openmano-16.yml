@@ -1,0 +1,22 @@
+description: 'Installs and configures OpenMANO
+
+  '
+maintainers:
+- Adam Israel <adam@adamisrael.com>
+name: openmano
+provides:
+  openmano:
+    interface: http
+requires:
+  db:
+    interface: mysql
+  openvim-controller:
+    interface: openvim
+series:
+- xenial
+subordinate: false
+summary: OpenMANO
+tags:
+- nfv
+- telco
+- osm

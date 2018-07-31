@@ -1,0 +1,15 @@
+categories:
+- miscellaneous
+description: 'Stack Mobile provides a web-based interface to the content of the Stack
+  Exchange network optimized for smartphones and tablets.
+
+  '
+maintainer: Nathan Osman <admin@quickmediasolutions.com>
+name: stackmobile
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: A mobile interface to the Stack Exchange network of sites.

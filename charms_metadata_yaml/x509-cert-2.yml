@@ -1,0 +1,15 @@
+description: 'Manages configuring an x509 certificate and key, providing file path
+
+  locations to any consuming charms tags:
+
+  '
+maintainer: simon.davy@canonical.com
+name: x509-cert
+requires:
+  x509-paths:
+    interface: x509-paths
+    scope: container
+subordinate: true
+summary: Manage x509 certificates, keys and chains
+tags:
+- security

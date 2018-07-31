@@ -1,0 +1,11 @@
+description: 'This will deploy the TF2 game on top of the Steam charm
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: teamfortress2
+requires:
+  steam:
+    interface: hlds
+    scope: container
+subordinate: true
+summary: Team Fortress 2 Steam server subordinate

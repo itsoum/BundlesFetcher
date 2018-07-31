@@ -1,0 +1,28 @@
+description: 'call-assistance management server
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- gdubina <gdubina@dataart.com>
+name: call-assistance
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  registration:
+    interface: http
+  restcomm:
+    interface: http
+subordinate: false
+summary: call-assistance management server
+tags:
+- containers
+- layer
+- misc
+- sip
+- voip

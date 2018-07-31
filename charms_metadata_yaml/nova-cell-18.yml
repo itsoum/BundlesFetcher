@@ -1,0 +1,22 @@
+description: 'Charm to configure nova cell service
+
+  '
+format: 2
+maintainer: Liam Young <liam.young@canonical.com>
+name: nova-cell
+provides:
+  cell:
+    interface: nova-cell
+  nova-cell-child:
+    interface: nova-cell-tree
+requires:
+  amqp:
+    interface: rabbitmq
+  nova-api:
+    interface: juju-info
+  nova-cell-parent:
+    interface: nova-cell-tree
+  shared-db:
+    interface: mysql-shared
+subordinate: false
+summary: Nova cell

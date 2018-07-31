@@ -1,0 +1,8 @@
+description: 'Deploy your Django project as an Apache mod_wsgi app.
+
+  '
+name: apache-django-wsgi
+requires:
+  db:
+    interface: pgsql
+summary: Apache+wsgi for your Django project

@@ -1,0 +1,13 @@
+description: 'zookeeper docker
+
+  '
+maintainer: Gennadiy Dubina <gdubina@dataart.com>
+name: mesos-zookeeper
+provides:
+  zookeeper:
+    interface: zookeeper
+subordinate: false
+summary: zookeeper docker
+tags:
+- ops
+- network

@@ -1,0 +1,21 @@
+description: Veritas HyperScale cinder configuration charm for datanode.
+maintainer: DL-VTAS-ENG-SDIO-HyperScale-Opensource@veritas.com
+name: hyperscale-datanode-conf
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+    scope: global
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Veritas HyperScale Datanode charm for OpenStack Block Storage.
+tags:
+- openstack
+- storage

@@ -1,0 +1,27 @@
+description: 'An Admin UI for CF
+
+  '
+maintainer: Whit Morriss <whit.morriss@canonical.com>
+name: cf-webadmin
+provides:
+  admin-web:
+    interface: http
+requires:
+  ccdb:
+    interface: mysql
+  db:
+    interface: mysql
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+  uaa:
+    interface: uaa
+  uaadb:
+    interface: mysql
+subordinate: false
+summary: Admin UI for CF
+tags:
+- cloudfoundry
+- paas
+- rails

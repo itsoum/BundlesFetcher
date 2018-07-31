@@ -1,0 +1,15 @@
+description: 'Installs the Steam Client Binary and any selected Steam game.
+
+
+  Upon installation, the Steam client will be updated and the selected
+
+  game will be installed then started.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: steam
+provides:
+  steam:
+    interface: hlds
+    scope: container
+summary: Installs the Valve Steam server client and a Steam Game Server

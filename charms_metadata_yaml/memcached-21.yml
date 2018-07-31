@@ -1,0 +1,33 @@
+description: memcached optimizes specific high-load serving applications that are
+  designed to take advantage of its versatile no-locking memory access system. Clients
+  are available in several different programming languages, to suit the needs of the
+  specific application. Traditionally this has been used in mod_perl apps to avoid
+  storing large chunks of data in Apache memory, and to share this burden across several
+  machines.
+maintainer: Felipe Reyes <felipe.reyes@canonical.com>
+name: memcached
+peers:
+  cluster:
+    interface: memcached-replication
+provides:
+  cache:
+    interface: memcache
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  monitors:
+    interface: monitors
+  munin:
+    interface: munin-node
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+series:
+- xenial
+- trusty
+- bionic
+- zesty
+- artful
+summary: A high-performance memory object caching system
+tags:
+- system

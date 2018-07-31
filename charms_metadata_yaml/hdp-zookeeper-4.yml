@@ -1,0 +1,17 @@
+description: "Hortonworks ZooKeeper is a centralized, reliable, service for maintaining\n\
+  configuration information, naming, providing distributed\nsynchronization, and group\
+  \ services. All of these kinds of services\nare used in some form or another by\
+  \ distributed applications. \nIn order to install and configure Hortonworks HBase\
+  \ and other Hadoop ecosystem\ncomponents, you must start the ZooKeeper service.\
+  \ \n"
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: hdp-zookeeper
+peers:
+  quorum:
+    interface: zookeeper-quorum
+provides:
+  zookeeper:
+    interface: zookeeper
+summary: High-performance coordination service for distributed applications
+tags:
+- big_data

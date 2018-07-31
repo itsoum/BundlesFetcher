@@ -1,0 +1,16 @@
+categories:
+- monitoring
+description: 'Adds the devstax apt repository, and deploys Devxtax OpsCenter - A monitoring
+  interface for CassandraDB
+
+  '
+maintainer: charles <charles@Bushido>
+name: opscenter
+provides:
+  opscenter:
+    interface: http
+requires:
+  db:
+    interface: cassandra
+subordinate: false
+summary: Deploys Datastax Opscenter, a cassandra management interface

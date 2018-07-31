@@ -1,0 +1,28 @@
+description: 'Tools for collecting work items from blueprints, bugs, and wiki pages,
+
+  and generate burndown charts and per-blueprint/per-assignee reports.
+
+
+  Please see
+
+
+  https://wiki.ubuntu.com/WorkItemsHowto
+
+
+  for instructions and
+
+
+  http://status.ubuntu.com
+
+
+  for the generated report and database for Canonical teams'' Ubuntu work.
+
+  '
+maintainer: Nobody <nobody@example.com>
+name: workitems-tracker
+requires:
+  apache:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Track work items and generate burndown charts

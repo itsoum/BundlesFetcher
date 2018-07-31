@@ -1,0 +1,31 @@
+description: 'The OpenStack Dashboard provides a full feature web interface for interacting
+
+  with instances, images, volumes and networks within an OpenStack deployment.
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: openstack-dashboard
+peers:
+  cluster:
+    interface: openstack-dashboard-ha
+provides:
+  dashboard-plugin:
+    interface: dashboard-plugin
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+summary: Web dashboard for OpenStack
+tags:
+- openstack
+- misc

@@ -1,0 +1,20 @@
+description: 'MySQL is a fast, stable and true multi-user, multi-threaded SQL database
+
+  server. SQL (Structured Query Language) is the most popular database query
+
+  language in the world. The main goals of MySQL are speed, robustness and
+
+  ease of use.
+
+  This formula is for the Cloudfoundry Server formula
+
+  '
+maintainer: Juan Negron <juan.negron@canonical.com>
+name: cf-mysql
+peers:
+  mysql-cluster:
+    interface: mysql
+requires:
+  cf-server:
+    interface: cf-server
+summary: MySQL is a fast, stable and true multi-user, multi-threaded SQL database

@@ -1,0 +1,14 @@
+categories:
+- applications
+description: 'This charm allows administering of MySQL with a web interface.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: phpmyadmin
+provides:
+  website:
+    interface: http
+requires:
+  db-admin:
+    interface: mysql-root
+summary: MySQL Web Administration Tool

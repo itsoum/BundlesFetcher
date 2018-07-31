@@ -1,0 +1,17 @@
+description: 'newcharm
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: newcharm
+peers:
+  member:
+    interface: http
+provides:
+  http:
+    interface: http
+series:
+- xenial
+subordinate: false
+summary: newcharm
+tags:
+- testing

@@ -1,0 +1,9 @@
+description: Deploy a user-defined node.js application
+name: node-app
+provides:
+  website:
+    interface: http
+requires:
+  mongodb:
+    interface: mongodb
+summary: Deploy a node.js application

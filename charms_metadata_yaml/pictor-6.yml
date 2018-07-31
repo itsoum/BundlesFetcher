@@ -1,0 +1,17 @@
+categories:
+- applications
+description: 'Pictor is a web application for browsing albums of pictures, perhaps
+
+  similar to Picasa or Flickr, except you own the filesystem serving
+
+  the content.  Pictor dynamically resizes and caches images, and is
+
+  driven entirely by the filesystem (no database required).
+
+  '
+maintainer: Dustin Kirkland <dustin.kirkland@gmail.com>
+name: pictor
+provides:
+  website:
+    interface: http
+summary: Pictor is a web application for browsing albums of pictures

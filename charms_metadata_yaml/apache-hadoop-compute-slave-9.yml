@@ -1,0 +1,21 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the compute slave node (DataNode + NodeManager).
+
+  '
+maintainer: Cory Johns <cory.johns@canonical.com>
+name: apache-hadoop-compute-slave
+provides:
+  datanode:
+    interface: dfs-slave
+  ganglia:
+    interface: monitor
+  nodemanager:
+    interface: mapred-slave
+summary: Compute node (DataNode + NodeManager) for Apache Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

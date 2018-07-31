@@ -1,0 +1,16 @@
+description: 'DEPRECATED: please use ibm-spectrum-scale instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: gpfs
+provides:
+  manager:
+    interface: gpfs
+requires:
+  client:
+    interface: gpfs
+subordinate: false
+summary: IBM's General Parallel File System (deprecated, use ibm-spectrum-scale)
+tags:
+- storage
+- big_data

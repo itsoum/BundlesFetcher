@@ -1,0 +1,15 @@
+description: 'Charm to show model info
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: modelinfo
+requires:
+  dont-use-me:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+subordinate: true
+summary: Charm to show model info
+tags:
+- misc

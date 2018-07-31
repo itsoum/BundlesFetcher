@@ -1,0 +1,18 @@
+description: 'This charm deploys the Flexran RTC for the 4G-5G openairinterface platform.
+
+  '
+maintainer: Navid Nikaein <navid.nikaein@eurecom.fr>
+name: flexran-rtc
+provides:
+  rtc:
+    interface: F1
+subordinate: false
+summary: Flexran realtime controller operating with the OpenAirInterface RAN agent
+tags:
+- Telecom, Network
+- 4G, 5G, LTE
+- Base Station
+- eNodeB, eNB
+- OpenAirInterface, OAI
+- MOSAIC-5G, FLEXRAN
+- Realtime Controller

@@ -1,0 +1,19 @@
+description: 'Uses a Kafka source, memory channel, and Avro sink in Apache Flume
+
+  to ingest messages published to a Kafka topic.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: apache-flume-kafka
+requires:
+  flume-sink:
+    interface: flume-agent
+  kafka:
+    interface: kafka
+series:
+- xenial
+summary: Ingest Kafka messages with Apache Flume
+tags:
+- apache
+- big_data

@@ -1,0 +1,20 @@
+description: 'Apache TomEE is an all-Apache Java EE 6 Web Profile certified  application
+  server extends Apache Tomcat.
+
+  '
+maintainer: Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+name: apache-tomee
+resources:
+  tomee:
+    description: The package with the Apache TomEE
+    filename: apache-tomee-7.0.1-plume.tar.gz
+    type: file
+series:
+- trusty
+- xenial
+summary: Apache TomEE charm
+tags:
+- java
+- jee
+- apache
+- tomcat

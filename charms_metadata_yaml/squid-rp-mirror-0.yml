@@ -1,0 +1,21 @@
+description: 'Squid is a high-performance proxy caching server for web clients, supporting
+
+  FTP, gopher, and HTTP data objects.
+
+  .
+
+  Squid version 3 is a major rewrite of Squid in C++ and introduces a number of
+
+  new features including ICAP and ESI support.
+
+  .
+
+  This charm uses squid3 in reverse-proxy mode as a mirror. See the README.md
+
+  '
+maintainer: David Medberry <david.medberry@canonical.com>
+name: squid-rp-mirror
+provides:
+  mirrored-website:
+    interface: http
+summary: Full featured Web Proxy cache as a mirror

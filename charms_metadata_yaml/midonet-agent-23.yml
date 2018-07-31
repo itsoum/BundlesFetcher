@@ -1,0 +1,29 @@
+description: 'The MidoNet agent is a daemon that runs on each of the compute nodes,
+  reads
+
+  the network configuration from zookeeper and configures the Open vSwitch
+
+  kernel datapath for the virtual networking.
+
+  '
+maintainer: Midokura
+name: midonet-agent
+provides:
+  host:
+    interface: midonet-host
+  neutron-plugin:
+    interface: neutron-plugin
+    scope: container
+requires:
+  cassandra:
+    interface: cassandra
+  container:
+    interface: juju-info
+    scope: container
+  zookeeper:
+    interface: zookeeper
+subordinate: true
+summary: charm for the MidoNet host agent
+tags:
+- midonet
+- network

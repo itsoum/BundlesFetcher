@@ -1,0 +1,26 @@
+description: 'This charm provides a templated IRC server using inspircd, for use in
+
+  a small or corporate environment.  Support for clustering is not
+
+  provided.
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: inspircd
+peers:
+  inspircd:
+    interface: inspircd
+provides:
+  ircd:
+    interface: inspircd
+  ircdservices:
+    interface: services
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+subordinate: false
+summary: InspIRCd server
+tags:
+- app-servers

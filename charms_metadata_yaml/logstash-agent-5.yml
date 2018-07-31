@@ -1,0 +1,16 @@
+categories:
+- applications
+description: "Installs the logstash agent.   useless without logstash indexer.\noutputs\
+  \ to logstash-indexer using redis.  \n"
+maintainer: Paul Cz <paul@paulcz.net>
+name: logstash-agent
+requires:
+  amqp:
+    interface: rabbitmq
+  input:
+    interface: redis
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Logstash agent server

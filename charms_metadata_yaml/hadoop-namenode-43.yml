@@ -1,0 +1,33 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm provides version 2.7.3 of the HDFS NameNode application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: hadoop-namenode
+provides:
+  benchmark:
+    interface: benchmark
+  java:
+    interface: java
+    scope: container
+  namenode:
+    interface: dfs
+requires:
+  datanode:
+    interface: dfs-slave
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: HDFS NameNode from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2

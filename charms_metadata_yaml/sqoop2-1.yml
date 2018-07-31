@@ -1,0 +1,24 @@
+description: 'Apache Sqoop is a tool designed for efficiently transferring bulk data
+
+  between Apache Hadoop and structured datastores such as relational databases
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: sqoop2
+provides:
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+summary: Transfer bulk data between Apache Hadoop and structured datastores.
+tags:
+- bigdata
+- hadoop
+- bigdata
+- hadoop
+- apache

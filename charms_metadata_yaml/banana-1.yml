@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Banana Ice Cream
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: ice-cream_banana
+provides:
+  ice-cream:
+    interface: ice-cream
+summary: Banana Ice Cream

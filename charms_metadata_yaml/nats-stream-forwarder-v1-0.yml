@@ -1,0 +1,9 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: nats-stream-forwarder-v1
+requires:
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: NATS stream forwarder

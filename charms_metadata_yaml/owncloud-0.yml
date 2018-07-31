@@ -1,0 +1,17 @@
+description: "ownCloud gives you universal access to your files through a web \ninterface\
+  \ or WebDAV. It also provides a platform to easily view \nand sync your contacts,\
+  \ calendars and bookmarks across all your \ndevices and enables basic editing right\
+  \ on the web.\n"
+maintainer: Nathan Williams <nathan@nathanewilliams.com>
+name: owncloud
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+    optional: true
+  shared-fs:
+    interface: mount
+    optional: true
+summary: owncloud

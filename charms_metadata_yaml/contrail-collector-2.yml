@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'Runs monitoring and analytics services
+
+  '
+maintainer: Contrail <contrail@juniper.net>
+name: contrail-collector
+peers:
+  cluster:
+    interface: collector-cluster
+provides:
+  collector:
+    interface: collector
+requires:
+  cfgm:
+    interface: cfgm
+  database:
+    interface: cassandra
+summary: Contrail controller 'collector' role

@@ -1,0 +1,13 @@
+description: 'Installs the unattended-upgrades package to automatically install
+
+  security upgrades.
+
+  '
+maintainer: Seth Arnold <seth.arnold@canonical.com>
+name: unattended-upgrades
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Automatically installs package upgrades

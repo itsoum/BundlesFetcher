@@ -1,0 +1,10 @@
+description: 'Runs adt-cloud-service using gunicorn from given code tarball
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: adt-cloud-service
+provides:
+  website:
+    interface: http
+    optional: true
+summary: Deploys a web_app to handle adt jobs dispatched to a rabbit queue

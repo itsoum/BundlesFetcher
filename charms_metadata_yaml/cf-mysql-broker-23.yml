@@ -1,0 +1,34 @@
+categories:
+- misc
+description: 'CF MySQL Broker provides MySQL databases as a Cloud Foundry service.
+
+  This broker demonstrates the v2 services API between cloud controllers and service
+  brokers.
+
+  The broker does not include a MySQL server. Instead, it is meant to be deployed
+  alongside a MySQL server, which it manages.
+
+  '
+maintainer: cf-charmers <cf-charmers@lists.launchpad.net>
+name: cf-mysql-broker
+requires:
+  db:
+    gets:
+    - host
+    - database
+    - user
+    - password
+    - slave
+    interface: mysql-root
+  nats:
+    gets:
+    - nats_port
+    - nats_address
+    - nats_user
+    - nats_password
+    interface: nats
+  router:
+    gets:
+    - domain
+    interface: router
+summary: CF MySQL Broker provides MySQL databases as a Cloud Foundry service.

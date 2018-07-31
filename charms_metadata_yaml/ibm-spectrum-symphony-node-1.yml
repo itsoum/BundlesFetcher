@@ -1,0 +1,33 @@
+description: 'IBM Spectrum Symphony software helps you control the massive compute
+  power available in your current and future technical
+
+  computing systems to address challenging and  complex problems. This software can
+  help you achieve breakthrough results in
+
+  business and research by addressing challenges in parallel application development
+  and deployment,
+
+  and technical computing infrastructure management.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-spectrum-symphony-node
+requires:
+  master:
+    interface: platformmaster
+  storage:
+    interface: nfsstorage
+series:
+- trusty
+- xenial
+subordinate: false
+summary: IBM Spectrum Symphony node
+tags:
+- ibm
+- ibm
+- symphony node
+- spectrum
+- application_optimization
+- cluster
+- virtualization

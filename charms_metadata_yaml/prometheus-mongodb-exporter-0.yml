@@ -1,0 +1,16 @@
+description: 'Allows prometheus to scrape MongoDB metrics
+
+  '
+maintainer: Junien Fridrick <junien.fridrick@canonical.com>
+name: prometheus-mongodb-exporter
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Allows prometheus to scrape MongoDB metrics
+tags:
+- monitoring
+- performance

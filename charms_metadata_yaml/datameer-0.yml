@@ -1,0 +1,19 @@
+description: 'Hue aggregates the most common Apache Hadoop components into a single
+  interface
+
+  and targets the user  experience. Its main goal is to have the users "just use"
+
+  Hadoop without worrying about the underlying complexity or using a command line.
+
+  '
+maintainer: sanjar <amir.sanjar@canonical.com>
+name: apache-hue
+requires:
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+subordinate: false
+summary: Hue is a Web interface for analyzing data with Apache Hadoop
+tags:
+- big_data

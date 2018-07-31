@@ -1,0 +1,19 @@
+description: 'See https://github.com/jrwren/parse-server-example
+
+  Example project using the parse-server module on Express.
+
+  '
+maintainer: Jay R. Wren <jrwren@xmtp.net>
+name: parse-server
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mongodb
+series:
+- xenial
+- yakkety
+summary: Example server using Express and the parse-server module.
+tags:
+- server

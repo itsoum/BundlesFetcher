@@ -1,0 +1,17 @@
+categories:
+- other
+description: 'Musica is a web application for browsing and streaming a music
+
+  library, except that you own the filesystem serving the content.
+
+  Musica includes an embeded mp3 player and is driven entirely
+
+  by the filesystem (no database required).
+
+  '
+maintainer: Dustin Kirkland <dustin.kirkland@gmail.com>
+name: musica
+provides:
+  website:
+    interface: http
+summary: Musica is a web application for browsing and streaming a music library

@@ -1,0 +1,19 @@
+description: 'The Firefox Sync Service is a method to syncronize Firefox session information
+
+  including passwords, tabs, and history between devices. In addition, the
+
+  Sync Service allows people to back up their settings, extensions, etc., in the
+
+  cloud.
+
+  '
+maintainer: Ben Howard <ben.howard@canonical.com>
+name: firefox-sync
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+    optional: true
+summary: Firefox Sync Server

@@ -1,0 +1,20 @@
+description: 'Bacula is a set of programs to manage backup, recovery and verification
+
+  of data across a network of computers of different kinds.  The Bacula
+
+  Director service supervises all the backup, restore, verify and archive
+
+  operations. It can run as a daemon or as a foreground service which
+
+  administrators can use to schedule backups and recover files.
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: bacula
+provides:
+  bacula-sd:
+    interface: bacula-sd
+requires:
+  db:
+    interface: mysql
+summary: network backup, recovery and verification - director/storage

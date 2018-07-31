@@ -1,0 +1,21 @@
+description: 'This subordinate charm installs and configures auditd.
+
+  '
+maintainer: Tim Kuhlman <timothy.kuhlman@canonical.com>
+name: auditd
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  audit:
+    interface: audit
+    scope: container
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: User space tools for security auditing
+tags:
+- security
+- monitoring

@@ -1,0 +1,15 @@
+categories:
+- misc
+description: 'This charm lets members of certain groups sudo
+
+  to a role account confined by an apparmor profile.
+
+  '
+maintainer: Canonical IS <root@admin.canonical.com>
+name: confined-role-account
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: confined-role-account

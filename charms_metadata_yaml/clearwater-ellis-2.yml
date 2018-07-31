@@ -1,0 +1,13 @@
+categories:
+- misc
+description: Ellis charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-ellis
+provides:
+  as-catalog:
+    interface: as-register
+requires:
+  dns-agent:
+    interface: dns-register
+subordinate: false
+summary: Ellis charm for Project Clearwater

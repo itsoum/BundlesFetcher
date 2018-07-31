@@ -1,0 +1,50 @@
+description: 'The CharmScaler is an autoscaler for Juju applications. Based on Elastisys''
+
+  autoscaling engine, it rightsizes your application deployments using
+
+  sophisticated auto-scaling algorithms to ensure that the application runs
+
+  cost-efficiently and is responsive at all times, even in the face of sudden
+
+  load spikes. At times of high anticipated load your charm is reinforced with
+
+  additional units -- units that are automatically decomissioned as the
+
+  pressure on your application goes down.
+
+  '
+maintainers:
+- Elastisys <techteam@elastisys.com>
+name: charmscaler
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  db-api:
+    interface: influxdb-api
+  scalable-charm:
+    interface: juju-info
+resources:
+  autoscaler:
+    filename: autoscaler.tar
+    type: file
+  charmpool:
+    filename: charmpool.tar
+    type: file
+series:
+- xenial
+subordinate: false
+summary: The Elastisys CharmScaler is an autoscaler for Juju applications
+tags:
+- misc
+- containers
+- layer
+- ops
+- performance

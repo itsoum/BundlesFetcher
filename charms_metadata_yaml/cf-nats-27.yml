@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'NATS is a lightweight publish-subscribe and distributed queueing messaging
+  system written in Ruby. For more information go to https://github.com/derekcollison/nats
+
+  '
+maintainer: cf-charmers <cf-charmers@lists.launchpad.net>
+name: cf-nats
+provides:
+  nats:
+    interface: nats
+subordinate: false
+summary: NATS is a component of CloudFoundry PAAS.

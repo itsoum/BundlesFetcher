@@ -1,0 +1,8 @@
+description: 'Provide test plans for charm tests
+
+  '
+name: charmrunner
+provides:
+  website:
+    interface: http
+summary: Charm test server

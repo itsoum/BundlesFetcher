@@ -1,0 +1,18 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Aakash <Aakash@localhost>
+name: kubernetes-master
+provides:
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  k8s-config:
+    interface: k8s-config
+series:
+- xenial
+- trusty
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- misc

@@ -1,0 +1,47 @@
+description: 'Apache Hive is a data warehouse infrastructure built on top of Hadoop
+  that supports data summarization, query, and analysis. Hive provides an SQL-like
+  language called HiveQL that transparently converts queries to MapReduce for execution
+  on large datasets stored in Hadoop''s HDFS.
+
+  This charm provides version 1.2.1 of the Hive application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: hive
+provides:
+  client:
+    interface: hive
+  giraph:
+    interface: giraph
+    scope: container
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+requires:
+  database:
+    interface: mysql
+  hbase:
+    interface: hbase
+  zookeeper:
+    interface: zookeeper
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: Hive from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2
+- hadoop

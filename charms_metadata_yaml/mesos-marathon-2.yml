@@ -1,0 +1,18 @@
+description: 'marathon docker
+
+  '
+maintainer: Gennadiy Dubina <gdubina@dataart.com>
+name: mesos-marathon
+provides:
+  website:
+    interface: http
+requires:
+  dns-server:
+    interface: dns-server
+  zookeeper:
+    interface: zookeeper
+subordinate: false
+summary: marathon docker
+tags:
+- ops
+- network

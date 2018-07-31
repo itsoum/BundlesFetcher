@@ -1,0 +1,24 @@
+description: 'A PLUMgrid Gateway provides connectivity from the VXLAN based virtual
+
+  fabric to external IP networks (such as for internet access). The PLUMgrid
+
+  Gateway can be deployed as a pair in Active/ Active mode for load balancing
+
+  of traffic and high availability of external connectivity.
+
+  '
+extra-bindings:
+  compute-data: null
+  internal: null
+maintainer: Bilal Baqar <bbaqar@plumgrid.com>
+name: plumgrid-gateway
+requires:
+  plumgrid:
+    interface: plumgrid
+series:
+- trusty
+- xenial
+subordinate: false
+summary: PLUMgrid IO Visor Gateway
+tags:
+- openstack

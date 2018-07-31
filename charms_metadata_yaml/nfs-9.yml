@@ -1,0 +1,14 @@
+categories:
+- file-servers
+description: "Installs and configures an nfs4 daemon with\nthe standard accompanying\
+  \ services, portmapd\nand idmapd.\n\nTo use this, client services must implement\n\
+  hooks for a storage relation that is compatible\nwith the 'mount' interface, see\
+  \ http://jujucharms.com/interfaces/mount. \n\nExported shares get created as new\
+  \ services\nare joined.  \n\nFor now, service units with the same servicename\n\
+  share the same exported filesystem.\n"
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: nfs
+provides:
+  nfs:
+    interface: mount
+summary: NFS formula for shared data storage

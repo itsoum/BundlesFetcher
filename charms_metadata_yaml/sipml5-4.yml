@@ -1,0 +1,12 @@
+categories:
+- misc
+description: 'A Sip webrtc running in a webserver allowing sip call with just a browser.
+
+  '
+maintainer: Nicoals Thomas <nicolas.thomas@canonical.com>
+name: sipml5
+requires:
+  dns-client:
+    interface: dns-client
+subordinate: false
+summary: A Sip webrtc running in a webserver allowing sip call with just a browser.

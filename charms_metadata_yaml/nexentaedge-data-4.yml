@@ -1,0 +1,15 @@
+description: 'A NexentaEdge data node is a dedicated storage node provide storage
+  capacity to the NexenetaEdge cluster.
+
+  '
+maintainer: Nexenta <nexenta.juju@nexenta.com>
+name: nexentaedge-data
+requires:
+  nedge:
+    interface: nedge
+subordinate: false
+summary: Distributed object storage node
+tags:
+- openstack
+- storage
+- file-servers

@@ -1,0 +1,16 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: loggregating
+name: loggregator-v1
+provides:
+  loggregator:
+    interface: loggregator
+requires:
+  etcd:
+    interface: etcd
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: loggregating

@@ -1,0 +1,8 @@
+description: 'Will deploy OpenJDK 6 JRE and the latest Minecraft server
+
+  '
+name: minecraft
+provides:
+  server:
+    interface: minecraft
+summary: Minecraft Server

@@ -1,0 +1,15 @@
+description: "Nuage VRS-G provides a highly flexible, high performance, secure network\n\
+  virtualization solution for data centers.\n.\nThis charm is used to configure a\
+  \ gateway \n"
+maintainer: Aniket Bhat <abhat@nuagenetworks.net>
+name: nuage-vrsg
+requires:
+  vrsg-controller-service:
+    interface: nuage-vrsg-control
+  vsd-rest-api:
+    interface: vsd-rest-api
+    scope: global
+summary: Nuage VRS-G
+tags:
+- openstack
+- miscellaneous

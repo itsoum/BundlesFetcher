@@ -1,0 +1,32 @@
+categories:
+- openstack
+description: 'OpenContrail is a network virtualization solution that provides an overlay
+
+  virtual-network to virtual-machines, containers or network namespaces.
+
+  .
+
+  This charm provides the configuration node component.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: contrail-configuration
+provides:
+  contrail-api:
+    interface: contrail-api
+  contrail-discovery:
+    interface: contrail-discovery
+  contrail-ifmap:
+    interface: contrail-ifmap
+requires:
+  amqp:
+    interface: rabbitmq
+  cassandra:
+    interface: cassandra
+  identity-admin:
+    interface: keystone-admin
+  neutron-metadata:
+    interface: neutron-metadata
+  zookeeper:
+    interface: zookeeper
+summary: OpenContrail Configuration Node

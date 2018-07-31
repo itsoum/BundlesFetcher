@@ -1,0 +1,9 @@
+description: 'Provides the logstash web ui on port 9292
+
+  '
+maintainer: Luis Arias <luis.arias@balsamiq.com>
+name: logstash-web
+requires:
+  rest:
+    interface: elasticsearch
+summary: Logstash Web Server

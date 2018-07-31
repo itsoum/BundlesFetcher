@@ -1,0 +1,20 @@
+description: 'Client which forms a bridge between a webservice and the proxy, to allow
+  service-specific configuration
+
+  '
+maintainer: Sander Borny <sander.borny@ugent.be>
+name: ssl-termination-fqdn
+requires:
+  ssl-termination:
+    interface: ssl-termination
+    scope: container
+  website:
+    interface: http
+series:
+- xenial
+subordinate: true
+summary: Bridge between a webservice and the ssl-termination-proxy.
+tags:
+- cache-proxy
+- security
+- web_server

@@ -1,0 +1,18 @@
+description: 'Camus is LinkedIn''s Kafka->HDFS pipeline
+
+  '
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: camus
+provides:
+  client:
+    interface: camus
+requires:
+  cm-agent:
+    interface: cm
+  resourcemanager:
+    interface: mapred
+  zk:
+    interface: zookeeper
+summary: Adapter for Kafka to write on HDFS
+tags:
+- big_data

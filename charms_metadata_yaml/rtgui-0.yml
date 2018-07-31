@@ -1,0 +1,10 @@
+description: 'Installs rtGui and rTorrent, upon completion will upload downloaded
+  files
+
+  to S3
+
+  '
+ensemble: formula
+name: rtgui
+revision: 9
+summary: rtGui rtorrent Web Interface

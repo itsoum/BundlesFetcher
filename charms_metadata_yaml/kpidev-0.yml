@@ -1,0 +1,15 @@
+description: "This charm executes a script with a database connection string\nand\
+  \ ideally sends results as metrics to telegraf so they can be scraped by \nprometheus\
+  \ and shown in a grafana dashboard.\n\nThis charm is cheerfully unmaintained and\
+  \ unsupported.\n"
+maintainer: c <c@zeugmatic>
+name: kpidev
+requires:
+  pgdb:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: KPI queries to statsd
+tags:
+- misc

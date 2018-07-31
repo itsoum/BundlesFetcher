@@ -1,0 +1,18 @@
+description: 'Offspring is a scalable image building service.
+
+  .
+
+  This charm provides the Offspring web interface in a deployment.
+
+  '
+name: offspring-web
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+  master:
+    interface: offspring-master
+    optional: true
+summary: Offspring image building web interface

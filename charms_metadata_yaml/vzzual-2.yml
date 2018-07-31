@@ -1,0 +1,14 @@
+description: 'Control Vzzual API key access to other services
+
+  '
+maintainer: Vzzual Ltd <contact@vzzual.com>
+name: vzzual
+requires:
+  vzzual:
+    interface: vzzual
+    scope: container
+subordinate: true
+summary: Vzzual API Proxy Charm
+tags:
+- analytics
+- big_data

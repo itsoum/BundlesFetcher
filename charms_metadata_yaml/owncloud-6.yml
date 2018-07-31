@@ -1,0 +1,33 @@
+description: 'OwnCloud provides employees and end users anywhere, anytime access to
+  the
+
+  files they need to get the job done - via mobile apps,
+
+  desktop sync clients, WebDAV clients and the web. With ownCloud, employees
+
+  can easily view and share documents and information critical to the
+
+  business, in a secure, flexible and controlled architecture - one that is
+
+  consistent with IT policies, procedures and regulatory requirements.
+
+  .
+
+  For more information, visit www.owncloud.com
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: owncloud
+provides:
+  http:
+    interface: http
+requires:
+  postgresql:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: OwnCloud File Server
+tags:
+- fileserver
+- owncloud

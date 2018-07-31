@@ -1,0 +1,25 @@
+description: 'MidoNet Manager provides a single pane of glass view of all the bridges,
+
+  routers, tenants, tunnel zones being managed by MidoNet and the agents.
+
+  Performing inter-tenant maintenance and making changes to the routing tables
+
+  can be done easily with the intuitive user interface
+
+  '
+maintainer: Midokura
+name: mem-manager
+provides:
+  website:
+    interface: http
+requires:
+  ha:
+    interface: hacluster
+    scope: container
+  midonet:
+    interface: midonet
+subordinate: false
+summary: MidoNet Enterprise dashboard
+tags:
+- midonet
+- network

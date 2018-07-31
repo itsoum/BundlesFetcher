@@ -1,0 +1,15 @@
+description: 'Gearman is a system to farm out work to other machines, dispatching
+
+  function calls to machines that are better suited to do work, to do
+
+  work in parallel, to load balance lots of function calls, or even to
+
+  call functions between languages.
+
+  '
+maintainer: Juan Negron <juan.negron@canonical.com>
+name: gearman-server
+provides:
+  gearman:
+    interface: gearman
+summary: Gearman distributed job server and Perl interface

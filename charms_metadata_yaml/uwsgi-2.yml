@@ -1,0 +1,23 @@
+categories:
+- misc
+description: 'The uWSGI project aims at developing a full stack for building hosting
+
+  services.
+
+
+  Application servers (for various programming languages and protocols),
+
+  proxies, process managers and monitors are all implemented using a common
+
+  api and a common configuration style.
+
+  '
+maintainer: Nathan Osman <admin@quickmediasolutions.com>
+name: uwsgi
+requires:
+  wsgi-file:
+    interface: wsgi
+    optional: true
+    scope: container
+subordinate: true
+summary: Application stack for hosted services

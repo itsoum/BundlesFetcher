@@ -1,0 +1,17 @@
+description: 'This charm configures the necessary settings for other MidoNet charms
+  to
+
+  know where should they be retrieving which version of the packages. In this
+
+  case, it configures the Upstream Open Source Software providers.
+
+  '
+maintainer: midokura
+name: mem-repository
+provides:
+  midonet-repository:
+    interface: midonet-repository
+summary: charm for midonet repositories on ubuntu
+tags:
+- midonet
+- network

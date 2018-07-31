@@ -1,0 +1,12 @@
+categories:
+- file-servers
+description: 'Pronto is a Content Delivery Network (CDN) front-end service to OpenStack''s
+  Swift cloud object storage,
+
+  '
+maintainer: Michael Hall <mhall119@ubuntu.com>
+name: go-pronto
+provides:
+  cdn:
+    interface: pronto
+summary: CDN frontend to Swift

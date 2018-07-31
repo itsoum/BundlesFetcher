@@ -1,0 +1,11 @@
+description: 'This charm demonstrates requiring agreements to more than one term as
+  a
+
+  precondition of deploying a charm.
+
+  '
+name: canonical-terms-example
+summary: Example charm demonstrating multiple terms.
+terms:
+- lorem-ipsum
+- canonical

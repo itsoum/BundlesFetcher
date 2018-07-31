@@ -1,0 +1,19 @@
+categories:
+- cloudfoundry
+description: 'Deploys the hm9000 health monitoring system for cloud foundry
+
+  '
+maintainer: cf-charmers
+name: cf-hm9000
+provides:
+  metrics:
+    interface: http
+requires:
+  cc:
+    interface: controller
+  etcd:
+    interface: http
+  nats:
+    interface: nats
+subordinate: false
+summary: Health Monitor for Cloud Foundry

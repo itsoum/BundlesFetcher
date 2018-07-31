@@ -1,0 +1,23 @@
+description: 'DokuWiki is a simple to use and highly versatile Open Source wiki software
+
+  that doesn''t require a database. It is loved by users for its clean and
+
+  readable syntax.
+
+  '
+maintainers:
+- Adam Stokes <adam.stokes@ubuntu.com>
+name: dokuwiki
+resources:
+  stable-release:
+    description: Dokuwiki stable wiki source
+    filename: stable.tgz
+    type: file
+series:
+- xenial
+summary: 'Dokuwiki is a simple to use wiki.
+
+  '
+tags:
+- php
+- wiki

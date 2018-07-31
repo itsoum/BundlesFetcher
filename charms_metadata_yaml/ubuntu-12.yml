@@ -1,0 +1,14 @@
+description: 'This simply deploys the Ubuntu Cloud/Server image
+
+  '
+maintainer: Charmers <juju@lists.ubuntu.com>
+name: ubuntu
+series:
+- xenial
+- bionic
+- artful
+- trusty
+- precise
+summary: A pristine Ubuntu Server
+tags:
+- misc

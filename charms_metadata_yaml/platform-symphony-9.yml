@@ -1,0 +1,19 @@
+description: 'DEPRECATED: please use ibm-platform-symphony instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: platform-symphony
+provides:
+  master:
+    interface: symphony
+requires:
+  node:
+    interface: symphony
+subordinate: false
+summary: IBM Platform Symphony (deprecated, use ibm-platform-symphony)
+tags:
+- soa_gridserver
+- symphony
+- application_optimization
+- cluster
+- virtualization

@@ -1,0 +1,48 @@
+description: 'OpenStack is a reliable cloud infrastructure. Its mission is to produce
+
+  the ubiquitous cloud computing platform that will meet the needs of public
+
+  and private cloud providers regardless of size, by being simple to implement
+
+  and massively scalable.
+
+  .
+
+  OpenStack Compute, codenamed Nova, is a cloud computing fabric controller. In
+
+  addition to its "native" API (the OpenStack API), it also supports the Amazon
+
+  EC2 API.
+
+  .
+
+  This charm provides the senlin service for OpenStack.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: senlin
+peers:
+  cluster:
+    interface: senlin-ha
+requires:
+  amqp:
+    interface: rabbitmq
+  certificates:
+    interface: tls-certificates
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+subordinate: false
+summary: OpenStack Senlin - OpenStack clustering service
+tags:
+- openstack

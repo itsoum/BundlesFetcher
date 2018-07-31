@@ -1,0 +1,12 @@
+categories:
+- misc
+description: '<Multi-line description here>
+
+  '
+maintainer: Nobuto Murata <nobuto@ubuntu.com>
+name: openmano-gui
+requires:
+  shared-db:
+    interface: mysql-shared
+subordinate: false
+summary: <Fill in summary here>

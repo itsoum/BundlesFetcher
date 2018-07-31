@@ -1,0 +1,16 @@
+description: 'ThinkUp is a free, open source web application that captures all your
+
+  activity on social networks.
+
+  '
+maintainer: Nathan Osman <admin@quickmediasolutions.com>
+name: thinkup
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: social network aggregator
+tags:
+- social

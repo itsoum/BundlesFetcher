@@ -1,0 +1,16 @@
+categories:
+- database
+description: 'pgBadger is a PostgreSQL log analyzer that generates detailed
+
+  performance and activity reports and charts.
+
+  '
+maintainer: Stuart Bishop <stuart.bishop@canonical.com>
+name: pgbadger
+provides:
+  syslog:
+    interface: syslog
+  website:
+    interface: http
+subordinate: false
+summary: Activity and performance reports and charts for PostgreSQL.

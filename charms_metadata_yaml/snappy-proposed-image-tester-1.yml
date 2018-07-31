@@ -1,0 +1,12 @@
+description: 'Runs snappy-proposed-image-tester service from a given service tarball
+
+  (provided as files/snappy-proposed-image-tester.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: snappy-proposed-image-tester
+summary: 'Deploy a service to test new ubuntucore images receiving requests via
+
+  rabbit queues.
+
+  '

@@ -1,0 +1,26 @@
+description: 'Apache ZooKeeper is a centralized, reliable, service for maintaining
+
+  configuration information, naming, providing distributed
+
+  synchronization, and group services. All of these kinds of services
+
+  are used in some form or another by distributed applications.
+
+  In order to install and configure Apache HBase and other Hadoop ecosystem
+
+  components, you must start the ZooKeeper service.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-zookeeper
+peers:
+  zkpeer:
+    interface: zookeeper-quorum
+provides:
+  zkclient:
+    interface: zookeeper
+summary: High-performance coordination service for distributed applications
+tags:
+- bigdata
+- hadoop
+- apache

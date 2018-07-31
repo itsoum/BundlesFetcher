@@ -1,0 +1,18 @@
+description: 'A highly-available multi-data center aware solution for service
+
+  discovery with integrated failure detection.
+
+  '
+name: consul
+peers:
+  cluster:
+    interface: raft
+provides:
+  admin:
+    interface: http
+  api:
+    interface: consul
+requires:
+  stats:
+    interface: statsd
+summary: Distributed service discovery and configuration.

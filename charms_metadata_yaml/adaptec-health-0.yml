@@ -1,0 +1,23 @@
+description: 'Provides hardware health monitoring for Adaptec cards, as well as
+
+  disk helath monitoring
+
+  '
+maintainer: Brad Marshall <brad.marshall@canonical.com>
+name: adaptec-health
+provides:
+  monitors:
+    interface: monitors
+  nrpe:
+    interface: nrpe
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Hardware Health for Adaptec based cards
+tags:
+- monitoring

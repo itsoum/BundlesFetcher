@@ -1,0 +1,13 @@
+description: 'Run an Ubuntu system, but don''t do a whole lot else.
+
+  '
+maintainer: John Arbash Meinel <john@arbash-meinel.com>
+name: ubuntu-lite
+series:
+- xenial
+- trusty
+subordinate: false
+summary: The smallest charm I could come up with that still looks nice.
+tags:
+- misc
+- application_development

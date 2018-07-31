@@ -1,0 +1,18 @@
+description: 'Setup a machine to be a client of a forward proxy
+
+  to access the outside network. Squid 3 can proxy FTP, HTTP, and HTTPS.
+
+  '
+maintainer: Curtis Hovey <curtis.hovey@canonical.com>
+name: client-forwardproxy
+requires:
+  forwardproxy:
+    interface: http
+series:
+- xenial
+- trusty
+- precise
+- yakkety
+summary: Setup a machine to be a client of a forward proxy.
+tags:
+- cache-proxy

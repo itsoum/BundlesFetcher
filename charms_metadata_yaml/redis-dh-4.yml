@@ -1,0 +1,12 @@
+description: 'Depricated
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: redis-dh
+provides:
+  dh:
+    interface: dh-re
+subordinate: false
+summary: DeviceHive Redis cache
+tags:
+- misc

@@ -1,0 +1,18 @@
+description: 'A Juju charm layer that handles installing Docker. This layer is somewhat
+
+  based on the juju-solutions docker charm
+
+  '
+maintainers:
+- Gregory Van Seghbroeck <gregory.vanseghbroeck@qrama.io>
+name: docker
+provides:
+  dockerhost:
+    interface: docker-image-host
+series:
+- xenial
+subordinate: false
+summary: A Juju charm layer to use Docker containers in charms.
+tags:
+- containers
+- layer

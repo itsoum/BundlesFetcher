@@ -1,0 +1,14 @@
+description: 'This charm deploys a script that will send data to ActiveMQ.
+
+  '
+maintainer: Sebastien Pattyn <sebastien.pattyn@tengu.io>
+name: data-source
+requires:
+  topic:
+    interface: activemq-topic
+series:
+- xenial
+subordinate: false
+summary: This charm deploys a script that will send data to ActiveMQ
+tags:
+- misc

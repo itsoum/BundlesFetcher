@@ -1,0 +1,20 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the HDFS Secondary NameNode, which manages checkpoints for the
+  HDFS master.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: cloudera-hadoop-hdfs-secondary
+provides:
+  ganglia:
+    interface: monitor
+  secondary:
+    interface: dfs-secondary
+summary: HDFS Secondary NameNode for CDH Hadoop
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

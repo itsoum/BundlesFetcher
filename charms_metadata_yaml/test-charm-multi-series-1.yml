@@ -1,0 +1,11 @@
+description: 'This is a no-op test charm for verifying aspects
+
+  of multi-series handling on jujucharms.com
+
+  '
+maintainer: Cory Johns <cory.johns@canonical.com>
+name: test-charm-multi-series
+series:
+- xenial
+- trusty
+summary: Test of multi-series support on jujucharms.com

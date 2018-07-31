@@ -1,0 +1,20 @@
+description: "This charm deploys a subordinate charm that relates to jupyter-notebook\
+  \ to get the conda constituents \n"
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: conda
+requires:
+  conda:
+    interface: conda
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Conda
+tags:
+- jupyter
+- spark
+- data-processing
+- anaconda
+- conda

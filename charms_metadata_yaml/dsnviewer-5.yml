@@ -1,0 +1,17 @@
+description: 'See summary
+
+  '
+maintainer: Rick Harding <rick.harding@canonical.com>
+name: dsnviewer
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+series:
+- xenial
+subordinate: false
+summary: Create a db and display connection info to the user.
+tags:
+- misc

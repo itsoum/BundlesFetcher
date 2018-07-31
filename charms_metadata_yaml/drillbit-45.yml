@@ -1,0 +1,20 @@
+description: Apache Drill Drillbit
+maintainer: Tom Barber <tom@analytical-labs.com>
+name: drillbit
+provides:
+  java:
+    interface: java
+    scope: container
+requires:
+  hdfs:
+    interface: dfs
+  mongodb:
+    interface: mongodb
+  zookeeper:
+    interface: zookeeper
+series:
+- trusty
+subordinate: false
+summary: Apache Drill Drillbit
+tags:
+- big_data

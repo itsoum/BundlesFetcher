@@ -1,0 +1,8 @@
+description: 'For testing the txstatsd charm and its relationships.
+
+  '
+name: example-txstatsd-client
+requires:
+  txstatsd:
+    interface: txstatsd
+summary: Example client for txstatsd to test the charm

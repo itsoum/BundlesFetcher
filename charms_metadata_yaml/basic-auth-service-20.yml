@@ -1,0 +1,25 @@
+description: 'This service provides an endpoint for HTTP basic-authorization credentials
+
+  validation, and a REST API to manage them.
+
+  '
+maintainer: Canonical Landscape Team <landscape-crew@lists.canonical.com>
+name: basic-auth-service
+provides:
+  basic-auth-check:
+    interface: basic-auth-check
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  website:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: HTTP basic-authorization backend service
+tags:
+- http
+- basic-auth

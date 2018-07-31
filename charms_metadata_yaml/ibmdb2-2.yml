@@ -1,0 +1,9 @@
+description: 'DEPRECATED: please use ibm-db2 instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibmdb2
+subordinate: false
+summary: IBM DB2 (deprecated, use ibm-db2)
+tags:
+- misc

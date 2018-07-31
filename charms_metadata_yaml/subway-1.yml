@@ -1,0 +1,10 @@
+description: Subway is a web-based IRC client with a multi-user backend and a JavaScript-heavy
+  UI. Frontend/backend communication is done with websockets (or best available fallback
+  where not available). The backend supports connection persistence and optional logging
+  when the browser disconnects.
+maintainer: Benjamin Kerensa <bkerensa@ubuntu.com>
+name: subway
+provides:
+  subway:
+    interface: http
+summary: Web-Based IRC Client

@@ -1,0 +1,18 @@
+description: UbuCon.org website
+maintainers:
+- Marco Ceppi <marco@ceppi.net>
+- ubucon-site-developers <community@ubuntu.com>
+name: ubucon
+provides:
+  website:
+    interface: http
+requires:
+  postgres:
+    interface: pgsql
+series:
+- trusty
+- precise
+summary: UbuCon.org website
+tags:
+- django
+- cms

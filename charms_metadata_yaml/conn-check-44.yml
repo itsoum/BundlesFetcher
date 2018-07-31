@@ -1,0 +1,19 @@
+description: 'Provides the conn-check tool for checking service connectivity, and
+  enables exposing the results to Nagios
+
+  '
+maintainer: Simon Davy <simon.davy@canonical.com>
+name: conn-check
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  conn-check:
+    interface: conn-check
+    scope: container
+subordinate: true
+summary: connection checker
+tags:
+- monitoring
+- ops

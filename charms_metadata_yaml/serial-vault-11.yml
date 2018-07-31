@@ -1,0 +1,21 @@
+description: 'Serial Vault that signs serial assertions from Ubuntu devices using
+  pre-defined
+
+  GPG signing keys. The Serial Vault holds a list of approved device models and
+
+  signs the serial assertion for the models.
+
+  '
+maintainer: James Jesudason <james.jesudason@canonical.com>
+name: serial-vault
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+series:
+- xenial
+summary: Serial Vault that signs serial assertions from Ubuntu devices.
+tags:
+- service

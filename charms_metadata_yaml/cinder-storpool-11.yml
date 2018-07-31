@@ -1,0 +1,28 @@
+description: 'This charm waits for the "storpool-block" charm to report readiness
+  on
+
+  the current node and then provides the "cinder" charm with
+
+  the configuration for the "cinder-storpool" backend.
+
+  '
+maintainer: StorPool <support@storpool.com>
+name: cinder-storpool
+peers:
+  cinder-p:
+    interface: storpool-service
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  storpool-presence:
+    interface: storpool-presence
+subordinate: true
+summary: Combine several layers to do... Cinder storage stuff.
+tags:
+- openstack
+- storage

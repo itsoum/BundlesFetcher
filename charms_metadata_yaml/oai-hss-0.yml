@@ -1,0 +1,21 @@
+description: 'This charm aims to deploy HSS functions of OpenAirInterface (OAI) wireless
+  technology platform
+
+  '
+maintainers:
+- Navid Nikaein <navid.nikaein@eurecom.fr>
+- Andrea Bordone Molini <bordone@eurecom.fr>
+name: oai-hss
+provides:
+  hss:
+    interface: S6a-hss
+requires:
+  db:
+    interface: mysql
+subordinate: false
+summary: HSS deals with functionalities such as mobility management
+tags:
+- network
+- telecom
+- lte
+- hss

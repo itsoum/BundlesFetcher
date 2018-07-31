@@ -1,0 +1,8 @@
+description: 'This charm doesn''t do anything, on purpose.  Good for testing a
+
+  Juju configuration or testing.
+
+  '
+maintainer: Ted Gould <ted@ubuntu.com>
+name: null-charm
+summary: A null Juju Charm

@@ -1,0 +1,11 @@
+description: 'Private charm for the TuMicro Team, server-side client.
+
+  '
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: tumicro
+provides:
+  website:
+    interface: http
+summary: Server-side client for TuMicro, currently with private data.
+tags:
+- web_server

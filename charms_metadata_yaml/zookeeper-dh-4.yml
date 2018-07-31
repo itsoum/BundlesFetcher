@@ -1,0 +1,23 @@
+categories:
+- misc
+description: 'Apache ZooKeeper is a software project of the Apache Software Foundation,
+  providing an open source distributed configuration service, synchronization service,
+  and naming registry for large distributed systems.
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: zookeeper-dh
+peers:
+  quorum:
+    interface: cluster
+provides:
+  dh:
+    interface: dh-zk
+  dhc:
+    interface: dhc-zk
+  ka:
+    interface: ka-zk
+  zp:
+    interface: zk-zp
+summary: ZooKeeper is a centralized service for maintaining configuration information,
+  naming, providing distributed synchronization, and providing group services

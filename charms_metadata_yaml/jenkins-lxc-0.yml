@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'Support running tests, etc. in LXC
+
+  '
+maintainer: Aaron Bentley <aaron.bentley@canonical.com>
+name: jenkins-lxc
+requires:
+  extension:
+    interface: jenkins-extension
+    scope: container
+subordinate: true
+summary: LXC integration for Jenkins

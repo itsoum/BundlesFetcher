@@ -1,0 +1,15 @@
+categories:
+- applications
+description: "A website to aggregate and display reports and metrics for the Juju\
+  \ project,\nincluding, but not limited to:\n  - CI data for Juju\n  - CI data for\
+  \ charms\n  - Usage data for both\n  - Usage of ecosystem websites (e.g. jujuguig,\
+  \ charm browser)\n"
+maintainer: Jon Sackett <jcsackett@canonical.com>
+name: juju-reports
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mongodb
+summary: Juju Reporting App

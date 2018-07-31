@@ -1,0 +1,77 @@
+description: 'Kubernetes is an open-source platform for deploying, scaling, and operations
+
+  of application containers across a cluster of hosts. Kubernetes is portable
+
+  in that it works with public, private, and hybrid clouds. Extensible through
+
+  a pluggable infrastructure. Self healing in that it will automatically
+
+  restart and place containers on healthy nodes if a node ever goes away.
+
+  '
+maintainers:
+- Tim Van Steenburgh <tim.van.steenburgh@canonical.com>
+- George Kraft <george.kraft@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+- Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+- Charles Butler <Chuck@dasroot.net>
+- Matthew Bruzek <mbruzek@ubuntu.com>
+name: kubernetes-master
+provides:
+  cluster-dns:
+    interface: kube-dns
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  kube-api-endpoint:
+    interface: http
+  kube-control:
+    interface: kube-control
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  aws:
+    interface: aws-integration
+  ceph-storage:
+    interface: ceph-admin
+  certificates:
+    interface: tls-certificates
+  etcd:
+    interface: etcd
+  gcp:
+    interface: gcp-integration
+  loadbalancer:
+    interface: public-address
+  openstack:
+    interface: openstack-integration
+resources:
+  cdk-addons:
+    description: CDK addons snap
+    filename: cdk-addons.snap
+    type: file
+  kube-apiserver:
+    description: kube-apiserver snap
+    filename: kube-apiserver.snap
+    type: file
+  kube-controller-manager:
+    description: kube-controller-manager snap
+    filename: kube-controller-manager.snap
+    type: file
+  kube-scheduler:
+    description: kube-scheduler snap
+    filename: kube-scheduler.snap
+    type: file
+  kubectl:
+    description: kubectl snap
+    filename: kubectl.snap
+    type: file
+series:
+- xenial
+subordinate: false
+summary: The Kubernetes control plane.
+tags:
+- misc
+- infrastructure
+- kubernetes
+- master

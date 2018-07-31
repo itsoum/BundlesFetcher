@@ -1,0 +1,18 @@
+description: 'The hardening-os-tests charm is used to test the OS image against
+
+  Hardening.io standards by running the chef test suite against the
+
+  Juju service.
+
+  '
+maintainers:
+- Billy Olsen <billy.olsen@canonical.com>
+name: hardening-os-tests
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: hardening-os-tests is a charm for testing a charm
+tags:
+- system

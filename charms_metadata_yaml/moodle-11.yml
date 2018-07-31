@@ -1,0 +1,15 @@
+description: "This charm will install and setup Moodle optimized to run in the\ncloud.\
+  \  In particular, this will deploy one or more Moodle web \nfrontends with support\
+  \ for load balancing, a shared moodle data\ndirectory over NFS, and a database backend\
+  \ on either Mysql or \nPostgresql.\n"
+maintainer: Ryan Kather <rkather@missionpenguin.com>
+name: moodle
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+  nfs:
+    interface: mount
+summary: Moodle Open Source E-Learning Software Platform

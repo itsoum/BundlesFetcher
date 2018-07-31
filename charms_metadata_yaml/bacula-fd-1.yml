@@ -1,0 +1,24 @@
+description: 'Bacula is a set of programs to manage backup, recovery and verification
+
+  of data across a network of computers of different kinds.  The file
+
+  daemon has to be installed on the machine to be backed up. It is
+
+  responsible for providing the file attributes and data when requested
+
+  by the Director, and also for the file system-dependent part of
+
+  restoration.
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: bacula-fd
+provides:
+  bacula:
+    interface: bacula-fd
+requires:
+  all-files:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: network backup, recovery and verification - file daemon

@@ -1,0 +1,18 @@
+description: 'Apache Mesos abstracts CPU, memory, storage, and other compute resources
+  away from machines (physical or virtual), enabling fault-tolerant and elastic distributed
+  systems to easily be built and run effectively.
+
+  '
+maintainer: Joao Ribeiro <jonnybgod@gmail.com>
+name: mesos-master
+peers:
+  mesos-masters:
+    interface: mesos-masters
+provides:
+  mesos-master:
+    interface: mesos-master
+subordinate: false
+summary: Provides a Mesos Cluster master for building distributed systems
+tags:
+- ops
+- network

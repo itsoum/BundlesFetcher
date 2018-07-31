@@ -1,0 +1,19 @@
+categories:
+- applications
+description: 'phpBB is a free flat-forum bulletin board software solution that can
+  be used
+
+  to stay in touch with a group of people or can power your entire website. It
+
+  is licensed under the GPLv2 and written in PHP.
+
+  '
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: phpbb
+provides:
+  html:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Free, Open Source bulletin board software

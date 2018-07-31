@@ -1,0 +1,13 @@
+description: 'This charm installs nginx-full and when combined with nginx-site, nginx-php,
+  or nginx-python will allow you to deploy independant VirtualHosts and scale those
+  out.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: nginx
+provides:
+  web-engine:
+    interface: nginx-vhost
+summary: small, powerful, scalable web/proxy server
+tags:
+- app-servers

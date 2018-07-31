@@ -1,0 +1,16 @@
+description: 'TR-69 CPE remote management tool
+
+  '
+maintainer: shweelan <shweelan@genieacs.com>
+name: genieacs
+provides:
+  genieacs:
+    interface: genieacs
+requires:
+  cache:
+    interface: redis
+  database:
+    interface: mongodb
+summary: TR-69 CPE remote management tool
+tags:
+- monitoring

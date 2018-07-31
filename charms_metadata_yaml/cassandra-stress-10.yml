@@ -1,0 +1,17 @@
+description: 'This will deploy the Cassandra stress tool, when related to a cassandra
+  cluster
+
+  will allow you to launch a stress against that service
+
+  '
+maintainer: Marco Ceppi <marco.ceppi@canonical.com>
+name: cassandra-stress
+provides:
+  benchmark:
+    interface: benchmark
+requires:
+  database:
+    interface: cassandra
+summary: Cassandra stress tool for benchmarking
+tags:
+- benchmark

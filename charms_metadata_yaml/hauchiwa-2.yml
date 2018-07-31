@@ -1,0 +1,13 @@
+description: ''
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: hauchiwa
+provides:
+  hauchiwa-port-forward:
+    interface: opened-ports
+requires:
+  rest2jfed:
+    interface: http
+subordinate: false
+summary: This Charm sets up a Tengu hauchiwa.
+tags:
+- big_data

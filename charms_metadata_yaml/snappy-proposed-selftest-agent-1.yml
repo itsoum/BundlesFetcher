@@ -1,0 +1,11 @@
+description: 'Runs snappy-proposed-selftest-agent service from a given service tarball
+  (provided as files/snappy-proposed-selftest-agent.tgz).
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: snappy-proposed-selftest-agent
+summary: 'Deploy a service to request tests for new ubuntucore images via
+
+  rabbit queue.
+
+  '

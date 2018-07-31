@@ -1,0 +1,18 @@
+categories:
+- misc
+description: 'This charm provides the pki structure that is expected by openvpn-server
+  and openvpn-p2p
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: openvpn-pki
+requires:
+  openvpn-pki-recipient:
+    interface: openvpn-pki-sync
+    sets:
+    - sync_key
+    - sync_ip
+subordinate: false
+summary: Open VPN pki server

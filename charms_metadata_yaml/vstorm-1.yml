@@ -1,0 +1,12 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: amir sanjar <sanjar@sanjar-acer>
+name: vstorm
+requires:
+  namenode:
+    interface: dfs
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- big_data

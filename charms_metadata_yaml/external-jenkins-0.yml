@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'Jenkins is a Continous Integration server supporting
+
+  flexible continous integration and deployment methodologies
+
+  and more.
+
+  .
+
+  This charm allows Jenkins slaves to use masters in external environments.
+
+  '
+maintainer: Aaron Bentley <aaron.bentley@canonical.com>
+name: external-jenkins
+requires:
+  master:
+    interface: jenkins-slave
+summary: Support jenkins masters in external environments.

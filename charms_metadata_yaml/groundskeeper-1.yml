@@ -1,0 +1,11 @@
+description: 'Bind the Tarmac instance to the Error Tracker instances.
+
+  '
+maintainer: Evan Dandrea <evan.dandrea@canonical.com>
+name: groundskeeper
+requires:
+  local-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Ubuntu Error Tracker Tarmac machinery

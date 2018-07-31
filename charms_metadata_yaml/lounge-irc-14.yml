@@ -1,0 +1,13 @@
+description: 'The Lounge is a modern web IRC client designed for self-hosting.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: lounge-irc
+provides:
+  website:
+    interface: http
+series:
+- xenial
+summary: The self-hosted web IRC client
+tags:
+- irc

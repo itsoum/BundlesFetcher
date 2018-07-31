@@ -1,0 +1,31 @@
+description: 'Galera Cluster provides an active/active MySQL
+
+  compatible alternative implemented using the Galera
+
+  synchronous replication library.
+
+
+  This charm is based on the Percona Cluster charm by
+
+  James Page <james.page@ubuntu.com>
+
+  '
+maintainer: Philip Stoev <philip.stoev@galeracluster.com>
+name: galera-cluster
+peers:
+  cluster:
+    interface: galera-cluster
+provides:
+  db:
+    interface: mysql
+  db-admin:
+    interface: mysql-root
+  shared-db:
+    interface: mysql-shared
+requires:
+  ha:
+    interface: hacluster
+    scope: container
+summary: Galera Cluster - Active/Active Synchronous MySQL Replication
+tags:
+- databases

@@ -1,0 +1,22 @@
+description: 'Cisco''s proprietary Vector Packet Processing software which uses a
+  VPE
+
+  (Vector Packet Engine) for packet switching through efficient use of caching.
+
+  '
+maintainer: Liam Young <liam.young@canonical.com>
+name: cisco-vpp
+provides:
+  neutron-plugin:
+    interface: neutron-plugin
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+  odl-controller:
+    interface: odl-controller-api
+subordinate: true
+summary: Cisco Vector Packet Processing software switch
+tags:
+- openstack

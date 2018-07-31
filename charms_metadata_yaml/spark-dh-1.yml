@@ -1,0 +1,12 @@
+description: 'Apache Spark is a fast and general engine for large-scale data processing.
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: spark-dh
+provides:
+  zeppelin:
+    interface: spark-zp
+subordinate: false
+summary: DeviceHive Spark
+tags:
+- misc

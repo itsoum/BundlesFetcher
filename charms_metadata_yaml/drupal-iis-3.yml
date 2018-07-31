@@ -1,0 +1,33 @@
+description: 'Drupal is a dynamic web site platform which allows an individual or
+
+  community of users to publish, manage and organize a variety of
+
+  content, Drupal integrates many popular features of content
+
+  management systems, weblogs, collaborative tools and discussion-based
+
+  community software into one easy-to-use package.
+
+  '
+maintainer: Ionut Balutoiu <ibalutoiu@cloudbasesolutions.com>
+name: drupal-iis
+peers:
+  cluster:
+    interface: drupal-iis
+provides:
+  website:
+    interface: http
+requires:
+  ad-join:
+    interface: ad-join
+  cache:
+    interface: memcache
+  mssql-db:
+    interface: mssql
+  mysql-db:
+    interface: mysql-shared
+  pgsql-db:
+    interface: pgsql
+summary: Drupal is a free and open-source content management framework
+tags:
+- windows

@@ -1,0 +1,13 @@
+description: 'Uses rsyslogs facilities to forward to a remote syslog server.
+
+  '
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: rsyslog-forwarder
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  syslog:
+    interface: syslog
+subordinate: true
+summary: forwards local syslog to remote syslog server

@@ -1,0 +1,15 @@
+description: 'Runs a developer demonstration/testing instance of the Launchpad software.
+
+
+  This is not intended for production use.
+
+
+  This charm currently runs everything inside a single VM: the database,
+
+  various daemons, all of the Launchpad cron jobs.  This is consistent with
+
+  current demo instances of Launchpad (but not a very good use of Juju.)
+
+  '
+name: launchpad
+summary: Launchpad demo instance

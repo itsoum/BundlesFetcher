@@ -1,0 +1,15 @@
+description: 'Contains swift-object, swift-container and swift-account servers.
+
+  '
+maintainer: Adam Gandelman <adamg@canonical.com>
+name: swift-storage
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  swift-storage:
+    interface: swift
+summary: Swift storage node
+tags:
+- openstack
+- file-servers

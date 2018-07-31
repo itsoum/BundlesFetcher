@@ -1,0 +1,34 @@
+description: 'This is the ''ubuntu'' charm with revision control tools preinstalled,
+
+  as well as relations to other developer-oriented charms. It is useful
+
+  as both a development environment and an endpoint for testing charms
+
+  like ''openjdk'' and ''ibm-xlc''.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: ubuntu-devenv
+provides:
+  java:
+    interface: java
+    scope: container
+  xlc:
+    interface: xlc-compiler
+    scope: container
+  xlf:
+    interface: ftn-compiler
+    scope: container
+requires:
+  db2:
+    interface: db2
+  mysql:
+    interface: mysql
+  pgsql:
+    interface: pgsql
+series:
+- xenial
+- trusty
+summary: Simple Ubuntu development and test environment
+tags:
+- application_development

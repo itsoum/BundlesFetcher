@@ -1,0 +1,19 @@
+description: ci-configurator
+maintainer: Adam Gandelman <adamg@ubuntu.com>
+name: ci-configurator
+requires:
+  gerrit-configurator:
+    interface: gerrit-configurator
+    scope: container
+  jenkins-configurator:
+    interface: jenkins-extension
+    scope: container
+  zuul-configurator:
+    interface: zuul-configurator
+    scope: container
+subordinate: true
+summary: 'Subordinate charm used to configure an integrated Jenkins, Zuul and Gerrit
+
+  continious-integration pipeline.
+
+  '

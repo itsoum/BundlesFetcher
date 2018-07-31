@@ -1,0 +1,23 @@
+description: 'Drupal is a dynamic web site platform which allows an individual or
+
+  community of users to publish, manage and organize a variety of
+
+  content, Drupal integrates many popular features of content
+
+  management systems, weblogs, collaborative tools and discussion-based
+
+  community software into one easy-to-use package.
+
+  '
+maintainer: Brandon Holtsclaw <me@brandonholtsclaw.com>
+name: drupal
+peers:
+  loadbalancer:
+    interface: reversenginx
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: Full Featured content management framework

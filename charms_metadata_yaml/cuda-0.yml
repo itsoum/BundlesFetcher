@@ -1,0 +1,19 @@
+description: 'Installs CUDA drivers to instance
+
+  '
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: cuda
+provides:
+  cuda-driver:
+    interface: cuda
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- xenial
+subordinate: true
+summary: installs CUDA drivers on GPU enabled instances
+tags:
+- misc

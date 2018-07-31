@@ -1,0 +1,14 @@
+description: 'This charm allows administering of MySQL with a web interface.
+
+  '
+maintainer: Simon Smith <simon@hestor.com>
+name: phpmyadmin
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+summary: MySQL Web Administration Tool
+tags:
+- databases

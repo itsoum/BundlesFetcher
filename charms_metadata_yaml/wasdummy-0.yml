@@ -1,0 +1,16 @@
+description: "To test IBM MQ which provides for messaging services to transport multiple\
+  \ types of data. \n"
+maintainer: Juju Support <jujusupp@us.ibm.com>
+name: wasdummy
+requires:
+  wasmessaging:
+    interface: ibm-mq
+series:
+- xenial
+- trusty
+subordinate: false
+summary: To check IBM MQ Messaging product
+tags:
+- misc
+- messaging
+- ibm

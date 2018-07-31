@@ -1,0 +1,21 @@
+categories:
+- application
+description: 'The configs define a URL for a .war file, which will then be downloaded
+
+  to the webapps directory. (defined in the webapp-path property by
+
+  the tomcat charm).
+
+  It is presumed that extraction of the .war file will be automatically
+
+  handled by tomcat as per usual.
+
+  '
+maintainer: Phil Brown <phil@bolthole.com>
+name: tomcat-webapp
+requires:
+  webapp-container:
+    interface: java-webapp
+    scope: container
+subordinate: true
+summary: tomcat-webapp deploys a well-behaved webapp to a tomcat service

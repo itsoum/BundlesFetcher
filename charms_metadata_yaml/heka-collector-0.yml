@@ -1,0 +1,13 @@
+description: 'Subordinate charm that adds metrics collection using Hekas
+
+  '
+name: heka-collector
+requires:
+  elasticsearch:
+    interface: elasticsearch
+  juju-info:
+    interface: juju-info
+    scope: container
+revision: 1
+subordinate: true
+summary: Collect metrics using Heka

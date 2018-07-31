@@ -1,0 +1,15 @@
+description: 'WebSphere Application Server is a proven, high-performance transaction
+  engine
+
+  that can help build, run, integrate, and manage dynamic web applications.
+
+  '
+maintainer: jujusupp@us.ibm.com
+name: was-base
+provides:
+  website:
+    interface: http
+subordinate: false
+summary: WebSphere Application Server Base Edition
+tags:
+- applications

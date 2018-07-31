@@ -1,0 +1,9 @@
+description: 'This fires up an lxc compute node.
+
+  It simply pre-loads all the cloud tarballs and sets /dev/vdb up for
+
+  lvm-backed containers.
+
+  '
+name: single-lxc
+summary: A single lxc instance

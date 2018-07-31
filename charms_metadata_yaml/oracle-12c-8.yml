@@ -1,0 +1,32 @@
+description: 'This is Oracle-12c charm.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: amarendra <info@cplanenetworks.com>
+name: oracle-12c
+provides:
+  master-state:
+    interface: state
+    scope: global
+  oracle:
+    interface: oracle
+    scope: global
+  slave:
+    interface: master-slave
+    scope: global
+requires:
+  master:
+    interface: master-slave
+    scope: global
+  slave-state:
+    interface: state
+    scope: global
+subordinate: false
+summary: oracle-12c for Openstack
+tags:
+- openstack
+- networking
+- database

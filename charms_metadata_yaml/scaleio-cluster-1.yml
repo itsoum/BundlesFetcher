@@ -1,0 +1,17 @@
+description: 'ScaleIO connector to existing cluster
+
+  '
+maintainer: Andrey Pavlov <andrey.mp@gmail.com>
+name: scaleio-cluster
+provides:
+  scaleio-gw:
+    interface: scaleio-gw
+  scaleio-mdm:
+    interface: scaleio-mdm
+series:
+- xenial
+- trusty
+- precise
+summary: ScaleIO connector to existing cluster
+tags:
+- storage

@@ -1,0 +1,19 @@
+description: "Elasticsearch Curator helps you curate, or manage your Elasticsearch\
+  \ indices.\nCurator allows for many different operations to be performed to both\
+  \ indices and snapshots, including:\n  - Add or remove indices from an alias\n \
+  \ - Shard routing allocation\n  - Disabling Bloom filter caches (for versions of\
+  \ Elasticsearch < 1.4)\n  - Close indices\n  - Delete indices and snapshots\n  -\
+  \ Open closed indices\n  - Optimize indices\n  - Change the number of replicas per\
+  \ shard for indices\n  - Show indices and snapshots\n  - Take a snapshot (backup)\
+  \ of indices. \n"
+maintainer: Guillermo Gonzalez <guillermo.gonzalez@canonical.com>
+name: es-curator
+requires:
+  elasticsearch:
+    interface: elasticsearch
+    scope: container
+subordinate: true
+summary: Subordinate charm to install elasticsearch curator and setup recurring tasks
+  via cron
+tags:
+- misc

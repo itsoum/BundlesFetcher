@@ -1,0 +1,19 @@
+description: 'ArangoDB is a native multi-model, open-source database with flexible
+
+  data models for documents, graphs, and key-values.
+
+  '
+maintainer: "Dixan Pe\xF1a Pe\xF1a <dixan.pena@tengu.io>"
+name: arangodb
+peers:
+  cluster:
+    interface: arangodb
+provides:
+  db:
+    interface: arangodb
+series:
+- xenial
+subordinate: false
+summary: This charm will Install ArangoDB in stand-alone mode.
+tags:
+- database

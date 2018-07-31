@@ -1,0 +1,40 @@
+description: 'The 0MQ lightweight messaging kernel is a library which
+
+  extends the standard socket interfaces with features
+
+  traditionally provided by specialised messaging middleware
+
+  products. 0MQ sockets provide an abstraction of asynchronous
+
+  message queues, multiple messaging patterns, message
+
+  filtering (subscriptions), seamless access to multiple
+
+  transport protocols and more.
+
+  .
+
+  This charm enables broker-less messaging using 0MQ to the
+
+  OpenStack charms.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: openstack-zeromq
+peers:
+  topology:
+    interface: zeromq-topology
+provides:
+  zeromq-configuration:
+    interface: zeromq-configuration
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+  redis:
+    interface: redis
+subordinate: true
+summary: 0MQ support for OpenStack charms
+tags:
+- openstack

@@ -1,0 +1,24 @@
+description: 'If your service doesn''t implement a DNS relationship, the subordinate
+  helper
+
+  will allow you to configure the records that *should* be sent from the service
+
+  to the DNS registry. This is mostly manual, and a stop-gap for a proper DNS
+
+  relationship implementation
+
+  '
+maintainer: Charles Butler <charles.butler@ubuntu.com>
+name: dns-helper
+requires:
+  programmable:
+    interface: dns
+  programmable-multiple:
+    interface: dns-multi
+  service:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Add DNS to any service
+tags:
+- networking

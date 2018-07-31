@@ -1,0 +1,21 @@
+description: 'This charm is designed to manage iptables rules
+
+  '
+maintainer: Michal Ajduk <Michal.Ajduk@canonical.com>
+name: iptables
+peers:
+  peers:
+    interface: peer-discovery
+    scope: global
+requires:
+  host-system:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Simple iptables based firewall
+tags:
+- security
+- network

@@ -1,0 +1,27 @@
+description: 'This is the web interface to the mailman3 mailing list manager, including
+  the
+
+  HyperKitty archiver and Postorius list administration interface.
+
+  '
+maintainer: Dave Lawson <dave.lawson@canonical.com>
+name: mailman3-web
+provides:
+  mailman3archiver:
+    interface: generic-ip-port-user-pass
+  mailman3website:
+    interface: http
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  db:
+    interface: pgsql
+  mailman3:
+    interface: generic-ip-port-user-pass
+series:
+- bionic
+subordinate: false
+summary: Web interface to the mailman3 mailing list manager.
+tags:
+- ops

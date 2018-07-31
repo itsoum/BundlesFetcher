@@ -1,0 +1,10 @@
+description: 'The git charm deploys and controls a git-over-ssh server.
+
+  '
+maintainer: Domas Monkus <domas@monkus.lt>
+name: git
+subordinate: false
+summary: fast, scalable, distributed revision control system
+tags:
+- application_development
+- storage

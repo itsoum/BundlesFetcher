@@ -1,0 +1,9 @@
+description: Standalone instance of Mobicent RestComm. v.7.3.1.675.
+maintainer: Gennadiy Dubina <gdubina@dataart.com>
+name: telscale-restcomm
+provides:
+  website:
+    interface: http
+summary: Standalone insatnce of Mobicents RestComm.
+tags:
+- app-servers

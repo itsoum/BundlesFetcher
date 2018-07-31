@@ -1,0 +1,15 @@
+description: 'Install HAProxy suitable for charms to register for reverse proxy of
+  services
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: haproxy
+provides:
+  reverseproxy:
+    interface: reverseproxy
+series:
+- xenial
+subordinate: false
+summary: HAProxy
+tags:
+- misc

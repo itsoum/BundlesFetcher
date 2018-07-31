@@ -1,0 +1,18 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Aakash <Aakash@localhost>
+name: ovn-worker
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  master-config:
+    interface: master-config
+series:
+- xenial
+- trusty
+subordinate: true
+summary: <Fill in summary here>
+tags:
+- misc

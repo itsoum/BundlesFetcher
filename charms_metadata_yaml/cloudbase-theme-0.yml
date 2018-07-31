@@ -1,0 +1,21 @@
+description: 'Cloudbase OpenStack Dashboard Theme
+
+  '
+maintainer: ibalutoiu <ibalutoiu@cloudbasesolutions.com>
+name: cloudbase-theme
+requires:
+  dashboard-plugin:
+    interface: dashboard-plugin
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Cloudbase OpenStack Dashboard Theme
+tags:
+- openstack
+- dashboard
+- theme
+- cloudbase
+- custom
+- horizon
+- plugin

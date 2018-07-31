@@ -1,0 +1,9 @@
+categories:
+- misc
+description: "This is a bridge to dual-host and mirror projects from launchpad to\
+  \ github.\nIt's just a set of scripts that use git-bzr-ng to mirror projects; currently\
+  \ \nit just mirrors from lp to github.\n"
+maintainer: j.c.sackett <jcsackett@canonical.com>
+name: gitpad
+subordinate: false
+summary: Sets up a simple job to mirror charms from launchpad to github.

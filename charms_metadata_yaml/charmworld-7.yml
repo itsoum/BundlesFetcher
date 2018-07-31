@@ -1,0 +1,13 @@
+description: 'Have you ever wondered where are my lucky charms? Charm Browser has
+  the answer and so much more.
+
+  '
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: charmworld
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mongodb
+summary: Juju Charm Browser

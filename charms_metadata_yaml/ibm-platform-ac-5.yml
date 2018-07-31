@@ -1,0 +1,36 @@
+description: 'This charm installs IBM platform application center which is a plugin
+  for IBM Platform LSF.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-platform-ac
+provides:
+  master:
+    interface: pac
+requires:
+  mysql:
+    interface: mysql-root
+  plugin:
+    interface: pac
+    scope: container
+resources:
+  ibm_pac_db_package:
+    description: IBM Platform Application Center database connector package.
+    filename: ibm_pac_db_package.tar.gz
+    type: file
+  ibm_pac_installer:
+    description: IBM Platform Application Center installation package
+    filename: ibm_pac_installer.tar.Z
+    type: file
+subordinate: true
+summary: IBM Platform Application Center
+tags:
+- ibm
+- lsf_plugin
+- applicaiton_center
+- platform
+- application_optimization
+- cluster
+- virtualization
+terms:
+- ibmcharmers/ibm-platform-ac/1

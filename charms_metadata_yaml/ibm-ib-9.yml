@@ -1,0 +1,14 @@
+description: "IBM Integration Bus provides for message integration services to transport\
+  \ \nmultiple types of data. \nIt also supports an (optional) relation to IBM MQ\
+  \ where features from IBM MQ\ncan be leveraged by IBM Integration Bus\n"
+maintainer: Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-ib
+requires:
+  messaging:
+    interface: ibm-mq
+    optional: true
+subordinate: false
+summary: IBM Integration Bus  product
+tags:
+- misc
+- ibm

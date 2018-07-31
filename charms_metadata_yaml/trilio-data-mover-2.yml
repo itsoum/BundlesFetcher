@@ -1,0 +1,22 @@
+description: TBC
+maintainer: charms@trilio.com
+name: trilio-data-mover
+provides:
+  data-mover:
+    interface: data-mover
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+subordinate: true
+summary: TBC
+tags:
+- openstack
+- storage
+- backup

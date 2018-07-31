@@ -1,0 +1,7 @@
+description: "The initial version of this charm is used to build the kernel for a\
+  \ specified Ubuntu release and specified arch.  The bulk of the kernel compile is\
+  \ done in install.  The release and arch can be changed by editing the config.yaml\
+  \ file.  The compiled kernel will be prvided as a .deb package in the kernel-build\
+  \ directory. \n"
+name: kernel-build
+summary: Charm to build the Ubuntu Linux kernel.

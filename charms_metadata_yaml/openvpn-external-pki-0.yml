@@ -1,0 +1,19 @@
+categories:
+- misc
+description: 'This charm provides a method for integrating an external PKI
+
+  infrastructure into openvpn-server and openvpn-p2p.
+
+  See also the openvpn-pki charm.
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: openvpn-external-pki
+requires:
+  openvpn-pki-recipient:
+    interface: openvpn-pki-sync
+    scope: container
+subordinate: true
+summary: OpenVPN charm for external PKI infrastructure

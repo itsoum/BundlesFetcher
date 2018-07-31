@@ -1,0 +1,31 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm provides version 2.7.3 of both the HDFS DataNode and the YARN NodeManager
+  from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: hadoop-slave
+provides:
+  java:
+    interface: java
+    scope: container
+  namenode:
+    interface: dfs-slave
+  resourcemanager:
+    interface: mapred-slave
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: Combined slave node (DataNode + NodeManager) from Apache Bigtop.
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2

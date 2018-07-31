@@ -1,0 +1,27 @@
+description: 'This charms allows you to design, deploy, provision, and dispose your
+  4G-5G OpenAirInterface EPC out of the box on any cloud infrastructure.
+
+  '
+maintainers:
+- Navid Nikaein <navid.nikaein@eurecom.fr>
+- Andrea Bordone Molini <bordone@eurecom.fr>
+name: oai-mme
+provides:
+  mme:
+    interface: S1-C
+requires:
+  hss:
+    interface: S6a-hss
+  spgw:
+    interface: S11
+  ssh-abot-mme:
+    interface: ssh
+subordinate: false
+summary: Evolved Packet Core Network (EPC) based on OpenairInterface
+tags:
+- Telecom
+- 4G-5G
+- EPC
+- Core Network
+- OpenAirInterface
+- Eurecom

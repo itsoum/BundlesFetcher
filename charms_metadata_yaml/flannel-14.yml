@@ -1,0 +1,25 @@
+description: 'it is a generic overlay network that can be used as a simple alternative
+
+  to existing software defined networking solutions
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+name: flannel
+requires:
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  etcd:
+    interface: etcd
+resources:
+  flannel:
+    description: A tarball packaged release of flannel
+    filename: flannel.tar.gz
+    type: file
+series:
+- xenial
+subordinate: true
+summary: A charm that provides a robust Software Defined Network
+tags:
+- networking

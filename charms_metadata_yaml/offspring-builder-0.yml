@@ -1,0 +1,17 @@
+description: 'Offspring is a scalable image building service.
+
+  .
+
+  This charm provides the Offspring buildd which is
+
+  responsible for building the distribution image.
+
+  '
+name: offspring-slave
+provides:
+  slave:
+    interface: offspring-slave
+requires:
+  master:
+    interface: offspring-master
+summary: Offspring image building buildd

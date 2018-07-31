@@ -1,0 +1,11 @@
+categories:
+- databases
+- file-servers
+description: This will install and setup Metis to run on your Apache or Nginx server.
+maintainer: Joshua Strobl <joshua@stroblindustries.com>
+name: metis
+provides:
+  website:
+    interface: http
+    scope: container
+summary: 'Metis is an open source JSON distributed database / storage system. '

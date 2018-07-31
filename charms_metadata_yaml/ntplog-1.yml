@@ -1,0 +1,23 @@
+description: 'Implements basic packet logging with iptables, for later retrieval by
+  an
+
+  authorised host.  Designed to be deployed with the ntp charm for logging &
+
+  counting of clients.
+
+  '
+maintainers:
+- Paul Gear <paul.gear@canonical.com>
+name: ntplog
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: iptables packet logging for NTP servers
+tags:
+- layer
+- network

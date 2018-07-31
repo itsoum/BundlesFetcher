@@ -1,0 +1,17 @@
+description: 'Present will help you build and deploy your presentations!
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: present
+provides:
+  website:
+    interface: http
+series:
+- xenial
+subordinate: false
+summary: Charm to deploy presentations made with sphinx + react.js.
+tags:
+- git
+- deploy
+- ops
+- presentation

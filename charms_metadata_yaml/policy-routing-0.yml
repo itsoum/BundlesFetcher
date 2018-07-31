@@ -1,0 +1,13 @@
+description: ''
+maintainer: Nobuto Murata <nobuto@ubuntu.com>
+name: policy-routing
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Setup an additional route with policy routing
+tags:
+- misc

@@ -1,0 +1,13 @@
+categories:
+- misc
+description: Sprout charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-sprout
+peers:
+  sprout:
+    interface: sprout-interface
+requires:
+  dns-agent:
+    interface: dns-register
+subordinate: false
+summary: Sprout charm for Project Clearwater

@@ -1,0 +1,23 @@
+description: 'PyBossa is an open source platform for crowd-sourcing online (volunteer)
+
+  assistance to perform tasks that require human cognition, knowledge or
+
+  intelligence (e.g. image classification, transcription, information location).
+
+  '
+maintainers:
+- Marvin Reimer <marvin@scifabric.com>
+- "Daniel Lombra\xF1a Gonz\xE1lez <daniel@scifabric.com>"
+name: pybossa
+provides:
+  website:
+    interface: http
+requires:
+  pgsql:
+    interface: pgsql
+subordinate: false
+summary: Open Source framework for making crowdsourcing projects
+tags:
+- social
+- application_development
+- web_server

@@ -1,0 +1,20 @@
+description: TODO
+maintainer: Martin Hilton <martin.hilton@canonical.com>
+name: elasticsearch
+provides:
+  elasticsearch:
+    interface: elasticsearch
+series:
+- xenial
+storage:
+  data:
+    description: elasticsearch index storage
+    location: /srv/elasticsearch
+    multiple:
+      range: 1-10
+    type: filesystem
+summary: RESTful search and analytics engine
+tags:
+- analytics
+- database
+- search

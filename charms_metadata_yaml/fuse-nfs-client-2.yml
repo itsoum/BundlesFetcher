@@ -1,0 +1,17 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Chris <Chris@leda>
+name: fuse-nfs-client
+requires:
+  host-system:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- trusty
+subordinate: true
+summary: <Fill in summary here>
+tags:
+- misc

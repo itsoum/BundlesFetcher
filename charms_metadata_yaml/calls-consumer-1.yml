@@ -1,0 +1,20 @@
+description: 'Store incomming numbers to database
+
+  '
+maintainer: gedubina <gdubina@dataart.com>
+name: calls-consumer
+provides:
+  haproxy:
+    interface: http
+requires:
+  mesos:
+    interface: juju-info
+    scope: container
+  redis:
+    interface: redis
+  restcomm:
+    interface: http
+subordinate: true
+summary: Store incomming numbers to database
+tags:
+- misc

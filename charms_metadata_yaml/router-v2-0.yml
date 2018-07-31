@@ -1,0 +1,18 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: router-v2
+provides:
+  router:
+    interface: http
+requires:
+  etcd:
+    interface: etcd
+  loggregator:
+    interface: loggregator
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: CF Router

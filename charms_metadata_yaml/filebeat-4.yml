@@ -1,0 +1,34 @@
+description: 'As the next-generation Logstash Forwarder, Filebeat tails logs and quickly
+
+  sends this information to Logstash for further parsing and enrichment or to
+
+  Elasticsearch for centralized storage and analysis.
+
+  '
+maintainers:
+- Tim Van Steenburgh <tim.van.steenburgh@canonical.com>
+- George Kraft <george.kraft@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+- Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+- Charles Butler <Chuck@dasroot.net>
+- Matthew Bruzek <mbruzek@ubuntu.com>
+name: filebeat
+requires:
+  beats-host:
+    interface: juju-info
+    scope: container
+  elasticsearch:
+    interface: elasticsearch
+  kafka:
+    interface: kafka
+  logstash:
+    interface: elastic-beats
+series:
+- xenial
+- trusty
+- bionic
+subordinate: true
+summary: Filebeat is a lightweight, open source shipper for log file data.
+tags:
+- logging
+- monitoring

@@ -1,0 +1,35 @@
+categories:
+- misc
+- ibm
+description: 'Strongloop Node.js application that connects to MongoDB.
+
+
+  StrongLoop (from https://strongloop.com/)
+
+
+  Built on top of the open source LoopBack framework,
+
+  StrongLoop allows you to visually develop REST APIs in
+
+  Node and get them connected to your data.StrongLoop also
+
+  features built-in features like push and offline sync,
+
+  plus graphical tools for clustering, profiling and monitoring Node apps.
+
+  '
+maintainer: Antonio Rosales <antonio.rosales@canonical.com>
+name: strongloop-mongo
+peers:
+  z-peer-relation:
+    interface: z-peer-interface
+provides:
+  strongloop:
+    interface: strong-spark
+  system-z:
+    interface: z-connect
+requires:
+  z-relation:
+    interface: z-interface
+subordinate: false
+summary: Node.js Application

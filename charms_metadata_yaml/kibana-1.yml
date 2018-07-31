@@ -1,0 +1,12 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Luis Arias <luis.arias@balsamiq.com>
+name: kibana
+provides:
+  website:
+    interface: http
+requires:
+  rest:
+    interface: elasticsearch
+summary: Kibana is a user friendly way to view search and visualize your log data

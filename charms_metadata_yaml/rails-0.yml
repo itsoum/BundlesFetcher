@@ -1,0 +1,40 @@
+categories:
+- app-servers
+description: 'Rack provides a minimal, modular and adaptable interface
+
+  for developing web applications in Ruby.
+
+  By wrapping HTTP requests and responses in the simplest way possible,
+
+  it unifies and distills the API for web servers, web frameworks, and
+
+  software in between (the so-called middleware) into a single method call.
+
+  '
+maintainer: Charles Butler <chuck@dasroot.net>
+name: rails
+provides:
+  nagios:
+    interface: monitors
+  nrpe:
+    interface: local-monitors
+    scope: container
+  proxy:
+    interface: http
+requires:
+  memcached:
+    interface: memcache
+    optional: true
+  mongodb:
+    interface: mongodb
+    optional: true
+  mysql:
+    interface: mysql
+    optional: true
+  postgresql:
+    interface: pgsql
+    optional: true
+  redis:
+    interface: redis
+    optional: true
+summary: A modular Ruby webserver interface

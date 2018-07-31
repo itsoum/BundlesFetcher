@@ -1,0 +1,16 @@
+description: 'This charm provides an iptables proxy for lxd containers.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: lxd-proxy
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Proxy to LXD Containers
+tags:
+- proxy
+- LXD

@@ -1,0 +1,30 @@
+description: 'Apache Tomcat is an open source implementation of the Java Servlet and
+
+  JavaServer Pages (JSP) specifications, and provides a "pure Java" HTTP
+
+  web server environment for Java web applications to run.
+
+  '
+maintainer: Matthew Bruzek <mattew.bruzek@canonical.com>
+name: tomcat
+peers:
+  cluster:
+    interface: tomcat-cluster
+provides:
+  webapp-container:
+    interface: java-webapp
+    scope: container
+  website:
+    interface: http
+requires:
+  jndi-memcached:
+    interface: memcache
+    optional: true
+  jndi-terracotta:
+    interface: terracotta
+    optional: true
+summary: Apache Tomcat 6 or 7 Servlet and JSP engine
+tags:
+- application_development
+- java
+- webapp

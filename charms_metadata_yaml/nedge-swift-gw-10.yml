@@ -1,0 +1,15 @@
+description: NEDGE is a distributed object storage system designed to provide excellent
+  performance, reliability, and scalability.
+maintainer: Anton <Anton.Skriptsov@nexenta.com>
+name: nedge-swift-gw
+requires:
+  identity-service:
+    interface: keystone
+  swift-gw:
+    interface: swift-gw
+subordinate: false
+summary: Nexenta Edge swift gateway node. Can be used as object storage node
+tags:
+- openstack
+- storage
+- file-servers

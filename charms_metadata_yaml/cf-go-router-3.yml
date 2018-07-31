@@ -1,0 +1,18 @@
+categories:
+- misc
+description: 'The Router routes traffic coming into Cloud Foundry to the appropriate
+
+  component - usually Cloud Controller or a running application on a DEA
+
+  node. The router is implemented in Go.
+
+  '
+maintainer: Alexnder Prismakov <prismakov@gmail.com>
+name: cf-go-router
+provides:
+  router:
+    interface: router
+requires:
+  nats:
+    interface: nats
+summary: Cloud Foundry (Go)Router

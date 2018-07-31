@@ -1,0 +1,23 @@
+description: 'Provides integration between OpenStack Cinder block storage and NexentaEdge
+  scale-out storage using ISCSI services.
+
+  '
+maintainer: Nexenta <nexenta.juju@nexenta.com>
+name: cinder-nexentaedge
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  cinder-host:
+    interface: juju-info
+    scope: container
+  cinder-nedge:
+    interface: cinder-nedge
+subordinate: true
+summary: Subordinate charm for Cinder configuration
+tags:
+- openstack
+- storage
+- file-servers
+- misc

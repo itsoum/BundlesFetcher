@@ -1,0 +1,13 @@
+description: 'This charm deploys a Ubuntu system
+
+  '
+maintainers:
+- Marco Ceppi <marco@ceppi.net>
+- Matt Bruzek <Matthew.Bruzek@canonical.com>
+name: charm-workshop
+series:
+- xenial
+subordinate: false
+summary: Deploy an Ubuntu system for workshops
+tags:
+- classroom

@@ -1,0 +1,27 @@
+description: "The CPLANE Controller is an SDN orchestration system for the CPLANE\
+  \ DVNd OpenStack Neutron Solution. \n"
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: amarendra <info@cplanenetworks.com>
+name: cplane-controller
+peers:
+  cluster:
+    interface: cplane-msm-ha
+provides:
+  cplane-controller:
+    interface: cplane-controller
+    scope: global
+requires:
+  ha:
+    interface: hacluster
+    scope: container
+  oracle:
+    interface: oracle
+    scope: global
+subordinate: false
+summary: Cplane controller for Openstack
+tags:
+- openstack
+- networking

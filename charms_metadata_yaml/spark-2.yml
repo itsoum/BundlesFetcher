@@ -1,0 +1,14 @@
+categories:
+- application
+description: 'This is an empty charm just for demonstration
+
+  '
+maintainer: s90 <s90@dmimakarenko>
+name: spark
+provides:
+  master:
+    interface: monitor
+requires:
+  db:
+    interface: cassandra
+summary: <Fill in summary here>

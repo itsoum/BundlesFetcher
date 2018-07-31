@@ -1,0 +1,21 @@
+categories:
+- misc
+description: 'The Log Router (aka Log Traffic Controller) acts as an endpoint for
+  DEAs
+
+  and routes logs to the appropriate loggregator instance.
+
+  '
+maintainer: Kapil Thangavelu <kapil.foss@gmail.com>
+name: cf-logrouter
+provides:
+  logs:
+    interface: logs
+requires:
+  loggregator:
+    interface: loggregator
+  nats:
+    interface: nats
+  router:
+    interface: router
+summary: Cloud Foundry Log Router

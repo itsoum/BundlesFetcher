@@ -1,0 +1,34 @@
+description: HAProxy is a TCP/HTTP reverse proxy which is particularly suited for
+  high availability environments. It features connection persistence through HTTP
+  cookies, load balancing, header addition, modification, deletion both ways. It has
+  request blocking capabilities and provides interface to display server status.
+maintainers:
+- Juan Negron <juan@ubuntu.com>
+- Tom Haddon <tom.haddon@canonical.com>
+name: haproxy
+peers:
+  peer:
+    interface: haproxy-peer
+provides:
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  munin:
+    interface: munin-node
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  statistics:
+    interface: statistics
+    scope: container
+  website:
+    interface: http
+requires:
+  reverseproxy:
+    interface: http
+series:
+- xenial
+- trusty
+summary: fast and reliable load balancing reverse proxy
+tags:
+- cache-proxy

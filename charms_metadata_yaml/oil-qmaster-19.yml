@@ -1,0 +1,20 @@
+categories:
+- applications
+description: 'Contains python modules and utilities for managing Canonical OIL.  This
+
+  package provides the OIL queue master daemon.
+
+  '
+maintainer: Ryan Harper <ryan.harper@ubuntu.com>
+name: oil-qmaster
+provides:
+  extension:
+    interface: oil-config-extension
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  oil-qmaster:
+    interface: oil-qmaster
+subordinate: false
+summary: Canonical OIL supporting framework.

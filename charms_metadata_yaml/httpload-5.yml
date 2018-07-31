@@ -1,0 +1,11 @@
+categories:
+- misc
+description: 'An HTTP/HTTPS stress tester
+
+  '
+maintainer: JuanJo Ciarlante <jjo@canonical.com>
+name: httpload
+requires:
+  website:
+    interface: http
+summary: HTTP loadtester

@@ -1,0 +1,24 @@
+description: 'DEPRECATED: please use ibm-platform-lsf instead.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: platform-lsf
+provides:
+  master-host:
+    interface: lsf
+  storage:
+    interface: lsf
+requires:
+  master-candt-host:
+    interface: lsf
+  master-host-storage:
+    interface: lsf
+  server-host:
+    interface: lsf
+  server-host-storage:
+    interface: lsf
+subordinate: false
+summary: IBM Platform LSF (deprecated, use ibm-platform-lsf)
+tags:
+- workload_management
+- job_scheduler

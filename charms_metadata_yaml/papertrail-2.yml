@@ -1,0 +1,11 @@
+description: "Papertrail provides an interface where logs are collected and can be\
+  \ analyzed. This charm will install the \nrequired papertrail clients to monitor\
+  \ any known running service. Papertrail is a freemium SaaS available\nat http://papertrailapp.com\n"
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: papertrail
+requires:
+  aggregator:
+    interface: syslog
+  logging:
+    interface: papertrail
+summary: Papertrail is a hosted log management tool for servers, apps, and cloud services.

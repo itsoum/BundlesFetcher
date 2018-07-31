@@ -1,0 +1,27 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm provides a simplified connection point for client / workload services,
+  such as Apache Hive or Apache Pig, which require access to Apache Hadoop.
+
+  '
+maintainer: Cory Johns <cory.johns@canonical.com>
+name: cloudera-hadoop-plugin
+provides:
+  benchmark:
+    interface: benchmark
+requires:
+  hadoop-plugin:
+    interface: hadoop-plugin
+    scope: container
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+subordinate: true
+summary: Simplified connection point for CDH Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

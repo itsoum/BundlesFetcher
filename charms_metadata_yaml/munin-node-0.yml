@@ -1,0 +1,35 @@
+description: 'Munin is a highly flexible and powerful solution used to create graphs
+
+  of virtually everything imaginable throughout your network, while
+
+  still maintaining a rattling ease of installation and configuration.
+
+  This package contains the daemon for the nodes being monitored. You
+
+  should install it on all the nodes in your network. It will know how
+
+  to extract all sorts of data from the node it runs on, and will wait
+
+  for the gatherer to request this data for further processing.  Munin
+
+  is written in Perl, and relies heavily on Tobi Oetiker''s excellent
+
+  RRDtool. To see a real example of Munin in action, you can follow a
+
+  link from <http://munin-monitoring.org/> to a live installation.
+
+  '
+maintainer: Felipe Reyes <felipe.reyes@canonical.com>
+name: munin-node
+provides:
+  munin:
+    interface: munin-node
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: network-wide graphing framework (node)
+tags:
+- monitoring
+- ops

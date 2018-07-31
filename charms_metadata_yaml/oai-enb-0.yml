@@ -1,0 +1,21 @@
+description: 'This charm will install and setup the OpenAirInterface (OAI) LTE/LTE-A
+  eNB.
+
+  '
+maintainers:
+- Navid Nikaein <navid.nikaein@eurecom.fr>
+- Andrea Bordone Molini <bordone@eurecom.fr>
+name: oai-enb
+requires:
+  epc:
+    interface: S1-C
+  rrh:
+    interface: FH-ETH
+    optional: true
+subordinate: false
+summary: An opensource implementation of LTE eNB based on openairinterface
+tags:
+- network
+- telecom
+- lte
+- enb

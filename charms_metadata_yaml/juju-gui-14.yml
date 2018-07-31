@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Web GUI for Juju
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: juju-gui
+provides:
+  web:
+    interface: http
+summary: User interface for Juju (development)

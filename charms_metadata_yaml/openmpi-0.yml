@@ -1,0 +1,18 @@
+description: "Open MPI is a project combining technologies and resources from \nseveral\
+  \ other projects (FT-MPI, LA-MPI, LAM/MPI, and PACX-MPI) in \norder to build the\
+  \ best MPI library available. A completely new \nMPI-2 compliant implementation,\
+  \ OpenMPI offers advantages for system \nand software vendors, application developers\
+  \ and computer science \nresearchers.\n"
+maintainer: Craig Magina <craig.magina@canonical.com>
+name: openmpi
+peers:
+  cluster:
+    interface: openmpi
+provides:
+  application:
+    interface: mpi-cluster
+requires:
+  shared-fs:
+    interface: mount
+    optional: true
+summary: OpenMPI

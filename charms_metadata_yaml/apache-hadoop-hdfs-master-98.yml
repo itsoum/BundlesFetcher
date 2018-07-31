@@ -1,0 +1,8 @@
+description: 'DEPRECATED: please use apache-hadoop-namenode instead.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-hadoop-hdfs-master
+summary: HDFS master (deprecated, use apache-hadoop-namenode)
+tags:
+- deprecated

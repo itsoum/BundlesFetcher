@@ -1,0 +1,9 @@
+description: 'dummy charm for testing charm-tools
+
+  '
+maintainer: Mark Mims <mark.mims@canonical.com>
+name: promultest
+provides:
+  web:
+    interface: http
+summary: dummy charm for testing charm-tools

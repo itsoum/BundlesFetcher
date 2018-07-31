@@ -1,0 +1,20 @@
+categories:
+- miscellaneous
+description: Updates DNS records for Clearwater using AWS Route53 service
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-route53
+provides:
+  register-bono:
+    interface: dns-register
+  register-ellis:
+    interface: dns-register
+  register-homer:
+    interface: dns-register
+  register-homestead:
+    interface: dns-register
+  register-ralf:
+    interface: dns-register
+  register-sprout:
+    interface: dns-register
+subordinate: false
+summary: Route53 DNS Agent for Project Clearwater

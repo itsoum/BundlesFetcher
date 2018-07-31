@@ -1,0 +1,16 @@
+categories:
+- applications
+description: Sample Apps in different programming languages are available for app
+  developers to refer. App developers can get source files to copy and paste the  code
+  needed which simplify app development. This will reduce the time to develop and
+  be able to adjust the coding according to the app they have in their mind to build.
+  http://devspace.hsenidmobile.com/download/
+maintainer: hSenidmobile <ctap@hsenidmobile.com.tld>
+name: rate-me-charm
+provides:
+  backend:
+    interface: http
+requires:
+  ctap:
+    interface: ussd
+summary: Refer Sample apps for a fast app creation process.

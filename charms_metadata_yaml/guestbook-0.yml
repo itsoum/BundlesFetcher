@@ -1,0 +1,18 @@
+description: 'This charm demonstrates modeling a Kubernetes service.
+
+  '
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: guestbook
+provides:
+  website:
+    interface: http
+  workload:
+    interface: kubernetes-workload
+requires:
+  node-guest:
+    interface: node-local
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: The guestbook/all-in-one kubernetes example

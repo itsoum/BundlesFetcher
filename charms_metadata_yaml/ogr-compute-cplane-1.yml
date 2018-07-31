@@ -1,0 +1,29 @@
+description: "The OGR compute node is a special type of OpenStack Compute specifically\
+  \ designed to run the CPLANE NETWORKS\u2019s Overlay Gateway Router (OGR). The OGR\
+  \ is a \nVirtual Network Function(VNF) that performs bridging between VXLAN based\
+  \ overlay networks and underlay networks. \n"
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: amarendra <info@cplanenetworks.com>
+name: ogr-compute-cplane
+provides:
+  neutron-plugin:
+    interface: neutron-plugin
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+  cloud-controller:
+    interface: nova
+  container:
+    interface: juju-info
+    scope: container
+  neutron-plugin-api:
+    interface: neutron-plugin-api
+subordinate: true
+summary: Cplane ogr compute for Openstack
+tags:
+- openstack
+- networking

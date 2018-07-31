@@ -1,0 +1,24 @@
+categories:
+- applications
+description: "HPCC Systems, an open source High Performance Computing Cluster, is\
+  \ a massive parallel-processing computing \nplatform that solves Big Data problems.\
+  \ HPCC Systems is an enterprise-proven platform for manipulating, \ntransforming,\
+  \ querying, and data warehousing Big Data. Built by LexisNexis, the HPCC platform\
+  \ has helped \nit grow to a $1.5 billion information solutions company.\n.\nThe\
+  \ HPCC Systems architecture incorporates a data query engine (called Thor) and a\
+  \ data delivery engine \n(called Roxie), as well as support components. An HPCC\
+  \ environment can include only Thor clusters, \nor both Thor and Roxie clusters.\
+  \ The HPCC Juju charm creates a cluster which contains both, but you can \ncustomize\
+  \ it after deployment.\n.\nThe HPCC Juju Charm encapsulates best practice configurations\
+  \ for the HPCC Systems Platform. You can use a Juju Charm to stand up an HPCC Platform\
+  \ on:\n.\n* Local Provider (LXC)\n* Amazon Web Services Cloud\n"
+maintainer: xiaoming.wang@lexisnexis.com
+name: hpcc
+peers:
+  hpcc-cluster:
+    interface: hpcc-cluster
+provides:
+  hpcc:
+    interface: hpcc
+subordinate: false
+summary: HPCC (High Performance Computing Cluster)

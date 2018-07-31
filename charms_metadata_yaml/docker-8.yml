@@ -1,0 +1,19 @@
+description: 'Deploys Docker Engine, a portable, lightweight runtime and packaging
+  tool.
+
+  '
+maintainer: Charles Butler <charles.butler@ubuntu.com>
+name: docker
+provides:
+  docker-containers:
+    interface: containers
+  events:
+    interface: docker-socket
+requires:
+  network:
+    interface: overlay-network
+subordinate: false
+summary: Deploys Docker Engine, a lightweight runtime and packaging tool.
+tags:
+- ops
+- application_development

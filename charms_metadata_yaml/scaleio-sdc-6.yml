@@ -1,0 +1,15 @@
+description: 'ScaleIO SDC service
+
+  '
+maintainer: Alexandre Levine <alexandrelevine@gmail.com>
+name: scaleio-sdc
+requires:
+  scaleio-mdm:
+    interface: scaleio-mdm
+series:
+- xenial
+- trusty
+- precise
+summary: ScaleIO SDC service
+tags:
+- storage

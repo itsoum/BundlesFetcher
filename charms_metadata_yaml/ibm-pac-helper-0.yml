@@ -1,0 +1,17 @@
+description: 'Exposes a remote database configuration.
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-pac-helper
+provides:
+  helper:
+    interface: database
+requires:
+  db:
+    interface: mysql
+    scope: container
+subordinate: true
+summary: IBM Platform Application Center Helper Charm to access remote database.
+tags:
+- misc
+- ibm

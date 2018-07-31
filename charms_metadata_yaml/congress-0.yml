@@ -1,0 +1,29 @@
+description: "Longline summary of charm \n"
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: congress
+peers:
+  cluster:
+    interface: openstack-ha
+requires:
+  amqp:
+    interface: rabbitmq
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+- trusty
+- yakkety
+subordinate: false
+summary: Short summary of charm
+tags:
+- openstack
+- openstack

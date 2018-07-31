@@ -1,0 +1,9 @@
+description: 'This charm installs the Chive - MySQL Database Management which is awesome!
+
+  '
+maintainer: Stefan Hartmann <stefan.hartmann@fusonic.net>
+name: chive
+provides:
+  website:
+    interface: http
+summary: Chive - MySQL Database Management

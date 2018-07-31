@@ -1,0 +1,19 @@
+categories:
+- misc
+description: '<Multi-line description here>
+
+  '
+maintainer: Andres Rodriguez <andres.rodriguez@canonical.com>
+name: maas-region
+peers:
+  cluster:
+    interface: region-cluster
+provides:
+  maas:
+    interface: maas-region
+requires:
+  amqp:
+    interface: rabbitmq
+  db:
+    interface: pgsql
+summary: <Fill in summary here>

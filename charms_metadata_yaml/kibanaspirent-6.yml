@@ -1,0 +1,17 @@
+description: 'alternative (better) logstash frontend
+
+  '
+maintainer: Spirent
+name: kibanaspirent
+provides:
+  web:
+    interface: http
+requires:
+  rest:
+    interface: elasticsearch
+series:
+- xenial
+summary: test
+tags:
+- applications
+- misc

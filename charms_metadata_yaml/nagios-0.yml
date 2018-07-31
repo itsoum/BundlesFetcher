@@ -1,0 +1,15 @@
+description: 'Nagios is a monitoring and management system for hosts, services, and
+
+  networks.
+
+  '
+ensemble: formula
+name: nagios
+provides:
+  website:
+    interface: http
+requires:
+  nagios:
+    interface: monitoring
+revision: 1
+summary: Nagios monitoring service.

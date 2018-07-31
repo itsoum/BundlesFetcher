@@ -1,0 +1,22 @@
+description: 'Deploys Expeto EPIC LTE EPC network fabric in Docker continers using
+  Juju.
+
+  '
+maintainer: Brian Baird <brian.baird@expeto.io>
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+name: qslice
+provides:
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  epc:
+    interface: S1-C
+subordinate: false
+summary: EPIC PaaS deployment of LTE cEPC services
+tags:
+- containers
+- layer
+- telecom
+- containers

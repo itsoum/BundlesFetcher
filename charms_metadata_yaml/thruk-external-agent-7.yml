@@ -1,0 +1,11 @@
+description: 'Exposes thruk interface to nagios
+
+  '
+maintainer: Brad Marshall <brad.marshall@canonical.com>
+name: thruk-external-agent
+provides:
+  thruk-agent:
+    interface: thruk-agent
+summary: Thruk agent to fake expose nagios across environments
+tags:
+- ops, monitoring

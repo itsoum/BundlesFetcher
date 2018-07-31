@@ -1,0 +1,6 @@
+description: 'Runs adt-result-checker from a specified bzr branch
+
+  '
+maintainer: Canonical CI Engineering <canonical-ci-engineering@lists.launchpad.net>
+name: adt-result-checker
+summary: Deploy a service to handle adt jobs dispatched to a rabbit queue

@@ -1,0 +1,15 @@
+description: 'This fires up a libvirt node with a running qemu instance.
+
+  When a kvm-ceph-test-dest joins, the instance will be
+
+  migrated.
+
+  '
+name: kvm-ceph-test-src
+requires:
+  ceph-client:
+    interface: ceph-client
+  master:
+    interface: kvm-ceph-test-dest
+    optional: true
+summary: Test kvm block migration - source node

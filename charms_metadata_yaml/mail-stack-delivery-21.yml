@@ -1,0 +1,17 @@
+description: 'Ubuntu''s mail stack provides fully operational delivery with
+
+  safe defaults and additional options. Out of the box it supports IMAP,
+
+  POP3 and SMTP services with SASL authentication and Maildir as default
+
+  storage engine.
+
+  '
+maintainer: Ante Karamatic <ivoks@ubuntu.com>
+name: mail-stack-delivery
+provides:
+  dovecot:
+    interface: imap-pop
+  postfix:
+    interface: smtp
+summary: Ubuntu mail-stack

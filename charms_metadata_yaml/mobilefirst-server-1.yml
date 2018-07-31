@@ -1,0 +1,14 @@
+description: 'DEPRECATED: please use ibm-mobilefirst-server instead.
+
+  '
+maintainer: IBM Juju Support team <jujusupp@us.ibm.com>
+name: mobilefirst-server
+requires:
+  db:
+    interface: db2
+  website:
+    interface: http
+subordinate: false
+summary: IBM MobileFirst Server (deprecated, use ibm-mobilefirst-server)
+tags:
+- misc

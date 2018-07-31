@@ -1,0 +1,13 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: hm9000-v1
+requires:
+  cc:
+    interface: controller
+  etcd:
+    interface: etcd
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: health monitor

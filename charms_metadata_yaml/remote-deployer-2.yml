@@ -1,0 +1,9 @@
+description: 'This charm copys a remote file tree using the given source and runs
+  the remote-deployer
+
+  command contained in the directory to setup whatever is contained in the directory.
+
+  '
+maintainer: MattyW <gh@mattyw.net>
+name: remote-deployer
+summary: The remote deployer

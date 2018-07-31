@@ -1,0 +1,11 @@
+description: 'Runs jenkins server from a given service tarball (provided as  files/jenkaas.tgz).
+
+  '
+maintainer: null
+name: jenkaas
+provides:
+  jenkaas-slave:
+    interface: jenkaas-slave
+summary: 'Deploy a service to run jenkins service.
+
+  '

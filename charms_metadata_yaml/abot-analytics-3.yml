@@ -1,0 +1,14 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Rebaca Technologies <reachus@rebaca.com>
+name: abot-analytics
+provides:
+  abot-es:
+    interface: abot-es
+subordinate: false
+summary: <Fill in summary here>
+tags:
+- misc
+- tags
+- ims

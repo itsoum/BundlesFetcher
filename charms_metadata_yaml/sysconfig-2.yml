@@ -1,0 +1,22 @@
+description: 'SYSConfig can configure cpufreq governor (ie powersave, performance),
+  and CPU Affinity or Kernel''s isolcpus details in systemd-sytem.conf or Grub. It
+  can also configure HugePages on Grub.
+
+  '
+maintainer: "Alvaro Ur\xEDa <alvaro.uria@canonical.com>"
+name: sysconfig
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: System related configurations
+tags:
+- cpu
+- memory
+- hugepages
+- performance
+- affinity
+- isolcpus

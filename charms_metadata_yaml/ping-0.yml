@@ -1,0 +1,8 @@
+description: 'ping stuff
+
+  '
+maintainer: George Kraft <george.kraft@canonical.com>
+name: ping
+summary: ping stuff
+tags:
+- misc

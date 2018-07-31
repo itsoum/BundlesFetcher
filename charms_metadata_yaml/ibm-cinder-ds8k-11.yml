@@ -1,0 +1,34 @@
+description: 'Cinder is the block storage service for the Openstack project.
+
+  This charm provides DS8K storage backend for Cinder
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-cinder-ds8k
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+resources:
+  ibm_cinder_ds8k_installer:
+    description: ibm storage driver for openstack
+    filename: IBM_Storage_Driver_for_OpenStack_1.7.0.1-b985.tar.gz
+    type: file
+series:
+- xenial
+- trusty
+subordinate: true
+summary: DS8K integration for OpenStack Block Storage
+tags:
+- openstack
+- storage
+- file-servers
+- misc
+- ibm-z
+- ibm
+terms:
+- ibmcharmers/ibm-cinder-ds8k/1

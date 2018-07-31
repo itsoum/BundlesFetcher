@@ -1,0 +1,12 @@
+description: 'Firefox Sync is a service that lets you synchronize your bookmarks,
+
+  history, passwords & open tabs between multiple instances of the
+
+  Firefox web browser across desktop and mobile platforms.
+
+  '
+name: firefox-sync-server
+provides:
+  firefox-sync-server:
+    interface: firefox-sync-server
+summary: Mozilla Firefox Sync Server

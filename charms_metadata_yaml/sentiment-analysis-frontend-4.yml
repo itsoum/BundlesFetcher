@@ -1,0 +1,17 @@
+description: "Sentiment Analysis is a bundle installing a real time Sentiment Analysis\
+  \ \nbased on Kafka, Storm and Node.js. This charm deploys the frontend. It \nhas\
+  \ no purpose if not deployed within a SA bundle. \n"
+maintainer: Samuel Cozannet <samnco@gmail.com>
+name: sentiment-analysis-frontend
+provides:
+  storm:
+    interface: http
+requires:
+  dashing:
+    interface: http
+  db:
+    interface: redis
+subordinate: false
+summary: Simple front end to collect tweets Sentiment Analysis
+tags:
+- misc

@@ -1,0 +1,13 @@
+description: 'Installs wanna-build to coordinate a farm of build daemons.
+
+  Relates to the sbuild charm.
+
+  '
+maintainer: Colin Watson <cjwatson@ubuntu.com>
+name: wanna-build
+requires:
+  db-admin:
+    interface: pgsql
+  package-builder:
+    interface: sbuild
+summary: wanna-build coordination for build daemons

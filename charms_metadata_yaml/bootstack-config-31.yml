@@ -1,0 +1,13 @@
+description: 'This charm configures bootstack specific things, such as sudoers
+
+  '
+maintainer: Brad Marshall <brad.marshall@canonical.com>
+name: bootstack-config
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Bootstack config that doesn't fit elsewhere
+tags:
+- misc

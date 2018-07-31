@@ -1,0 +1,19 @@
+description: 'Review Queue web app
+
+  '
+maintainer: Tim Van Steenburgh <tim.van.teenburgh@canonical.com>
+name: review-queue
+provides:
+  website:
+    interface: http
+requires:
+  amqp:
+    interface: rabbitmq
+  db:
+    interface: pgsql
+series:
+- xenial
+subordinate: false
+summary: Review Queue web app
+tags:
+- web-app

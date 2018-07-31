@@ -1,0 +1,24 @@
+categories:
+- misc
+description: 'This charm provides a templated openvpn server which assumes that
+
+  pki is done elsewhere, and pushed to the machine using SSH.
+
+  .
+
+  '
+maintainer: LaMont Jones <lamont.jones@canonical.com>
+name: openvpn-server
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  openvpn-pki-recipient:
+    gets:
+    - sync_key
+    - sync_ip
+    interface: openvpn-pki-sync
+  openvpn-service:
+    interface: openvpn-server
+subordinate: false
+summary: Open VPN server

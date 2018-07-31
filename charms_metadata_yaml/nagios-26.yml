@@ -1,0 +1,26 @@
+description: 'Nagios is a monitoring and management system for hosts, services, and
+
+  networks.
+
+  '
+extra-bindings:
+  public: null
+maintainers:
+- Marco Ceppi <marco@ceppi.net>
+- Nagios Charm Developers <nagios-charmers@lists.launchpad.net>
+name: nagios
+provides:
+  website:
+    interface: http
+requires:
+  monitors:
+    interface: monitors
+  nagios:
+    interface: juju-info
+series:
+- xenial
+- bionic
+- trusty
+summary: Nagios Core 3 monitoring.
+tags:
+- monitoring

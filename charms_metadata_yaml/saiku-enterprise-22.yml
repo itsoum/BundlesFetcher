@@ -1,0 +1,22 @@
+description: 'Web based OLAP tool which allows users to query data stored in JDBC
+  compliant databases and NOSQL clusters.
+
+  '
+maintainer: Meteorite BI <info@meteorite.bi>
+name: saikuanalytics-enterprise
+requires:
+  drill:
+    interface: drill
+  jdbc:
+    interface: jdbc
+  mysql:
+    interface: mysql
+  website:
+    interface: http
+    scope: container
+series:
+- xenial
+summary: Web Based data analysis and dashboarding tool for SQL and NOSQL data
+tags:
+- analytics
+- big_data

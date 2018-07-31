@@ -1,0 +1,13 @@
+categories:
+- application
+description: 'Hadoop 2 test charm to run tests on the namenode.
+
+  '
+maintainer: Craig Magina <craig.magina@canonical.com>
+name: hadoop2test
+requires:
+  hadoop:
+    interface: dfs
+    scope: container
+subordinate: true
+summary: Hadoop 2 Tester Subordinate Charm

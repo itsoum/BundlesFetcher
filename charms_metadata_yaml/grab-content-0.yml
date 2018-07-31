@@ -1,0 +1,13 @@
+categories:
+- misc
+description: 'Populate a directory with content grabbed from an external source
+
+  '
+maintainer: liam.young@canonical.com
+name: grab-content
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Populate a directory with content grabbed from an external src

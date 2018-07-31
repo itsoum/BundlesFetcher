@@ -1,0 +1,25 @@
+description: 'Given a CSV file that contains information about the network, nexthop
+  and
+
+  the route to add this will dynamically add new routes to the system if the
+
+  system this Charm is deployed on has an interface on the network the route
+
+  is to be added for.
+
+
+  Any networks that the host does not have interfaces for will be ignored.
+
+  '
+maintainer: Bert JW Regeer <bertjw@regeer.org>
+name: staticroutes
+requires:
+  host-system:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: Adds static routes based upon configuration provided by the user.
+tags:
+- network

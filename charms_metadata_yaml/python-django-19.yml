@@ -1,0 +1,52 @@
+description: 'This charm will install Django. It can also install your Django
+
+  project and his dependencies from either a template or from a
+
+  version control system.
+
+  It can also link your project to a database and sync the schemas.
+
+  This charm also come with a Fabric fabfile to interact with the
+
+  deployement in a cloud aware manner.
+
+  '
+maintainer: Patrick Hetu <patrick.hetu@gmail.com>
+name: python-django
+provides:
+  django-settings:
+    interface: directory-path
+    scope: container
+  website:
+    interface: http
+    optional: true
+  wsgi:
+    interface: wsgi
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+    optional: true
+  cache:
+    interface: memcache
+    optional: true
+  mongodb:
+    interface: mongodb
+    optional: true
+  mysql:
+    interface: mysql
+    optional: true
+  mysql-root:
+    interface: mysql-root
+  mysql-shared:
+    interface: mysql-shared
+  pgsql:
+    interface: pgsql
+    optional: true
+  redis:
+    interface: redis
+    optional: true
+summary: High-level Python web development framework
+tags:
+- databases
+- app-servers

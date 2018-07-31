@@ -1,0 +1,10 @@
+categories:
+- applications
+description: "PageKite makes local websites or SSH servers publicly accessible in\
+  \ mere\nseconds, and works with any computer and any Internet connection. \n"
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: pagekite
+provides:
+  tunnel:
+    interface: pagekite
+summary: Tunneling service

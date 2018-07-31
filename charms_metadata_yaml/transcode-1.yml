@@ -1,0 +1,23 @@
+categories:
+- applications
+description: 'Video transcoding is a complicated, resource intensive options.
+
+  This charm breaks a video into N chunks, and farms out video transcoding
+
+  to N workers.  It can take video files of many different types.  The output
+
+  will always be a web-viewable .mp4, using h264 and aac codecs.
+
+  '
+maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+name: transcode
+peers:
+  workers:
+    interface: transcode
+provides:
+  website:
+    interface: http
+requires:
+  shared-fs:
+    interface: mount
+summary: high quality, scalable, parallel video transcoder

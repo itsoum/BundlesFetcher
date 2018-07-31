@@ -1,0 +1,26 @@
+description: 'keepalived is used for monitoring real servers within a Linux Virtual
+
+  Server (LVS) cluster.
+
+  '
+maintainers:
+- Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+- Valentin Boucher <valentin.boucher@kontron.com>
+name: keepalived
+provides:
+  loadbalancer:
+    interface: public-address
+  website:
+    interface: http
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  lb-sink:
+    interface: http
+series:
+- xenial
+subordinate: true
+summary: Failover and monitoring daemon for LVS clusters
+tags:
+- networking

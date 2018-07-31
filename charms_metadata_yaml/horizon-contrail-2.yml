@@ -1,0 +1,23 @@
+description: 'OpenContrail is a network virtualization solution that provides an overlay
+
+  virtual-network to virtual-machines, containers or network namespaces.
+
+  .
+
+  This subordinate charm provides the OpenStack plugin for OpenContrail.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: horizon-contrail
+provides:
+  horizon_plugin:
+    interface: horizon-plugin
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: OpenContrail plugin for OpenStack Dashboard
+tags:
+- openstack

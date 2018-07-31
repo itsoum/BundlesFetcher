@@ -1,0 +1,18 @@
+categories:
+- misc
+description: Homestead charm for Project Clearwater
+maintainer: Project Clearwater Maintainers <maintainers@projectclearwater.org>
+name: clearwater-homestead
+peers:
+  homestead:
+    interface: homestead-interface
+provides:
+  homestead-cscf:
+    interface: homestead-hss-interface
+  homestead-prov-user:
+    interface: homestead-prov-interface
+requires:
+  programmable-multiple:
+    interface: dns-multi
+subordinate: false
+summary: Homestead charm for Project Clearwater

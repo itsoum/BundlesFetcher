@@ -1,0 +1,11 @@
+description: 'Install arbitrary debian packages on a service''s machines.
+
+  '
+maintainer: Aaron Bentley <aaron.bentley@canonical.com>
+name: packages
+requires:
+  extension:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Arbitrary debian package installer

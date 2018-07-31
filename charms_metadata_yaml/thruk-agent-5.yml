@@ -1,0 +1,22 @@
+description: 'Exposes thruk interface to nagios
+
+  '
+maintainer: Brad Marshall <brad.marshall@canonical.com>
+name: thruk-agent
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  thruk-agent:
+    interface: thruk-agent
+requires:
+  general-info:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- xenial
+subordinate: true
+summary: Thruk agent to expose nagios
+tags:
+- ops, monitoring

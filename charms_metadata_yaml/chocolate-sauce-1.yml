@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Chocolate Sauce
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: sauce_chocolate
+requires:
+  sauce:
+    interface: ice-cream
+summary: Chocolate Sauce

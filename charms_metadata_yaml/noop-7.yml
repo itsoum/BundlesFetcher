@@ -1,0 +1,16 @@
+description: Windows no operation charm
+maintainer: Ionut Balutoiu <ibalutoiu@cloudbasesolutions.com>
+name: noop
+provides:
+  noop:
+    interface: noop
+series:
+- win2012
+- win2012r2
+- win2012hv
+- win2012hvr2
+- win2016
+- win2016nano
+summary: Windows Noop Charm
+tags:
+- windows

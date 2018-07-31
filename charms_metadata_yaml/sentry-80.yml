@@ -1,0 +1,24 @@
+description: 'This charm provides sentry, the modern error logging and aggregation
+  platform.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: sentry
+provides:
+  website:
+    interface: http
+requires:
+  memcache:
+    interface: memcache
+  postgres:
+    interface: pgsql
+  rabbitmq:
+    interface: rabbitmq
+series:
+- xenial
+subordinate: false
+summary: Sentry - the modern error logging and aggregation platform.
+tags:
+- misc
+- monitoring
+- logging

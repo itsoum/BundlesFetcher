@@ -1,0 +1,19 @@
+description: 'This charm will deploy the ActiveMQ-flow on Node-red.
+
+  '
+maintainer: "S\xE9bastien Pattyn <sebastien.pattyn@tengu.io>"
+name: activemq-flow
+provides:
+  dataflow:
+    interface: nodered-flow
+requires:
+  db:
+    interface: mongodb-database
+  topic:
+    interface: activemq-topic
+series:
+- xenial
+subordinate: false
+summary: This charm will deploy the ActiveMQ-flow on Node-red
+tags:
+- misc

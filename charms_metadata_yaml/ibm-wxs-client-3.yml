@@ -1,0 +1,47 @@
+description: IBM WebSphere eXtreme Scale is an elastic, scalable, in-memory data grid
+  (IMDG). It is designed to help you handle exponential growth of transactions. With
+  WebSphere eXtreme Scale, you can expect an enhanced quality of service in high-performance
+  computing environments.
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+min-juju-version: 2.0-beta1
+name: ibm-wxs-client
+requires:
+  devenv:
+    interface: juju-info
+    scope: container
+  wasnd-dm:
+    interface: was-nd
+    scope: container
+  wxsgrid:
+    interface: ibm-wxs
+resources:
+  ibm_im_fixpack:
+    description: Installation Manager fix pack archive
+    filename: ibm_im_fixpack.zip
+    type: file
+  ibm_im_installer:
+    description: Installation Manager installer archive
+    filename: ibm_im_installer.zip
+    type: file
+  ibm_wxs_base_installer:
+    description: WXS  Base installer archive
+    filename: ibm_wxs_base_installer.zip
+    type: file
+  ibm_wxs_fixpack_installer:
+    description: WXS Fixpack installer archive
+    filename: ibm_wxs_fixpack_installer.zip
+    type: file
+series:
+- xenial
+subordinate: true
+summary: IBM WebSphere eXtreme Scale
+tags:
+- ibm
+- im
+- ibm-z
+- in-memory data grid
+- workload_management
+- wxs-client
+terms:
+- ibm-im/1
+- ibm-wxs/1

@@ -1,0 +1,10 @@
+description: Application Load balancer
+maintainer: Kapil Thangavelu <kapil.foss@gmail.com>
+name: aws-elb
+provides:
+  web:
+    interface: http
+requires:
+  backend:
+    interface: http
+summary: Amazon Elastic Load Balancer

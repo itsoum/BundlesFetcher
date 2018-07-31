@@ -1,0 +1,7 @@
+description: "This is a charm to create a remote assistance ssh middleman. \nThis\
+  \ allows you to connect to another computer behind a firewall.\n"
+name: remote-assistance
+provides:
+  tunnel:
+    interface: ssh
+summary: middleman for providing support for clients behind firewals

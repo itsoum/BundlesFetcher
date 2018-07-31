@@ -1,0 +1,23 @@
+description: 'Consul is a HashiCorp tool for service discovery, failure detection
+  (health
+
+  checks), key/value storage, that works with multiple datacenters.
+
+  This charm installs Consul agent.
+
+  '
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: consul-agent
+requires:
+  consul:
+    interface: consul
+  consul-agent:
+    interface: consul-agent
+    scope: container
+series:
+- xenial
+subordinate: 'true'
+summary: A distributed tool for discovery and configuration.
+tags:
+- ops
+- network

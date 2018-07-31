@@ -1,0 +1,9 @@
+description: 'http://svn.python.org/projects/python/trunk/Tools/pybench/README
+
+  '
+maintainer: <ju-jistics-hackers@lists.canonical.com>
+name: pybench
+requires:
+  rtest:
+    interface: passit
+summary: Python Benchmark Suite

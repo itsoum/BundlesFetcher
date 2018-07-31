@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Chocolate Ice Cream
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: ice-cream_chocolate
+provides:
+  ice-cream:
+    interface: ice-cream
+summary: Chocolate Ice Cream

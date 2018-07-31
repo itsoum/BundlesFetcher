@@ -1,0 +1,32 @@
+description: 'Apache Pig is a platform for creating MapReduce programs used with Hadoop.
+
+  It consists of a high-level language (Pig Latin) for expressing data analysis
+
+  programs, coupled with infrastructure for evaluating these programs.
+
+
+  Learn more at http://pig.apache.org.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-pig
+provides:
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+series:
+- xenial
+- trusty
+summary: Create MapReduce programs for data warehouse analysis
+tags:
+- bigdata
+- hadoop
+- bigdata
+- hadoop
+- apache

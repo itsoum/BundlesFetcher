@@ -1,0 +1,21 @@
+description: 'ScaleIO GW service
+
+  '
+maintainer: Alexandre Levine <alexandrelevine@gmail.com>
+name: scaleio-gw
+peers:
+  scaleio-gw-cluster:
+    interface: scaleio-gw-ha
+provides:
+  scaleio-gw:
+    interface: scaleio-gw
+requires:
+  scaleio-mdm:
+    interface: scaleio-mdm
+series:
+- xenial
+- trusty
+- precise
+summary: ScaleIO GW service
+tags:
+- storage

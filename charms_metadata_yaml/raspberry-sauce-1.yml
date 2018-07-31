@@ -1,0 +1,9 @@
+categories:
+- applications
+description: Raspberry Sauce
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: sauce_raspberry
+requires:
+  sauce:
+    interface: ice-cream
+summary: Raspberry Sauce

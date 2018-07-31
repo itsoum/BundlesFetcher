@@ -1,0 +1,24 @@
+description: 'Installs and configures the OpenVIM controller from OpenMANO.
+
+  '
+extra-bindings:
+  internal: null
+  public: null
+maintainers:
+- Adam Israel <adam.israel@canonical.com>
+name: openvim
+provides:
+  openvim-controller:
+    interface: openvim
+requires:
+  compute:
+    interface: openvim-compute
+  db:
+    interface: mysql
+series:
+- xenial
+summary: Open Virtual Infrastructure Manager
+tags:
+- nfv
+- telco
+- osm

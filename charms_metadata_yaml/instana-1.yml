@@ -1,0 +1,17 @@
+description: 'Instana is a fully automatic APM solution.
+
+  '
+maintainers:
+- Konstantinos Tsakalozos <konstantinos.tsakalozos@canonical.com>
+name: instana
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: The charm to install the Instana Agent.
+tags:
+- infrastructure
+- instana

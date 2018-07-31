@@ -1,0 +1,8 @@
+categories:
+- applications
+description: Proxy charm for elasticsearch
+name: elasticsearch-proxy
+provides:
+  rest:
+    interface: elasticsearch
+summary: Proxy for elasticsearch

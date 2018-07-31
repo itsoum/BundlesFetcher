@@ -1,0 +1,38 @@
+description: 'Trove is Database as a Service for OpenStack. It''s designed to run
+  entirely on OpenStack,
+
+  with the goal of allowing users to quickly and easily utilize the features of a
+  relational
+
+  or non-relational database without the burden of handling complex administrative
+  tasks.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: TransCirrus <support@transcirrus.com>
+name: trove
+peers:
+  cluster:
+    interface: openstack-ha
+requires:
+  amqp:
+    interface: rabbitmq
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+- yakkety
+subordinate: false
+summary: Trove provides DBaaS services for OpenStack
+tags:
+- openstack
+- openstack
+- database

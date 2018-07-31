@@ -1,0 +1,20 @@
+description: 'logstash is a tool for managing events and logs. You can use it to collect
+  logs, parse them,
+
+  and store them for later use (like, for searching). Speaking of searching, logstash
+  comes
+
+  with a web interface for searching and drilling into all of your logs.
+
+  '
+maintainer: Jay Wren <jay.wren@canonical.com>
+name: logstash
+provides:
+  input-tcp:
+    interface: logstash-tcp
+requires:
+  elasticsearch:
+    interface: elasticsearch
+summary: Logstash
+tags:
+- applications

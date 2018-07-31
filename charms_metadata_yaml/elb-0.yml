@@ -1,0 +1,10 @@
+description: 'Elastic Load Balancing is Amazon''s web service that improves an application''s
+  availability by distributing incoming traffic between two or more Amazon Elastic
+  Compute Cloud (Amazon EC2) instances.
+
+  '
+name: elb
+provides:
+  elb:
+    interface: http
+summary: Distributes incoming application traffic across multiple Amazon EC2 instances

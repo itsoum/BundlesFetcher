@@ -1,0 +1,18 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: router-v3
+provides:
+  router:
+    interface: router
+requires:
+  doppler:
+    interface: doppler
+  etcd:
+    interface: etcd
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+summary: CF Router

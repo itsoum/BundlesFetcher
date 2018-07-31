@@ -1,0 +1,9 @@
+description: 'Example ceph client
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: ceph-client
+requires:
+  mon:
+    interface: ceph-client
+summary: Example ceph client

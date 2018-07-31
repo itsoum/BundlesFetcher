@@ -1,0 +1,20 @@
+categories:
+- cache-proxy
+description: "Squid is a high-performance proxy caching server for web clients, supporting\
+  \ FTP, gopher, and HTTP data objects.  Squid version 3 is a major rewrite of Squid\
+  \ in C++ and introduces a number of new features including ICAP and ESI support.\n\
+  Requires the following relation settings from clients:\n\n  ip: service ip address\n\
+  \  port: service port\n  sitenames: space-delimited list of vhosts to whitelist\n"
+maintainer: Alexander List <alexander.list@canonical.com>
+name: squid-forwardproxy
+provides:
+  cached-website:
+    interface: http
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  squid-auth-helper:
+    interface: squid-auth-helper
+    optional: true
+summary: Full featured Web Proxy cache (HTTP proxy)

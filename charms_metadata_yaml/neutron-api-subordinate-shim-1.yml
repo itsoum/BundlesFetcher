@@ -1,0 +1,26 @@
+description: 'Use this charm for testing the neutron-api subordinate interface, or
+
+  as a template for writing a new suborindate charm. Has no practical
+
+  production use.
+
+  '
+maintainer: Pete Vander Giessen <pete.vandergiessen@canonical.com>
+name: neutron-api-subordinate-shim
+provides:
+  neutron-plugin-api-subordinate:
+    interface: neutron-plugin-api-subordinate
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- artful
+- trusty
+subordinate: true
+summary: Shim used for testing neutron-api suborindate interface
+tags:
+- openstack

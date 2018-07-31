@@ -1,0 +1,8 @@
+description: 'Deploys simple ubuntu server with hardening.
+
+  '
+maintainer: Charmers <juju@lists.ubuntu.com>
+name: hardeningexample
+summary: Example usage of Juju hardening
+tags:
+- misc

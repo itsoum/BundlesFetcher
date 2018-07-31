@@ -1,0 +1,20 @@
+categories:
+- applications
+description: "Review Board is a tool for reviewing source code, documentation and\
+  \ other text-based files. It offers a powerful web-based interface with broad browser\
+  \ support for managing review requests and reviewing code, as well as command line\
+  \ tools to simplify the review request submission process.\n\nReview Board supports\
+  \ the following browsers:\n\n  Firefox 3.0+\n  Internet Explorer 9+\n  Google Chrome\n\
+  \nThe following browsers are unsupported but known to work:\n\n  Firefox 2.0\n \
+  \ Internet Explorer 8\n  Opera 9+\n\nReview Board is designed to fit in with existing\
+  \ pre-commit review and post-commit review methods.\n"
+maintainer: Adam Collard <adam.collard@gmail.com>
+name: reviewboard
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+subordinate: false
+summary: Review Board takes the pain out of code review.

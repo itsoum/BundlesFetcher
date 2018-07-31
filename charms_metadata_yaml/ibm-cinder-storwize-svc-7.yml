@@ -1,0 +1,27 @@
+description: 'Cinder is the block storage service for the Openstack project.
+
+  This charm provides storwize/SVC storage backend for Cinder
+
+  '
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-cinder-storwize-svc
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Storwize/SVC integration for OpenStack Block Storage
+tags:
+- ibm
+- ibm-z
+- openstack
+- storage
+- file-servers
+- misc

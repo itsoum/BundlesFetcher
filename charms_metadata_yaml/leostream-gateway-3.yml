@@ -1,0 +1,11 @@
+description: 'The Leostream VDI Gateway
+
+  '
+maintainer: Leostream Corp <support@leostream.com>
+name: leostream-gateway
+series:
+- xenial
+subordinate: false
+summary: The Leostream VDI Gateway
+tags:
+- vdi

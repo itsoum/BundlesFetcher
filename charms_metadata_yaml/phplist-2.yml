@@ -1,0 +1,11 @@
+description: 'Deploys phplist
+
+  '
+name: phplist
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: php-based email campaign manager

@@ -1,0 +1,21 @@
+description: A multi server Landscape Dedicated Server charm.
+maintainer: Landscape Team <landscape-team@canonical.com>
+name: landscape-server
+provides:
+  data:
+    interface: block-storage
+    optional: true
+    scope: container
+  hosted:
+    interface: landscape-hosted
+    scope: container
+  website:
+    interface: http
+requires:
+  amqp:
+    interface: rabbitmq
+  db:
+    interface: pgsql
+summary: Charm for installing and using Landscape Dedicated Server.
+tags:
+- app-servers

@@ -1,0 +1,20 @@
+description: 'Configures up an Apache web server enabling OpenID access control to
+  web
+
+  resources. Supports both users and teams permission lists.
+
+  '
+maintainer: Caio Begotti <caio.begotti@canonical.com>
+name: apache-openid
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- xenial
+- bionic
+subordinate: true
+summary: Enables OpenID on Apache web servers
+tags:
+- app-servers

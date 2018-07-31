@@ -1,0 +1,23 @@
+description: 'This charm installs LimeDS as a docker image. By connecting this charm
+  to a
+
+  docker host, it will get started.
+
+  '
+maintainer: Gregory Van Seghbroeck <gregory.vanseghbroeck@intec.ugent.be>
+name: limeds
+provides:
+  endpoint:
+    interface: http
+  limeds-server:
+    interface: limeds
+requires:
+  dockerhost:
+    interface: docker-image-host
+series:
+- xenial
+subordinate: false
+summary: installs LimeDS as a docker image
+tags:
+- streaming
+- analytics

@@ -1,0 +1,7 @@
+description: 'Installs phoronix-test-suite and provides simple interface to enable
+
+  individual stress tests and runs them via upstart job
+
+  '
+name: phoronix-test-suite
+summary: The Phoronix Test Suite

@@ -1,0 +1,28 @@
+description: 'OpenStack Services NRPE Checks
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: Jill Rouleau <jill.rouleau@canonical.com>
+name: openstack-service-checks
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    optional: true
+    scope: container
+requires:
+  identity-credentials:
+    interface: keystone-credentials
+    optional: true
+series:
+- xenial
+- trusty
+- yakkety
+subordinate: false
+summary: OpenStack Services NRPE Checks
+tags:
+- openstack
+- ops
+- monitoring

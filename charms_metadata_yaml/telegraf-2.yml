@@ -1,0 +1,35 @@
+description: "It is part of the TICK stack and is a plugin-driven server agent for\
+  \ collecting and reporting metrics.\nTelegraf has plugins or integrations to source\
+  \ a variety of metrics directly from the system it\u2019s running on, pull metrics\
+  \ from third-party APIs, or even listen for metrics via a StatsD and Kafka consumer\
+  \ services.\nIt also has output plugins to send metrics to a variety of other datastores,\
+  \ services, and message queues, including InfluxDB, Graphite, OpenTSDB, Datadog,\
+  \ Librato, Kafka, MQTT, NSQ, and many others.\n"
+maintainer: Michiel Ghyselinck <michiel.ghyselinck@tengu.io>
+name: telegraf
+requires:
+  arangodb-input:
+    interface: arangodb
+    scope: container
+  host-system:
+    interface: juju-info
+    scope: container
+  influxdb-output:
+    interface: influxdb-api
+  mongodb-input:
+    interface: mongodb
+    scope: container
+  mysql-input:
+    interface: mysql
+    scope: container
+  nginx-input:
+    interface: nginx-stats
+    scope: container
+  opentsdb-output:
+    interface: opentsdb
+series:
+- xenial
+subordinate: true
+summary: Telegraf is the Agent for Collecting & Reporting Metrics & Data.
+tags:
+- monitoring

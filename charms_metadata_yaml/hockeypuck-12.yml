@@ -1,0 +1,25 @@
+description: 'Hockeypuck is an OpenPGP public keyserver, implementing the HKP draft
+
+  protocol specification, as well as several extensions to the protocol supported
+
+  by SKS. Project homepage: https://hockeypuck.github.io/
+
+  '
+maintainer: Casey Marshall <cmars@cmarstech.com>
+name: hockeypuck
+provides:
+  keymaster:
+    interface: recon
+  website:
+    interface: http
+requires:
+  gatekeeper:
+    interface: recon
+  mongodb:
+    interface: mongodb
+subordinate: false
+summary: OpenPGP public keyserver
+tags:
+- keyserver
+- security
+- openpgp

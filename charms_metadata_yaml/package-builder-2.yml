@@ -1,0 +1,25 @@
+description: 'Jenkins is a Continous Integration server supporting
+
+  flexible continous integration and deployment methodologies
+
+  and more.
+
+  .
+
+  This charm extends the Jenkins base charm with capability
+
+  to accept dput uploads which then get automatically built
+
+  for supported Ubuntu releases.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: package-builder
+provides:
+  website:
+    interface: http
+requires:
+  master:
+    interface: package-builder-slave
+    optional: true
+summary: Automated package building using Jenkins CI

@@ -1,0 +1,19 @@
+description: 'This charm serves the very narrow and specific purpose of validating
+  that a
+
+  database connection provided over a Juju Charm relation is indeed ready for
+
+  persistent use instantly after the relation is complete.
+
+  '
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: index-paratus
+requires:
+  shared-db:
+    interface: mysql-shared
+series:
+- bionic
+- xenial
+summary: Test charm for validating readiness of SQL database peer
+tags:
+- database

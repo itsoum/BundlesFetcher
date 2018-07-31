@@ -1,0 +1,12 @@
+categories:
+- misc
+description: 'This package deploys and configures Scrapyd to run as a system service.
+
+  '
+maintainer: Pablo Gonzalez <pbglezc@gmail.com>
+name: scrapyd
+provides:
+  scrapyd:
+    interface: scrapyd
+subordinate: false
+summary: Scrapyd is an application for deploying and running Scrapy spiders.

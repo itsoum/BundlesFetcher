@@ -1,0 +1,21 @@
+description: 'ScaleIO MDM service
+
+  '
+maintainer: Alexandre Levine <alexandrelevine@gmail.com>
+name: scaleio-mdm
+peers:
+  scaleio-cluster:
+    interface: scaleio-cluster
+provides:
+  scaleio-mdm:
+    interface: scaleio-mdm
+requires:
+  scaleio-sds:
+    interface: scaleio-sds
+series:
+- xenial
+- trusty
+- precise
+summary: ScaleIO MDM service
+tags:
+- storage

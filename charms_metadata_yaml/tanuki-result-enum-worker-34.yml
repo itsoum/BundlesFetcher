@@ -1,0 +1,16 @@
+description: 'Runs result-enum-worker service.
+
+  '
+maintainer: Thomi Richards <thomi.richards@canonical.com>
+name: result-enum-worker
+provides:
+  conn-check:
+    interface: conn-check
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  mongodb:
+    interface: mongodb
+summary: Deploy a service to write test results to a data store.

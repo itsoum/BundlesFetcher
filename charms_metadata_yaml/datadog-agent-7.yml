@@ -1,0 +1,18 @@
+description: Datadog Agent
+maintainer: James Beedy <jamesbeedy@gmail.com>
+name: datadog-agent
+requires:
+  datadog-integration:
+    interface: datadog-integration
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+subordinate: true
+summary: Datadog agent
+tags:
+- ops
+- monitoring
+- metrics

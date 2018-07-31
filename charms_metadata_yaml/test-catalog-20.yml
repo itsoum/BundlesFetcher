@@ -1,0 +1,22 @@
+categories:
+- miscellaneous
+description: test-catalog
+maintainer: Gregory Lutostanski <gregory.lutostanski@canonical.com>
+name: test-catalog
+provides:
+  extension:
+    interface: oil-config-extension
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  test-catalog:
+    interface: test-catalog
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+summary: 'OIL test cataloger
+
+  '

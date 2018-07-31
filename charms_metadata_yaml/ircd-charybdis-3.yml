@@ -1,0 +1,18 @@
+categories:
+- app-servers
+description: 'Charybdis is a fast, scalable IRC server, capable of supporting tens
+
+  of thousands of connections. It supports SSL and X.509 certificate
+
+  challenge-response authentication.
+
+  '
+maintainer: Ryan Finnie <ryan.finnie@canonical.com>
+name: ircd-charybdis
+peers:
+  cluster:
+    interface: charybdis
+provides:
+  ircd:
+    interface: charybdis
+summary: charybdis IRC server

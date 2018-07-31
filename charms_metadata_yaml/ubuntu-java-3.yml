@@ -1,0 +1,14 @@
+description: 'This charm is deprecated. A more generic environment for dev/test is
+
+  available with the ''ubuntu-devenv'' charm.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: ubuntu-java
+provides:
+  java:
+    interface: java
+    scope: container
+summary: DEPRECATED - use ubuntu-devenv instead
+tags:
+- application_development

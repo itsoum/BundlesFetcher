@@ -1,0 +1,10 @@
+description: 'DEPRECATED: please use ibm-xcat instead.
+
+  '
+maintainer: Juju Support Team <jujusupp@us.ibm.com>
+name: xcat
+subordinate: false
+summary: xCAT (deprecated, use ibm-db2)
+tags:
+- ibm
+- ops

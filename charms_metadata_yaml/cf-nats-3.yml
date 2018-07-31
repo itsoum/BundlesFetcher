@@ -1,0 +1,12 @@
+categories:
+- misc
+description: 'TBD
+
+  '
+maintainer: Alexnder Prismakov <prismakov@gmail.com>
+name: cf-nats
+provides:
+  nats:
+    interface: nats
+subordinate: false
+summary: Cloud Foundry NATS

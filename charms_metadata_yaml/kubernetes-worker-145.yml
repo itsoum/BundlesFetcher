@@ -1,0 +1,84 @@
+description: 'Kubernetes is an open-source platform for deploying, scaling, and operations
+
+  of application containers across a cluster of hosts. Kubernetes is portable
+
+  in that it works with public, private, and hybrid clouds. Extensible through
+
+  a pluggable infrastructure. Self healing in that it will automatically
+
+  restart and place containers on healthy nodes if a node ever goes away.
+
+  '
+maintainers:
+- Tim Van Steenburgh <tim.van.steenburgh@canonical.com>
+- George Kraft <george.kraft@canonical.com>
+- Rye Terrell <rye.terrell@canonical.com>
+- Konstantinos Tsakalozos <kos.tsakalozos@canonical.com>
+- Charles Butler <Chuck@dasroot.net>
+- Matthew Bruzek <mbruzek@ubuntu.com>
+- Mike Wilson <mike.wilson@canonical.com>
+name: kubernetes-worker
+provides:
+  cni:
+    interface: kubernetes-cni
+    scope: container
+  dockerhost:
+    interface: dockerhost
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  aws:
+    interface: aws-integration
+  certificates:
+    interface: tls-certificates
+  gcp:
+    interface: gcp-integration
+  kube-api-endpoint:
+    interface: http
+  kube-control:
+    interface: kube-control
+  kube-dns:
+    interface: kube-dns
+  nfs:
+    interface: mount
+  openstack:
+    interface: openstack-integration
+resources:
+  cni-amd64:
+    description: CNI plugins for amd64
+    filename: cni.tgz
+    type: file
+  cni-arm64:
+    description: CNI plugins for arm64
+    filename: cni.tgz
+    type: file
+  cni-s390x:
+    description: CNI plugins for s390x
+    filename: cni.tgz
+    type: file
+  kube-proxy:
+    description: kube-proxy snap
+    filename: kube-proxy.snap
+    type: file
+  kubectl:
+    description: kubectl snap
+    filename: kubectl.snap
+    type: file
+  kubelet:
+    description: kubelet snap
+    filename: kubelet.snap
+    type: file
+series:
+- xenial
+- bionic
+subordinate: false
+summary: The workload bearing units of a kubernetes cluster
+tags:
+- misc
+- containers
+- layer

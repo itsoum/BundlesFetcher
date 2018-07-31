@@ -1,0 +1,47 @@
+description: 'Vault secures, stores, and tightly controls access to
+
+  tokens, passwords, certificates, API keys, and other
+
+  secrets in modern computing. Vault handles leasing, key
+
+  revocation, key rolling, and auditing. Through a unified
+
+  API, users can access an encrypted Key/Value store and
+
+  network encryption-as-a-service, or generate AWS IAM/STS
+
+  credentials, SQL/NoSQL databases, X.509 certificates,
+
+  SSH credentials, and more.
+
+  '
+extra-bindings:
+  access: null
+maintainers:
+- Paul Collins <paul.collins@canonical.com>
+name: vault
+peers:
+  cluster:
+    interface: vault-ha
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  secrets:
+    interface: vault-kv
+requires:
+  db:
+    interface: pgsql
+  etcd:
+    interface: etcd
+  ha:
+    interface: hacluster
+    scope: container
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+- bionic
+summary: a tool for managing secrets
+tags:
+- security

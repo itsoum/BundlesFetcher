@@ -1,0 +1,21 @@
+description: 'Biarca OpenStack integration charm
+
+  '
+name: biarca-openstack
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- trusty
+- precise
+- xenial
+subordinate: true
+summary: Biarca OpenStack integration charm
+tags:
+- storage
+- openstack

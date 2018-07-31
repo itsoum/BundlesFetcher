@@ -1,0 +1,29 @@
+description: 'This will install and setup WordPresss optimized to run in the cloud.
+  By default it will
+
+  place Ngnix and php-fpm configured to scale horizontally with Nginx''s reverse proxy.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: wordpress
+peers:
+  loadbalancer:
+    interface: reversenginx
+provides:
+  website:
+    interface: http
+requires:
+  cache:
+    interface: memcache
+  db:
+    interface: mysql
+  nfs:
+    interface: mount
+series:
+- trusty
+- precise
+- wily
+summary: WordPress is a full featured web blogging tool, this charm deploys it.
+tags:
+- applications
+- blog

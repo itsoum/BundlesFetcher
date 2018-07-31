@@ -1,0 +1,24 @@
+description: 'VMware NSX provides a highly flexible, high performance, secure network
+
+  virtualization solution for data centers.
+
+  .
+
+  This charm is used to configure a principle service as a transport node
+
+  in a NSX cluster.  This includes installing and configuring OpenvSwitch
+
+  to be controlled by the NSX cluster.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: nsx-transport-node
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: VMware NSX - Transport Node
+tags:
+- openstack
+- miscellaneous

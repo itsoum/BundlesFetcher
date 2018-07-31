@@ -1,0 +1,19 @@
+description: 'OpenDaylight is a network virtualization solution that provides an overlay
+
+  virtual-network to virtual-machines, containers or network namespaces.
+
+  .
+
+  This charm provides the controller component.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: odl-controller
+provides:
+  controller-api:
+    interface: odl-controller-api
+  ovsdb-manager:
+    interface: ovsdb-manager
+summary: OpenDaylight Controller
+tags:
+- openstack

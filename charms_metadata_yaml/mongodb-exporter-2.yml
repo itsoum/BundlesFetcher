@@ -1,0 +1,17 @@
+description: 'MongoDB exporter for prometheus.io, written in go.
+
+  '
+maintainer: Casey Marshall <casey.marshall@canonical.com>
+name: mongodb-exporter
+provides:
+  target:
+    interface: prometheus
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: MongoDB exporter for prometheus.io
+tags:
+- database
+- monitoring

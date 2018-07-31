@@ -1,0 +1,19 @@
+description: 'Errbot is a chatbot, a daemon that connects to your favorite chat service
+
+  and brings your tools into the conversation.
+
+  '
+maintainer: Wes Mason <wesley.mason@canonical.com>
+name: errbot
+provides:
+  local-monitors:
+    interface: local-monitors
+  nrpe-external-master:
+    interface: nrpe-external-master
+  webhooks:
+    interface: http
+summary: Extensible chatbot with lots of out-of-the-box features.
+tags:
+- social
+- ops
+- monitoring

@@ -1,0 +1,18 @@
+description: "Nagios\xAE Core\u2122 is an Open Source system and network monitoring\
+  \ application. It\nwatches hosts and services that you specify, alerting you when\
+  \ things go bad\nand when they get better.\n"
+maintainer: Matthew Bruzek <Matthew.Bruzek@canonical.com>
+name: nagios-core
+provides:
+  website:
+    interface: http
+requires:
+  monitors:
+    interface: monitors
+  nagios:
+    interface: juju-info
+subordinate: false
+summary: Nagios core provides central monitoring engine and web interface for viewing
+  status.
+tags:
+- monitoring

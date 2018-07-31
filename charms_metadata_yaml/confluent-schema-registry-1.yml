@@ -1,0 +1,15 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: Stuart Bishop <stuart.bishop@canonical.com>
+name: confluent-schema-registry
+provides:
+  schema-registry:
+    interface: http
+requires:
+  zookeeper:
+    interface: zookeeper
+subordinate: false
+summary: Schema Registry component of the Confluent Platform
+tags:
+- streaming

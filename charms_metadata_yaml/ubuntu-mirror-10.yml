@@ -1,0 +1,29 @@
+categories:
+- misc
+description: 'This charm deploys a full Ubuntu mirror syncing from the main archives.
+
+  It can be configured to sync cdimages, ports and other sync components as
+
+  well.
+
+  It uses a storage suboordinate charm to point ot the actual storage where
+
+  the bits will be stored.
+
+  Be aware that a full mirror is SEVERAL TERRABYTES large! Make sure you have
+
+  enough disk space!
+
+  '
+maintainer: Chris Glass <tribaal@gmail.com>
+name: ubuntu-mirror
+peers:
+  cluster:
+    interface: ubuntu-mirror-ha
+provides:
+  data:
+    interface: block-storage
+    scope: container
+  website:
+    interface: http
+summary: An Ubuntu archives mirror (and more)

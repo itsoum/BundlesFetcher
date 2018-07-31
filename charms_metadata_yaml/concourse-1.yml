@@ -1,0 +1,27 @@
+description: 'Concourse is a CI and CD system, and built while working on the Cloud
+  Foundry
+
+  project. This charm provides an all-in-one Concourse ATC and TSA components,
+
+  access to the web UI, and can direct multiple concourse-worker units to run
+
+  builds and collect artifacts.
+
+  '
+maintainer: Dimiter Naydenov <Dimiter.Naydenov@hitchcock>
+name: concourse
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: pgsql
+series:
+- trusty
+subordinate: false
+summary: Concourse CI is a pipeline-based CI system (all in one machine).
+tags:
+- analytics
+- audits
+- cloudfoundry
+- ops

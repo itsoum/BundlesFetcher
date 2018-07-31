@@ -1,0 +1,23 @@
+categories:
+- applications
+description: 'It features: File Browser for accessing HDFS, Beeswax application for
+  executing Hive queries, Impala App for executing Impala queries, Spark Editor and
+  Dashboard, Pig Editor for submitting Pig scripts, Oozie App for submitting and monitoring
+  workflows, coordinators and bundles, HBase Browser for exploring and modifying HBase
+  tables and data, Table Browser for accessing Hive metadata and HCatalog, Search
+  App for querying Solr and Solr Cloud, Job Browser for accessing MapReduce jobs (MR1/MR2-YARN),
+  Job Designer for creating MapReduce/Streaming/Java jobs, A Sqoop 2 Editor and Dashboard,
+  A ZooKeeper Browser and Editor, A DB Query Editor for MySql, PostGres, Sqlite and
+  Oracle, On top of that, a SDK is available for creating new apps integrated with
+  Hadoop.
+
+  '
+maintainer: Marco Ceppi <marco@ceppi.net>
+name: hue
+provides:
+  website:
+    interface: http
+requires:
+  hadoop:
+    interface: ''
+summary: Web UI and framework for making Hadoop easy to use.

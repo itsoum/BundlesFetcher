@@ -1,0 +1,24 @@
+categories:
+- openstack
+- miscellaneous
+description: 'Nuage VRS provides a highly flexible, high performance, secure network
+
+  virtualization solution for data centers.
+
+  .
+
+  This charm is used to configure VRS service inside a NOVA Compute Node and controlled
+  by Nuage VSC/VSD.
+
+  '
+maintainer: Subbarayudu Mukkamala
+name: nuage-vrs-node
+requires:
+  cloud-compute:
+    interface: nova-compute
+    scope: container
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Nuage VRS

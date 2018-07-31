@@ -1,0 +1,19 @@
+description: '<Multi-line description here>
+
+  '
+maintainer: AakashKT <AakashKT@aakashkts-macbook-pro.local>
+name: ovn-master
+provides:
+  master-config:
+    interface: master-config
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+subordinate: true
+summary: <Fill in summary here>
+tags:
+- misc

@@ -1,0 +1,10 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: nats-v1
+provides:
+  nats:
+    interface: nats
+requires:
+  orchestrator:
+    interface: orchestrator
+summary: NATS message bus for CF

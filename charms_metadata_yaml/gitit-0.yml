@@ -1,0 +1,9 @@
+description: 'Installs a self-contained GitIt Wiki system.
+
+  '
+maintainer: GitIt User <aenor.realm@gmail.com>
+name: gitit
+provides:
+  website:
+    interface: http
+summary: GitIt Wiki

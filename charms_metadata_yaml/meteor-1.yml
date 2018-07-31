@@ -1,0 +1,16 @@
+description: 'Deploy a Meteor (http://meteor.com) app from source control (git or
+  hg).
+
+  '
+maintainer: Tim Van Steenburgh <tim.van.steenburgh@canonical.com>
+name: meteor
+provides:
+  website:
+    interface: http
+requires:
+  mongodb:
+    interface: mongodb
+subordinate: false
+summary: Deploy a Meteor application
+tags:
+- application_development

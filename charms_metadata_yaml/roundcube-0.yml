@@ -1,0 +1,19 @@
+categories:
+- applications
+description: "RoundCube Webmail is a browser-based multilingual IMAP client with an\n\
+  application-like user interface. It provides full functionality\nexpected from an\
+  \ e-mail client, including MIME support, address book,\nfolder manipulation and\
+  \ message filters.  The user interface is fully\nskinnable using XHTML and CSS 2.\
+  \  \n"
+maintainer: Nick Barcet <nick.barcet@canonical.com>
+name: roundcube
+peers:
+  peer:
+    interface: roundcube-peers
+provides:
+  website:
+    interface: http
+requires:
+  db:
+    interface: mysql
+summary: skinnable AJAX based webmail solution for IMAP servers

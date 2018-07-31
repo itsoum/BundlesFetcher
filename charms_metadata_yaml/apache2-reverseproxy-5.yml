@@ -1,0 +1,18 @@
+categories:
+- misc
+description: 'This is a subordinate charm for Apache.  This allows configuration to
+  live
+
+  near Apache, and still be easy to manage.
+
+  '
+maintainer: Aaron Bentley <aaron@aaronbentley.com>
+name: apache2-reverseproxy
+requires:
+  apache-website:
+    interface: apache-website
+    scope: container
+  website:
+    interface: http
+subordinate: true
+summary: Configure an Apache instance to reverse-proxy a site.

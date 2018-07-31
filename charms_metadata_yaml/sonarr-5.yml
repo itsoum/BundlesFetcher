@@ -1,0 +1,23 @@
+description: 'Installs sonarr with relations for registering downloaders and notifications
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: sonarr
+requires:
+  plex-info:
+    interface: plex-info
+  reverseproxy:
+    interface: reverseproxy
+  usenet-downloader:
+    interface: usenet-downloader
+resources:
+  sonarrconfig:
+    description: Zip file of sonarr backup to restore
+    filename: sonarrconfig.zip
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Installs sonarr
+tags:
+- misc

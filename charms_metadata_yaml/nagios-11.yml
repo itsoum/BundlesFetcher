@@ -1,0 +1,21 @@
+description: 'Nagios is a monitoring and management system for hosts, services, and
+
+  networks.
+
+  '
+ensemble: formula
+maintainer: Clint Byrum <clint@ubuntu.com>
+name: nagios
+provides:
+  mymonitors:
+    interface: monitors
+  website:
+    interface: http
+requires:
+  legacy:
+    interface: monitoring
+  monitors:
+    interface: monitors
+  nagios:
+    interface: juju-info
+summary: Nagios monitoring service.

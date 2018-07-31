@@ -1,0 +1,21 @@
+description: "This charm utilizes the preserve program to backup to an untrusted\n\
+  backend.  Your data will be split into 1MB chunks, encrypted and \nthen stored.\n"
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: preserve
+requires:
+  gluster:
+    interface: gluster-fuse
+    optiona: true
+  juju-info:
+    interface: juju-info
+    scope: container
+  mon:
+    interface: ceph-client
+  vault:
+    interface: vault
+series:
+- xenial
+subordinate: true
+summary: Encrypt and backup a service
+tags:
+- backup

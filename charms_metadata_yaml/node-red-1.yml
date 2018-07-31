@@ -1,0 +1,29 @@
+categories:
+- misc
+- ibm
+description: 'Node.js Node Red application connecting to MongoDB, taking
+
+  input from simulated iBeacon input.
+
+
+  Node Red is a visual tool for wiring the Internet of Things
+
+
+  Node-RED is a tool for wiring together hardware devices, APIs and
+
+  online services in new and interesting ways.
+
+
+  For more information see http://nodered.org
+
+  '
+maintainer: Antonio Rosales <antonio.rosales@canonical.com>
+name: node-red
+peers:
+  node-peer:
+    interface: node-peer-interfacee
+provides:
+  node-red:
+    interface: node-mongo
+subordinate: false
+summary: Node.js Application

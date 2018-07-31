@@ -1,0 +1,15 @@
+description: 'Uses a Twitter source, memory channel, and Avro sink in Apache Flume
+
+  to ingest Twitter data.
+
+  '
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: apache-flume-twitter
+requires:
+  flume-agent:
+    interface: flume-agent
+summary: Ingest tweets with Apache Flume
+tags:
+- applications
+- bigdata
+- apache

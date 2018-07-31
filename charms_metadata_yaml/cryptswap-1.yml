@@ -1,0 +1,13 @@
+categories:
+- miscellaneous
+description: 'This charm creates an encrypted swap file or partition
+
+  '
+maintainer: Chris Stratford <chris.stratford@canonical.com>
+name: cryptswap
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Creates an encrypted swap file or partition

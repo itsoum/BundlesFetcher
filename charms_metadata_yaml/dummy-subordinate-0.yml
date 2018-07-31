@@ -1,0 +1,20 @@
+categories:
+- misc
+description: 'This dummy subordinate charm is used to verify that a relationship is
+  created correctly
+
+  '
+maintainer: Juju-QA <aaron.bentley+cjqa@canonical.com>
+name: dummy-subordinate
+requires:
+  sink:
+    interface: dummy-token
+    scope: container
+series:
+- xenial
+- trusty
+- precise
+- yakkety
+- zesty
+subordinate: true
+summary: Dummy subordinate charm that accepts data

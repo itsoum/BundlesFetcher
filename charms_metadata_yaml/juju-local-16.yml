@@ -1,0 +1,10 @@
+description: 'Provides juju with lxc containers for deploying services
+
+  '
+name: juju-local
+requires:
+  user:
+    interface: username
+    scope: container
+subordinate: true
+summary: Juju local provider

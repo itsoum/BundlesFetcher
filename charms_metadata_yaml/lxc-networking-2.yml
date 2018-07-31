@@ -1,0 +1,19 @@
+description: 'This Charm configures the unit so LXC containers are bridged directly
+  to the given network, allowing them to dhcp the network the host is connected to
+  for ip adresses.
+
+
+  This is achieved by creating the lxcbr0 interface and configuring it to connect
+  directly to the interface of the given network. Default LXC containers are connected
+  to this bridge; connecting them to the eth0 interface.
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: lxc-networking
+series:
+- trusty
+subordinate: false
+summary: Configures the host to bridge LXC containers directly to interface on given
+  network
+tags:
+- network

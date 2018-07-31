@@ -1,0 +1,18 @@
+description: ''
+maintainer: Michael Skalka <Michael.Skalka@mskalka>
+name: keystone-ico
+provides:
+  keystone-ico:
+    interface: keystone-ico
+    scope: container
+requires:
+  container:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+subordinate: true
+summary: IBM Cloud Orchestrator OpenStack integration
+tags:
+- openstack
+- misc

@@ -1,0 +1,16 @@
+description: 'Depricated
+
+  '
+maintainer: devicehive <admin@devicehive.com
+name: devicehive-worker
+provides:
+  website:
+    interface: http
+requires:
+  ca:
+    interface: ca-dhc
+  zk:
+    interface: dhc-zk
+summary: DeviceHive node for big and high loaded installations
+tags:
+- misc

@@ -1,0 +1,16 @@
+categories:
+- applications
+description: 'This charm deploys Sendy as outlined by the Sendy
+
+  installation guide.
+
+  '
+maintainer: Bo Fjord Jensen <bo@bxd.dk>
+name: sendy
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: mysql
+summary: Sendy is a email newsletter application using Amazon SES.

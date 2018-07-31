@@ -1,0 +1,23 @@
+description: 'Deploys the Errors component of the Ubuntu Error Tracker. Errors is
+
+  provides a web interface to the error reports contained in the Daisy
+
+  component of the Ubuntu Error Tracker.
+
+  '
+name: errors
+provides:
+  errors:
+    interface: http
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  wsgi-file:
+    interface: wsgi
+    scope: container
+requires:
+  db:
+    interface: cassandra
+  postgres:
+    interface: pgsql
+summary: Errors for the Ubuntu Error Tracker

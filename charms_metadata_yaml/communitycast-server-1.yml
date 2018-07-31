@@ -1,0 +1,11 @@
+categories:
+- applications
+description: 'This is the server-side application that makes Community Cast possible.
+
+  '
+maintainer: "Jos\xE9 Antonio Rey <jose@ubuntu.com>"
+name: communitycast-server
+provides:
+  website:
+    interface: html
+summary: Server for Community Cast

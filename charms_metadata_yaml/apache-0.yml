@@ -1,0 +1,14 @@
+description: 'Installs and configures apache to run the wrappz site.
+
+
+  The site is stored on NFS shared disk, and uses MySQL
+
+  '
+name: apache
+provides:
+  website:
+    interface: http
+requires:
+  disk:
+    interface: mount
+summary: Apache server for Wrappz

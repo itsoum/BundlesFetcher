@@ -1,0 +1,16 @@
+description: TBC
+maintainer: charms@trilio.com
+name: trilio-horizon-plugin
+requires:
+  dashboard-plugin:
+    interface: dashboard-plugin
+    scope: container
+series:
+- xenial
+- bionic
+subordinate: true
+summary: TBC
+tags:
+- openstack
+- storage
+- backup

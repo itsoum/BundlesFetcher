@@ -1,0 +1,16 @@
+categories:
+- misc
+description: 'Installs the opengrok source code search and cross-reference engine
+
+
+  Currently configured as a standalone tomcat6 service. Opengrok is
+
+  space, cpu, and i/o intensive service.
+
+  '
+maintainer: Peter M Petrakis <peter.petrakis@canonical.com>
+name: opengrok
+provides:
+  website:
+    interface: http
+summary: OpenGrok source code search and cross-reference

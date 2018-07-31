@@ -1,0 +1,78 @@
+description: 'OpenStack is a reliable cloud infrastructure. Its mission is to produce
+
+  the ubiquitous cloud computing platform that will meet the needs of public
+
+  and private cloud providers regardless of size, by being simple to implement
+
+  and massively scalable.
+
+  .
+
+  OpenStack Compute, codenamed Nova, is a cloud computing fabric controller. In
+
+  addition to its "native" API (the OpenStack API), it also supports the Amazon
+
+  EC2 API.
+
+  .
+
+  This charm provides the cloud controller service for OpenStack Nova and includes
+
+  nova-scheduler, nova-api and nova-conductor services.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: nova-cloud-controller
+peers:
+  cluster:
+    interface: nova-ha
+provides:
+  cloud-controller:
+    interface: nova
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+  cell:
+    interface: nova-cell
+  cinder-volume-service:
+    interface: cinder
+  cloud-compute:
+    interface: nova-compute
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  image-service:
+    interface: glance
+  memcache:
+    interface: memcache
+  neutron-api:
+    interface: neutron-api
+  nova-vmware:
+    interface: nova-vmware
+    scope: container
+  pgsql-nova-db:
+    interface: pgsql
+  quantum-network-service:
+    interface: quantum
+  shared-db:
+    interface: mysql-shared
+  zeromq-configuration:
+    interface: zeromq-configuration
+    scope: container
+series:
+- xenial
+- trusty
+- precise
+- yakkety
+summary: OpenStack Compute - Nova cloud controller service
+tags:
+- openstack

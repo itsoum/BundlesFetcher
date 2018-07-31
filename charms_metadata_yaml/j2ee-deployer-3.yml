@@ -1,0 +1,21 @@
+description: 'J2EE Deployer
+
+  .
+
+  J2EE Deployer provides a mechanism for deploying WAR application files on
+
+  Juju deployed J2EE web containers, for example Tomcat.  Deployed as a
+
+  subordinate charm, applications may be subsequently upgraded across all of your
+
+  Juju services/units.
+
+  '
+maintainer: Robert Ayres <robert.ayres@ubuntu.com>
+name: j2ee-deployer
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: J2EE Deployer

@@ -1,0 +1,15 @@
+description: 'subordinate service to provides apache reverse proxy, ssl, and auth
+  services to a web service that has none of these things.
+
+  '
+maintainer: Paul Czarkowski <paul@paulcz.net>
+name: auth-proxy
+provides:
+  website:
+    interface: http
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: provides apache reverse proxy and auth - subordinate

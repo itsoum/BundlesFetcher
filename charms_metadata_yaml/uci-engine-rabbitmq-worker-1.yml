@@ -1,0 +1,21 @@
+categories:
+- app-servers
+description: 'Deploys a rabbitmq worker from a given bzr branch.
+
+  '
+maintainer: Andy Doan <andy.doan@ubuntu.com>
+name: rabbitmq-worker
+provides:
+  json_status:
+    interface: json_status
+    optional: true
+  local-monitors:
+    interface: local-monitors
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  amqp:
+    interface: rabbitmq
+summary: Deploy a service that handles messages from a rabbit queue

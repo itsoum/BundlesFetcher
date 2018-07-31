@@ -1,0 +1,36 @@
+description: 'A minimalist redmine project portal application charm. Launches
+
+  Redmine rails app via docker-compose. If running in standalone
+
+  launches a Postgres container.
+
+
+  Relating to the PostGres charm will run the application in
+
+  scale-out formation. All data will be shipped from the
+
+  dockerized PGSQL instance from the leader, to the postgres
+
+  unit.
+
+  '
+maintainers:
+- Charles Butler <charles.butler@canonical.com>
+name: redmine
+payloads:
+  application:
+    type: docker
+  database:
+    type: docker
+provides:
+  website:
+    interface: http
+requires:
+  mysql:
+    interface: mysql
+subordinate: false
+summary: Juju deployed Redmine
+tags:
+- containers
+- application
+- project management

@@ -1,0 +1,19 @@
+description: 'Jenkins is a Continous Integration server supporting
+
+  flexible continous integration and deployment methodologies
+
+  and more.
+
+  .
+
+  This charm provides slave services to a package-builder
+
+  for building Ubuntu packages from source.
+
+  '
+maintainer: James Page <james.page@ubuntu.com>
+name: package-builder-slave
+provides:
+  slave:
+    interface: package-builder-slave
+summary: Package Builder Slave

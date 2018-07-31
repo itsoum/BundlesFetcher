@@ -1,0 +1,14 @@
+categories:
+- applications
+description: 'alternative (better) logstash frontend
+
+  '
+maintainer: Paul Czarkowski <paul@paulcz.net>
+name: kibana-apache
+provides:
+  web:
+    interface: kibana
+requires:
+  rest:
+    interface: elasticsearch
+summary: alternative (better) logstash frontend

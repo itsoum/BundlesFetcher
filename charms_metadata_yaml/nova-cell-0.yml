@@ -1,0 +1,33 @@
+categories:
+- openstack
+- misc
+description: 'Nova Cells functionality allows you to scale an OpenStack Compute cloud
+
+  in a more distributed fashion without having to use complicated
+
+  technologies like database and message queue clustering. It is intended
+
+  to support very large deployments.
+
+  .
+
+  This charm deploys Nova Cells as part of a Juju deployed OpenStack Cloud.
+
+  '
+format: 2
+maintainer: Liam Young <liam.young@canonical.com>
+name: nova-cell
+provides:
+  cell:
+    interface: nova-cell
+  nova-cell-child:
+    interface: nova-cell-tree
+requires:
+  amqp:
+    interface: rabbitmq
+  nova-cell-parent:
+    interface: nova-cell-tree
+  shared-db:
+    interface: mysql-shared
+subordinate: false
+summary: Nova Cells for Scalable OpenStack Clouds

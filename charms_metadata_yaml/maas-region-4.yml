@@ -1,0 +1,24 @@
+description: 'MAAS runs a software-defined data centre - it turns a collection of
+  physical
+
+  servers and switches into a bare metal cloud with full open source IP address
+
+  management (IPAM) and instant provisioning on demand.
+
+  '
+maintainer: MAAS Maintainers <maas-devel@canonical.com>
+name: maas-region
+peers:
+  ha:
+    interface: maas-region-ha
+provides:
+  rpc:
+    interface: maas-rpc
+requires:
+  db:
+    interface: pgsql
+series:
+- xenial
+summary: Region controller for MAAS.
+tags:
+- network

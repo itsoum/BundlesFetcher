@@ -1,0 +1,23 @@
+description: "Glance is a central repository for virtual images.  This driver charm\
+  \ passes the \nhostname and private/ public keys of Glance to Spectrum Scale Client.\n"
+maintainer: IBM Juju Support Team <jujusupp@us.ibm.com>
+name: ibm-glance-spectrumscale
+provides:
+  storage-backend:
+    interface: glance-backend
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+  spectrumscale:
+    interface: spectrum-scale-client
+series:
+- xenial
+- trusty
+subordinate: true
+summary: Driver charm for Glance for passing hostname to Spectrum Scale client.
+tags:
+- openstack
+- glance
+- misc

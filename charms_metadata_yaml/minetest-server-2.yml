@@ -1,0 +1,9 @@
+description: 'Installs minetest and configures a network server.
+
+  '
+maintainer: James Tait <james.tait@wyrddreams.org>
+name: minetest-server
+provides:
+  server:
+    interface: minetest
+summary: Minetest Network Server

@@ -1,0 +1,17 @@
+description: "Ceilometer project aims to become the infrastructure to collect measurements\
+  \ \nwithin OpenStack so that no two agents would need to be written to collect \n\
+  the same data. It's primary targets are monitoring and metering, but the \nframework\
+  \ should be easily expandable to collect for other needs. To that \neffect, Ceilometer\
+  \ should be able to share collected data with a variety of consumers.\n.\nThis charm\
+  \ should be used in conjunction with the ceilometer and nova charm to collect \n\
+  Openstack measures.\n"
+maintainer: Yolanda Robla <yolanda.robla@canonical.com>
+name: ceilometer-agent
+requires:
+  ceilometer-service:
+    interface: ceilometer
+  container:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Subordinate charm for deploying Ceilometer compute agent

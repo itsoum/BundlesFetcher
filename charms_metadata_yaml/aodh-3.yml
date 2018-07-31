@@ -1,0 +1,45 @@
+description: 'Ceilometer aims to deliver a Single Point Of Contact for billing systems,
+
+  providing all the counters they need to establish customer billing, across
+
+  all current and future OpenStack components. The delivery of counters must be
+
+  traceable and auditable, the counters must be easily extensible to support new
+
+  projects, and agents doing data collections should be independent of the
+
+  overall system.
+
+  .
+
+  Aodh provides the Alarming service as part of OpenStack telemetry.
+
+  '
+extra-bindings:
+  admin: null
+  internal: null
+  public: null
+maintainer: OpenStack Charmers <openstack-charmers@lists.ubuntu.com>
+name: aodh
+peers:
+  cluster:
+    interface: openstack-ha
+requires:
+  amqp:
+    interface: rabbitmq
+  ha:
+    interface: hacluster
+    scope: container
+  identity-service:
+    interface: keystone
+  mongodb:
+    interface: mongodb
+  shared-db:
+    interface: mysql-shared
+series:
+- xenial
+- trusty
+subordinate: false
+summary: OpenStack Telemetry - Alarming service
+tags:
+- openstack

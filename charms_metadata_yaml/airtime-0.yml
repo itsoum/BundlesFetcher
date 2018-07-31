@@ -1,0 +1,20 @@
+categories:
+- applications
+description: 'Deploys the SourceFabric Radio Automation suite. RabbitMQ, IceCast,
+  Monit
+
+  and Airtime on Apache2
+
+  '
+maintainer: Charles Butler <charles.butler@ubuntu.com>
+name: airtime
+provides:
+  scsource:
+    interface: streamrelay
+  website:
+    interface: http
+requires:
+  screlay:
+    interface: streamrelay
+subordinate: false
+summary: Airtime Radio Automation from SourceFabric

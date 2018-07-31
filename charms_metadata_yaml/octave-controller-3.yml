@@ -1,0 +1,16 @@
+categories:
+- applications
+description: "In addition to providing GNU OCtave, this charm installs a simple\n\
+  web gui, which can be used to submit octave jobs to the deployed\noctave service.\
+  \ Note that the octave-controller machine is also \nutilized for numerical computations\
+  \ in Octave.\n"
+maintainer: Ales Stimec <ales.stimec@xlab.si>
+name: octave-controller
+provides:
+  website:
+    interface: http
+requires:
+  octave:
+    interface: octave_rel
+subordinate: false
+summary: This charms the Octave to install itself on the target machine.

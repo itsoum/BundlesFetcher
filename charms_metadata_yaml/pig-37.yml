@@ -1,0 +1,40 @@
+description: 'Apache Pig is a platform for creating MapReduce programs used with Hadoop.
+
+  It consists of a high-level language (Pig Latin) for expressing data analysis
+
+  programs, coupled with infrastructure for evaluating these programs.
+
+
+  This charm provides version 0.15.0 of the Pig application from Apache Bigtop.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.0.0
+name: pig
+provides:
+  giraph:
+    interface: giraph
+    scope: container
+  hadoop:
+    interface: hadoop-plugin
+    scope: container
+  java:
+    interface: java
+    scope: container
+  mahout:
+    interface: mahout
+    scope: container
+resources:
+  bigtop-repo:
+    description: A zip archive of the Apache Bigtop git repository.
+    filename: bigtop-repo.zip
+    type: file
+series:
+- xenial
+summary: Pig from Apache Bigtop
+tags:
+- apache
+- big_data
+- bigtop
+- bigtop-1.2
+- hadoop

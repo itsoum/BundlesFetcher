@@ -1,0 +1,22 @@
+description: 'DeviceHive makes any connected device part of the Internet of Things.
+  It provides the communication layer, control software and multi-platform libraries
+  to bootstrap development of smart energy, home automation, remote sensing, telemetry,
+  remote control and monitoring software, and much more. Leave communications to DeviceHive
+  and focus on product and innovation. Learn more at: http://devicehive.com
+
+  '
+maintainer: devicehive <admin@devicehive.com
+name: devicehive
+provides:
+  website:
+    interface: http
+requires:
+  ka:
+    interface: dh-ka
+  pg:
+    interface: dh-pg
+  zk:
+    interface: dh-zk
+summary: DeviceHive node for big and high loaded installations
+tags:
+- misc

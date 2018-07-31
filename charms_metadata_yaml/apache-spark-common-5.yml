@@ -1,0 +1,27 @@
+description: 'Run programs up to 100x faster than Hadoop MapReduce in memory, or 10x
+  faster
+
+  on disk. Spark powers a stack of high-level tools including Spark SQL, MLlib for
+
+  machine learning, GraphX, and Spark Streaming. You can combine these libraries
+
+  seamlessly in the same application.
+
+  '
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: apache-spark-common
+provides:
+  master:
+    interface: spark
+  spark:
+    interface: spark
+requires:
+  namenode:
+    interface: dfs
+  slave:
+    interface: spark
+summary: "Apache Spark\u2122 is a fast and general engine for large-scale data processing"
+tags:
+- bigdata
+- hadoop
+- apache

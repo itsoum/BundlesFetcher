@@ -1,0 +1,31 @@
+description: 'This charm will deploy MidoNet Gateway Nodes, which will connect the
+
+  OpenStack deployment to the external network.  Currently, it supports only
+
+  static routing setup (refer to respective section on README.md) .
+
+  '
+maintainers:
+- Ryo Tagami <ryo@midokura.com>
+name: midonet-gateway
+peers:
+  cluster:
+    interface: midonet-gateway-cluster
+provides:
+  midonet-gateway:
+    interface: midonet-gateway
+requires:
+  identity-admin:
+    interface: keystone-admin
+  midonet-api:
+    interface: midonet
+  midonet-host:
+    interface: midonet-host
+    scope: container
+  neutron-plugin-api:
+    interface: neutron-plugin-api
+subordinate: false
+summary: MidoNet Open Source Network Virtualization System Gateway
+tags:
+- midonet
+- network

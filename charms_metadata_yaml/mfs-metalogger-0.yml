@@ -1,0 +1,11 @@
+description: 'MooseFS is a distributed storage and file system
+
+  '
+name: mfs-metalogger
+provides:
+  mfs-metalogger:
+    interface: mfs
+requires:
+  mfs-master:
+    interface: mfs
+summary: distributed storage and file system

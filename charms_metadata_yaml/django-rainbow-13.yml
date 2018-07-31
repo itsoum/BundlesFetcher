@@ -1,0 +1,15 @@
+description: "Django-rainbow is a full-fledged Django web project deployment charm.\
+  \ One can deploy many projects onto a single instance\nby maintaining individual\
+  \ config files pertaining to the project. Django-rainbow is a safe and convenient\
+  \ platform\nfor development or production web server management. Web sites are updated\
+  \ instantly using mercurial based versioning.\nYour django-rainbow project file\
+  \ can be stored for future use, allowing anyone using juju a fail safe method to\
+  \ \ndevelop and deploy your project without creating conflicting structure. Django-rainbow\
+  \ is a \"Set it and forget it\"\nplatform leaving development issues with the developers\
+  \ :)\n"
+maintainer: Surgemcgee <RobertSteckroth@gmail.com>
+name: django-rainbow
+provides:
+  rainbow:
+    interface: django-rainbow
+summary: Installs the Django-rainbow platform onto a cloud instance.

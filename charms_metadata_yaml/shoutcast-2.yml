@@ -1,0 +1,15 @@
+categories:
+- Application
+description: 'SHOUTcast lets you transmit your audio to listeners around the world.
+
+  '
+maintainer: Charles Butler <charles.butler@ubuntu.com>
+name: shoutcast
+provides:
+  scsource:
+    interface: streamrelay
+requires:
+  screlay:
+    interface: streamrelay
+subordinate: false
+summary: installs and configures Shoutcast DNAS server

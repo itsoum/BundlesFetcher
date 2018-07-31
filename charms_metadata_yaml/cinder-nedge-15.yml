@@ -1,0 +1,22 @@
+description: 'Deploy the  ISCSI driver for a Cinder Backend Nedge Cluster
+
+  '
+maintainer: Anton <anton.skriptsov@nexenta.com>
+name: cinder-nedge
+provides:
+  storage-backend:
+    interface: cinder-backend
+    scope: container
+requires:
+  cinder-host:
+    interface: juju-info
+    scope: container
+  cinder-nedge:
+    interface: cinder-nedge
+subordinate: true
+summary: Subordinate iscsi driver and configure cinder backend for NEDGE
+tags:
+- openstack
+- storage
+- file-servers
+- misc

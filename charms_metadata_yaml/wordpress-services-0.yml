@@ -1,0 +1,21 @@
+categories:
+- applications
+description: Wordpress blog
+maintainer: Nick Moffit <nick.moffit@canonical.com> Jacek Nykis <jacek.nykis@canonical.com>
+name: wordpress
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  webservice:
+    interface: webservice
+  website:
+    interface: http
+  wordpress-plugin:
+    interface: wordpress-plugin
+  wordpress-theme:
+    interface: wordpress-theme
+requires:
+  db:
+    interface: mysql
+summary: Wordpress

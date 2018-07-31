@@ -1,0 +1,17 @@
+author: CloudFoundry Charm Generator <cs:~cf-charmers/cloudfoundry>
+description: ''
+name: cloud-controller-worker-v1
+requires:
+  cc:
+    interface: controller
+  cc-db:
+    interface: controller-db
+  ltc:
+    interface: loggregator_trafficcontroller
+  nats:
+    interface: nats
+  orchestrator:
+    interface: orchestrator
+  uaa:
+    interface: http
+summary: Worker for cc

@@ -1,0 +1,24 @@
+description: 'A combined NexentaEdge OpenStack Swift API gateway and data node.
+
+  The combined data node and OpenStack Swift gateway provide both data storage capacity
+  to the NexentaEdge cluster,
+
+  and function as a OpenStack Swift API service.
+
+  When used with OpenStack or standalone the Swift gateway provides HTTP/REST based
+  object storage using the OpenStack Swift API specification.
+
+  '
+maintainer: Nexenta <nexenta.juju@nexenta.com>
+name: nexentaedge-swift-gw
+requires:
+  identity-service:
+    interface: keystone
+  swift-gw:
+    interface: swift-gw
+subordinate: false
+summary: NexentaEdge swift gateway node. Can be used as object storage node
+tags:
+- openstack
+- storage
+- file-servers

@@ -1,0 +1,26 @@
+description: 'Automatically keep your glance mirror in sync with any (multiple) source(s)
+
+  of simplestreams data.
+
+  '
+maintainer: Tycho Andersen <Tycho.Andersen@canonical.com>
+name: glance-simplestreams-sync
+provides:
+  image-modifier:
+    interface: script-provider
+    scope: container
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  simplestreams-image-service:
+    interface: glance-simplestreams-sync
+requires:
+  amqp:
+    interface: rabbitmq
+  identity-service:
+    interface: keystone
+subordinate: false
+summary: Sync data from simplestreams into glance.
+tags:
+- misc
+- openstack

@@ -1,0 +1,9 @@
+description: "The forumla-tester service provides a central control point\nfor executing\
+  \ tests and collating results ithin other service \nunits.\n"
+ensemble: formula
+name: formula-tester
+provides:
+  tester:
+    interface: testing
+revision: 7
+summary: Service for testing other ensemble formulas

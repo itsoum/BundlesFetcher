@@ -1,0 +1,14 @@
+description: 'isc-dhcp server
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: dhcp-server
+requires:
+  opened-ports:
+    interface: opened-ports
+series:
+- trusty
+subordinate: false
+summary: isc-dhcp server
+tags:
+- ops

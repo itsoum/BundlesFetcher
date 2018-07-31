@@ -1,0 +1,15 @@
+description: "Squid is a high-performance proxy caching server for web clients,\n\
+  supporting FTP, gopher, and HTTP data objects.  Squid version 3 is a\nmajor rewrite\
+  \ of Squid in C++ and introduces a number of new features\nincluding ICAP and ESI\
+  \ support.\n\nRequires the following relation settings from consuming services:\n\
+  \n  ip: service ip address\n  port: service port\n  sitenames: a list of vhosts\
+  \ provided\n\nAlthough squid can be configured as a traditional forward proxy, this\n\
+  charm supports only a reverse proxy configuration.\n"
+name: squid-reverseproxy
+provides:
+  reverseproxy:
+    interface: http
+requires:
+  website:
+    interface: http
+summary: Full featured Web Proxy cache (HTTP proxy)

@@ -1,0 +1,13 @@
+description: 'template does a lot of template stuff and is very useful for doing templates.
+
+  '
+maintainer: Mr Foo <foo@bar.com>
+name: template
+provides:
+  website:
+    interface: http
+    limit: 1
+    optional: false
+    scope: global
+summary: template charm for doing lots of templatenstrating basic charm construct
+  and functionality

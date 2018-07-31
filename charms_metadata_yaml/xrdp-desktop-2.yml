@@ -1,0 +1,9 @@
+description: 'Creates a default Ubuntu desktop that is available over RDP.  Provides
+  a
+
+  desktop-in-the-cloud type feature.
+
+  '
+maintainer: Ted Gould <ted@ubuntu.com>
+name: xrdp-desktop
+summary: Create an Ubuntu Desktop available over RDP

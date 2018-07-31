@@ -1,0 +1,45 @@
+description: 'Kubernetes is an open-source platform for deploying, scaling, and operations
+
+  of application containers across a cluster of hosts. Kubernetes is portable
+
+  in that it works with public, private, and hybrid clouds. Extensible through
+
+  a pluggable infrastructure. Self healing in that it will automatically
+
+  restart and place containers on healthy nodes if a node ever goes away.
+
+  '
+maintainers:
+- Matthew Bruzek <matthew.bruzek@canonical.com>
+- Charles Butler <charles.butler@canonical.com>
+name: kubernetes-master
+provides:
+  cluster-dns:
+    interface: kube-dns
+  kube-api-endpoint:
+    interface: http
+  sdn-plugin:
+    interface: sdn-plugin
+    scope: container
+requires:
+  ceph-storage:
+    interface: ceph-admin
+  certificates:
+    interface: tls-certificates
+  etcd:
+    interface: etcd
+  loadbalancer:
+    interface: public-address
+resources:
+  kubernetes:
+    description: A tarball packaged release of the kubernetes bins.
+    filename: kubernetes.tar.gz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: The Kubernetes control plane.
+tags:
+- infrastructure
+- kubernetes
+- master

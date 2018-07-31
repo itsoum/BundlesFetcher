@@ -1,0 +1,24 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages the HDFS master node (NameNode).
+
+  '
+maintainer: bigdata-dev <bigdata-dev@canonical.com>
+name: cloudera-hadoop-hdfs-master
+provides:
+  ganglia:
+    interface: monitor
+  namenode:
+    interface: dfs
+requires:
+  datanode:
+    interface: dfs-slave
+  secondary:
+    interface: dfs-secondary
+summary: HDFS master (NameNode) for CDH Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

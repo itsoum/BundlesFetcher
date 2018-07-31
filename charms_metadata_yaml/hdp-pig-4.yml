@@ -1,0 +1,20 @@
+categories:
+- application
+description: "Apache\u2122 Pig allows you to write complex MapReduce transformations\
+  \ using a \nsimple scripting language. Pig Latin (the language) defines a set of\
+  \ \ntransformations on a data set such as aggregate, join and sort.  \nPig translates\
+  \ the Pig Latin script into MapReduce so that it can be executed\nwithin Hadoop\xAE\
+  . Pig Latin is sometimes extended using UDFs \n(User Defined Functions), which the\
+  \ user can write in Java or a scripting \nlanguage and then call directly from the\
+  \ Pig Latin\n"
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: hdp-pig
+requires:
+  hadoop-nodes:
+    interface: mapred
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+subordinate: false
+summary: "Apache\u2122 Pig allows you to write complex MapReduce operation"

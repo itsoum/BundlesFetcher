@@ -1,0 +1,15 @@
+categories:
+- applications
+description: 'This program can be used as an IRC server which forwards everything
+  you
+
+  say to people on other chat networks: Jabber (which includes Google Talk
+
+  and Facebook Chat), ICQ, AIM, MSN, Yahoo! and Twitter/Identica/Status.net.
+
+  '
+name: bitlbee
+provides:
+  chat-server:
+    interface: irc
+summary: IRC to IM gateway

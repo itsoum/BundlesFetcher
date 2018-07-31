@@ -1,0 +1,20 @@
+description: 'Subordinate charm used for Juju networking tests
+
+  '
+maintainer: Michael Skalka <Michael.Skalka@canonical.com>
+name: network-health
+peers:
+  network-test-peer:
+    interface: network-test
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+- precise
+subordinate: true
+summary: Subordinate charm used for Juju networking tests
+tags:
+- misc

@@ -1,0 +1,14 @@
+description: 'A web-based notebook that enables interactive data analytics.
+
+  '
+maintainer: devicehive <admin@devicehive.com>
+name: zeppelin-dh
+requires:
+  spark:
+    interface: spark-zp
+  zk:
+    interface: zk-zp
+subordinate: false
+summary: DeviceHive Zeppelin
+tags:
+- misc

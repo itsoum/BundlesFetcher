@@ -1,0 +1,7 @@
+description: 'Used to automate maintenance of the ilp32 kernel found at ppa:ce-hyperscale/ppa
+
+  '
+maintainer: dann frazier <dann.frazier@canonical.com>
+name: ilp32-rebase
+subordinate: false
+summary: Automatically rebase ILP32 patches onto an Ubuntu kernel tree

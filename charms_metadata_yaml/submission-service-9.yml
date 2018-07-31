@@ -1,0 +1,24 @@
+description: 'This web service accepts and validates Checkbox submissions
+
+  before passing them on to a C3 web service for further processing.
+
+  '
+maintainer: Sheila Miguez <sheila.miguez@canonical.com>
+name: submission-service
+provides:
+  website:
+    interface: http
+requires:
+  database:
+    interface: pgsql
+resources:
+  submission-service:
+    description: Snap for the Submission Service
+    filename: submission-service_1.0_amd64.snap
+    type: file
+series:
+- xenial
+subordinate: false
+summary: This web service accepts and validates Checkbox submissions.
+tags:
+- web_server

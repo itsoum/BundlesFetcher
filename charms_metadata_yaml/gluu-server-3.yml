@@ -1,0 +1,17 @@
+description: 'The Gluu Server includes an OpenID Connect Identity Provider (IDP) and
+  UMA
+
+  Authorization Server (AS), and is engineered to support robust enterprise
+
+  requirements for uptime and availability.
+
+  '
+maintainer: Shouro <shouro@gluu.org>
+name: gluu-server
+provides:
+  gluuserver:
+    interface: openid-connect-op
+subordinate: false
+summary: The Gluu Server is a free and open source access management tool.
+tags:
+- app-servers

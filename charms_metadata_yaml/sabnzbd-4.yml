@@ -1,0 +1,22 @@
+description: 'Installs sabnzbd with relations for registering downloaders and notifications
+
+  '
+maintainer: Chris Sanders <sanders.chris@gmail.com>
+name: sabnzbd
+provides:
+  usenet-downloader:
+    interface: usenet-downloader
+requires:
+  reverseproxy:
+    interface: reverseproxy
+resources:
+  sabconfig:
+    description: Tar file of configuration folder to restore on install
+    filename: sabconfig.tgz
+    type: file
+series:
+- xenial
+subordinate: false
+summary: Installs sabnzbd
+tags:
+- misc

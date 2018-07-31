@@ -1,0 +1,18 @@
+description: 'Hadoop is a software platform that lets one easily write and run applications
+  that process vast amounts of data.
+
+  This charm manages a dedicated client node as a place to run mapreduce jobs.
+
+  '
+maintainer: Cory Johns <cory.johns@canonical.com>
+name: apache-hadoop-client
+provides:
+  hadoop-plugin:
+    interface: hadoop-plugin
+    scope: container
+summary: Dedicated client node for Apache Hadoop platform
+tags:
+- applications
+- bigdata
+- hadoop
+- apache

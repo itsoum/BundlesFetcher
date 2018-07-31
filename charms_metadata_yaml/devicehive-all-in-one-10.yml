@@ -1,0 +1,12 @@
+description: 'DeviceHive makes any connected device part of the Internet of Things.
+  It provides the communication layer, control software and multi-platform libraries
+  to bootstrap development of smart energy, home automation, remote sensing, telemetry,
+  remote control and monitoring software, and much more. Leave communications to DeviceHive
+  and focus on product and innovation. Learn more at: http://devicehive.com
+
+  '
+maintainer: devicehive <admin@devicehive.com
+name: devicehive-all-in-one
+summary: DeviceHive standalone instalation for demonstration purposes
+tags:
+- misc

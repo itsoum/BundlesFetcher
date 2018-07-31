@@ -1,0 +1,8 @@
+description: 'DEPRECATED: please use hadoop-client instead.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+name: apache-hadoop-client
+summary: Apache Hadoop client service (deprecated, use hadoop-client)
+tags:
+- deprecated

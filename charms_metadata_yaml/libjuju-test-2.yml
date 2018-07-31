@@ -1,0 +1,10 @@
+description: Dummy charm used in testing python-libjuju
+maintainers:
+- Cory Johns <cory.johns@canonical.com>
+name: libjuju-test
+series:
+- xenial
+- trusty
+summary: Dummy charm used in testing python-libjuju
+tags:
+- testing

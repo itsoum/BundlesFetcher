@@ -1,0 +1,24 @@
+description: 'NS1''s Managed DNS is powered by a world-class global network and deep
+  traffic
+
+  management technology: optimize your application''s delivery and streamline
+
+  your DevOps processes with our next-gen platform.
+
+  '
+maintainers:
+- Marco Ceppi <marco@ceppi.net>
+name: ns1
+requires:
+  machine:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- trusty
+- precise
+subordinate: true
+summary: Intelligent DNS & Traffic Management
+tags:
+- dns
+- saas

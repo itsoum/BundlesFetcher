@@ -1,0 +1,26 @@
+description: 'The MidoNet API service provides the integration point between external
+
+  network configuration (typically Neutron) and the internal MidoNet
+
+  configuration. In order to provide this service, it needs access to an Apache
+
+  quorum and an OpenStack Keystone authentication service.
+
+  '
+maintainer: Midokura
+name: midonet-api
+provides:
+  midonet-api:
+    interface: midonet
+requires:
+  host:
+    interface: midonet-host
+  keystone:
+    interface: keystone
+  zookeeper:
+    interface: zookeeper
+subordinate: false
+summary: charm for the MidoNet API service
+tags:
+- midonet
+- network

@@ -1,0 +1,4 @@
+description: "A golang daemon and cli that allows for easy creation \nof lxc containers.\n"
+maintainer: Kapil Thangavelu <kapil.foss@gmail.com>
+name: docker
+summary: Dotcloud's LXC with batteries.

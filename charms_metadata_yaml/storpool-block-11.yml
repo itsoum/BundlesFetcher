@@ -1,0 +1,26 @@
+description: 'This charm installs the StorPool block client (the initiator for
+
+  the StorPool distributed network storage service), along with
+
+  the StorPool OpenStack integration on the bare metal node and
+
+  possibly in all its LXD containers as configured.
+
+  '
+maintainer: StorPool <support@storpool.com>
+name: storpool-block
+peers:
+  block-p:
+    interface: storpool-service
+provides:
+  storpool-presence:
+    interface: storpool-presence
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+subordinate: true
+summary: Combine several layers to install StorPool services
+tags:
+- openstack
+- storage

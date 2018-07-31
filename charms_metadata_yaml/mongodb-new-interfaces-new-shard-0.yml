@@ -1,0 +1,24 @@
+description: "MongoDB is a high-performance, open source, schema-free document-\n\
+  oriented  data store that's easy to deploy, manage and use. It's\nnetwork accessible,\
+  \ written in C++ and offers the following features :\n* Collection oriented storage\
+  \ - easy storage of object-style data\n* Full index support, including on inner\
+  \ objects\n* Query profiling\n* Replication and fail-over support\n* Efficient storage\
+  \ of binary data including large\n  objects (e.g. videos)\n* Auto-sharding for cloud-level\
+  \ scalability (Q209)\n  High performance, scalability, and reasonable depth of functionality\n\
+  \  are the goals for the project.\n"
+maintainer: Juan Negron <juan.negron@canonical.com>
+name: mongodb
+peers:
+  replica-set:
+    interface: mongodb-replica-set
+provides:
+  configsvr:
+    interface: shard
+  database:
+    interface: mongodb
+requires:
+  mongos:
+    interface: mongodb
+  mongos-cfg:
+    interface: shard
+summary: An object/document-oriented database (metapackage)

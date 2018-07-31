@@ -1,0 +1,41 @@
+description: 'Cinder is the block storage service for OpenStack.
+
+  '
+maintainer: Ionut-Madalin Balutoiu <ibalutoiu@cloudbasesolutions.com>
+name: cinder-volume
+provides:
+  cinder-volume-service:
+    interface: cinder
+requires:
+  ad-join:
+    interface: ad-join
+  amqp:
+    interface: rabbitmq
+  cinder-accounts:
+    interface: share-access
+  cluster-service:
+    interface: cluster-service
+  failover-cluster:
+    interface: failover-cluster
+  image-service:
+    interface: glance
+  mysql-db:
+    interface: mysql-shared
+  smb-share:
+    interface: fileserver
+series:
+- win2012
+- win2012r2
+- win2012hv
+- win2012hvr2
+- win2016
+- win2016nano
+summary: OpenStack block storage service
+tags:
+- openstack
+- storage
+- windows
+- samba
+- iscsi
+- microsoft
+- volume

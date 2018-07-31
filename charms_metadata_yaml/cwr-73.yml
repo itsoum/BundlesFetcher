@@ -1,0 +1,31 @@
+description: 'Install Cloud Weather Report along with its toolchain needed for testing
+
+  charms in the context of a CI.
+
+  '
+maintainer: Juju Big Data <bigdata@lists.ubuntu.com>
+min-juju-version: 2.1.0
+name: cwr
+provides:
+  ci-client:
+    interface: cwr-ci
+requires:
+  jenkins:
+    interface: jenkins-extension
+    scope: container
+resources:
+  cwrbox:
+    description: The LXD image used to run CWR.
+    filename: cwrbox.tar.gz
+    type: file
+series:
+- xenial
+storage:
+  artifacts:
+    description: Storage for build artifacts
+    location: /srv/artifacts
+    type: filesystem
+subordinate: true
+summary: Install Cloud Weather Report with all tools needed for a CI
+tags:
+- CI

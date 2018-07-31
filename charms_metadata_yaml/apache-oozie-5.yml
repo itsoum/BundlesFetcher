@@ -1,0 +1,22 @@
+description: "Oozie Workflow jobs are Directed Acyclical Graphs (DAGs) of actions.\n\
+  Oozie Coordinator jobs are recurrent Oozie Workflow jobs triggered by \ntime (frequency)\
+  \ and data availabilty.\nOozie is integrated with the rest of the Hadoop stack supporting\
+  \ several\ntypes of Hadoop jobs out of the box (such as Java map-reduce, Streaming\n\
+  map-reduce, Pig, Hive, Sqoop and Distcp) as well as system specific jobs.\nOozie\
+  \ is a scalable, reliable and extensible system..\n"
+maintainer: Kevin Monroe <kevin.monroe@canonical.com>
+name: apache-oozie
+provides:
+  hadoop-plugin:
+    interface: hadoop-plugin
+    scope: container
+  oozie:
+    interface: oozie
+requires:
+  db:
+    interface: mysql
+summary: Oozie is a workflow scheduler system to manage Apache Hadoop jobs.
+tags:
+- bigdata
+- hadoop
+- apache

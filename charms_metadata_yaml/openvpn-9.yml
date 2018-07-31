@@ -1,0 +1,15 @@
+description: 'Installs and configures OpenVPN and creates client `.ovpn` config files.
+  This Charm uses the luxflux-openvpn Puppet module for the heavy lifting. After installation,
+  you can find the client config files in `/home/ubuntu/*.ovpn`.
+
+  '
+maintainer: Merlijn Sebrechts <merlijn.sebrechts@gmail.com>
+name: openvpn
+series:
+- xenial
+- trusty
+subordinate: false
+summary: OpenVPN Charm
+tags:
+- network
+- security

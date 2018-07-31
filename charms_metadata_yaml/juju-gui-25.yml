@@ -1,0 +1,12 @@
+categories:
+- applications
+description: Web GUI for Juju
+maintainer: Juju GUI Team <juju-gui@lists.launchpad.net>
+name: juju-gui
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+  web:
+    interface: http
+summary: User interface for Juju (development)

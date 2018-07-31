@@ -1,0 +1,15 @@
+categories:
+- file-servers
+description: "Generic storage broker charm which brokers all interaction with storage\n\
+  services such as Nova and EC2. It attaches block storage volumes to the\ninstances\
+  \ designated by instance-id provided by the related charms.\nThe block storage broker\
+  \ is intended to be the single owner of credentials\nfor Nova or EC2. This charm\
+  \ will speak with the underlying services via the\nconfigured storage service endpoint\
+  \ to attach new or existing volumes \nto the cloud instance which is requesting\
+  \ the storage.\n"
+maintainer: Chad Smith <chad.smith@canonical.com>
+name: block-storage-broker
+provides:
+  block-storage:
+    interface: volume-request
+summary: Block storage broker charm for  Nova or EC2

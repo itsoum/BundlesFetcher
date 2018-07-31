@@ -1,0 +1,16 @@
+categories:
+- Applications
+description: "Apache\u2122 Tez is an extensible framework for building YARN based,\
+  \ high performance batch and interactive data processing applications in Hadoop\
+  \ that need to handle TB to PB scale datasets. It allows projects in the Hadoop\
+  \ ecosystem, such as Apache Hive and Apache Pig, as well as 3rd-party software vendors\
+  \ to express fit-to-purpose data processing applications in a way that meets their\
+  \ unique demands for fast response times and extreme throughput at petabyte scale.\n"
+maintainer: Amir Sanjar <amir.sanjar@canonical.com>
+name: hdp-tez
+requires:
+  namenode:
+    interface: dfs
+  resourcemanager:
+    interface: mapred
+summary: With Tez, Hadoop provides both interactive and batch queries.

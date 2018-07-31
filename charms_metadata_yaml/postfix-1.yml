@@ -1,0 +1,27 @@
+description: 'Postfix is Wietse Venema''s mail transport agent that started life as
+  an
+
+  alternative to the widely-used Sendmail program.  Postfix attempts to
+
+  be fast, easy to administer, and secure, while at the same time being
+
+  sendmail compatible enough to not upset existing users. Thus, the
+
+  outside has a sendmail-ish flavor, but the inside is completely
+
+  different.
+
+  '
+maintainers:
+- Menno Smits <menno.smits@canonical.com>
+- Frank Mueller <frank.mueller@canonical.com>
+- Horacio Duran <horacio.duran@canonical.com>
+- John Weldon <johnweldon4@gmail.com>
+name: postfix
+provides:
+  postfix:
+    interface: mta
+subordinate: false
+summary: High-performance mail transport agent
+tags:
+- network

@@ -1,0 +1,26 @@
+description: 'This charm installs and configures the Autocert X.509 certificate/key
+  renewal
+
+  service client, and automatically restarts relevant services when new
+
+  certificates and/or keys are installed.
+
+  '
+maintainer: Autocert charm developers <barry.price@canonical.com>
+name: autocert
+provides:
+  nrpe-external-master:
+    interface: nrpe-external-master
+    scope: container
+requires:
+  juju-info:
+    interface: juju-info
+    scope: container
+series:
+- xenial
+- bionic
+- trusty
+subordinate: true
+summary: Automated X.509 certificate/key renewal service client
+tags:
+- security
