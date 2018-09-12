@@ -3,6 +3,7 @@ import urllib.request
 import re
 import requests
 import yaml
+from collections import Counter
 
 
 def charms_link_part(charm_name):
@@ -53,7 +54,25 @@ def store_bundles(bundles):
 		    yaml.dump(data, yaml_file, default_flow_style=False)
 	return
 
+#---------------------------
+def unique_charms(charms_list):
+	j=0
+	unique_charms_list=[]
+	for charm in charms_list:
+		chname=charm.rsplit('/',1)[-1]
+		print(chname)
+		chname=chname.rsplit('-',1)[0]
+		print(chname)
+		unique_charms_list.append(chname)
+		j+=1
+	return unique_charms_list
+
+
 charms=charms_list()
+nbld=unique_charms(charms)
+duplicates=Counter(nbld)
+print(duplicates)
+#print(nbld)
 
 #Connection failed in the meantime
 #l = [charms.index(i) for i in charms if '~landscape/trusty/neutron-api-leadership-election-0' in i]
@@ -62,8 +81,8 @@ charms=charms_list()
 #charms=charms[k:]
 #print(charms)
 
-store_charmsmetad(charms)
+#store_charmsmetad(charms)
 
-bundles=bundles_list()
-store_bundles(bundles)
+#bundles=bundles_list()
+#store_bundles(bundles)
 
