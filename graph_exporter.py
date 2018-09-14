@@ -6,6 +6,8 @@ import yaml
 from collections import Counter
 import itertools
 
+import pandas as pd
+import numpy as np
 
 #DAG
 
@@ -21,7 +23,16 @@ with open('bundles_yaml/django-2.yml') as bundle:
 	final = list(itertools.chain.from_iterable(relations))
 	print(final)
 
-		
+	for f in final:
+		#chname=f.rsplit(':',1)[-1]
+		#print(chname)
+		chname=f.rsplit(':',1)[0]
+		print(chname)
+		print(data['services'][chname]['charm'])
+
+
+	am = pd.DataFrame(np.zeros(shape=(int(len(final)/2),int(len(final)/2))))
+	print(am)	
 	
 	#relations
 	#print(data['services'][relations]['charm'])
