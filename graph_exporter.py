@@ -16,7 +16,7 @@ from collections import Counter
 #  - gdistances for the Djikstra shortest paths
 #    between all nodes per graph (distances matrix)
 #-----------------------------------------------------------------------
-outfile_links = "links.csv"
+outfile_links = "links_raw.csv"
 outfile_gdist = "gdistances.csv"
 
 #-----------------------------------------------------------------------
@@ -41,7 +41,6 @@ csvwriter_gdist.writerow(row)
 # JUJU Dataset formation
 # considering each bundle as uDAG (undirected graph)
 #-----------------------------------------------------------------------
-
 j=0
 k=0
 k1=[]
@@ -101,7 +100,21 @@ for i in filelist:
 			k1.append(path+i)
 
 			k+=1
-print('ta leme',k,k1)
+print('In the exception case',k,k1)
 
+#-----------------------------------------------------------------------
+# Remove duplicates from csv
+#-----------------------------------------------------------------------
+def duplicates(read,write):
+	with open(read,'r') as in_file, open(write,'w') as out_file:
+	    # Set for fast O(1) amortized lookup
+	    seen = set() 
+	    for line in in_file:
+	    	# Skip duplicate
+	        if line in seen: continue
+	        seen.add(line)
+	        out_file.write(line)
+	return 0
 
+duplicates('links_raw.csv','links.csv')
 
