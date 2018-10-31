@@ -4,3 +4,4 @@ matplotlib
 pycurl
 requests
 pyyaml
+networkx
