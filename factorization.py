@@ -81,7 +81,7 @@ model = implicit.als.AlternatingLeastSquares(factors=50)
 #-------------------------------------------
 
 # Calculate the confidence by multiplying it by our alpha value.
-alpha_val = 15
+alpha_val = 40
 data_conf = (item_user_data * alpha_val).astype('double')
 
 #Fit the model
@@ -105,8 +105,8 @@ print(recommendations)
 # FIND SIMILAR ITEMS
 #---------------------
 
-# Find the 10 most similar to Jay-Z
-item_id = 95 #Jay-Z
+# Find the 20 most similar to precise/mysql
+item_id = 95 #precise/mysql
 n_similar = 20
 
 # Use implicit to get similar items.
