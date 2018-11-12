@@ -106,7 +106,7 @@ print(recommendations)
 #---------------------
 
 # Find the 10 most similar to Jay-Z
-item_id = 95 #Jay-Z
+item_id = 95 #precise/mysql
 n_similar = 20
 
 # Use implicit to get similar items.
