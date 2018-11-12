@@ -114,7 +114,7 @@ similar = model.similar_items(item_id, n_similar)
 
 print(similar)
 
-# Print the names of our most similar artists
+# Print the names of our most similar charms
 for item in similar:
     idx, score = item
     print(pair_distances.componentB.loc[pair_distances.componentB_id == idx].iloc[0])
